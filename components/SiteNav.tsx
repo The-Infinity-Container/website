@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const NAV_LINKS = [
@@ -10,11 +11,20 @@ const NAV_LINKS = [
   { label: "Who is this for?", href: "/who-is-this-for" },
   { label: "What is integration?", href: "/what-is-integration" },
   { label: "Community Call", href: "/community-call" },
+  { label: "Partnerships", href: "/partnerships" },
   { label: "Blog", href: "/blog" },
+  { label: "About us", href: "/about-us" },
+  { label: "Testimonials", href: "/testimonials" },
 ];
 
 export default function SiteNav() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  function isActive(href: string) {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  }
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-3">
@@ -26,20 +36,19 @@ export default function SiteNav() {
         TIC INDEX
       </Link>
 
-      {/* Desktop nav — centre links */}
+      {/* Desktop — condensed nav */}
       <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
-        <Link href="/" className="hover:opacity-60 transition-opacity">Home</Link>
-        <Link
+        <NavLink href="/" active={isActive("/")}>Home</NavLink>
+        <NavLink
           href="https://the-infinity-container.mn.co/landing"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:opacity-60 transition-opacity"
+          external
+          active={false}
         >
           Membership
-        </Link>
-        <Link href="/community-call" className="hover:opacity-60 transition-opacity">
+        </NavLink>
+        <NavLink href="/community-call" active={isActive("/community-call")}>
           Community Calls
-        </Link>
+        </NavLink>
       </div>
 
       {/* Sign In + hamburger */}
@@ -53,68 +62,85 @@ export default function SiteNav() {
           Sign In
         </a>
 
-        {/* Hamburger — mobile only */}
         <button
           className="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8"
           onClick={() => setMenuOpen((o) => !o)}
-          aria-label="Toggle menu"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
         >
-          <span
-            className={`block h-0.5 w-full bg-black transition-transform origin-center ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`}
-          />
-          <span
-            className={`block h-0.5 w-full bg-black transition-opacity ${menuOpen ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`block h-0.5 w-full bg-black transition-transform origin-center ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`}
-          />
+          <span className={`block h-0.5 w-full bg-black transition-transform origin-center ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
+          <span className={`block h-0.5 w-full bg-black transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block h-0.5 w-full bg-black transition-transform origin-center ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
         </button>
       </div>
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-tic-yellow border-t border-black/10 py-4 md:hidden">
-          <ul className="flex flex-col gap-2 px-5">
-            {NAV_LINKS.map((link) =>
-              link.external ? (
-                <li key={link.href}>
+        <div className="absolute top-full left-0 right-0 bg-tic-yellow border-t-2 border-black py-4 md:hidden shadow-lg">
+          <ul className="flex flex-col">
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                {link.external ? (
                   <a
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block py-2 text-sm font-medium uppercase tracking-wide hover:opacity-60"
+                    className="block px-5 py-3 text-sm font-medium uppercase tracking-wide hover:bg-black/5"
                     onClick={() => setMenuOpen(false)}
                   >
-                    {link.label}
+                    {link.label} ↗
                   </a>
-                </li>
-              ) : (
-                <li key={link.href}>
+                ) : (
                   <Link
                     href={link.href}
-                    className="block py-2 text-sm font-medium uppercase tracking-wide hover:opacity-60"
+                    className={`block px-5 py-3 text-sm font-medium uppercase tracking-wide hover:bg-black/5 ${isActive(link.href) ? "font-bold" : ""}`}
                     onClick={() => setMenuOpen(false)}
                   >
                     {link.label}
                   </Link>
-                </li>
-              )
-            )}
-            <li>
+                )}
+              </li>
+            ))}
+            <li className="border-t border-black/10 mt-2 pt-2">
               <a
                 href="https://the-infinity-container.mn.co/sign_in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block py-2 text-sm font-medium uppercase tracking-wide hover:opacity-60"
+                className="block px-5 py-3 text-sm font-medium uppercase tracking-wide hover:bg-black/5"
                 onClick={() => setMenuOpen(false)}
               >
-                Sign In
+                Sign In ↗
               </a>
             </li>
           </ul>
         </div>
       )}
     </nav>
+  );
+}
+
+function NavLink({
+  href,
+  children,
+  active,
+  external,
+}: {
+  href: string;
+  children: React.ReactNode;
+  active: boolean;
+  external?: boolean;
+}) {
+  const cls = `hover:opacity-60 transition-opacity ${active ? "underline underline-offset-4 decoration-2" : ""}`;
+  if (external) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link href={href} className={cls}>
+      {children}
+    </Link>
   );
 }
