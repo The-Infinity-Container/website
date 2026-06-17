@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "CS-Gordon-Vintage";
+  src:
+    url("/assets/fonts/CS-Gordon-Vintage.woff2") format("woff2"),
+    url("/assets/fonts/CS-Gordon-Vintage.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-tic-yellow: #d5d068;
+  --color-tic-pink: #f25fc1;
+  --color-tic-dark: #5d514a;
+  --color-tic-orange: #ed7e21;
+  --font-gordon: "CS-Gordon-Vintage", serif;
+  --font-serif: var(--font-noto-serif), "Georgia", serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-tic-yellow);
+  color: #000;
+  font-family: var(--font-serif);
 }
