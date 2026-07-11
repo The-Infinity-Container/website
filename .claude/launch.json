@@ -5,7 +5,8 @@
       "name": "infinity-container",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
-      "port": 3004
+      "port": 3004,
+      "autoPort": true
     }
   ]
 }
