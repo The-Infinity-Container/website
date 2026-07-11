@@ -8,7 +8,11 @@ import { useState } from "react";
 // used on pages that open with a black section at the top.
 const DARK_NAV_ROUTES = ["/blog"];
 
-const NAV_LINKS = [
+type NavLink =
+  | { label: string; href: string; external?: boolean }
+  | { label: string; children: { label: string; href: string }[] };
+
+const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "What is this?", href: "/what-is-the-infinity-container" },
   { label: "Membership Info", href: "https://the-infinity-container.mn.co/landing", external: true },
