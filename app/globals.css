@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @font-face {
   font-family: "CS-Gordon-Vintage";
@@ -15,6 +16,8 @@
   --color-tic-pink: #f25fc1;
   --color-tic-dark: #5d514a;
   --color-tic-orange: #ed7e21;
+  --color-tic-olive: #807104;
+  --color-tic-coral: #cc5547;
   --font-gordon: "CS-Gordon-Vintage", serif;
   --font-serif: var(--font-noto-serif), "Georgia", serif;
 }

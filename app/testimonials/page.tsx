@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Marquee from "@/components/Marquee";
 
 export const metadata: Metadata = {
@@ -87,11 +86,6 @@ export default function TestimonialsPage() {
         </a>
       </section>
 
-      <div className="flex flex-wrap justify-center gap-6 py-6 px-6 border-t border-black/20 text-sm font-medium uppercase tracking-wide">
-        <Link href="/about-us" className="hover:opacity-60">About Us</Link>
-        <Link href="/community-call" className="hover:opacity-60">Community Call</Link>
-        <Link href="/" className="hover:opacity-60">Home</Link>
-      </div>
     </main>
   );
 }

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import Marquee from "@/components/Marquee";
 import NewsletterForm from "@/components/NewsletterForm";
 
@@ -205,13 +204,6 @@ export default function WhatIsThisPage() {
         />
       </section>
 
-      {/* ── Nav links ───────────────────────────────────────────── */}
-      <div className="flex flex-wrap justify-center gap-6 py-6 px-6 border-t border-black/20 text-sm font-medium tracking-wide uppercase">
-        <Link href="/who-is-this-for" className="hover:opacity-60">Who is this for?</Link>
-        <Link href="/what-is-integration" className="hover:opacity-60">What is integration?</Link>
-        <Link href="/community-call" className="hover:opacity-60">Community Call</Link>
-        <Link href="/about-us" className="hover:opacity-60">About Us</Link>
-      </div>
     </main>
   );
 }

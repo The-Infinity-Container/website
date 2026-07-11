@@ -4,6 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+// Routes that render the nav in its dark variant (pink links, yellow logo) —
+// used on pages that open with a black section at the top.
+const DARK_NAV_ROUTES = ["/blog"];
+
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "What is this?", href: "/what-is-the-infinity-container" },
@@ -13,109 +17,167 @@ const NAV_LINKS = [
   { label: "Community Call", href: "/community-call" },
   { label: "Partnerships", href: "/partnerships" },
   { label: "Blog", href: "/blog" },
-  { label: "About us", href: "/about-us" },
-  { label: "Testimonials", href: "/testimonials" },
+  {
+    label: "About",
+    children: [
+      { label: "About us", href: "/about-us" },
+      { label: "Testimonials", href: "/testimonials" },
+    ],
+  },
 ];
 
 export default function SiteNav() {
   const pathname = usePathname();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const isDark = DARK_NAV_ROUTES.some((r) => pathname.startsWith(r));
 
   function isActive(href: string) {
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   }
 
+  function closeDrawer() {
+    setDrawerOpen(false);
+  }
+
+  const linkBase =
+    "block w-full text-right px-6 py-4 font-[family-name:var(--font-gordon)] text-xl uppercase tracking-wide transition-colors hover:bg-tic-pink";
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-3">
-      {/* Logo */}
-      <Link
-        href="/"
-        className="font-[family-name:var(--font-gordon)] text-xl tracking-widest uppercase hover:opacity-70 transition-opacity"
-      >
-        TIC INDEX
-      </Link>
-
-      {/* Desktop — condensed nav */}
-      <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
-        <NavLink href="/" active={isActive("/")}>Home</NavLink>
-        <NavLink
-          href="https://the-infinity-container.mn.co/landing"
-          external
-          active={false}
-        >
-          Membership
-        </NavLink>
-        <NavLink href="/community-call" active={isActive("/community-call")}>
-          Community Calls
-        </NavLink>
-      </div>
-
-      {/* Sign In + hamburger */}
-      <div className="flex items-center gap-4">
-        <a
-          href="https://the-infinity-container.mn.co/sign_in"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:block text-sm font-medium tracking-wide uppercase hover:opacity-60 transition-opacity"
-        >
-          Sign In
-        </a>
-
+    <>
+      {/* Top bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-3">
         <button
-          className="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8"
-          onClick={() => setMenuOpen((o) => !o)}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
+          onClick={() => setDrawerOpen(true)}
+          className={`font-[family-name:var(--font-gordon)] text-xl tracking-widest uppercase hover:opacity-70 transition-opacity ${
+            isDark ? "text-tic-yellow" : ""
+          }`}
+          aria-label="Open navigation"
+          aria-expanded={drawerOpen}
         >
-          <span className={`block h-0.5 w-full bg-black transition-transform origin-center ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
-          <span className={`block h-0.5 w-full bg-black transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block h-0.5 w-full bg-black transition-transform origin-center ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
+          TIC INDEX
         </button>
-      </div>
 
-      {/* Mobile dropdown */}
-      {menuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-tic-yellow border-t-2 border-black py-4 md:hidden shadow-lg">
-          <ul className="flex flex-col">
-            {NAV_LINKS.map((link) => (
+        <div
+          className={`hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase ${
+            isDark ? "text-tic-pink" : ""
+          }`}
+        >
+          <NavLink href="/" active={isActive("/")}>Home</NavLink>
+          <NavLink href="https://the-infinity-container.mn.co/landing" external active={false}>
+            Membership
+          </NavLink>
+        </div>
+      </nav>
+
+      {/* Backdrop */}
+      <div
+        className={`fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 ${
+          drawerOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={closeDrawer}
+        aria-hidden="true"
+      />
+
+      {/* Left sliding drawer */}
+      <div
+        className={`fixed top-0 left-0 h-full z-50 w-[65vw] max-w-md bg-tic-yellow flex flex-col transition-transform duration-300 ease-in-out ${
+          drawerOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+        aria-hidden={!drawerOpen}
+      >
+        {/* Close button */}
+        <div className="flex justify-end px-5 py-4">
+          <button
+            onClick={closeDrawer}
+            className="text-3xl leading-none font-light hover:opacity-60 transition-opacity"
+            aria-label="Close navigation"
+          >
+            ×
+          </button>
+        </div>
+
+        {/* Links */}
+        <ul className="flex flex-col flex-1 overflow-y-auto mt-6">
+          {NAV_LINKS.map((link) => {
+            if ("children" in link) {
+              const childActive = link.children.some((c) => isActive(c.href));
+              return (
+                <li key={link.label}>
+                  <button
+                    className={`${linkBase} flex items-center justify-end gap-3 ${
+                      childActive || aboutOpen ? "bg-tic-pink" : ""
+                    }`}
+                    onClick={() => setAboutOpen((o) => !o)}
+                    aria-expanded={aboutOpen}
+                  >
+                    {link.label}
+                    <span className="text-xl">{aboutOpen ? "^" : "v"}</span>
+                  </button>
+                  <ul
+                    className={`overflow-hidden transition-all duration-200 ${
+                      aboutOpen ? "max-h-40" : "max-h-0"
+                    }`}
+                  >
+                    {link.children.map((child) => (
+                      <li key={child.href}>
+                        <Link
+                          href={child.href}
+                          className={`block w-full text-right px-6 py-3 font-[family-name:var(--font-gordon)] text-base uppercase tracking-wide transition-colors hover:bg-tic-pink ${
+                            isActive(child.href) ? "opacity-60" : ""
+                          }`}
+                          onClick={closeDrawer}
+                        >
+                          {child.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              );
+            }
+
+            return (
               <li key={link.href}>
                 {link.external ? (
                   <a
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-5 py-3 text-sm font-medium uppercase tracking-wide hover:bg-black/5"
-                    onClick={() => setMenuOpen(false)}
+                    className={linkBase}
+                    onClick={closeDrawer}
                   >
-                    {link.label} ↗
+                    {link.label}
                   </a>
                 ) : (
                   <Link
                     href={link.href}
-                    className={`block px-5 py-3 text-sm font-medium uppercase tracking-wide hover:bg-black/5 ${isActive(link.href) ? "font-bold" : ""}`}
-                    onClick={() => setMenuOpen(false)}
+                    className={`${linkBase} ${isActive(link.href) ? "text-tic-olive" : ""}`}
+                    onClick={closeDrawer}
                   >
                     {link.label}
                   </Link>
                 )}
               </li>
-            ))}
-            <li className="border-t border-black/10 mt-2 pt-2">
-              <a
-                href="https://the-infinity-container.mn.co/sign_in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block px-5 py-3 text-sm font-medium uppercase tracking-wide hover:bg-black/5"
-                onClick={() => setMenuOpen(false)}
-              >
-                Sign In ↗
-              </a>
-            </li>
-          </ul>
+            );
+          })}
+        </ul>
+
+        {/* Member Sign In */}
+        <div className="border-t border-black/20">
+          <a
+            href="https://the-infinity-container.mn.co/sign_in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkBase}
+            onClick={closeDrawer}
+          >
+            Member Sign In
+          </a>
         </div>
-      )}
-    </nav>
+      </div>
+    </>
   );
 }
 

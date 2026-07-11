@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import Marquee from "@/components/Marquee";
 
 export const metadata: Metadata = {
@@ -235,11 +234,6 @@ export default function WhatIsIntegrationPage() {
         </a>
       </section>
 
-      <div className="flex flex-wrap justify-center gap-6 py-6 px-6 text-sm font-medium uppercase tracking-wide">
-        <Link href="/what-is-the-infinity-container" className="hover:opacity-60">What is this?</Link>
-        <Link href="/who-is-this-for" className="hover:opacity-60">Who is this for?</Link>
-        <Link href="/community-call" className="hover:opacity-60">Community Call</Link>
-      </div>
     </main>
   );
 }

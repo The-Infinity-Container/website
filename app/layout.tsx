@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Serif } from "next/font/google";
 import SiteNav from "@/components/SiteNav";
-import SiteFooter from "@/components/SiteFooter";
+import SectionFooter from "@/components/SectionFooter";
 import "./globals.css";
 
 const notoSerif = Noto_Serif({
@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-tic-yellow text-black antialiased">
         <SiteNav />
         {children}
-        <SiteFooter />
+        <SectionFooter />
       </body>
     </html>
   );
