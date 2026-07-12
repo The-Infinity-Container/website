@@ -10,6 +10,7 @@ export type Post = {
   body: string;
   category: CategoryKey;
   cover_image_url: string | null;
+  images: string[];
   status: PostStatus;
   created_at: string;
   updated_at: string;

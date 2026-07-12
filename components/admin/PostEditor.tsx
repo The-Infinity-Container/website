@@ -19,7 +19,7 @@ function ToolbarButton({
     <button
       type="button"
       onClick={onClick}
-      className={`px-3 py-1 text-sm font-bold uppercase tracking-wide border-2 border-black hover:bg-black hover:text-tic-yellow transition-colors ${
+      className={`px-3 py-1 text-sm font-bold uppercase tracking-wide border-2 border-black cursor-pointer hover:bg-black hover:text-tic-yellow transition-colors ${
         active ? "bg-black text-tic-yellow" : "bg-white"
       }`}
     >

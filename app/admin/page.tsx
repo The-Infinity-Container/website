@@ -19,7 +19,7 @@ export default async function AdminDashboardPage() {
         </h1>
         <Link
           href="/admin/posts/new"
-          className="shrink-0 bg-black text-tic-yellow font-[family-name:var(--font-gordon)] uppercase tracking-widest text-sm px-6 py-3 hover:opacity-90 transition-opacity"
+          className="shrink-0 bg-black text-tic-yellow font-[family-name:var(--font-gordon)] uppercase tracking-widest text-sm px-6 py-3 cursor-pointer hover:bg-tic-yellow hover:text-black transition-colors"
         >
           New Post
         </Link>
@@ -41,16 +41,16 @@ export default async function AdminDashboardPage() {
               </p>
             </div>
             <div className="flex items-center gap-4 shrink-0 text-sm font-bold uppercase tracking-wide">
-              <Link href={`/admin/posts/${post.id}/edit`} className="underline hover:opacity-70">
+              <Link href={`/admin/posts/${post.id}/edit`} className="underline cursor-pointer hover:opacity-70">
                 Edit
               </Link>
               <form action={togglePublish.bind(null, post.id, post.status)}>
-                <button type="submit" className="underline hover:opacity-70">
+                <button type="submit" className="underline cursor-pointer hover:opacity-70">
                   {post.status === "published" ? "Unpublish" : "Publish"}
                 </button>
               </form>
               <form action={deletePost.bind(null, post.id)}>
-                <button type="submit" className="underline text-tic-coral hover:opacity-70">
+                <button type="submit" className="underline text-tic-coral cursor-pointer hover:opacity-70">
                   Delete
                 </button>
               </form>

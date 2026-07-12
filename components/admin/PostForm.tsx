@@ -29,7 +29,9 @@ export default function PostForm({ post }: { post?: Post }) {
   const [body, setBody] = useState(post?.body ?? "");
   const [status, setStatus] = useState<PostStatus>(post?.status ?? "draft");
   const [coverImageUrl, setCoverImageUrl] = useState<string | null>(post?.cover_image_url ?? null);
+  const [images, setImages] = useState<string[]>(post?.images ?? []);
   const [uploading, setUploading] = useState(false);
+  const [galleryUploading, setGalleryUploading] = useState(false);
 
   const [state, formAction, pending] = useActionState<PostActionState, FormData>(async () => {
     const payload = {
@@ -39,6 +41,7 @@ export default function PostForm({ post }: { post?: Post }) {
       excerpt,
       body,
       coverImageUrl,
+      images,
       status,
     };
     return isEdit ? updatePost(post.id, payload) : createPost(payload);
@@ -56,6 +59,20 @@ export default function PostForm({ post }: { post?: Post }) {
     const url = await uploadImage(file);
     setUploading(false);
     if (url) setCoverImageUrl(url);
+  }
+
+  async function handleGalleryUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+    setGalleryUploading(true);
+    const url = await uploadImage(file);
+    setGalleryUploading(false);
+    if (url) setImages((prev) => [...prev, url].slice(0, 5));
+  }
+
+  function removeImage(url: string) {
+    setImages((prev) => prev.filter((u) => u !== url));
   }
 
   return (
@@ -129,8 +146,68 @@ export default function PostForm({ post }: { post?: Post }) {
           // eslint-disable-next-line @next/next/no-img-element
           <img src={coverImageUrl} alt="" className="w-full max-w-xs h-auto mb-2 border-2 border-black" />
         )}
-        <input type="file" accept="image/*" onChange={handleCoverUpload} disabled={uploading} />
+        <label
+          htmlFor="cover-image"
+          className={`inline-block border-2 border-black px-4 py-2 text-sm font-bold uppercase tracking-wide cursor-pointer hover:bg-black hover:text-tic-yellow transition-colors ${
+            uploading ? "opacity-50 pointer-events-none" : ""
+          }`}
+        >
+          {coverImageUrl ? "Change Image" : "Choose Image"}
+        </label>
+        <input
+          id="cover-image"
+          type="file"
+          accept="image/*"
+          onChange={handleCoverUpload}
+          disabled={uploading}
+          className="sr-only"
+        />
         {uploading && <p className="text-sm text-black/60 mt-1">Uploading…</p>}
+      </div>
+
+      <div>
+        <label className={labelClass}>
+          Gallery images <span className="font-normal normal-case text-black/50">({images.length}/5)</span>
+        </label>
+        {images.length > 0 && (
+          <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 mb-2">
+            {images.map((url) => (
+              <div key={url} className="relative">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={url} alt="" className="w-full aspect-square object-cover border-2 border-black" />
+                <button
+                  type="button"
+                  onClick={() => removeImage(url)}
+                  className="absolute top-1 right-1 bg-black text-tic-yellow text-xs font-bold w-5 h-5 flex items-center justify-center cursor-pointer hover:bg-tic-coral transition-colors"
+                  aria-label="Remove image"
+                >
+                  ×
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+        {images.length < 5 && (
+          <>
+            <label
+              htmlFor="gallery-image"
+              className={`inline-block border-2 border-black px-4 py-2 text-sm font-bold uppercase tracking-wide cursor-pointer hover:bg-black hover:text-tic-yellow transition-colors ${
+                galleryUploading ? "opacity-50 pointer-events-none" : ""
+              }`}
+            >
+              Add Image
+            </label>
+            <input
+              id="gallery-image"
+              type="file"
+              accept="image/*"
+              onChange={handleGalleryUpload}
+              disabled={galleryUploading}
+              className="sr-only"
+            />
+          </>
+        )}
+        {galleryUploading && <p className="text-sm text-black/60 mt-1">Uploading…</p>}
       </div>
 
       <div>
@@ -157,8 +234,8 @@ export default function PostForm({ post }: { post?: Post }) {
 
       <button
         type="submit"
-        disabled={pending || uploading}
-        className="bg-black text-tic-yellow font-[family-name:var(--font-gordon)] uppercase tracking-widest py-3 hover:opacity-90 transition-opacity disabled:opacity-50"
+        disabled={pending || uploading || galleryUploading}
+        className="bg-black text-tic-yellow font-[family-name:var(--font-gordon)] uppercase tracking-widest py-3 cursor-pointer hover:bg-tic-yellow hover:text-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-black disabled:hover:text-tic-yellow"
       >
         {pending ? "Saving…" : isEdit ? "Save Changes" : "Create Post"}
       </button>

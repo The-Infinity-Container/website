@@ -37,6 +37,7 @@ export type PostInput = {
   excerpt: string;
   body: string;
   coverImageUrl: string | null;
+  images: string[];
   status: PostStatus;
 };
 
@@ -51,6 +52,7 @@ export async function createPost(input: PostInput): Promise<PostActionState> {
 
   if (!input.title.trim()) return { error: "Title is required." };
   if (!input.slug.trim()) return { error: "Slug is required." };
+  if (input.images.length > 5) return { error: "Up to 5 gallery images allowed." };
 
   const { error } = await supabase.from("posts").insert({
     title: input.title.trim(),
@@ -59,6 +61,7 @@ export async function createPost(input: PostInput): Promise<PostActionState> {
     excerpt: deriveExcerpt(input),
     body: input.body,
     cover_image_url: input.coverImageUrl,
+    images: input.images,
     status: input.status,
     published_at: input.status === "published" ? new Date().toISOString() : null,
   });
@@ -78,6 +81,7 @@ export async function updatePost(id: string, input: PostInput): Promise<PostActi
 
   if (!input.title.trim()) return { error: "Title is required." };
   if (!input.slug.trim()) return { error: "Slug is required." };
+  if (input.images.length > 5) return { error: "Up to 5 gallery images allowed." };
 
   const existing = await supabase.from("posts").select("status").eq("id", id).maybeSingle();
   const wasPublished = existing.data?.status === "published";
@@ -91,6 +95,7 @@ export async function updatePost(id: string, input: PostInput): Promise<PostActi
       excerpt: deriveExcerpt(input),
       body: input.body,
       cover_image_url: input.coverImageUrl,
+      images: input.images,
       status: input.status,
       published_at:
         input.status === "published"

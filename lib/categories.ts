@@ -14,3 +14,7 @@ export const CATEGORIES: { key: CategoryKey; label: string; color: string }[] = 
 export function categoryLabel(key: string): string {
   return CATEGORIES.find((c) => c.key === key)?.label ?? key;
 }
+
+export function categoryColor(key: string): string {
+  return CATEGORIES.find((c) => c.key === key)?.color ?? "#000000";
+}
