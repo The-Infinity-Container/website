@@ -12,6 +12,7 @@ function normalize(post: Post): Post {
     seo_title: post.seo_title ?? "",
     meta_description: post.meta_description ?? "",
     alt_text: post.alt_text ?? "",
+    claude_readability_score: post.claude_readability_score ?? null,
   };
 }
 

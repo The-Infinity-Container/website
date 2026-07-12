@@ -52,6 +52,7 @@ export type PostInput = {
   seoTitle: string;
   metaDescription: string;
   altText: string;
+  claudeReadabilityScore: number | null;
   status: PostStatus;
 };
 
@@ -60,6 +61,12 @@ function validateSeoLengths(input: PostInput): string | null {
   if (input.seoTitle.length > 60) return "SEO title must be 60 characters or fewer.";
   if (input.metaDescription.length > 160) return "Meta description must be 160 characters or fewer.";
   if (input.altText.length > 125) return "Alt text must be 125 characters or fewer.";
+  if (
+    input.claudeReadabilityScore !== null &&
+    (input.claudeReadabilityScore < 1 || input.claudeReadabilityScore > 100)
+  ) {
+    return "Claude readability score must be between 1 and 100.";
+  }
   return null;
 }
 
@@ -90,6 +97,7 @@ export async function createPost(input: PostInput): Promise<PostActionState> {
     seo_title: input.seoTitle.trim(),
     meta_description: input.metaDescription.trim(),
     alt_text: input.altText.trim(),
+    claude_readability_score: input.claudeReadabilityScore,
     status: input.status,
     published_at: input.status === "published" ? new Date().toISOString() : null,
   });
@@ -130,6 +138,7 @@ export async function updatePost(id: string, input: PostInput): Promise<PostActi
       seo_title: input.seoTitle.trim(),
       meta_description: input.metaDescription.trim(),
       alt_text: input.altText.trim(),
+      claude_readability_score: input.claudeReadabilityScore,
       status: input.status,
       published_at:
         input.status === "published"
