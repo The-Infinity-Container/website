@@ -6,7 +6,7 @@ import { useState } from "react";
 
 // Routes that render the nav in its dark variant (pink links, yellow logo) —
 // used on pages that open with a black section at the top.
-const DARK_NAV_ROUTES = ["/blog"];
+const DARK_NAV_ROUTES = ["/", "/blog"];
 
 type NavLink =
   | { label: string; href: string; external?: boolean }
@@ -34,7 +34,7 @@ export default function SiteNav() {
   const pathname = usePathname();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
-  const isDark = DARK_NAV_ROUTES.some((r) => pathname.startsWith(r));
+  const isDark = DARK_NAV_ROUTES.some((r) => (r === "/" ? pathname === "/" : pathname.startsWith(r)));
 
   function isActive(href: string) {
     if (href === "/") return pathname === "/";
