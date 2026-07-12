@@ -66,6 +66,7 @@ export type SeoAnalysisInput = {
   altText: string;
   body: string;
   usedKeyphrases: string[];
+  claudeReadabilityScore: number | null;
 };
 
 export function analyzeSeo(fields: SeoAnalysisInput): SeoCheck[] {
@@ -241,6 +242,20 @@ export function analyzeSeo(fields: SeoAnalysisInput): SeoCheck[] {
     message: reused
       ? `"${kp}" is already the focus keyphrase on another post — reusing it can make the two posts compete with each other in search results.`
       : "This focus keyphrase isn't used on any other post.",
+  });
+
+  const readability = fields.claudeReadabilityScore;
+  checks.push({
+    id: "claude-readability-score",
+    status: readability === null ? "ok" : readability >= 70 ? "good" : readability >= 40 ? "ok" : "bad",
+    message:
+      readability === null
+        ? "Ask Claude to read this post and give it a readability score from 1–100, then enter it above."
+        : readability >= 70
+          ? `Good readability score from Claude (${readability}/100).`
+          : readability >= 40
+            ? `Claude scored this post's readability at ${readability}/100 — consider shorter sentences and paragraphs.`
+            : `Claude scored this post's readability at ${readability}/100 — it may be hard to read. Consider revising for clarity.`,
   });
 
   return checks;

@@ -2,6 +2,7 @@
 
 import { useActionState, useEffect, useState } from "react";
 import PostEditor from "./PostEditor";
+import SerpPreview from "./SerpPreview";
 import { CATEGORIES, type CategoryKey } from "@/lib/categories";
 import { createPost, updatePost, getUsedFocusKeyphrases, type PostActionState } from "@/lib/actions/posts";
 import { uploadImage } from "@/lib/uploadImage";
@@ -93,6 +94,9 @@ export default function PostForm({
   const [seoTitle, setSeoTitle] = useState(post?.seo_title ?? "");
   const [metaDescription, setMetaDescription] = useState(post?.meta_description ?? "");
   const [altText, setAltText] = useState(post?.alt_text ?? "");
+  const [claudeReadabilityScore, setClaudeReadabilityScore] = useState<number | null>(
+    post?.claude_readability_score ?? null,
+  );
   const [usedKeyphrases, setUsedKeyphrases] = useState<string[]>([]);
 
   const [contentOpen, setContentOpen] = useState(true);
@@ -102,7 +106,16 @@ export default function PostForm({
     getUsedFocusKeyphrases(post?.id).then(setUsedKeyphrases).catch(() => {});
   }, [post?.id]);
 
-  const seoChecks = analyzeSeo({ focusKeyphrase, seoTitle, metaDescription, slug, altText, body, usedKeyphrases });
+  const seoChecks = analyzeSeo({
+    focusKeyphrase,
+    seoTitle,
+    metaDescription,
+    slug,
+    altText,
+    body,
+    usedKeyphrases,
+    claudeReadabilityScore,
+  });
   const score = seoScore(seoChecks);
 
   const [state, formAction, pending] = useActionState<PostActionState, FormData>(async () => {
@@ -118,6 +131,7 @@ export default function PostForm({
       seoTitle,
       metaDescription,
       altText,
+      claudeReadabilityScore,
       status,
     };
     return isEdit ? updatePost(post.id, payload) : createPost(payload);
@@ -310,6 +324,8 @@ export default function PostForm({
           </span>
         }
       >
+        <SerpPreview title={title} seoTitle={seoTitle} slug={slug} excerpt={excerpt} metaDescription={metaDescription} />
+
         <div>
           <div className="flex items-center justify-between">
             <label htmlFor="focus-keyphrase" className={labelClass}>
@@ -388,6 +404,33 @@ export default function PostForm({
             onChange={(e) => setAltText(e.target.value)}
             maxLength={ALT_TEXT_MAX}
             className={inputClass}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="claude-readability-score" className={labelClass}>
+            Claude Readability Score <span className="font-normal normal-case text-black/50">(1–100)</span>
+          </label>
+          <p className="text-xs text-black/50 mb-1">
+            Ask Claude to read this post and give it a readability score from 1–100, then enter it here.
+          </p>
+          <input
+            id="claude-readability-score"
+            type="number"
+            min={1}
+            max={100}
+            value={claudeReadabilityScore ?? ""}
+            onChange={(e) => {
+              const raw = e.target.value;
+              if (raw === "") {
+                setClaudeReadabilityScore(null);
+                return;
+              }
+              const parsed = Math.round(Number(raw));
+              if (Number.isNaN(parsed)) return;
+              setClaudeReadabilityScore(Math.min(100, Math.max(1, parsed)));
+            }}
+            className={`${inputClass} max-w-[8rem]`}
           />
         </div>
 

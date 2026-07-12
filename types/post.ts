@@ -15,6 +15,7 @@ export type Post = {
   seo_title: string;
   meta_description: string;
   alt_text: string;
+  claude_readability_score: number | null;
   status: PostStatus;
   created_at: string;
   updated_at: string;
