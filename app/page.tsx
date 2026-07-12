@@ -1,400 +1,456 @@
 import Image from "next/image";
+import Link from "next/link";
 import InlineNewsletter from "@/components/InlineNewsletter";
-import SpotifyEmbed from "@/components/SpotifyEmbed";
+
+const MEMBERSHIP_URL = "https://the-infinity-container.mn.co/landing";
+const SIGNIN_URL = "https://the-infinity-container.mn.co/sign_in";
 
 export default function HomePage() {
   return (
     <main>
-
-      {/* ── Section 1: Orange hero video ──────────────────────────── */}
-      <section className="relative min-h-screen bg-tic-orange flex flex-col overflow-hidden">
-        {/* Poster / fallback — visible until video plays */}
-        <div className="absolute inset-0 z-0 flex items-center justify-center" aria-hidden>
-          <Image
-            src="/assets/hero-logo.svg"
-            alt="The Infinity Container globe"
-            width={700}
-            height={700}
-            priority
-            className="w-[85vmin] h-auto"
-          />
-        </div>
-        {/* Video sits on top of poster once loaded */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 z-10 w-full h-full object-cover"
-        >
-          <source src="/assets/videos/hero.mp4" type="video/mp4" />
-        </video>
-        {/* Spacer pushes footer to bottom */}
-        <div className="flex-1 relative z-0" />
-      </section>
-
-      {/* ── Section 2: Olive — huge two-line text + newsletter ────── */}
-      <section className="min-h-screen bg-tic-olive flex flex-col overflow-hidden">
-        <div className="flex-1 flex flex-col justify-center pt-20">
-          {/* Full-bleed text — no horizontal padding, matches live site */}
-          <div className="overflow-visible leading-none text-center">
-            <p
-              className="font-[family-name:var(--font-gordon)] text-tic-pink whitespace-nowrap select-none"
-              style={{ fontSize: "clamp(2.5rem, 9vw, 140px)", lineHeight: 1.05 }}
-            >
-              INTEGRATION
-            </p>
-            <p
-              className="font-[family-name:var(--font-gordon)] text-tic-pink whitespace-nowrap select-none"
-              style={{ fontSize: "clamp(2.5rem, 9vw, 140px)", lineHeight: 1.05 }}
-            >
-              AND SUPPORT
-            </p>
-          </div>
-          <p className="text-center text-tic-pink font-[family-name:var(--font-noto-serif)] italic text-xl mt-10 px-4">
-            Integration is the way.
-          </p>
-          <div className="mt-8 mb-16 px-10">
-            <InlineNewsletter inputBg="bg-tic-pink" />
-          </div>
-        </div>
-      </section>
-
-      {/* ── Section 3: Yellow — space holders + TIC headline ─────── */}
-      <section className="min-h-screen bg-tic-yellow flex flex-col">
-        <div className="pt-16 pb-8 px-6 md:px-16">
-          <p
-            className="font-[family-name:var(--font-noto-serif)] leading-tight"
-            style={{ fontSize: "clamp(1.8rem, 4.5vw, 4.5rem)" }}
-          >
-            We&apos;re here for the space holders, the artists, the ones pitching in.
-          </p>
-        </div>
-
-        <div className="flex-1 flex flex-col items-center justify-center text-center px-6 py-8">
-          <p className="font-[family-name:var(--font-noto-serif)] text-2xl">This is</p>
-          <p
-            className="font-[family-name:var(--font-gordon)] uppercase leading-none"
-            style={{ fontSize: "clamp(1.8rem, 5vw, 5rem)" }}
-          >
-            THE INFINITY CONTAINER
-          </p>
-          <p className="font-[family-name:var(--font-noto-serif)] text-2xl mt-1">A place for integration</p>
-        </div>
-
-        <div className="px-6 md:px-16 pb-8 text-right">
-          <p
-            className="font-[family-name:var(--font-noto-serif)] leading-tight"
-            style={{ fontSize: "clamp(1.8rem, 4.5vw, 4.5rem)" }}
-          >
-            Tune into presence &amp; we&apos;ll meet you where you are.
-          </p>
-        </div>
-      </section>
-
-      {/* ── Section 4: Pink — scrolling marquee ───────────────────── */}
-      <section className="min-h-screen bg-tic-pink flex flex-col overflow-hidden">
-        <div className="flex-1 flex items-center overflow-hidden">
-          <MarqueeRow
-            text="INTEGRATION IS THE WAY"
-            duration={28}
-            fontSize="clamp(5rem, 18vw, 22rem)"
-          />
-        </div>
-      </section>
-
-      {/* ── Section 5: Yellow — integration poem + Spotify ───────── */}
-      <section className="min-h-screen bg-tic-yellow flex flex-col relative">
-        {/* Dropper SVG — absolute right */}
-        <div
-          className="absolute right-0 top-1/3 w-28 md:w-44 pointer-events-none z-10"
-          aria-hidden
-        >
-          <Image
-            src="/assets/dropper-learn-more.svg"
-            alt=""
-            width={160}
-            height={260}
-            className="w-full h-auto"
-          />
-        </div>
-
-        <div className="flex-1 flex flex-col justify-center px-6 md:px-20 pt-24 pb-10 relative z-0">
-          {/* integration.svg handwriting heading */}
-          <Image
-            src="/assets/integration.svg"
-            alt="Integration"
-            width={680}
-            height={200}
-            className="w-full max-w-2xl h-auto mb-10"
-          />
-
-          {/* Prose poem */}
-          <p
-            className="font-[family-name:var(--font-noto-serif)] text-center leading-relaxed max-w-3xl mx-auto pr-24 md:pr-48"
-            style={{ fontSize: "clamp(1rem, 2.2vw, 1.6rem)" }}
-          >
-            Integration is a birthday &amp; a funeral. It is playing in the unknown, while knowing
-            yourself more. It is weaving. It is collaborating. It is titration &amp; digestion. It is
-            process. It is practice with awareness. It is the evolution of a differentiated, connected
-            self. It is intra-connected identity. It is WE, it is US. It is the link between
-            possibility and actuality.
-          </p>
-
-          <p
-            className="text-center mt-6 max-w-3xl mx-auto pr-24 md:pr-48 font-[family-name:var(--font-noto-serif)]"
-            style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)" }}
-          >
-            It happens in the{" "}
-            <strong className="font-[family-name:var(--font-gordon)] uppercase" style={{ fontSize: "1.15em" }}>
-              THE INFINITY CONTAINER,
-            </strong>{" "}
-            where integration is the way.
-          </p>
-
-          {/* Spotify + mushrooms */}
-          <div className="flex items-center justify-center gap-4 md:gap-8 mt-12 mb-4">
-            <Image
-              src="/assets/mush-gio.svg"
-              alt=""
-              width={50}
-              height={70}
-              aria-hidden
-              className="w-10 md:w-14 h-auto shrink-0"
-            />
-            <div className="w-full max-w-md">
-              <SpotifyEmbed />
-            </div>
-            <Image
-              src="/assets/mush-gio-mirrored.svg"
-              alt=""
-              width={50}
-              height={70}
-              aria-hidden
-              className="w-10 md:w-14 h-auto shrink-0"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ── Section 6: Black — video (globe white) + spider drops ── */}
-      <section className="relative min-h-screen bg-black flex flex-col overflow-hidden">
-        {/* Placeholder — inverted globe until video is added */}
-        <div className="absolute inset-0 z-0 flex items-center justify-center" aria-hidden>
+      {/* ── Hero ───────────────────────────────────────────────────── */}
+      <header className="relative bg-black text-center overflow-hidden px-6 pt-28 pb-28 md:pt-32 md:pb-32">
+        <div className="relative w-24 h-24 mx-auto mb-11 rounded-full overflow-hidden border border-tic-yellow/40 flex items-center justify-center bg-black">
           <Image
             src="/assets/hero-logo.svg"
             alt="The Infinity Container"
-            width={500}
-            height={500}
-            className="w-[65vmin] h-auto"
-            style={{ filter: "invert(1)" }}
+            width={96}
+            height={96}
+            priority
+            className="w-16 h-16 object-contain"
           />
+          <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+            <source src="/assets/videos/hero.mp4" type="video/mp4" />
+          </video>
         </div>
-        {/* Video loads on top: /assets/videos/globe-white.mp4 (TODO: add file) */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 z-10 w-full h-full object-cover"
+
+        <p className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.24em] text-xs mb-9">
+          Psychedelic Integration <span className="mx-2">·</span> Life Transitions{" "}
+          <span className="mx-2">·</span> Expanded Experience
+        </p>
+
+        <h1
+          className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-wide leading-[1.12] max-w-3xl mx-auto mb-6"
+          style={{ fontSize: "clamp(2.375rem, 6.5vw, 4.25rem)" }}
         >
-          <source src="/assets/videos/globe-white.mp4" type="video/mp4" />
-        </video>
-        <div className="flex-1 relative z-0" />
-      </section>
+          This is where
+          <br />
+          the work continues.
+        </h1>
 
-      {/* ── Section 7: Yellow — practitioner CTA + spider ────────── */}
-      <section className="min-h-screen bg-tic-yellow flex flex-col">
-        <div className="flex-1 grid md:grid-cols-2 gap-0 pt-16">
+        <p
+          className="font-[family-name:var(--font-noto-serif)] italic text-tic-yellow mb-7"
+          style={{ fontSize: "clamp(1.19rem, 2.6vw, 1.56rem)" }}
+        >
+          Prepare well. Integrate fully. Keep going.
+        </p>
 
-          {/* Left: thread + spider + practitioner names */}
-          <div className="flex flex-col items-start px-6 md:px-12 pt-4">
-            {/* Silk thread */}
-            <div
-              className="w-px bg-black"
-              style={{ height: 100, marginLeft: "5rem" }}
-              aria-hidden
-            />
-            {/* Spider */}
-            <Image
-              src="/assets/spider.svg"
-              alt=""
-              width={220}
-              height={280}
-              aria-hidden
-              className="w-36 md:w-52 h-auto ml-2"
-            />
-            {/* Practitioner names — handwriting approximation */}
-            <div className="mt-6 font-[family-name:var(--font-noto-serif)] italic leading-loose text-2xl md:text-3xl">
-              <p className="ml-10">Nurturer &nbsp;&nbsp; Manager</p>
-              <p>Coach &nbsp; Space Holder &nbsp; Doctor</p>
-              <p className="ml-6">Teacher &nbsp; Leader &nbsp; Parent</p>
-              <p>Therapist &nbsp; Doula &nbsp; Artist &nbsp; Creator</p>
-              <p className="ml-14">Acts of Service</p>
+        <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey max-w-xl mx-auto mb-11 leading-[1.75] text-[15px] md:text-[17px]">
+          Psychedelic integration, life transitions, and expanded experience — for the people
+          doing the work and the practitioners who hold that space.
+        </p>
+
+        <a
+          href={MEMBERSHIP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block font-[family-name:var(--font-gordon)] uppercase tracking-wider text-sm bg-tic-orange text-black px-10 py-4 rounded-sm hover:bg-tic-pink transition-colors"
+        >
+          Find My Membership →
+        </a>
+        <a
+          href={SIGNIN_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block mt-5 text-sm text-tic-dark-grey hover:text-tic-yellow transition-colors"
+        >
+          Already a member? Sign in
+        </a>
+      </header>
+
+      <WayDivider />
+
+      {/* ── What is this? ──────────────────────────────────────────── */}
+      <section className="bg-white px-6 py-24 md:py-28">
+        <div className="max-w-[1080px] mx-auto">
+          <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.22em] text-[11px] text-tic-dark-grey mb-4">
+            What is this?
+          </p>
+          <h2
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-wide leading-tight max-w-2xl mb-10"
+            style={{ fontSize: "clamp(1.75rem, 4.4vw, 2.75rem)" }}
+          >
+            Integration support for the people who hold everyone else.
+          </h2>
+
+          <div className="grid md:grid-cols-[1.4fr_1fr] gap-12 md:gap-16 items-start">
+            <div className="font-[family-name:var(--font-noto-serif)] text-[16.5px] leading-[1.8] text-[#2a2a2a] flex flex-col gap-5">
+              <p>
+                The Infinity Container is a community built for the full arc — preparation before
+                the experience, and integration after. We work inside the Solar-Lunar Framework, a
+                proprietary system rooted in behavioral science, somatic practice, and
+                contemplative traditions.
+              </p>
+              <p>
+                We are here for practitioners, therapists, coaches, healers, and helpers of all
+                kinds — and for anyone navigating psychedelic experiences, life transitions, or
+                expanded states who is ready to do the work with real support.
+              </p>
+              <p>
+                Integration is not therapy. It is not a debrief. It is an ongoing practice of
+                becoming — and TIC is built to hold that practice over time.
+              </p>
             </div>
-            {/* Hearts */}
-            <div className="mt-6" aria-hidden>
+
+            <div className="relative">
               <Image
-                src="/assets/hearts.svg"
+                src="/assets/eye-witness.svg"
                 alt=""
-                width={80}
-                height={60}
-                className="w-16 h-auto"
+                aria-hidden
+                width={103}
+                height={68}
+                className="hidden md:block absolute -top-10 right-0 w-16 h-auto opacity-80"
               />
+              <Image
+                src="/assets/integration.svg"
+                alt="Integration"
+                width={420}
+                height={130}
+                className="w-full max-w-xs h-auto mb-6"
+              />
+              <p className="font-[family-name:var(--font-noto-serif)] italic leading-[1.9] text-[17px] border-l-[3px] border-tic-yellow pl-6">
+                Integration is a birthday &amp; a funeral. It is playing in the unknown, while
+                knowing yourself more. It is weaving. It is collaborating. It is titration &amp;
+                digestion. It is process. It is practice with awareness. It is the evolution of a
+                differentiated, connected self. It is intra-connected identity. It is WE, it is
+                US. It is the link between possibility and actuality.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Right: question copy + closed hand */}
-          <div className="flex flex-col justify-between px-6 md:px-12 pt-8 pb-8">
-            <div>
-              <Image
-                src="/assets/are-you-a-practitioner.svg"
-                alt="Are you a Practitioner?"
-                width={440}
-                height={140}
-                className="w-full max-w-sm h-auto mb-8"
-              />
-              <div
-                className="font-[family-name:var(--font-noto-serif)] text-right leading-relaxed space-y-3"
-                style={{ fontSize: "clamp(1rem, 2.5vw, 1.5rem)" }}
+      <WayDivider onBlack />
+
+      {/* ── Two Paths ──────────────────────────────────────────────── */}
+      <section className="bg-tic-grey px-6 py-24 md:py-28">
+        <div className="max-w-[1080px] mx-auto">
+          <div className="text-center mb-14">
+            <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.22em] text-[11px] text-tic-dark-grey mb-4">
+              Who is this for?
+            </p>
+            <h2
+              className="font-[family-name:var(--font-gordon)] uppercase tracking-wide mb-5"
+              style={{ fontSize: "clamp(1.75rem, 4.4vw, 2.75rem)" }}
+            >
+              Two containers. One ecosystem.
+            </h2>
+            <p className="font-[family-name:var(--font-noto-serif)] italic text-[17px] text-[#2a2a2a] max-w-lg mx-auto">
+              Whether you are doing your own integration work or supporting others in theirs —
+              there is a place for you here.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-[920px] mx-auto">
+            <div className="bg-tic-turquoise text-white rounded p-10 md:p-11 flex flex-col">
+              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.2em] text-[10px] opacity-85 mb-5">
+                For Practitioners
+              </p>
+              <h3
+                className="font-[family-name:var(--font-gordon)] uppercase tracking-wide leading-tight mb-4"
+                style={{ fontSize: "clamp(1.3rem, 2.6vw, 1.7rem)" }}
               >
-                <p>Are you <strong>holding</strong> &amp; <strong>creating</strong> without feeling held?</p>
-                <p>Perhaps you&apos;re <strong>lacking mentorship</strong>?</p>
-                <p>Feeling <strong>burnt out</strong>? <strong>Uninspired</strong>?</p>
-                <p>Are you doing <strong>a lot of giving</strong> without <strong>enough receiving</strong>?</p>
-              </div>
-
-              <div
-                className="mt-8 text-right font-[family-name:var(--font-noto-serif)] space-y-3"
-                style={{ fontSize: "clamp(1rem, 2vw, 1.4rem)" }}
-              >
-                <p className="font-bold text-xl">Join us in The Infinity Container.</p>
-                <p>
-                  We&apos;re <strong>embodying</strong> what we learn,{" "}
-                  <strong>exploring</strong> what we teach, &amp;{" "}
-                  <strong>teaching</strong> better ways to practice.
-                  We&apos;re offering integration and expanded possibilities.
-                </p>
-              </div>
-            </div>
-
-            {/* Closed hand illustration */}
-            <div className="flex justify-end mt-6" aria-hidden>
+                You hold a lot.
+                <br />
+                This holds you.
+              </h3>
+              <p className="font-[family-name:var(--font-noto-serif)] text-[15px] leading-[1.7] mb-8 flex-grow">
+                For therapists, coaches, healers, bodyworkers, and space holders who are ready for
+                a consistent place to be held — not just to hold. Weekly practice. Real tools. A
+                community that understands the work.
+              </p>
               <Image
                 src="/assets/closed-hand.svg"
                 alt=""
+                aria-hidden
                 width={220}
                 height={220}
-                className="w-40 md:w-56 h-auto"
+                className="w-16 h-auto mb-6 opacity-90"
               />
+              <Link
+                href="/who-is-this-for"
+                className="font-[family-name:var(--font-gordon)] uppercase tracking-wider text-xs bg-white text-tic-turquoise px-6 py-3 rounded-sm text-center hover:opacity-85 transition-opacity"
+              >
+                Explore the Practitioner Path →
+              </Link>
+            </div>
+
+            <div className="bg-tic-salmon text-black rounded p-10 md:p-11 flex flex-col">
+              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.2em] text-[10px] opacity-85 mb-5">
+                For Helpers &amp; Seekers
+              </p>
+              <h3
+                className="font-[family-name:var(--font-gordon)] uppercase tracking-wide leading-tight mb-4"
+                style={{ fontSize: "clamp(1.3rem, 2.6vw, 1.7rem)" }}
+              >
+                You don&apos;t have to figure this out alone.
+              </h3>
+              <p className="font-[family-name:var(--font-noto-serif)] text-[15px] leading-[1.7] mb-8 flex-grow">
+                For helpers, caregivers, educators, artists, and curious humans integrating their
+                own experiences. Drop-in practice. Integration frameworks. A community of people
+                doing the work alongside you.
+              </p>
+              <Image
+                src="/assets/open-hand.svg"
+                alt=""
+                aria-hidden
+                width={220}
+                height={192}
+                className="w-16 h-auto mb-6 opacity-90"
+              />
+              <Link
+                href="/what-is-integration"
+                className="font-[family-name:var(--font-gordon)] uppercase tracking-wider text-xs bg-black text-white px-6 py-3 rounded-sm text-center hover:opacity-85 transition-opacity"
+              >
+                Explore the Practice Path →
+              </Link>
+            </div>
+          </div>
+
+          <div className="max-w-[920px] mx-auto mt-7 bg-white border border-black/10 rounded p-9 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div>
+              <h4 className="font-[family-name:var(--font-gordon)] uppercase tracking-wide text-lg mb-2">
+                Not ready for a membership? Start free.
+              </h4>
+              <p className="font-[family-name:var(--font-noto-serif)] text-sm leading-[1.65] text-[#3a3a3a] max-w-md">
+                Join the free community for monthly community calls and a library of integration
+                modules — each with one practice and one teaching video. A real taste of the work,
+                at no cost.
+              </p>
+            </div>
+            <a
+              href={MEMBERSHIP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 whitespace-nowrap font-[family-name:var(--font-gordon)] uppercase tracking-wider text-xs border border-black text-black px-7 py-3 rounded-sm hover:bg-black hover:text-white transition-colors"
+            >
+              Join Free →
+            </a>
+          </div>
+
+          <div className="text-center mt-11">
+            <a
+              href={MEMBERSHIP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-[family-name:var(--font-noto-serif)] italic text-base underline underline-offset-4 hover:text-tic-brown transition-colors"
+            >
+              Not sure which path fits you? Take the 7-question quiz →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Framework ──────────────────────────────────────────────── */}
+      <section className="bg-black text-white px-6 py-28 md:py-32">
+        <div className="max-w-[1080px] mx-auto">
+          <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.22em] text-[11px] text-tic-yellow mb-4">
+            Our approach
+          </p>
+          <h2
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-wide leading-[1.18] max-w-2xl mb-8"
+            style={{ fontSize: "clamp(1.75rem, 4.4vw, 2.9rem)" }}
+          >
+            Integration is not an event.
+            <br />
+            It is a system.
+          </h2>
+          <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey max-w-xl leading-[1.8] text-[17px] mb-10">
+            The Solar-Lunar Framework is TIC&apos;s proprietary integration system — built on
+            behavioral science, somatic practice, and contemplative traditions. It maps the full
+            arc across two spirals:
+          </p>
+
+          <Image
+            src="/assets/solar-lunar-spiral.svg"
+            alt=""
+            aria-hidden
+            width={113}
+            height={113}
+            style={{ filter: "invert(1)" }}
+            className="w-20 h-auto mx-auto mb-14 opacity-90"
+          />
+
+          <div className="grid md:grid-cols-2 gap-7 max-w-[920px] mx-auto mb-14">
+            <div className="rounded p-10 md:p-11 border border-white/10 bg-gradient-to-br from-tic-pink/15 to-tic-orange/15">
+              <span className="text-3xl mb-4 block" aria-hidden>☀</span>
+              <h3 className="font-[family-name:var(--font-gordon)] uppercase tracking-wide text-xl text-tic-salmon mb-1.5">
+                The Solar Spiral
+              </h3>
+              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-xs text-tic-grey mb-4">
+                7 Preparation Capacities
+              </p>
+              <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey text-[15px] leading-[1.7] mb-5">
+                The capacities that help you arrive ready — grounded, receptive, and resourced
+                before the experience begins.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-wide text-[11px] border border-white/30 rounded-full px-3.5 py-1.5">
+                  Ground
+                </span>
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-wide text-[11px] border border-dashed border-white/30 rounded-full px-3.5 py-1.5 opacity-55">
+                  + 6 more
+                </span>
+              </div>
+            </div>
+
+            <div className="rounded p-10 md:p-11 border border-white/10 bg-gradient-to-br from-tic-cobalt/20 to-tic-turquoise/20">
+              <span className="text-3xl mb-4 block" aria-hidden>☾</span>
+              <h3 className="font-[family-name:var(--font-gordon)] uppercase tracking-wide text-xl text-[#7fb8c9] mb-1.5">
+                The Lunar Spiral
+              </h3>
+              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-xs text-tic-grey mb-4">
+                13 Integration Capacities
+              </p>
+              <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey text-[15px] leading-[1.7] mb-5">
+                The capacities that help you weave what you find into who you are becoming — a
+                little at a time.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-wide text-[11px] border border-white/30 rounded-full px-3.5 py-1.5">
+                  Weave
+                </span>
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-wide text-[11px] border border-white/30 rounded-full px-3.5 py-1.5">
+                  Conduct
+                </span>
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-wide text-[11px] border border-dashed border-white/30 rounded-full px-3.5 py-1.5 opacity-55">
+                  + 11 more
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
+            <div>
+              <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey max-w-lg leading-relaxed text-base mb-6">
+                Every program, session, and theme inside TIC is organized within this framework.
+                It is not a curriculum you complete. It is a practice you return to.
+              </p>
+              <Link
+                href="/what-is-integration"
+                className="font-[family-name:var(--font-gordon)] uppercase tracking-wider text-xs text-tic-yellow border-b border-tic-yellow pb-1 hover:text-tic-pink hover:border-tic-pink transition-colors"
+              >
+                Learn more about the Solar-Lunar Framework →
+              </Link>
+            </div>
+            <Image
+              src="/assets/mushrooms-trio.svg"
+              alt=""
+              aria-hidden
+              width={98}
+              height={151}
+              style={{ filter: "invert(1)" }}
+              className="w-16 h-auto opacity-80 shrink-0"
+            />
+          </div>
+        </div>
+      </section>
+
+      <WayDivider />
+
+      {/* ── Testimonials ───────────────────────────────────────────── */}
+      <section className="bg-white px-6 py-24 md:py-28">
+        <div className="max-w-[1080px] mx-auto">
+          <h2
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-wide text-center mb-14"
+            style={{ fontSize: "clamp(1.625rem, 4vw, 2.5rem)" }}
+          >
+            What practitioners say.
+          </h2>
+
+          <div className="relative grid md:grid-cols-2 gap-11 max-w-[920px] mx-auto">
+            <Image
+              src="/assets/spider-thick.svg"
+              alt=""
+              aria-hidden
+              width={890}
+              height={1386}
+              className="hidden md:block absolute -top-16 -right-10 w-14 h-auto opacity-70"
+            />
+            <div>
+              <blockquote className="font-[family-name:var(--font-noto-serif)] italic leading-[1.8] text-lg border-l-[3px] border-tic-pink pl-6 mb-4">
+                &ldquo;Friday practice is a place where I don&apos;t have to do the holding. I get
+                to be held — and I also learn techniques I can use with my clients.&rdquo;
+              </blockquote>
+              <cite className="font-[family-name:var(--font-gordon)] not-italic uppercase tracking-[0.16em] text-[11px] text-tic-dark-grey pl-6">
+                — Practice Member
+              </cite>
+            </div>
+            <div>
+              <blockquote className="font-[family-name:var(--font-noto-serif)] italic leading-[1.8] text-lg border-l-[3px] border-tic-pink pl-6 mb-4">
+                &ldquo;The consistency and the connection allows me to really grow and trust
+                there&apos;s a place to grow with and in. I feel held by the ecosystem.&rdquo;
+              </blockquote>
+              <cite className="font-[family-name:var(--font-gordon)] not-italic uppercase tracking-[0.16em] text-[11px] text-tic-dark-grey pl-6">
+                — Practitioner Member
+              </cite>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Section 8: Coral — space to expand + newsletter ──────── */}
-      <section className="min-h-screen bg-tic-coral flex flex-col">
-        <div className="flex-1 flex flex-col items-center justify-center px-6 py-20">
-          <Image
-            src="/assets/space-to-expand.svg"
-            alt="Do you need space to expand + condense in? Us too."
-            width={720}
-            height={420}
-            className="w-full max-w-2xl h-auto mb-14"
-          />
-          <InlineNewsletter inputBg="bg-tic-yellow" />
-        </div>
-      </section>
-
-      {/* ── Section 9: Yellow — presence + arch CTA ───────────────── */}
-      <section className="min-h-screen bg-tic-yellow flex flex-col">
+      {/* ── Newsletter ─────────────────────────────────────────────── */}
+      <section className="bg-tic-yellow px-6 py-24 md:py-28 text-center">
         <h2
-          className="text-center font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] pt-10 pb-4 px-4"
-          style={{ fontSize: "clamp(0.9rem, 2.2vw, 1.7rem)" }}
+          className="font-[family-name:var(--font-gordon)] uppercase tracking-wide mb-4"
+          style={{ fontSize: "clamp(1.625rem, 4vw, 2.5rem)" }}
         >
-          PRESENCE IS THE ONLY THING THAT HAS NO END
+          Integration as a practice, not an event.
         </h2>
-
-        <div className="flex-1 flex items-center justify-between px-6 md:px-14 gap-4 py-6">
-          <a
-            href="https://the-infinity-container.mn.co/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:block font-[family-name:var(--font-gordon)] font-bold uppercase tracking-widest leading-tight max-w-[180px] hover:opacity-70 transition-opacity"
-            style={{ fontSize: "clamp(1rem, 1.6vw, 1.5rem)" }}
-          >
-            JOIN US IN THE<br />INFINITY<br />CONTAINER
-          </a>
-
-          <div className="flex-1 flex items-center justify-center min-w-0">
-            <Image
-              src="/assets/window-view.svg"
-              alt="The Infinity Container portal — stained glass arch"
-              width={480}
-              height={660}
-              className="w-full max-w-[260px] md:max-w-[420px] h-auto"
-            />
-          </div>
-
-          <a
-            href="https://the-infinity-container.mn.co/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:block font-[family-name:var(--font-gordon)] font-bold uppercase tracking-widest leading-tight max-w-[180px] text-right hover:opacity-70 transition-opacity"
-            style={{ fontSize: "clamp(1rem, 1.6vw, 1.5rem)" }}
-          >
-            ENTER OUR<br />MEMBERSHIP<br />PORTAL
-          </a>
-        </div>
-
-        {/* Mobile CTAs */}
-        <div className="md:hidden flex flex-col items-center gap-6 px-6 pb-10 text-center">
-          <a
-            href="https://the-infinity-container.mn.co/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-[family-name:var(--font-gordon)] font-bold text-2xl uppercase tracking-widest leading-tight"
-          >
-            JOIN US IN THE INFINITY CONTAINER
-          </a>
-          <a
-            href="https://the-infinity-container.mn.co/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-[family-name:var(--font-gordon)] font-bold text-2xl uppercase tracking-widest leading-tight"
-          >
-            ENTER OUR MEMBERSHIP PORTAL
-          </a>
-        </div>
+        <p className="font-[family-name:var(--font-noto-serif)] text-base max-w-lg mx-auto mb-10 leading-[1.7] text-[#2a2a1a]">
+          The TIC newsletter brings you integration frameworks, somatic tools, and practitioner
+          resources — rooted in the Solar-Lunar system. Written by Dr. Victoria Sterkin.
+        </p>
+        <InlineNewsletter inputBg="bg-white" />
+        <p className="mt-4 text-xs text-[#5a570f]">No spam. Unsubscribe anytime.</p>
       </section>
 
+      {/* ── Closing CTA ────────────────────────────────────────────── */}
+      <section className="relative bg-black text-white px-6 py-20 text-center overflow-hidden">
+        <Image
+          src="/assets/window-view.svg"
+          alt="The Infinity Container membership portal"
+          width={480}
+          height={660}
+          className="mx-auto w-full max-w-[180px] h-auto mb-8"
+        />
+        <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey max-w-md mx-auto mb-8 leading-relaxed">
+          Whenever you&apos;re ready, the container is open.
+        </p>
+        <a
+          href={MEMBERSHIP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block font-[family-name:var(--font-gordon)] uppercase tracking-wider text-sm border border-tic-yellow text-tic-yellow px-9 py-4 rounded-sm hover:bg-tic-yellow hover:text-black transition-colors"
+        >
+          Enter Our Membership Portal
+        </a>
+      </section>
     </main>
   );
 }
 
-/* Inline marquee — avoids importing Framer Motion at page level */
-function MarqueeRow({
-  text,
-  duration,
-  fontSize,
-}: {
-  text: string;
-  duration: number;
-  fontSize: string;
-}) {
-  const repeated = Array(8).fill(text).join("   ✦   ");
+function WayDivider({ onBlack = false }: { onBlack?: boolean }) {
   return (
-    <div className="overflow-hidden w-full">
-      <p
-        className="font-[family-name:var(--font-gordon)] text-tic-yellow whitespace-nowrap animate-marquee select-none"
-        style={{ fontSize, lineHeight: 0.88 }}
+    <div className={`px-6 py-20 text-center ${onBlack ? "bg-black" : "bg-tic-olive"}`}>
+      <span
+        className={`font-[family-name:var(--font-gordon)] uppercase tracking-[0.32em] ${
+          onBlack ? "text-white" : "text-tic-yellow"
+        }`}
+        style={{ fontSize: "clamp(1.25rem, 3.4vw, 2.125rem)" }}
       >
-        {repeated}&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;{repeated}
-      </p>
-      <style>{`
-        @keyframes marquee-row { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-        .animate-marquee { animation: marquee-row ${duration}s linear infinite; }
-      `}</style>
+        Integration is the way
+      </span>
     </div>
   );
 }
