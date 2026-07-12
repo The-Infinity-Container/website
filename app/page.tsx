@@ -136,7 +136,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Integration Section ────────────────────────────────────── */}
-      <section className="px-6 py-[100px]" style={{ backgroundColor: "#D5D06A" }}>
+      <section className="px-6 py-[66px]" style={{ backgroundColor: "#D5D06A" }}>
         <div className="max-w-[80vw] mx-auto">
           <Image
             src="/assets/integration.svg"
@@ -159,6 +159,58 @@ export default function HomePage() {
             A little at a time.
           </p>
         </div>
+
+        {/* Spotify Playlist Section with Mushrooms */}
+        <div>
+          <div className="flex items-center justify-center gap-8">
+            {/* Left Mushrooms */}
+            <div className="hidden lg:block flex-shrink-0">
+              <Image
+                src="/assets/mushrooms-trio.svg"
+                alt=""
+                aria-hidden
+                width={233}
+                height={359}
+                className="w-[233px] h-[359px]"
+              />
+            </div>
+
+            {/* Spotify Embed */}
+            <div style={{ width: '532px', height: '294px', marginTop: '20px' }} className="flex-shrink-0">
+              <div className="bg-black rounded-xl p-6 text-center h-full">
+                <div className="bg-[#C41E3A] rounded-lg p-8 h-full flex flex-col">
+                  <div className="mb-4">
+                    <img
+                      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='white'/%3E%3Cpath d='M35 30 L65 50 L35 70 Z' fill='%23C41E3A'/%3E%3C/svg%3E"
+                      alt=""
+                      className="w-12 h-12 mx-auto"
+                    />
+                  </div>
+                  <p className="text-white text-xl font-bold mb-1">Integration Playlist</p>
+                  <p className="text-white/90 text-xs mb-4">BIRTHDAY/FUNERAL · Paul Bennett IV</p>
+                  <div className="bg-white/10 rounded-lg p-4 mb-4 flex-grow">
+                    <p className="text-white/60 text-xs">Spotify Embed Player Placeholder</p>
+                  </div>
+                  <button className="bg-white text-[#C41E3A] px-6 py-2 rounded-full font-semibold text-xs hover:bg-white/90 transition-opacity mt-auto">
+                    Open in Spotify
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Mushrooms (Mirrored) */}
+            <div className="hidden lg:block flex-shrink-0">
+              <Image
+                src="/assets/mushrooms-trio.svg"
+                alt=""
+                aria-hidden
+                width={233}
+                height={359}
+                className="w-[233px] h-[359px] scale-x-[-1]"
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
       <WayDivider onBlack />
@@ -166,44 +218,52 @@ export default function HomePage() {
       {/* ── Two Paths ──────────────────────────────────────────────── */}
       <section className="bg-tic-grey px-6 py-[110px]">
         <div className="max-w-[1080px] mx-auto">
-          <div className="text-center mb-14">
-            <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.22em] text-[11px] text-tic-dark-grey mb-[18px]">
+          <div className="text-center mb-14 relative">
+            <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.15em] text-tic-dark-grey mb-[18px]" style={{ fontSize: "2.4em" }}>
               Who is this for?
             </p>
             <h2
               className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] mb-4"
-              style={{ fontSize: "clamp(1.75rem, 4.4vw, 2.75rem)" }}
+              style={{ fontSize: "4.08em" }}
             >
               Two containers. One ecosystem.
             </h2>
-            <p className="font-[family-name:var(--font-noto-serif)] italic text-[17px] text-[#2a2a2a] max-w-[560px] mx-auto">
+            <p className="font-[family-name:var(--font-noto-serif)] italic text-[#2a2a2a] max-w-[920px] mx-auto" style={{ fontSize: "2.4em" }}>
               Whether you are doing your own integration work or supporting others in theirs —
               there is a place for you here.
             </p>
+            <Image
+              src="/assets/closed-hand.svg"
+              alt=""
+              aria-hidden
+              width={900}
+              height={900}
+              className="absolute top-0 -right-[294px] w-96 lg:w-[600px] h-auto opacity-20"
+            />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-[28px] max-w-[920px] mx-auto">
+          <div className="grid gap-[28px] max-w-[95vw] mx-auto">
             <div className="relative">
-              <div className="bg-tic-turquoise text-white rounded py-[46px] px-[38px] flex flex-col">
-                <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.2em] text-[10px] opacity-85 mb-5">
+              <div className="text-white rounded py-[80px] px-[100px] flex flex-col" style={{ backgroundColor: "#1948A7" }}>
+                <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.2em] text-[14px] opacity-85 mb-8">
                   For Practitioners
                 </p>
                 <h3
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.25] mb-[18px]"
-                  style={{ fontSize: "clamp(1.3125rem, 2.6vw, 1.6875rem)" }}
+                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.25] mb-[28px] max-w-[800px]"
+                  style={{ fontSize: "clamp(2rem, 4.5vw, 2.75rem)" }}
                 >
                   You hold a lot.
                   <br />
                   This holds you.
                 </h3>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[15px] leading-[1.7] mb-[30px] flex-grow">
+                <p className="font-[family-name:var(--font-noto-serif)] text-[20px] leading-[1.7] mb-[40px] flex-grow max-w-[800px]">
                   For therapists, coaches, healers, bodyworkers, and space holders who are ready
                   for a consistent place to be held — not just to hold. Weekly practice. Real
                   tools. A community that understands the work.
                 </p>
                 <Link
                   href="/who-is-this-for"
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-xs bg-white text-tic-turquoise px-6 py-[13px] rounded-sm text-center hover:opacity-85 transition-opacity"
+                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm bg-white px-8 py-[16px] rounded-sm text-center hover:opacity-85 transition-opacity w-fit" style={{ color: "#286B80", boxShadow: "0 4px 12px rgba(40, 107, 128, 0.3)" }}
                 >
                   Explore the Practitioner Path →
                 </Link>
@@ -218,25 +278,34 @@ export default function HomePage() {
               />
             </div>
 
+            <Image
+              src="/assets/open-hand.svg"
+              alt=""
+              aria-hidden
+              width={300}
+              height={260}
+              className="absolute -left-32 top-1/2 -translate-y-1/2 w-56 lg:w-80 h-auto opacity-50 z-10"
+            />
+
             <div className="relative">
-              <div className="bg-tic-salmon text-black rounded py-[46px] px-[38px] flex flex-col">
-                <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.2em] text-[10px] opacity-85 mb-5">
+              <div className="text-black rounded py-[80px] px-[100px] flex flex-col" style={{ backgroundColor: "#F56E71" }}>
+                <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.2em] text-[14px] opacity-85 mb-8">
                   For Helpers &amp; Seekers
                 </p>
                 <h3
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.25] mb-[18px]"
-                  style={{ fontSize: "clamp(1.3125rem, 2.6vw, 1.6875rem)" }}
+                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.25] mb-[28px] max-w-[800px]"
+                  style={{ fontSize: "clamp(2rem, 4.5vw, 2.75rem)" }}
                 >
                   You don&apos;t have to figure this out alone.
                 </h3>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[15px] leading-[1.7] mb-[30px] flex-grow">
+                <p className="font-[family-name:var(--font-noto-serif)] text-[20px] leading-[1.7] mb-[40px] flex-grow max-w-[800px]">
                   For helpers, caregivers, educators, artists, and curious humans integrating
                   their own experiences. Drop-in practice. Integration frameworks. A community of
                   people doing the work alongside you.
                 </p>
                 <Link
                   href="/what-is-integration"
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-xs bg-black text-white px-6 py-[13px] rounded-sm text-center hover:opacity-85 transition-opacity"
+                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm bg-white px-8 py-[16px] rounded-sm text-center hover:opacity-85 transition-opacity w-fit" style={{ color: "#286B80", boxShadow: "0 4px 12px rgba(40, 107, 128, 0.3)" }}
                 >
                   Explore the Practice Path →
                 </Link>
