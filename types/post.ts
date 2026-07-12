@@ -11,6 +11,10 @@ export type Post = {
   category: CategoryKey;
   cover_image_url: string | null;
   images: string[];
+  focus_keyphrase: string;
+  seo_title: string;
+  meta_description: string;
+  alt_text: string;
   status: PostStatus;
   created_at: string;
   updated_at: string;

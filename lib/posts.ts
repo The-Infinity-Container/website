@@ -5,7 +5,14 @@ import type { Post } from "@/types/post";
 // yet, Supabase simply omits the column rather than erroring, which would
 // otherwise crash every `post.images.length` access.
 function normalize(post: Post): Post {
-  return { ...post, images: post.images ?? [] };
+  return {
+    ...post,
+    images: post.images ?? [],
+    focus_keyphrase: post.focus_keyphrase ?? "",
+    seo_title: post.seo_title ?? "",
+    meta_description: post.meta_description ?? "",
+    alt_text: post.alt_text ?? "",
+  };
 }
 
 export async function getPublishedPosts(): Promise<Post[]> {

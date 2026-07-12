@@ -11,7 +11,7 @@ export default async function BlogPage() {
   const posts = await getPublishedPosts();
 
   return (
-    <main className="pb-[5em]">
+    <main>
       <BlogHero posts={posts} />
     </main>
   );

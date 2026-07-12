@@ -28,6 +28,16 @@ export async function deletePost(id: string) {
   revalidatePath("/blog");
 }
 
+export async function getUsedFocusKeyphrases(excludeId?: string): Promise<string[]> {
+  const supabase = await requireAdmin();
+  let query = supabase.from("posts").select("focus_keyphrase").neq("focus_keyphrase", "");
+  if (excludeId) query = query.neq("id", excludeId);
+
+  const { data, error } = await query;
+  if (error) return [];
+  return (data ?? []).map((row) => row.focus_keyphrase as string).filter(Boolean);
+}
+
 export type PostActionState = { error: string } | null;
 
 export type PostInput = {
@@ -38,8 +48,20 @@ export type PostInput = {
   body: string;
   coverImageUrl: string | null;
   images: string[];
+  focusKeyphrase: string;
+  seoTitle: string;
+  metaDescription: string;
+  altText: string;
   status: PostStatus;
 };
+
+function validateSeoLengths(input: PostInput): string | null {
+  if (input.focusKeyphrase.length > 60) return "Focus keyphrase must be 60 characters or fewer.";
+  if (input.seoTitle.length > 60) return "SEO title must be 60 characters or fewer.";
+  if (input.metaDescription.length > 160) return "Meta description must be 160 characters or fewer.";
+  if (input.altText.length > 125) return "Alt text must be 125 characters or fewer.";
+  return null;
+}
 
 function deriveExcerpt(input: PostInput): string | null {
   if (input.excerpt.trim()) return input.excerpt.trim();
@@ -53,6 +75,8 @@ export async function createPost(input: PostInput): Promise<PostActionState> {
   if (!input.title.trim()) return { error: "Title is required." };
   if (!input.slug.trim()) return { error: "Slug is required." };
   if (input.images.length > 5) return { error: "Up to 5 gallery images allowed." };
+  const seoError = validateSeoLengths(input);
+  if (seoError) return { error: seoError };
 
   const { error } = await supabase.from("posts").insert({
     title: input.title.trim(),
@@ -62,6 +86,10 @@ export async function createPost(input: PostInput): Promise<PostActionState> {
     body: input.body,
     cover_image_url: input.coverImageUrl,
     images: input.images,
+    focus_keyphrase: input.focusKeyphrase.trim(),
+    seo_title: input.seoTitle.trim(),
+    meta_description: input.metaDescription.trim(),
+    alt_text: input.altText.trim(),
     status: input.status,
     published_at: input.status === "published" ? new Date().toISOString() : null,
   });
@@ -82,6 +110,8 @@ export async function updatePost(id: string, input: PostInput): Promise<PostActi
   if (!input.title.trim()) return { error: "Title is required." };
   if (!input.slug.trim()) return { error: "Slug is required." };
   if (input.images.length > 5) return { error: "Up to 5 gallery images allowed." };
+  const seoError = validateSeoLengths(input);
+  if (seoError) return { error: seoError };
 
   const existing = await supabase.from("posts").select("status").eq("id", id).maybeSingle();
   const wasPublished = existing.data?.status === "published";
@@ -96,6 +126,10 @@ export async function updatePost(id: string, input: PostInput): Promise<PostActi
       body: input.body,
       cover_image_url: input.coverImageUrl,
       images: input.images,
+      focus_keyphrase: input.focusKeyphrase.trim(),
+      seo_title: input.seoTitle.trim(),
+      meta_description: input.metaDescription.trim(),
+      alt_text: input.altText.trim(),
       status: input.status,
       published_at:
         input.status === "published"
