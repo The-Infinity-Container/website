@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PostForm from "@/components/admin/PostForm";
+import NewPostClient from "./NewPostClient";
 
 export const metadata: Metadata = {
   title: "New Post — Admin",
@@ -11,7 +11,7 @@ export default function NewPostPage() {
       <h1 className="font-[family-name:var(--font-gordon)] text-3xl uppercase tracking-widest mb-8">
         New Post
       </h1>
-      <PostForm />
+      <NewPostClient />
     </div>
   );
 }

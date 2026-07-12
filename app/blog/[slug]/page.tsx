@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import sanitizeHtml from "sanitize-html";
 import { getPostBySlug } from "@/lib/posts";
 import { categoryColor, categoryLabel } from "@/lib/categories";
+import CategoryBanner from "@/components/CategoryBanner";
+import { sanitizePostBody } from "@/lib/sanitizeHtml";
 
 export async function generateMetadata({
   params,
@@ -15,8 +16,8 @@ export async function generateMetadata({
   const post = await getPostBySlug(slug);
   if (!post) return { title: "Post not found — The Infinity Container" };
   return {
-    title: `${post.title} — The Infinity Container`,
-    description: post.excerpt ?? undefined,
+    title: `${post.seo_title || post.title} — The Infinity Container`,
+    description: post.meta_description || post.excerpt || undefined,
   };
 }
 
@@ -26,17 +27,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!post) notFound();
 
-  const safeBody = sanitizeHtml(post.body, {
-    allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img", "h1", "h2"]),
-    allowedAttributes: {
-      ...sanitizeHtml.defaults.allowedAttributes,
-      img: ["src", "alt"],
-      a: ["href", "target", "rel"],
-    },
-  });
+  const safeBody = sanitizePostBody(post.body);
 
   return (
-    <main className="pt-14 pb-[5em]">
+    <main className="bg-black text-white pb-[5em]">
+      <CategoryBanner />
+
       <article className="px-6 pt-16 pb-10 max-w-2xl mx-auto">
         <div className="flex items-center gap-2 mb-4">
           <span
@@ -44,24 +40,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             style={{ backgroundColor: categoryColor(post.category) }}
             aria-hidden
           />
-          <p className="text-sm font-bold uppercase tracking-widest text-black/50">
+          <p className="text-sm font-bold uppercase tracking-widest text-white/50">
             {categoryLabel(post.category)}
           </p>
         </div>
-        <h1 className="font-[family-name:var(--font-gordon)] text-4xl md:text-5xl uppercase tracking-wide mb-8">
+        <h1 className="font-[family-name:var(--font-gordon)] text-4xl md:text-5xl uppercase tracking-wide leading-tight mb-8">
           {post.title}
         </h1>
         {post.cover_image_url && (
           <Image
             src={post.cover_image_url}
-            alt=""
+            alt={post.alt_text || post.title}
             width={800}
             height={450}
-            className="w-full h-auto mb-10 border-2 border-black"
+            className="w-full h-auto mb-10 border-2 border-white/20"
           />
         )}
         <div
-          className="font-[family-name:var(--font-noto-serif)] prose max-w-none"
+          className="font-[family-name:var(--font-noto-serif)] prose prose-invert max-w-none"
           dangerouslySetInnerHTML={{ __html: safeBody }}
         />
 
@@ -74,7 +70,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 alt=""
                 width={400}
                 height={400}
-                className="w-full aspect-square object-cover border-2 border-black"
+                className="w-full aspect-square object-cover border-2 border-white/20"
               />
             ))}
           </div>
@@ -82,7 +78,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </article>
 
       {/* ── Membership CTA ──────────────────────────────────────── */}
-      <section className="relative bg-black text-tic-yellow py-16 px-6 text-center overflow-hidden">
+      <section className="relative text-tic-yellow py-16 px-6 text-center overflow-hidden border-t border-white/10">
         <Image
           src="/assets/spider-heart.svg"
           alt=""
@@ -107,7 +103,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <div className="px-6 py-10 max-w-2xl mx-auto">
         <Link
           href="/blog"
-          className="inline-block text-sm font-bold uppercase tracking-widest underline hover:opacity-60 transition-opacity"
+          className="inline-block text-sm font-bold uppercase tracking-widest underline text-white hover:opacity-60 transition-opacity"
         >
           ← Back to Blog
         </Link>
