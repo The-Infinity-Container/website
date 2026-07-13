@@ -104,7 +104,21 @@ export default function HomePage() {
           </h2>
 
           <div className="relative">
-            <div className="font-[family-name:var(--font-noto-serif)] text-[34px] leading-[1.8] text-[#2a2a2a] flex flex-col gap-[22px] mb-16">
+            <div className="flex justify-center mb-[48px]">
+              <Image
+                src="/assets/integration.svg"
+                alt="Integration"
+                width={420}
+                height={130}
+                className="w-full max-w-[420px] h-auto"
+              />
+            </div>
+
+            <div className="font-[family-name:var(--font-noto-serif)] text-[16.5px] leading-[1.8] text-[#2a2a2a] flex flex-col gap-[22px] mb-16">
+              <div className="font-[family-name:var(--font-noto-serif)] italic text-[17px] leading-[1.9] border-l-[3px] border-tic-yellow pl-[26px]">
+                Integration is a birthday &amp; a funeral. It is playing in the unknown, while knowing yourself more. It is weaving. It is collaborating. It is titration &amp; digestion. It is process. It is practice with awareness.
+                <p className="font-[family-name:var(--font-noto-serif)] not-italic text-[11px] text-tic-dark-grey mt-[14px] font-normal">[full poem + handwritten "Integration" SVG from current site]</p>
+              </div>
               <p>
                 The Infinity Container is a community built for the full arc — preparation before
                 the experience, and integration after. We work inside the Solar-Lunar Framework, a
@@ -129,76 +143,6 @@ export default function HomePage() {
                 width={200}
                 height={350}
                 className="absolute w-56 lg:w-80 h-auto opacity-[0.28] -translate-y-[130px]"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Integration Section ────────────────────────────────────── */}
-      <section className="px-6 py-[66px]" style={{ backgroundColor: "#D5D06A" }}>
-        <div className="max-w-[80vw] mx-auto">
-          <Image
-            src="/assets/integration.svg"
-            alt="Integration"
-            width={420}
-            height={130}
-            className="w-full h-auto mb-12"
-          />
-          <p className="font-[family-name:var(--font-noto-serif)] leading-[1.9] text-[28px] text-[#2a2a2a]">
-            Integration is a birthday &amp; a funeral. It is playing in the unknown, while
-            knowing yourself more. It is weaving. It is collaborating. It is titration &amp;
-            digestion. It is process. It is practice with awareness. It is the evolution of a
-            differentiated, connected self. It is intra-connected identity. It is WE, it is
-            US. It is the link between possibility and actuality.
-          </p>
-
-          <p className="font-[family-name:var(--font-noto-serif)] leading-[1.9] text-[28px] text-[#2a2a2a] mt-8">
-            And it happens in The Infinity Container.
-            <br />
-            A little at a time.
-          </p>
-        </div>
-
-        {/* Spotify Playlist Section with Mushrooms */}
-        <div>
-          <div className="flex items-center justify-center gap-8">
-            {/* Left Mushrooms */}
-            <div className="hidden lg:block flex-shrink-0">
-              <Image
-                src="/assets/mushrooms-trio.svg"
-                alt=""
-                aria-hidden
-                width={233}
-                height={359}
-                className="w-[233px] h-[359px]"
-              />
-            </div>
-
-            {/* Spotify Embed */}
-            <div className="flex-shrink-0" style={{ transform: 'translateY(100px)' }}>
-              <iframe
-                data-testid="embed-iframe"
-                style={{ borderRadius: '12px' }}
-                src="https://open.spotify.com/embed/playlist/4dXmXxaXA2PDX0janyZoM3?utm_source=generator&si=359beda243574603"
-                width="100%"
-                height="152"
-                frameBorder="0"
-                allowFullScreen
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              />
-            </div>
-
-            {/* Right Mushrooms (Mirrored) */}
-            <div className="hidden lg:block flex-shrink-0">
-              <Image
-                src="/assets/mushrooms-trio.svg"
-                alt=""
-                aria-hidden
-                width={233}
-                height={359}
-                className="w-[233px] h-[359px] scale-x-[-1]"
               />
             </div>
           </div>
@@ -344,109 +288,81 @@ export default function HomePage() {
       </section>
 
       {/* ── Framework ──────────────────────────────────────────────── */}
-      <section className="relative text-white px-6 py-[120px] overflow-hidden" style={{ backgroundColor: "#0A0E10" }}>
-        <Image
-          src="/assets/solar-lunar-spiral.svg"
-          alt=""
-          aria-hidden
-          width={890}
-          height={1386}
-          style={{ filter: "invert(1)" }}
-          className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-[20px] w-[486px] h-auto opacity-20 z-0 pointer-events-none"
-        />
-
+      <section className="text-white px-6 py-[120px]" style={{ backgroundColor: "#0b0d10" }}>
         <div className="max-w-[1080px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.22em] text-[19px] text-tic-yellow mb-[18px]">
+          <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.22em] text-[11px] text-tic-yellow mb-[18px]">
             Our approach
           </p>
           <h2
             className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.18] mb-[30px]"
-            style={{ fontSize: "clamp(2.1rem, 4.4vw, 3.45rem)" }}
+            style={{ fontSize: "clamp(1.75rem, 4.4vw, 2.875rem)" }}
           >
             Integration is not an event.
             <br />
             It is a system.
           </h2>
-          <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey leading-[1.8] text-[20px] mb-[56px]">
+          <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey leading-[1.8] text-[17px] mb-[56px]">
             The Solar-Lunar Framework is TIC&apos;s proprietary integration system — built on
             behavioral science, somatic practice, and contemplative traditions. It maps the full
             arc across two spirals:
           </p>
 
-          <div className="grid gap-[76px] mb-[56px] relative">
-            <div className="rounded py-[100px] px-[80px]" style={{ backgroundColor: "#7C3537" }}>
-              <h3 className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[48px] mb-4" style={{ color: "#F56E71" }}>
+          <div className="grid gap-[28px] mb-[56px]">
+            <div className="rounded-sm py-[44px] px-[38px] border border-white/15" style={{ background: "linear-gradient(145deg, rgba(242,95,193,0.14), rgba(235,115,31,0.14))" }}>
+              <span className="text-3xl mb-[18px] block">☀</span>
+              <h3 className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.06em] text-[22px] leading-[1.2] mb-[6px]" style={{ color: "#f56e71" }}>
                 The Solar Spiral
               </h3>
-              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[44px] text-white mb-[40px]">
+              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[12px] text-tic-grey mb-[18px]">
                 7 Preparation Capacities
               </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-white text-[24px] leading-[1.8] mb-[48px]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey text-[15px] leading-[1.7] mb-[22px]">
                 The capacities that help you arrive ready — grounded, receptive, and resourced
                 before the experience begins.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border border-white rounded-full px-[28px] py-[14px]">
+              <div className="flex flex-wrap gap-2">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-white/30 text-white rounded-full px-[14px] py-[7px]">
                   Ground
                 </span>
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border rounded-full px-[28px] py-[14px]" style={{ borderColor: "#7B7B7A", color: "#7B7B7A" }}>
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-dashed border-white/30 text-white rounded-full px-[14px] py-[7px] opacity-55">
                   + 6 more
                 </span>
               </div>
             </div>
 
-            <Image
-              src="/assets/solar-lunar-spiral.svg"
-              alt=""
-              aria-hidden
-              width={890}
-              height={1386}
-              style={{ filter: "invert(1)" }}
-              className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[300px] h-auto opacity-15 z-0 pointer-events-none"
-            />
-
-            <div className="rounded py-[100px] px-[80px]" style={{ backgroundColor: "#236C7F" }}>
-              <h3 className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[48px] mb-4" style={{ color: "#0A0E10" }}>
+            <div className="rounded-sm py-[44px] px-[38px] border border-white/15" style={{ background: "linear-gradient(145deg, rgba(20,46,199,0.18), rgba(35,108,127,0.18))" }}>
+              <span className="text-3xl mb-[18px] block">☾</span>
+              <h3 className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.06em] text-[22px] leading-[1.2] mb-[6px]" style={{ color: "#7fb8c9" }}>
                 The Lunar Spiral
               </h3>
-              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[44px] text-white mb-[40px]">
+              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[12px] text-tic-grey mb-[18px]">
                 13 Integration Capacities
               </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-white text-[24px] leading-[1.8] mb-[48px]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey text-[15px] leading-[1.7] mb-[22px]">
                 The capacities that help you weave what you find into who you are becoming — a
                 little at a time.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border border-white rounded-full px-[28px] py-[14px]" style={{ color: "white" }}>
+              <div className="flex flex-wrap gap-2">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-white/30 text-white rounded-full px-[14px] py-[7px]">
                   Weave
                 </span>
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border border-white rounded-full px-[28px] py-[14px]" style={{ color: "white" }}>
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-white/30 text-white rounded-full px-[14px] py-[7px]">
                   Conduct
                 </span>
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border rounded-full px-[28px] py-[14px]" style={{ borderColor: "#7B7B7A", color: "#7B7B7A" }}>
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-dashed border-white/30 text-white rounded-full px-[14px] py-[7px] opacity-55">
                   + 11 more
                 </span>
               </div>
             </div>
           </div>
 
-          <Image
-            src="/assets/solar-lunar-spiral.svg"
-            alt=""
-            aria-hidden
-            width={890}
-            height={1386}
-            style={{ filter: "invert(1)" }}
-            className="hidden lg:block absolute left-1/2 -translate-x-1/2 w-[350px] h-auto opacity-15 z-0 pointer-events-none"
-          />
-
-          <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey leading-relaxed text-[24px] mb-[40px] relative z-10">
+          <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey leading-relaxed text-[16px] mb-[30px]">
             Every program, session, and theme inside TIC is organized within this framework. It
             is not a curriculum you complete. It is a practice you return to.
           </p>
           <Link
             href="/what-is-integration"
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[20px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors"
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[13px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors"
           >
             Learn more about the Solar-Lunar Framework →
           </Link>
