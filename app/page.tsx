@@ -216,7 +216,7 @@ export default function HomePage() {
       <WayDivider onBlack />
 
       {/* ── Two Paths ──────────────────────────────────────────────── */}
-      <section className="bg-tic-grey px-6 py-[110px]">
+      <section className="bg-tic-grey px-6 py-[110px] overflow-hidden">
         <div className="max-w-[1080px] mx-auto">
           <div className="text-center mb-14 relative">
             <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.15em] text-tic-dark-grey mb-[18px]" style={{ fontSize: "2.4em" }}>
@@ -242,8 +242,8 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="grid gap-[28px] max-w-[95vw] mx-auto">
-            <div className="relative">
+          <div className="grid gap-[160px] max-w-[95vw] mx-auto relative">
+            <div className="relative z-10">
               <div className="text-white rounded py-[80px] px-[100px] flex flex-col" style={{ backgroundColor: "#1948A7" }}>
                 <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.2em] text-[14px] opacity-85 mb-8">
                   For Practitioners
@@ -263,31 +263,24 @@ export default function HomePage() {
                 </p>
                 <Link
                   href="/who-is-this-for"
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm bg-white px-8 py-[16px] rounded-sm text-center hover:opacity-85 transition-opacity w-fit" style={{ color: "#286B80", boxShadow: "0 4px 12px rgba(40, 107, 128, 0.3)" }}
+                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[15px] bg-white px-[35px] py-[18px] rounded-sm text-center hover:opacity-85 transition-opacity w-fit" style={{ color: "#286B80", boxShadow: "0 4px 12px rgba(40, 107, 128, 0.3)" }}
                 >
                   Explore the Practitioner Path →
                 </Link>
               </div>
-              <Image
-                src="/assets/closed-hand.svg"
-                alt=""
-                aria-hidden
-                width={220}
-                height={220}
-                className="hidden md:block absolute -bottom-6 -right-6 w-20 lg:w-24 h-auto opacity-95 drop-shadow-lg"
-              />
             </div>
 
             <Image
               src="/assets/open-hand.svg"
               alt=""
               aria-hidden
-              width={300}
-              height={260}
-              className="absolute -left-32 top-1/2 -translate-y-1/2 w-56 lg:w-80 h-auto opacity-50 z-10"
+              width={900}
+              height={900}
+              className="absolute -left-[374px] top-[430px] w-96 lg:w-[600px] h-auto opacity-20 z-0 pointer-events-none"
+              style={{ transform: "scaleX(-1) rotate(45deg)" }}
             />
 
-            <div className="relative">
+            <div className="relative z-10">
               <div className="text-black rounded py-[80px] px-[100px] flex flex-col" style={{ backgroundColor: "#F56E71" }}>
                 <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.2em] text-[14px] opacity-85 mb-8">
                   For Helpers &amp; Seekers
@@ -305,28 +298,30 @@ export default function HomePage() {
                 </p>
                 <Link
                   href="/what-is-integration"
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm bg-white px-8 py-[16px] rounded-sm text-center hover:opacity-85 transition-opacity w-fit" style={{ color: "#286B80", boxShadow: "0 4px 12px rgba(40, 107, 128, 0.3)" }}
+                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[15px] bg-white px-[35px] py-[18px] rounded-sm text-center hover:opacity-85 transition-opacity w-fit" style={{ color: "#286B80", boxShadow: "0 4px 12px rgba(40, 107, 128, 0.3)" }}
                 >
                   Explore the Practice Path →
                 </Link>
               </div>
-              <Image
-                src="/assets/open-hand.svg"
-                alt=""
-                aria-hidden
-                width={220}
-                height={192}
-                className="hidden md:block absolute -bottom-6 -right-6 w-20 lg:w-24 h-auto opacity-95 drop-shadow-lg"
-              />
             </div>
           </div>
 
-          <div className="max-w-[920px] mx-auto mt-7 bg-white border border-black/10 rounded py-[38px] px-[42px] flex flex-col md:flex-row items-center justify-between gap-8">
-            <div>
-              <h4 className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.03em] text-[20px] mb-[10px]">
+          <div className="relative mx-auto mt-[160px]">
+            <Image
+              src="/assets/spider-thick.svg"
+              alt=""
+              aria-hidden
+              width={400}
+              height={600}
+              className="absolute right-[100px] -top-[160px] w-24 lg:w-36 h-auto opacity-20 z-20 pointer-events-none"
+            />
+
+            <div className="max-w-[95vw] mx-auto bg-white border border-black/10 rounded py-[80px] px-[100px] flex flex-col items-start justify-start gap-8 relative z-10">
+            <div className="max-w-[800px]">
+              <h4 className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.25] mb-[28px]" style={{ fontSize: "clamp(2rem, 4.5vw, 2.75rem)" }}>
                 Not ready for a membership? Start free.
               </h4>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[14.5px] leading-[1.65] text-[#3a3a3a] max-w-[560px]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-[20px] leading-[1.7] text-[#3a3a3a] mb-[40px]">
                 Join the free community for monthly community calls and a library of integration
                 modules — each with one practice and one teaching video. A real taste of the work,
                 at no cost.
@@ -336,10 +331,11 @@ export default function HomePage() {
               href={MEMBERSHIP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 whitespace-nowrap font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-xs border-[1.5px] border-black text-black px-[26px] py-[13px] rounded-sm hover:bg-black hover:text-white transition-colors"
+              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm border-[1.5px] border-black text-black px-8 py-[16px] rounded-sm hover:bg-black hover:text-white transition-colors"
             >
               Join Free →
             </a>
+            </div>
           </div>
 
           <div className="text-center mt-12">
@@ -347,7 +343,7 @@ export default function HomePage() {
               href={MEMBERSHIP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-[family-name:var(--font-noto-serif)] italic text-base underline underline-offset-4 hover:text-tic-brown transition-colors"
+              className="font-[family-name:var(--font-noto-serif)] italic text-[36px] underline underline-offset-4 hover:text-tic-brown transition-colors"
             >
               Not sure which path fits you? Take the 7-question quiz →
             </a>
