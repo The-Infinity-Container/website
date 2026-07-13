@@ -104,19 +104,28 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="font-[family-name:var(--font-noto-serif)] italic text-[17px] leading-[1.9] text-black border-l-[3px] border-tic-yellow pl-[26px]">
-              Integration is a birthday<br />
-              &amp; a funeral.<br />
-              It is playing in the unknown,<br />
-              while knowing yourself more.<br />
-              It is weaving.<br />
-              It is collaborating.<br />
-              It is titration &amp; digestion.<br />
-              It is process.<br />
-              It is practice with awareness.
-              <p className="font-[family-name:var(--font-noto-serif)] not-italic text-[11px] text-tic-dark-grey mt-[14px]">
-                [full poem + handwritten "Integration" SVG from current site]
-              </p>
+            <div className="flex flex-col gap-8">
+              <Image
+                src="/assets/integration.svg"
+                alt="Integration"
+                width={320}
+                height={100}
+                className="w-full h-auto"
+              />
+              <div className="font-[family-name:var(--font-noto-serif)] italic text-[17px] leading-[1.9] text-black border-l-[3px] border-tic-yellow pl-[26px]">
+                Integration is a birthday<br />
+                &amp; a funeral.<br />
+                It is playing in the unknown,<br />
+                while knowing yourself more.<br />
+                It is weaving.<br />
+                It is collaborating.<br />
+                It is titration &amp; digestion.<br />
+                It is process.<br />
+                It is practice with awareness.
+                <p className="font-[family-name:var(--font-noto-serif)] not-italic text-[11px] text-tic-dark-grey mt-[14px]">
+                  [full poem + handwritten "Integration" SVG from current site]
+                </p>
+              </div>
             </div>
           </div>
         </div>
