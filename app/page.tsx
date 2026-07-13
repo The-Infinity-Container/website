@@ -92,9 +92,9 @@ export default function HomePage() {
           </h2>
 
           {/* Mobile: stacked, Desktop: 2-column grid */}
-          <div className="flex flex-col gap-8 md:gap-16 max-w-[920px] md:grid md:max-w-full" style={{ gridTemplateColumns: "1.4fr 1fr", alignItems: "start" }}>
+          <div className="flex flex-col gap-8 md:gap-16 w-full md:grid" style={{ gridTemplateColumns: "1.4fr 1fr", alignItems: "start" }}>
             {/* Mobile: Integration image first */}
-            <div className="md:hidden order-first">
+            <div className="md:hidden order-1 w-full">
               <Image
                 src="/assets/integration.svg"
                 alt="Integration"
@@ -104,8 +104,24 @@ export default function HomePage() {
               />
             </div>
 
-            {/* Text content - appears second on mobile, first on desktop */}
-            <div className="flex flex-col gap-[22px] order-2 md:order-1">
+            {/* Mobile: Poem appears after image, before text */}
+            <div className="md:hidden order-2 w-full font-[family-name:var(--font-noto-serif)] italic text-[17px] leading-[1.9] text-black border-l-[3px] border-tic-yellow pl-[26px]">
+              Integration is a birthday<br />
+              &amp; a funeral.<br />
+              It is playing in the unknown,<br />
+              while knowing yourself more.<br />
+              It is weaving.<br />
+              It is collaborating.<br />
+              It is titration &amp; digestion.<br />
+              It is process.<br />
+              It is practice with awareness.
+              <p className="font-[family-name:var(--font-noto-serif)] not-italic text-[11px] text-tic-dark-grey mt-[14px]">
+                [full poem + handwritten "Integration" SVG from current site]
+              </p>
+            </div>
+
+            {/* Text content - appears third on mobile, first on desktop */}
+            <div className="flex flex-col gap-[22px] order-3 md:order-1 w-full">
               <p className="font-[family-name:var(--font-noto-serif)] text-[16.5px] leading-[1.8] text-[#2a2a2a]">
                 The Infinity Container is a community built for the full arc — preparation before the experience, and integration after. We work inside the Solar-Lunar Framework, a proprietary system rooted in behavioral science, somatic practice, and contemplative traditions.
               </p>
@@ -118,7 +134,7 @@ export default function HomePage() {
             </div>
 
             {/* Desktop: Integration image and poem in right column */}
-            <div className="hidden md:flex flex-col gap-8 order-3 md:order-2">
+            <div className="hidden md:flex flex-col gap-8 md:order-2">
               <Image
                 src="/assets/integration.svg"
                 alt="Integration"
@@ -141,29 +157,13 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-
-            {/* Mobile: Poem appears after image */}
-            <div className="md:hidden order-3 font-[family-name:var(--font-noto-serif)] italic text-[17px] leading-[1.9] text-black border-l-[3px] border-tic-yellow pl-[26px]">
-              Integration is a birthday<br />
-              &amp; a funeral.<br />
-              It is playing in the unknown,<br />
-              while knowing yourself more.<br />
-              It is weaving.<br />
-              It is collaborating.<br />
-              It is titration &amp; digestion.<br />
-              It is process.<br />
-              It is practice with awareness.
-              <p className="font-[family-name:var(--font-noto-serif)] not-italic text-[11px] text-tic-dark-grey mt-[14px]">
-                [full poem + handwritten "Integration" SVG from current site]
-              </p>
-            </div>
           </div>
         </div>
       </section>
 
       {/* ── Integration Section ────────────────────────────────────── */}
-      <section className="px-6 py-[66px]" style={{ backgroundColor: "#D5D06A" }}>
-        <div className="max-w-[80vw] mx-auto">
+      <section className="px-6 py-[66px] w-full overflow-hidden" style={{ backgroundColor: "#D5D06A" }}>
+        <div className="max-w-[920px] mx-auto px-6 md:px-0">
           <Image
             src="/assets/integration.svg"
             alt="Integration"
@@ -197,8 +197,8 @@ export default function HomePage() {
               Who is this for?
             </p>
             <h2
-              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] mb-4"
-              style={{ fontSize: "4.08em" }}
+              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] mb-4 break-words"
+              style={{ fontSize: "clamp(28px, 7.5vw, 4.08em)" }}
             >
               Two containers. One ecosystem.
             </h2>
@@ -344,7 +344,7 @@ export default function HomePage() {
             arc across two spirals:
           </p>
 
-          <div className="grid gap-7 mb-14 max-w-[920px]" style={{ gridTemplateColumns: "1fr 1fr" }}>
+          <div className="grid gap-7 mb-14 max-w-[920px]" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}>
             <div className="rounded-sm py-11 px-9.5 border border-white/15" style={{ background: "linear-gradient(145deg, rgba(242,95,193,0.14), rgba(235,115,31,0.14))" }}>
               <span className="text-[30px] mb-[18px] block">☀</span>
               <h3 className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.06em] text-[22px] leading-[1.2] mb-[6px]" style={{ color: "#f56e71" }}>
