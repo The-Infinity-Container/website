@@ -93,8 +93,8 @@ export default function HomePage() {
 
           {/* Mobile: stacked, Desktop: 2-column grid */}
           <div className="flex flex-col gap-8 md:gap-16 w-full md:grid" style={{ gridTemplateColumns: "1.4fr 1fr", alignItems: "start" }}>
-            {/* Mobile: Integration image first */}
-            <div className="md:hidden order-1 w-full">
+            {/* Mobile: Integration image second */}
+            <div className="md:hidden order-2 w-full">
               <Image
                 src="/assets/integration.svg"
                 alt="Integration"
@@ -104,8 +104,8 @@ export default function HomePage() {
               />
             </div>
 
-            {/* Mobile: Poem appears after image, before text */}
-            <div className="md:hidden order-2 w-full font-[family-name:var(--font-noto-serif)] italic text-[17px] leading-[1.9] text-black border-l-[3px] border-tic-yellow pl-[26px]">
+            {/* Mobile: Poem appears third */}
+            <div className="md:hidden order-3 w-full font-[family-name:var(--font-noto-serif)] italic text-[17px] leading-[1.9] text-black border-l-[3px] border-tic-yellow pl-[26px]">
               Integration is a birthday<br />
               &amp; a funeral.<br />
               It is playing in the unknown,<br />
@@ -120,8 +120,8 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Text content - appears third on mobile, first on desktop */}
-            <div className="flex flex-col gap-[22px] order-3 md:order-1 w-full">
+            {/* Text content - appears first on mobile, first on desktop */}
+            <div className="flex flex-col gap-[22px] order-1 md:order-1 w-full">
               <p className="font-[family-name:var(--font-noto-serif)] text-[16.5px] leading-[1.8] text-[#2a2a2a]">
                 The Infinity Container is a community built for the full arc — preparation before the experience, and integration after. We work inside the Solar-Lunar Framework, a proprietary system rooted in behavioral science, somatic practice, and contemplative traditions.
               </p>
@@ -162,7 +162,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Integration Section ────────────────────────────────────── */}
-      <section className="px-6 py-[66px] w-full overflow-hidden" style={{ backgroundColor: "#D5D06A" }}>
+      <section className="hidden px-6 py-[66px] w-full overflow-hidden" style={{ backgroundColor: "#D5D06A" }}>
         <div className="max-w-[920px] mx-auto px-6 md:px-0">
           <Image
             src="/assets/integration.svg"
@@ -187,10 +187,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <WayDivider onBlack />
+      <div className="hidden">
+        <WayDivider onBlack />
+      </div>
 
       {/* ── Two Paths ──────────────────────────────────────────────── */}
-      <section className="bg-tic-grey px-6 py-[110px] overflow-hidden">
+      <section className="hidden bg-tic-grey px-6 py-[110px] overflow-hidden">
         <div className="max-w-[1080px] mx-auto">
           <div className="text-center mb-14 relative">
             <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.15em] text-tic-dark-grey mb-[18px]" style={{ fontSize: "2.4em" }}>
@@ -218,7 +220,7 @@ export default function HomePage() {
 
           <div className="grid gap-[160px] max-w-[95vw] mx-auto relative">
             <div className="relative z-10">
-              <div className="text-white rounded py-[80px] px-[100px] flex flex-col" style={{ backgroundColor: "#1948A7" }}>
+              <div className="text-white rounded py-[40px] px-6 md:py-[80px] md:px-[100px] flex flex-col" style={{ backgroundColor: "#1948A7" }}>
                 <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.2em] text-[14px] opacity-85 mb-8">
                   For Practitioners
                 </p>
@@ -255,7 +257,7 @@ export default function HomePage() {
             />
 
             <div className="relative z-10">
-              <div className="text-black rounded py-[80px] px-[100px] flex flex-col" style={{ backgroundColor: "#F56E71" }}>
+              <div className="text-black rounded py-[40px] px-6 md:py-[80px] md:px-[100px] flex flex-col" style={{ backgroundColor: "#F56E71" }}>
                 <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.2em] text-[14px] opacity-85 mb-8">
                   For Helpers &amp; Seekers
                 </p>
@@ -290,7 +292,7 @@ export default function HomePage() {
               className="absolute right-[100px] -top-[160px] w-24 lg:w-36 h-auto opacity-20 z-20 pointer-events-none"
             />
 
-            <div className="max-w-[95vw] mx-auto bg-white border border-black/10 rounded py-[80px] px-[100px] flex flex-col items-start justify-start gap-8 relative z-10">
+            <div className="max-w-[95vw] mx-auto bg-white border border-black/10 rounded py-[40px] px-6 md:py-[80px] md:px-[100px] flex flex-col items-start justify-start gap-8 relative z-10">
             <div className="max-w-[800px]">
               <h4 className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.25] mb-[28px]" style={{ fontSize: "clamp(2rem, 4.5vw, 2.75rem)" }}>
                 Not ready for a membership? Start free.
@@ -345,7 +347,7 @@ export default function HomePage() {
           </p>
 
           <div className="grid gap-7 mb-14 max-w-[920px]" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}>
-            <div className="rounded-sm py-11 px-9.5 border border-white/15" style={{ background: "linear-gradient(145deg, rgba(242,95,193,0.14), rgba(235,115,31,0.14))" }}>
+            <div className="rounded-sm py-6 px-5 md:py-11 md:px-9.5 border border-white/15" style={{ background: "linear-gradient(145deg, rgba(242,95,193,0.14), rgba(235,115,31,0.14))" }}>
               <span className="text-[30px] mb-[18px] block">☀</span>
               <h3 className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.06em] text-[22px] leading-[1.2] mb-[6px]" style={{ color: "#f56e71" }}>
                 The Solar Spiral
@@ -367,7 +369,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="rounded-sm py-11 px-9.5 border border-white/15" style={{ background: "linear-gradient(145deg, rgba(20,46,199,0.18), rgba(35,108,127,0.18))" }}>
+            <div className="rounded-sm py-6 px-5 md:py-11 md:px-9.5 border border-white/15" style={{ background: "linear-gradient(145deg, rgba(20,46,199,0.18), rgba(35,108,127,0.18))" }}>
               <span className="text-[30px] mb-[18px] block">☾</span>
               <h3 className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.06em] text-[22px] leading-[1.2] mb-[6px]" style={{ color: "#7fb8c9" }}>
                 The Lunar Spiral
