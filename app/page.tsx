@@ -79,73 +79,72 @@ export default function HomePage() {
       <WayDivider />
 
       {/* ── What is this? ──────────────────────────────────────────── */}
-      <section className="relative bg-white px-6 py-[110px]">
-        <Image
-          src="/assets/eye-witness.svg"
-          alt=""
-          aria-hidden
-          width={103}
-          height={68}
-          className="hidden md:block absolute top-8 right-0 w-56 lg:w-80 h-auto opacity-35 z-10"
-        />
-        <div className="max-w-[95vw] px-6">
-          <p
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] text-black mb-[16px]"
-            style={{ fontSize: "clamp(1.75rem, 5vw, 3.5rem)" }}
-          >
+      <section className="bg-white px-6 py-[110px]">
+        <div className="max-w-[1080px] mx-auto">
+          <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.22em] text-[11px] text-tic-dark-grey mb-[18px]">
             What is this?
           </p>
-
           <h2
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.3] mb-[48px]"
-            style={{ fontSize: "clamp(2.5rem, 7.2vw, 5rem)" }}
+            className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.2] mb-[34px] max-w-[700px]"
+            style={{ fontSize: "clamp(28px, 4.4vw, 44px)" }}
           >
             Integration support for the people who hold everyone else.
           </h2>
 
-          <div className="relative">
-            <div className="flex justify-center mb-[48px]">
-              <Image
-                src="/assets/integration.svg"
-                alt="Integration"
-                width={420}
-                height={130}
-                className="w-full max-w-[420px] h-auto"
-              />
+          <div className="grid gap-16 max-w-[920px]" style={{ gridTemplateColumns: "1.4fr 1fr", alignItems: "start" }}>
+            <div className="flex flex-col gap-[22px]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-[16.5px] leading-[1.8] text-[#2a2a2a]">
+                The Infinity Container is a community built for the full arc — preparation before the experience, and integration after. We work inside the Solar-Lunar Framework, a proprietary system rooted in behavioral science, somatic practice, and contemplative traditions.
+              </p>
+              <p className="font-[family-name:var(--font-noto-serif)] text-[16.5px] leading-[1.8] text-[#2a2a2a]">
+                We are here for practitioners, therapists, coaches, healers, and helpers of all kinds — and for anyone navigating psychedelic experiences, life transitions, or expanded states who is ready to do the work with real support.
+              </p>
+              <p className="font-[family-name:var(--font-noto-serif)] text-[16.5px] leading-[1.8] text-[#2a2a2a]">
+                Integration is not therapy. It is not a debrief. It is an ongoing practice of becoming — and TIC is built to hold that practice over time.
+              </p>
             </div>
 
-            <div className="font-[family-name:var(--font-noto-serif)] text-[16.5px] leading-[1.8] text-[#2a2a2a] flex flex-col gap-[22px] mb-16">
-              <div className="font-[family-name:var(--font-noto-serif)] italic text-[17px] leading-[1.9] border-l-[3px] border-tic-yellow pl-[26px]">
-                Integration is a birthday &amp; a funeral. It is playing in the unknown, while knowing yourself more. It is weaving. It is collaborating. It is titration &amp; digestion. It is process. It is practice with awareness.
-                <p className="font-[family-name:var(--font-noto-serif)] not-italic text-[11px] text-tic-dark-grey mt-[14px] font-normal">[full poem + handwritten "Integration" SVG from current site]</p>
-              </div>
-              <p>
-                The Infinity Container is a community built for the full arc — preparation before
-                the experience, and integration after. We work inside the Solar-Lunar Framework, a
-                proprietary system rooted in behavioral science, somatic practice, and
-                contemplative traditions.
+            <div className="font-[family-name:var(--font-noto-serif)] italic text-[17px] leading-[1.9] text-black border-l-[3px] border-tic-yellow pl-[26px]">
+              Integration is a birthday<br />
+              &amp; a funeral.<br />
+              It is playing in the unknown,<br />
+              while knowing yourself more.<br />
+              It is weaving.<br />
+              It is collaborating.<br />
+              It is titration &amp; digestion.<br />
+              It is process.<br />
+              It is practice with awareness.
+              <p className="font-[family-name:var(--font-noto-serif)] not-italic text-[11px] text-tic-dark-grey mt-[14px]">
+                [full poem + handwritten "Integration" SVG from current site]
               </p>
-              <p>
-                We are here for practitioners, therapists, coaches, healers, and helpers of all
-                kinds — and for anyone navigating psychedelic experiences, life transitions, or
-                expanded states who is ready to do the work with real support.
-              </p>
-              <p>
-                Integration is not therapy. It is not a debrief. It is an ongoing practice of
-                becoming — and TIC is built to hold that practice over time.
-              </p>
-            </div>
-            <div className="flex justify-center pb-[250px]">
-              <Image
-                src="/assets/dropper-learn-more.svg"
-                alt=""
-                aria-hidden
-                width={200}
-                height={350}
-                className="absolute w-56 lg:w-80 h-auto opacity-[0.28] -translate-y-[130px]"
-              />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Integration Section ────────────────────────────────────── */}
+      <section className="px-6 py-[66px]" style={{ backgroundColor: "#D5D06A" }}>
+        <div className="max-w-[80vw] mx-auto">
+          <Image
+            src="/assets/integration.svg"
+            alt="Integration"
+            width={420}
+            height={130}
+            className="w-full h-auto mb-12"
+          />
+          <p className="font-[family-name:var(--font-noto-serif)] leading-[1.9] text-[28px] text-[#2a2a2a]">
+            Integration is a birthday &amp; a funeral. It is playing in the unknown, while
+            knowing yourself more. It is weaving. It is collaborating. It is titration &amp;
+            digestion. It is process. It is practice with awareness. It is the evolution of a
+            differentiated, connected self. It is intra-connected identity. It is WE, it is
+            US. It is the link between possibility and actuality.
+          </p>
+
+          <p className="font-[family-name:var(--font-noto-serif)] leading-[1.9] text-[28px] text-[#2a2a2a] mt-8">
+            And it happens in The Infinity Container.
+            <br />
+            A little at a time.
+          </p>
         </div>
       </section>
 
@@ -294,22 +293,21 @@ export default function HomePage() {
             Our approach
           </p>
           <h2
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.18] mb-[30px]"
-            style={{ fontSize: "clamp(1.75rem, 4.4vw, 2.875rem)" }}
+            className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.18] mb-[30px] max-w-[720px]"
+            style={{ fontSize: "clamp(28px, 4.4vw, 46px)" }}
           >
-            Integration is not an event.
-            <br />
+            Integration is not an event.<br />
             It is a system.
           </h2>
-          <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey leading-[1.8] text-[17px] mb-[56px]">
+          <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey leading-[1.8] text-[17px] mb-[56px] max-w-[640px]">
             The Solar-Lunar Framework is TIC&apos;s proprietary integration system — built on
             behavioral science, somatic practice, and contemplative traditions. It maps the full
             arc across two spirals:
           </p>
 
-          <div className="grid gap-[28px] mb-[56px]">
-            <div className="rounded-sm py-[44px] px-[38px] border border-white/15" style={{ background: "linear-gradient(145deg, rgba(242,95,193,0.14), rgba(235,115,31,0.14))" }}>
-              <span className="text-3xl mb-[18px] block">☀</span>
+          <div className="grid gap-7 mb-14 max-w-[920px]" style={{ gridTemplateColumns: "1fr 1fr" }}>
+            <div className="rounded-sm py-11 px-9.5 border border-white/15" style={{ background: "linear-gradient(145deg, rgba(242,95,193,0.14), rgba(235,115,31,0.14))" }}>
+              <span className="text-[30px] mb-[18px] block">☀</span>
               <h3 className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.06em] text-[22px] leading-[1.2] mb-[6px]" style={{ color: "#f56e71" }}>
                 The Solar Spiral
               </h3>
@@ -330,8 +328,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="rounded-sm py-[44px] px-[38px] border border-white/15" style={{ background: "linear-gradient(145deg, rgba(20,46,199,0.18), rgba(35,108,127,0.18))" }}>
-              <span className="text-3xl mb-[18px] block">☾</span>
+            <div className="rounded-sm py-11 px-9.5 border border-white/15" style={{ background: "linear-gradient(145deg, rgba(20,46,199,0.18), rgba(35,108,127,0.18))" }}>
+              <span className="text-[30px] mb-[18px] block">☾</span>
               <h3 className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.06em] text-[22px] leading-[1.2] mb-[6px]" style={{ color: "#7fb8c9" }}>
                 The Lunar Spiral
               </h3>
@@ -356,7 +354,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey leading-relaxed text-[16px] mb-[30px]">
+          <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey leading-[1.8] text-[16px] mb-[30px] max-w-[620px]">
             Every program, session, and theme inside TIC is organized within this framework. It
             is not a curriculum you complete. It is a practice you return to.
           </p>
@@ -456,15 +454,16 @@ export default function HomePage() {
 function WayDivider({ onBlack = false }: { onBlack?: boolean }) {
   return (
     <div
-      className={`min-h-[90vh] flex items-center justify-center px-6 text-center ${
+      className={`px-6 text-center ${
         onBlack ? "bg-black" : "bg-tic-olive"
       }`}
+      style={{ padding: "90px 24px" }}
     >
       <span
-        className={`font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.12] ${
+        className={`font-[family-name:var(--font-gordon)] uppercase tracking-[0.32em] ${
           onBlack ? "text-white" : "text-tic-yellow"
         }`}
-        style={{ fontSize: "clamp(3.5rem, 11vw, 9rem)" }}
+        style={{ fontSize: "clamp(20px, 3.4vw, 34px)" }}
       >
         Integration
         <br />
