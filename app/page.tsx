@@ -176,26 +176,18 @@ export default function HomePage() {
             </div>
 
             {/* Spotify Embed */}
-            <div style={{ width: '532px', height: '294px', marginTop: '20px' }} className="flex-shrink-0">
-              <div className="bg-black rounded-xl p-6 text-center h-full">
-                <div className="bg-[#C41E3A] rounded-lg p-8 h-full flex flex-col">
-                  <div className="mb-4">
-                    <img
-                      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='white'/%3E%3Cpath d='M35 30 L65 50 L35 70 Z' fill='%23C41E3A'/%3E%3C/svg%3E"
-                      alt=""
-                      className="w-12 h-12 mx-auto"
-                    />
-                  </div>
-                  <p className="text-white text-xl font-bold mb-1">Integration Playlist</p>
-                  <p className="text-white/90 text-xs mb-4">BIRTHDAY/FUNERAL · Paul Bennett IV</p>
-                  <div className="bg-white/10 rounded-lg p-4 mb-4 flex-grow">
-                    <p className="text-white/60 text-xs">Spotify Embed Player Placeholder</p>
-                  </div>
-                  <button className="bg-white text-[#C41E3A] px-6 py-2 rounded-full font-semibold text-xs hover:bg-white/90 transition-opacity mt-auto">
-                    Open in Spotify
-                  </button>
-                </div>
-              </div>
+            <div className="flex-shrink-0" style={{ transform: 'translateY(100px)' }}>
+              <iframe
+                data-testid="embed-iframe"
+                style={{ borderRadius: '12px' }}
+                src="https://open.spotify.com/embed/playlist/4dXmXxaXA2PDX0janyZoM3?utm_source=generator&si=359beda243574603"
+                width="100%"
+                height="152"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              />
             </div>
 
             {/* Right Mushrooms (Mirrored) */}
@@ -352,100 +344,109 @@ export default function HomePage() {
       </section>
 
       {/* ── Framework ──────────────────────────────────────────────── */}
-      <section className="relative bg-black text-white px-6 py-[120px] overflow-hidden">
+      <section className="relative text-white px-6 py-[120px] overflow-hidden" style={{ backgroundColor: "#0A0E10" }}>
         <Image
           src="/assets/solar-lunar-spiral.svg"
           alt=""
           aria-hidden
-          width={113}
-          height={113}
+          width={890}
+          height={1386}
           style={{ filter: "invert(1)" }}
-          className="hidden lg:block absolute top-28 right-16 w-28 h-auto opacity-90"
-        />
-        <Image
-          src="/assets/mushrooms-trio.svg"
-          alt=""
-          aria-hidden
-          width={98}
-          height={151}
-          style={{ filter: "invert(1)" }}
-          className="hidden lg:block absolute bottom-20 right-10 w-20 h-auto opacity-80"
+          className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-[20px] w-[486px] h-auto opacity-20 z-0 pointer-events-none"
         />
 
         <div className="max-w-[1080px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.22em] text-[11px] text-tic-yellow mb-[18px]">
+          <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.22em] text-[19px] text-tic-yellow mb-[18px]">
             Our approach
           </p>
           <h2
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.18] max-w-[720px] mb-[30px]"
-            style={{ fontSize: "clamp(1.75rem, 4.4vw, 2.875rem)" }}
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.18] mb-[30px]"
+            style={{ fontSize: "clamp(2.1rem, 4.4vw, 3.45rem)" }}
           >
             Integration is not an event.
             <br />
             It is a system.
           </h2>
-          <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey max-w-[640px] leading-[1.8] text-[17px] mb-[56px]">
+          <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey leading-[1.8] text-[20px] mb-[56px]">
             The Solar-Lunar Framework is TIC&apos;s proprietary integration system — built on
             behavioral science, somatic practice, and contemplative traditions. It maps the full
             arc across two spirals:
           </p>
 
-          <div className="grid md:grid-cols-2 gap-[28px] max-w-[920px] mb-[56px]">
-            <div className="rounded py-11 px-[38px] border border-white/[0.14] bg-gradient-to-br from-tic-pink/[0.14] to-tic-orange/[0.14]">
-              <span className="text-[30px] mb-[18px] block" aria-hidden>☀</span>
-              <h3 className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[22px] text-tic-salmon mb-1.5">
+          <div className="grid gap-[76px] mb-[56px] relative">
+            <div className="rounded py-[100px] px-[80px]" style={{ backgroundColor: "#7C3537" }}>
+              <h3 className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[48px] mb-4" style={{ color: "#F56E71" }}>
                 The Solar Spiral
               </h3>
-              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-xs text-tic-grey mb-[18px]">
+              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[44px] text-white mb-[40px]">
                 7 Preparation Capacities
               </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey text-[15px] leading-[1.7] mb-[22px]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-white text-[24px] leading-[1.8] mb-[48px]">
                 The capacities that help you arrive ready — grounded, receptive, and resourced
                 before the experience begins.
               </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-white/30 rounded-full px-[14px] py-[7px]">
+              <div className="flex flex-wrap gap-4">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border border-white rounded-full px-[28px] py-[14px]">
                   Ground
                 </span>
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-dashed border-white/30 rounded-full px-[14px] py-[7px] opacity-55">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border rounded-full px-[28px] py-[14px]" style={{ borderColor: "#7B7B7A", color: "#7B7B7A" }}>
                   + 6 more
                 </span>
               </div>
             </div>
 
-            <div className="rounded py-11 px-[38px] border border-white/[0.14] bg-gradient-to-br from-tic-cobalt/[0.18] to-tic-turquoise/[0.18]">
-              <span className="text-[30px] mb-[18px] block" aria-hidden>☾</span>
-              <h3 className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[22px] text-[#7fb8c9] mb-1.5">
+            <Image
+              src="/assets/solar-lunar-spiral.svg"
+              alt=""
+              aria-hidden
+              width={890}
+              height={1386}
+              style={{ filter: "invert(1)" }}
+              className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[300px] h-auto opacity-15 z-0 pointer-events-none"
+            />
+
+            <div className="rounded py-[100px] px-[80px]" style={{ backgroundColor: "#236C7F" }}>
+              <h3 className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[48px] mb-4" style={{ color: "#0A0E10" }}>
                 The Lunar Spiral
               </h3>
-              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-xs text-tic-grey mb-[18px]">
+              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[44px] text-white mb-[40px]">
                 13 Integration Capacities
               </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey text-[15px] leading-[1.7] mb-[22px]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-white text-[24px] leading-[1.8] mb-[48px]">
                 The capacities that help you weave what you find into who you are becoming — a
                 little at a time.
               </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-white/30 rounded-full px-[14px] py-[7px]">
+              <div className="flex flex-wrap gap-4">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border border-white rounded-full px-[28px] py-[14px]" style={{ color: "white" }}>
                   Weave
                 </span>
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-white/30 rounded-full px-[14px] py-[7px]">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border border-white rounded-full px-[28px] py-[14px]" style={{ color: "white" }}>
                   Conduct
                 </span>
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-dashed border-white/30 rounded-full px-[14px] py-[7px] opacity-55">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border rounded-full px-[28px] py-[14px]" style={{ borderColor: "#7B7B7A", color: "#7B7B7A" }}>
                   + 11 more
                 </span>
               </div>
             </div>
           </div>
 
-          <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey max-w-[620px] leading-relaxed text-base mb-[30px]">
+          <Image
+            src="/assets/solar-lunar-spiral.svg"
+            alt=""
+            aria-hidden
+            width={890}
+            height={1386}
+            style={{ filter: "invert(1)" }}
+            className="hidden lg:block absolute left-1/2 -translate-x-1/2 w-[350px] h-auto opacity-15 z-0 pointer-events-none"
+          />
+
+          <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey leading-relaxed text-[24px] mb-[40px] relative z-10">
             Every program, session, and theme inside TIC is organized within this framework. It
             is not a curriculum you complete. It is a practice you return to.
           </p>
           <Link
             href="/what-is-integration"
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[13px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors"
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[20px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors"
           >
             Learn more about the Solar-Lunar Framework →
           </Link>
