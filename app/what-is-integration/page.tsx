@@ -1,237 +1,395 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Marquee from "@/components/Marquee";
 
 export const metadata: Metadata = {
-  title: "What is Integration?",
-  description: "Integration is the process of becoming. Learn what it means to integrate and why it matters for practitioners and conscious explorers.",
+  title: "What is Integration? | The Infinity Container",
+  description: "Integration is how an experience becomes part of who you are. Learn what psychedelic integration is, why it doesn't happen on its own, and how the Solar-Lunar Framework maps the full arc from preparation to becoming.",
 };
 
-const DEFINITIONS = [
-  "To bring together or incorporate (parts) into a whole.",
-  "To combine, mingle, fuse, merge, UNITE.",
-  "To deepen our relationship with our inner and outer worlds, fostering a wholeness.",
+const SOLAR_CAPACITIES = [
+  "Ground",
+  "Anchor",
+  // Additional capacities shown in the framework
 ];
 
-const FOUR_STEPS = [
-  "Identify separate parts with individual value",
-  "Connect, communicate, and harmonize different parts",
-  "Apply discernment; determine what needs decomposing",
-  "Integration results in a third entity — what emerges in the field",
-];
-
-const INTEGRATED = [
-  "Peaceful", "Balanced", "Loving", "Compassionate", "Thoughtful", "Curious",
-  "Reciprocal", "Focused", "Organized", "Patient", "Creative", "Belonging",
-  "Playful", "Resilient", "In Flow", "Mindful",
-];
-
-const FRAGMENTED = [
-  "Insecure", "Compulsive", "Reactive", "Unable to think", "Anxious", "Scared",
-  "Untrusting", "Depressed", "Self-centered", "Selfish", "Scarce", "Judgemental",
-  "Impatient", "Constricted", "Disorganized", "Rigid", "Not fitting in", "Chaotic",
-];
-
-const CONTINUUMS = [
-  ["Stuckness", "Movement"],
-  ["Fast", "Slow"],
-  ["Rigid", "Flexible"],
-  ["Trance", "Awake"],
-  ["Distress", "Focused effort"],
-  ["Chaotic", "Organized"],
-  ["Numb", "Openly experiencing"],
-  ["Closed", "Curious"],
-  ["Narrow mind", "Multi perspective"],
-  ["One", "Many"],
-  ["Parts", "Whole"],
+const LUNAR_CAPACITIES = [
+  "Weave",
+  "Conduct",
+  // Additional capacities shown in the framework
 ];
 
 export default function WhatIsIntegrationPage() {
   return (
-    <main className="pt-14 pb-[5em]">
+    <main className="bg-white">
 
-      {/* ── Hero ────────────────────────────────────────────────── */}
-      <section className="min-h-[50vh] flex flex-col items-center justify-center px-6 py-20 text-center gap-8">
-        <Image
-          src="/assets/integration.svg"
-          alt="Integration"
-          width={220}
-          height={280}
-          className="w-40 md:w-52 h-auto"
-        />
-        <h1 className="font-[family-name:var(--font-gordon)] text-4xl md:text-6xl uppercase tracking-widest">
-          Integration is the process of becoming.
-        </h1>
-      </section>
-
-      {/* ── Definitions ─────────────────────────────────────────── */}
-      <section className="bg-black text-tic-yellow py-16 px-6">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <h2 className="font-[family-name:var(--font-gordon)] text-xl tracking-widest uppercase mb-8 text-center">
-            What does integrate mean?
-          </h2>
-          {DEFINITIONS.map((d, i) => (
-            <p
-              key={i}
-              className="font-[family-name:var(--font-noto-serif)] text-lg leading-relaxed border-l-4 border-tic-yellow pl-6"
-            >
-              {d}
-            </p>
-          ))}
+      {/* ── PAGE HERO ────────────────────────────────────────────────── */}
+      <section style={{ backgroundColor: "#817202", padding: "100px 24px 90px", textAlign: "center" }}>
+        <div style={{ maxWidth: "1080px", margin: "0 auto" }}>
+          <p style={{
+            fontFamily: "'CS Gordon', Georgia, sans-serif",
+            fontSize: "11px",
+            letterSpacing: "0.24em",
+            textTransform: "uppercase",
+            color: "#d5d069",
+            marginBottom: "24px"
+          }}>
+            What is Integration?
+          </p>
+          <h1 style={{
+            fontFamily: "'CS Gordon', Georgia, sans-serif",
+            fontSize: "clamp(34px, 5.5vw, 56px)",
+            letterSpacing: "0.02em",
+            lineHeight: "1.15",
+            color: "#fcfcfc",
+            maxWidth: "760px",
+            margin: "0 auto"
+          }}>
+            How an experience
+          </h1>
+          <Image
+            src="/assets/integration_handwritten.png"
+            alt="becomes a part of who you are"
+            width={440}
+            height={120}
+            style={{
+              maxWidth: "min(440px, 72vw)",
+              display: "block",
+              margin: "4px auto",
+              height: "auto"
+            }}
+          />
+          <p style={{
+            fontFamily: "'Noto Serif', Georgia, serif",
+            fontStyle: "italic",
+            fontSize: "clamp(17px, 2.2vw, 21px)",
+            color: "#d5d069",
+            maxWidth: "560px",
+            margin: "26px auto 0"
+          }}>
+            A journey — psychedelic or otherwise — opens something. Integration is what you do with what opened.
+          </p>
         </div>
       </section>
 
-      {/* ── Why it matters ──────────────────────────────────────── */}
-      <section className="py-20 px-6 max-w-4xl mx-auto">
-        <div className="flex flex-col md:flex-row gap-12 items-start">
-          <div className="md:w-2/3 space-y-5">
-            <h2 className="font-[family-name:var(--font-gordon)] text-2xl uppercase tracking-wide">
-              In order to integrate…
+      {/* ── THE WORK SECTION ──────────────────────────────────────── */}
+      <section style={{ padding: "100px 24px", backgroundColor: "#fcfcfc" }}>
+        <div style={{ maxWidth: "1080px", margin: "0 auto", display: "grid", gridTemplateColumns: "1.35fr 1fr", gap: "72px", alignItems: "start" }}>
+          <div>
+            <p style={{
+              fontFamily: "'CS Gordon', Georgia, sans-serif",
+              fontSize: "11px",
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: "#7b7b7a",
+              marginBottom: "18px"
+            }}>
+              The work
+            </p>
+            <h2 style={{
+              fontFamily: "'CS Gordon', Georgia, sans-serif",
+              fontWeight: "normal",
+              fontSize: "clamp(26px, 4vw, 42px)",
+              letterSpacing: "0.02em",
+              lineHeight: "1.2",
+              marginBottom: "28px"
+            }}>
+              More than a conversation after the fact.
             </h2>
-            <p className="font-[family-name:var(--font-noto-serif)] text-base leading-relaxed">
-              Ensuring to take time for integration is the opportunity to process and embed healing
-              work from therapeutic sessions. It applies to medicine journeys, hypnotherapy, yoga,
-              retreats, bodywork, sound healing, and meditation.
-            </p>
-            <p className="font-[family-name:var(--font-gordon)] text-xl uppercase tracking-wide text-tic-dark">
-              Integration isn&apos;t optional — it&apos;s a crucial part of the healing journey.
-            </p>
-            <p className="font-[family-name:var(--font-noto-serif)] text-base leading-relaxed">
-              Fragmentation is the root of most mental and societal illness and dysfunction.
-            </p>
-          </div>
-          <div className="md:w-1/3 flex justify-center">
-            <Image src="/assets/spider.svg" alt="" width={160} height={200} aria-hidden className="w-36 h-auto opacity-70" />
-          </div>
-        </div>
-      </section>
-
-      <Marquee
-        text="INTEGRATION IS THE WAY"
-        duration={22}
-        className="py-4 border-y-2 border-black"
-        textClassName="font-[family-name:var(--font-gordon)] text-xl tracking-[0.2em] uppercase"
-      />
-
-      {/* ── Four steps ──────────────────────────────────────────── */}
-      <section className="py-20 px-6 max-w-4xl mx-auto">
-        <h2 className="font-[family-name:var(--font-gordon)] text-2xl uppercase tracking-widest mb-10 text-center">
-          Four steps to integration
-        </h2>
-        <ol className="space-y-6">
-          {FOUR_STEPS.map((step, i) => (
-            <li key={i} className="flex gap-5 items-start">
-              <span className="font-[family-name:var(--font-gordon)] text-4xl leading-none shrink-0 opacity-30">
-                {i + 1}
-              </span>
-              <p className="font-[family-name:var(--font-noto-serif)] text-base leading-relaxed pt-1">
-                {step}
+            <div style={{ fontFamily: "'Noto Serif', Georgia, serif", fontSize: "17px", lineHeight: "1.85", marginBottom: "24px", color: "#222" }}>
+              <p style={{ marginBottom: "24px" }}>
+                Integration is often described as "making meaning" from a psychedelic experience — a session or two of talking about what happened. But meaning that stays in language stays in your head. Real integration lives in the body, in behavior, in relationship, in time.
               </p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      {/* ── Interaction stage ───────────────────────────────────── */}
-      <section className="bg-tic-dark text-tic-yellow py-16 px-6">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-[family-name:var(--font-gordon)] text-2xl uppercase tracking-widest mb-6">
-            Interaction with integration
-          </h2>
-          <p className="font-[family-name:var(--font-noto-serif)] text-base leading-relaxed opacity-90">
-            Interaction is the early stage of integration. Within interaction, we are introduced to
-            a new idea, a new feeling, a discovery that is an opening. We are born with certain
-            capacities — we shape and become shaped with our environments.
-          </p>
-        </div>
-      </section>
-
-      {/* ── TIC helps us ────────────────────────────────────────── */}
-      <section className="py-16 px-6 max-w-3xl mx-auto text-center">
-        <h2 className="font-[family-name:var(--font-gordon)] text-2xl uppercase tracking-widest mb-6">
-          TIC helps us feel held in the energetics of the container
-        </h2>
-        <p className="font-[family-name:var(--font-noto-serif)] text-base leading-relaxed">
-          Sequence &amp; development — the practice of returning, refining, and deepening.
-        </p>
-      </section>
-
-      {/* ── States grid ─────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-black">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="font-[family-name:var(--font-gordon)] text-2xl uppercase tracking-widest text-tic-yellow text-center mb-12">
-            Integrated States vs Fragmented States
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-[family-name:var(--font-gordon)] text-lg uppercase tracking-wide text-tic-yellow mb-4 border-b border-tic-yellow/40 pb-2">
-                Integrated
-              </h3>
-              <ul className="flex flex-wrap gap-2">
-                {INTEGRATED.map((s) => (
-                  <li key={s} className="text-tic-yellow border border-tic-yellow/40 px-3 py-1 text-sm font-[family-name:var(--font-noto-serif)]">
-                    {s}
-                  </li>
-                ))}
-              </ul>
+              <p style={{ marginBottom: "24px" }}>
+                Integration is how insight becomes practice. How an opening becomes a capacity. How the person who returned from the journey and the person living your Tuesday afternoon become the same person.
+              </p>
+              <p>
+                And it applies far beyond psychedelics. Life transitions, grief, awe, birth, loss, love — any experience big enough to change you asks to be integrated. The question is whether it gets what it needs.
+              </p>
             </div>
-            <div>
-              <h3 className="font-[family-name:var(--font-gordon)] text-lg uppercase tracking-wide text-tic-pink mb-4 border-b border-tic-pink/40 pb-2">
-                Fragmented
-              </h3>
-              <ul className="flex flex-wrap gap-2">
-                {FRAGMENTED.map((s) => (
-                  <li key={s} className="text-tic-pink border border-tic-pink/40 px-3 py-1 text-sm font-[family-name:var(--font-noto-serif)]">
-                    {s}
-                  </li>
-                ))}
-              </ul>
+            <div style={{ marginTop: "40px" }}>
+              <a href="/blog/what-is-integration" style={{
+                display: "inline-block",
+                fontFamily: "'CS Gordon', Georgia, sans-serif",
+                fontSize: "12px",
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                color: "#142ec7",
+                textDecoration: "none",
+                borderBottom: "1.5px solid #142ec7",
+                paddingBottom: "3px",
+                marginTop: "4px"
+              }}>
+                Dive deeper: read the full essay on the blog →
+              </a>
             </div>
           </div>
-          <p className="font-[family-name:var(--font-noto-serif)] text-tic-yellow/70 text-sm text-center mt-10 italic max-w-2xl mx-auto">
-            While these states indicate a more integrated self, the goal is not to always be in
-            these states but to move through that which arises and return here.
-          </p>
-        </div>
-      </section>
 
-      {/* ── Continuums ──────────────────────────────────────────── */}
-      <section className="py-20 px-6 max-w-4xl mx-auto">
-        <h2 className="font-[family-name:var(--font-gordon)] text-2xl uppercase tracking-widest text-center mb-10">
-          Continuums to Titrate
-        </h2>
-        <div className="space-y-4">
-          {CONTINUUMS.map(([from, to]) => (
-            <div key={from} className="flex items-center gap-4">
-              <span className="font-[family-name:var(--font-noto-serif)] text-sm w-40 text-right text-black/60">{from}</span>
-              <div className="flex-1 h-px bg-black/20 relative">
-                <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-tic-dark" />
-              </div>
-              <span className="font-[family-name:var(--font-noto-serif)] text-sm w-40 text-black/60">{to}</span>
+          <div>
+            <div style={{
+              fontFamily: "'Noto Serif', Georgia, serif",
+              fontStyle: "italic",
+              fontSize: "15.5px",
+              lineHeight: "1.65",
+              color: "#0b0d10",
+              borderLeft: "3px solid #d5d069",
+              paddingLeft: "26px"
+            }}>
+              <p>Integration is a birthday<br />
+                & a funeral.<br />
+                It is playing in the unknown,<br />
+                while knowing yourself more.<br />
+                It is weaving.<br />
+                It is collaborating.<br />
+                It is titration & digestion.<br />
+                It is process.<br />
+                It is practice with awareness.<br />
+                It is the evolution of a differentiated,<br />
+                connected self.<br />
+                It is intra-connected identity.<br />
+                It is WE, it is us.<br />
+                It is the link between possibility and actuality.<br />
+                <br />
+                It happens in The Infinity Container.
+              </p>
             </div>
-          ))}
+          </div>
         </div>
-        <p className="font-[family-name:var(--font-noto-serif)] text-center mt-10 text-base italic">
-          The more integrated we are, the more ease we find in choosing where on the continuum
-          feels best for the present moment.
-        </p>
       </section>
 
-      {/* ── Closing statement ───────────────────────────────────── */}
-      <section className="py-14 px-6 bg-black text-tic-yellow text-center">
-        <p className="font-[family-name:var(--font-gordon)] text-2xl md:text-4xl uppercase tracking-widest max-w-3xl mx-auto leading-snug">
-          Fragmentation is at the core of all dysfunction and discomfort.
-          <br />
-          <span className="text-tic-pink">Integration is the way.</span>
-        </p>
-        <a
-          href="https://the-infinity-container.mn.co/landing"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-10 border-2 border-tic-yellow text-tic-yellow px-10 py-4 font-[family-name:var(--font-gordon)] text-xl uppercase tracking-widest hover:bg-tic-yellow hover:text-black transition-colors"
-        >
-          Become a Member
-        </a>
+      {/* ── DIVIDER ────────────────────────────────────────────────── */}
+      <section style={{ backgroundColor: "#817202", padding: "70px 8px", textAlign: "center" }}>
+        <span style={{
+          fontFamily: "'CS Gordon', Georgia, sans-serif",
+          fontSize: "clamp(40px, 9.5vw, 124px)",
+          letterSpacing: "0.03em",
+          lineHeight: "1.12",
+          textTransform: "uppercase",
+          color: "#d5d069",
+          display: "block"
+        }}>
+          Integration is the way
+        </span>
+      </section>
+
+      {/* ── THE GAP SECTION ───────────────────────────────────────── */}
+      <section style={{ padding: "100px 24px", backgroundColor: "#dfe3de" }}>
+        <div style={{ maxWidth: "680px", margin: "0 auto" }}>
+          <p style={{
+            fontFamily: "'CS Gordon', Georgia, sans-serif",
+            fontSize: "11px",
+            letterSpacing: "0.22em",
+            textTransform: "uppercase",
+            color: "#7b7b7a",
+            marginBottom: "18px"
+          }}>
+            The gap
+          </p>
+          <h2 style={{
+            fontFamily: "'CS Gordon', Georgia, sans-serif",
+            fontWeight: "normal",
+            fontSize: "clamp(26px, 4vw, 42px)",
+            letterSpacing: "0.02em",
+            lineHeight: "1.2",
+            marginBottom: "28px"
+          }}>
+            It doesn't happen on its own.
+          </h2>
+
+          <Image
+            src="/assets/red-hand.svg"
+            alt=""
+            width={200}
+            height={200}
+            style={{
+              float: "right",
+              margin: "0 0 16px 24px",
+              width: "200px",
+              height: "auto"
+            }}
+            aria-hidden
+          />
+
+          <p style={{
+            fontFamily: "'Noto Serif', Georgia, serif",
+            fontSize: "17px",
+            lineHeight: "1.85",
+            marginBottom: "24px",
+            color: "#222"
+          }}>
+            The experience is a doorway — but most people are handed the doorway and nothing else. No preparation beforehand. No container afterward. No community to witness the becoming.
+          </p>
+
+          <p style={{
+            fontFamily: "'Noto Serif', Georgia, serif",
+            fontStyle: "italic",
+            fontSize: "clamp(20px, 3vw, 26px)",
+            lineHeight: "1.6",
+            color: "#7c3537",
+            margin: "36px 0",
+            paddingLeft: "28px",
+            borderLeft: "3px solid #7c3537"
+          }}>
+            Insight without integration fades. The journey that could have changed everything becomes a story you tell.
+          </p>
+
+          <p style={{
+            fontFamily: "'Noto Serif', Georgia, serif",
+            fontSize: "17px",
+            lineHeight: "1.85",
+            marginBottom: "24px",
+            color: "#222"
+          }}>
+            Integration takes structure, rhythm, and relationship. It takes a system that honors both the preparation before and the long, spiraling work after. That is what The Infinity Container was built for.
+          </p>
+
+          <a href="/blog/what-is-integration" style={{
+            display: "inline-block",
+            fontFamily: "'CS Gordon', Georgia, sans-serif",
+            fontSize: "12px",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            color: "#142ec7",
+            textDecoration: "none",
+            borderBottom: "1.5px solid #142ec7",
+            paddingBottom: "3px",
+            marginTop: "4px"
+          }}>
+            Dive deeper: why integration needs a container →
+          </a>
+        </div>
+      </section>
+
+      {/* ── WHY CAPACITIES SECTION ───────────────────────────────── */}
+      <section style={{ padding: "100px 24px", backgroundColor: "#fcfcfc" }}>
+        <div style={{ maxWidth: "680px", margin: "0 auto" }}>
+          <p style={{
+            fontFamily: "'CS Gordon', Georgia, sans-serif",
+            fontSize: "11px",
+            letterSpacing: "0.22em",
+            textTransform: "uppercase",
+            color: "#7b7b7a",
+            marginBottom: "18px"
+          }}>
+            Why capacities
+          </p>
+          <h2 style={{
+            fontFamily: "'CS Gordon', Georgia, sans-serif",
+            fontWeight: "normal",
+            fontSize: "clamp(26px, 4vw, 42px)",
+            letterSpacing: "0.02em",
+            lineHeight: "1.2",
+            marginBottom: "28px"
+          }}>
+            Who are you becoming?
+          </h2>
+
+          <Image
+            src="/assets/head.svg"
+            alt=""
+            width={190}
+            height={200}
+            style={{
+              float: "right",
+              margin: "-20px 0 16px 24px",
+              width: "190px",
+              height: "auto"
+            }}
+            aria-hidden
+          />
+
+          <p style={{
+            fontFamily: "'Noto Serif', Georgia, serif",
+            fontSize: "17px",
+            lineHeight: "1.85",
+            marginBottom: "24px",
+            color: "#222"
+          }}>
+            Most learning asks: what can you do? Integration asks a different question — who are you becoming?
+          </p>
+
+          <p style={{
+            fontFamily: "'Noto Serif', Georgia, serif",
+            fontSize: "17px",
+            lineHeight: "1.85",
+            marginBottom: "24px",
+            color: "#222"
+          }}>
+            That is why the framework is built around behavioral capacities, not skills. A skill is something you deploy in a context. A capacity changes what you are able to be — across contexts, across relationships, across time.
+          </p>
+
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", margin: "44px 0" }}>
+            <div style={{ padding: "32px 28px", borderRadius: "4px", backgroundColor: "#dfe3de" }}>
+              <h4 style={{
+                fontFamily: "'CS Gordon', Georgia, sans-serif",
+                fontWeight: "normal",
+                fontSize: "15px",
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                marginBottom: "14px"
+              }}>
+                Skills, learned in isolation
+              </h4>
+              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#2a2a2a" }}>
+                Acquired in a course. Practiced alone. Deployed when remembered. They add to what you can do — but leave who you are untouched.
+              </p>
+            </div>
+            <div style={{ padding: "32px 28px", borderRadius: "4px", backgroundColor: "#d5d069" }}>
+              <h4 style={{
+                fontFamily: "'CS Gordon', Georgia, sans-serif",
+                fontWeight: "normal",
+                fontSize: "15px",
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                marginBottom: "14px"
+              }}>
+                Capacities, built in community
+              </h4>
+              <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#2a2a2a" }}>
+                Developed in relationship, over time, inside a container. They change what is available to you — more resilience, less burnout, a deeper sense of oneness with your life and the people in it.
+              </p>
+            </div>
+          </div>
+
+          <p style={{
+            fontFamily: "'Noto Serif', Georgia, serif",
+            fontSize: "17px",
+            lineHeight: "1.85",
+            marginBottom: "24px",
+            color: "#222"
+          }}>
+            This is why we integrate rather than simply learn. Insight that stays intellectual fades. Capacity that is practiced in community becomes who you are.
+          </p>
+
+          <a href="/blog/what-is-integration" style={{
+            display: "inline-block",
+            fontFamily: "'CS Gordon', Georgia, sans-serif",
+            fontSize: "12px",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            color: "#142ec7",
+            textDecoration: "none",
+            borderBottom: "1.5px solid #142ec7",
+            paddingBottom: "3px",
+            marginTop: "4px"
+          }}>
+            Dive deeper: capacities, not skills →
+          </a>
+        </div>
+      </section>
+
+      {/* ── DIVIDER ────────────────────────────────────────────────── */}
+      <section style={{ backgroundColor: "#817202", padding: "70px 8px", textAlign: "center" }}>
+        <span style={{
+          fontFamily: "'CS Gordon', Georgia, sans-serif",
+          fontSize: "clamp(40px, 9.5vw, 124px)",
+          letterSpacing: "0.03em",
+          lineHeight: "1.12",
+          textTransform: "uppercase",
+          color: "#d5d069",
+          display: "block"
+        }}>
+          Integration is the way
+        </span>
       </section>
 
     </main>
