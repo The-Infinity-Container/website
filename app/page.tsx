@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import InlineNewsletter from "@/components/InlineNewsletter";
 import ApproachCards from "@/components/ApproachCards";
+import MembershipCards from "@/components/MembershipCards";
 
 const MEMBERSHIP_URL = "https://the-infinity-container.mn.co/landing";
 const SIGNIN_URL = "https://the-infinity-container.mn.co/sign_in";
@@ -193,95 +194,38 @@ export default function HomePage() {
       </div>
 
       {/* ── Two Paths ──────────────────────────────────────────────── */}
-      <section className="hidden bg-tic-grey px-6 py-[110px] overflow-hidden">
+      <section className="bg-white px-6 py-[110px]">
         <div className="max-w-[1080px] mx-auto">
-          <div className="text-center mb-14 relative">
-            <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.15em] text-tic-dark-grey mb-[18px]" style={{ fontSize: "2.4em" }}>
-              Who is this for?
-            </p>
-            <h2
-              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] mb-4 break-words"
-              style={{ fontSize: "clamp(28px, 7.5vw, 4.08em)" }}
-            >
-              Two containers. One ecosystem.
-            </h2>
-            <p className="font-[family-name:var(--font-noto-serif)] italic text-[#2a2a2a] max-w-[920px] mx-auto" style={{ fontSize: "2.4em" }}>
-              Whether you are doing your own integration work or supporting others in theirs —
-              there is a place for you here.
-            </p>
-            <Image
-              src="/assets/closed-hand.svg"
-              alt=""
-              aria-hidden
-              width={900}
-              height={900}
-              className="absolute top-0 -right-[294px] w-96 lg:w-[600px] h-auto opacity-20"
-            />
-          </div>
+          <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-dark-grey mb-[18px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
+            Who is this for?
+          </p>
+          <h2
+            className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[44px]"
+            style={{ fontSize: "clamp(30px, 4.6vw, 48px)" }}
+          >
+            Two containers. One ecosystem.
+          </h2>
 
-          <div className="grid gap-[160px] max-w-[95vw] mx-auto relative">
-            <div className="relative z-10">
-              <div className="text-white rounded py-[40px] px-6 md:py-[80px] md:px-[100px] flex flex-col" style={{ backgroundColor: "#1948A7" }}>
-                <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.2em] text-[14px] opacity-85 mb-8">
-                  For Practitioners
-                </p>
-                <h3
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.4] mb-[28px] w-full"
-                  style={{ fontSize: "clamp(2rem, 4.5vw, 2.75rem)" }}
-                >
-                  You hold a lot.
-                  <br />
-                  This holds you.
-                </h3>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[20px] leading-[1.7] mb-[40px] flex-grow max-w-[800px]">
-                  For therapists, coaches, healers, bodyworkers, and space holders who are ready
-                  for a consistent place to be held — not just to hold. Weekly practice. Real
-                  tools. A community that understands the work.
-                </p>
-                <Link
-                  href="/who-is-this-for"
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[15px] bg-white px-[35px] py-[18px] rounded-sm text-center hover:opacity-85 transition-opacity w-fit" style={{ color: "#286B80", boxShadow: "0 4px 12px rgba(40, 107, 128, 0.3)" }}
-                >
-                  Explore the Practitioner Path →
-                </Link>
-              </div>
-            </div>
-
-            <Image
-              src="/assets/open-hand.svg"
-              alt=""
-              aria-hidden
-              width={900}
-              height={900}
-              className="absolute -left-[374px] top-[430px] w-96 lg:w-[600px] h-auto opacity-20 z-0 pointer-events-none"
-              style={{ transform: "scaleX(-1) rotate(45deg)" }}
-            />
-
-            <div className="relative z-10">
-              <div className="text-black rounded py-[40px] px-6 md:py-[80px] md:px-[100px] flex flex-col" style={{ backgroundColor: "#F56E71" }}>
-                <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.2em] text-[14px] opacity-85 mb-8">
-                  For Helpers &amp; Seekers
-                </p>
-                <h3
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.4] mb-[28px] w-full"
-                  style={{ fontSize: "clamp(2rem, 4.5vw, 2.75rem)" }}
-                >
-                  You don&apos;t have to figure this out alone.
-                </h3>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[20px] leading-[1.7] mb-[40px] flex-grow max-w-[800px]">
-                  For helpers, caregivers, educators, artists, and curious humans integrating
-                  their own experiences. Drop-in practice. Integration frameworks. A community of
-                  people doing the work alongside you.
-                </p>
-                <Link
-                  href="/what-is-integration"
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[15px] bg-white px-[35px] py-[18px] rounded-sm text-center hover:opacity-85 transition-opacity w-fit" style={{ color: "#286B80", boxShadow: "0 4px 12px rgba(40, 107, 128, 0.3)" }}
-                >
-                  Explore the Practice Path →
-                </Link>
-              </div>
-            </div>
-          </div>
+          <MembershipCards
+            cards={[
+              {
+                label: "FOR PRACTITIONERS",
+                heading: "YOU HOLD A LOT. THIS HOLDS YOU.",
+                description: "For therapists, coaches, healers, bodyworkers, and space holders who are ready for a consistent place to be held — not just to hold. Weekly practice. Real tools. A community that understands the work.",
+                buttonText: "EXPLORE THE PRACTITIONER PATH →",
+                buttonHref: "/who-is-this-for",
+                backgroundColor: "blue",
+              },
+              {
+                label: "FOR HELPERS & SEEKERS",
+                heading: "YOU DON'T HAVE TO FIGURE THIS OUT ALONE.",
+                description: "For helpers, caregivers, educators, artists, and curious humans integrating their own experiences. Drop-in practice. Integration frameworks. A community of people doing the work alongside you.",
+                buttonText: "EXPLORE THE PRACTICE PATH →",
+                buttonHref: "/what-is-integration",
+                backgroundColor: "red",
+              },
+            ]}
+          />
 
           <div className="relative mx-auto mt-[160px]">
             <Image
