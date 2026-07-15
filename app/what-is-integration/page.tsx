@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ApproachCards from "@/components/ApproachCards";
+import MembershipCards from "@/components/MembershipCards";
+import SimpleNewsletter from "@/components/SimpleNewsletter";
 
 export const metadata: Metadata = {
   title: "What is Integration? | The Infinity Container",
@@ -59,7 +61,7 @@ export default function WhatIsIntegrationPage() {
 
           {/* Two-column row: paragraphs and poem */}
           <div className="grid md:grid-cols-[1.35fr_1fr] gap-[72px] items-start mb-[40px]">
-            <div className="space-y-[24px] font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#222]">
+            <div className="space-y-[24px] font-[family-name:var(--font-noto-serif)] text-[28px] text-[#222]" style={{ lineHeight: "45px" }}>
               <p>
                 Integration is often described as "making meaning" from a psychedelic experience — a session or two of talking about what happened. But meaning that stays in language stays in your head. Real integration lives in the body, in behavior, in relationship, in time.
               </p>
@@ -135,7 +137,7 @@ export default function WhatIsIntegrationPage() {
             <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]" style={{ fontSize: "clamp(26px, 4vw, 42px)" }}>
               It doesn't happen on its own.
             </h2>
-            <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#222]">
+            <p className="font-[family-name:var(--font-noto-serif)] text-[28px] text-[#222]" style={{ lineHeight: "45px" }}>
               The experience is a doorway — but most people are handed the doorway and nothing else. No preparation beforehand. No container afterward. No community to witness the becoming.
             </p>
           </div>
@@ -159,7 +161,7 @@ export default function WhatIsIntegrationPage() {
 
           {/* Row 3: Full-width paragraph and link */}
           <div>
-            <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] mb-[24px] text-[#222]">
+            <p className="font-[family-name:var(--font-noto-serif)] text-[28px] mb-[24px] text-[#222]" style={{ lineHeight: "45px" }}>
               Integration takes structure, rhythm, and relationship. It takes a system that honors both the preparation before and the long, spiraling work after. That is what The Infinity Container was built for.
             </p>
 
@@ -182,11 +184,11 @@ export default function WhatIsIntegrationPage() {
                 Who are you becoming?
               </h2>
 
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] mb-[24px] text-[#222]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] mb-[24px] text-[#222]" style={{ lineHeight: "45px" }}>
                 Most learning asks: what can you do? Integration asks a different question — who are you becoming?
               </p>
 
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] mb-[24px] text-[#222]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] mb-[24px] text-[#222]" style={{ lineHeight: "45px" }}>
                 That is why the framework is built around behavioral capacities, not skills. A skill is something you deploy in a context. A capacity changes what you are able to be — across contexts, across relationships, across time.
               </p>
             </div>
@@ -206,7 +208,7 @@ export default function WhatIsIntegrationPage() {
               <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[30px] uppercase tracking-[0.14em] mb-[14px]">
                 Skills, learned in isolation
               </h4>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#2a2a2a] font-medium">
+              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] text-[#2a2a2a] font-medium" style={{ lineHeight: "45px" }}>
                 Acquired in a course. Practiced alone. Deployed when remembered. They add to what you can do — but leave who you are untouched.
               </p>
             </div>
@@ -214,13 +216,13 @@ export default function WhatIsIntegrationPage() {
               <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[30px] uppercase tracking-[0.14em] mb-[14px]">
                 Capacities, built in community
               </h4>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#2a2a2a] font-medium">
+              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] text-[#2a2a2a] font-medium" style={{ lineHeight: "45px" }}>
                 Developed in relationship, over time, inside a container. They change what is available to you — more resilience, less burnout, a deeper sense of oneness with your life and the people in it.
               </p>
             </div>
           </div>
 
-          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#222]" style={{ marginTop: "6rem", marginBottom: "6rem" }}>
+          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] text-[#222]" style={{ marginTop: "6rem", marginBottom: "6rem", lineHeight: "45px" }}>
             This is why we integrate rather than simply learn. Insight that stays intellectual fades. Capacity that is practiced in community becomes who you are.
           </p>
 
@@ -256,7 +258,7 @@ export default function WhatIsIntegrationPage() {
           <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]" style={{ fontSize: "clamp(26px, 4vw, 42px)", color: "white" }}>
             The Solar-Lunar Framework
           </h2>
-          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] mb-[44px]" style={{ color: "white" }}>
+          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] mb-[44px]" style={{ color: "white", lineHeight: "45px" }}>
             Our proprietary integration system — built on behavioral science, somatic practice, and contemplative traditions. It maps the full arc of transformative experience across two spirals:
           </p>
 
@@ -298,7 +300,7 @@ export default function WhatIsIntegrationPage() {
             </div>
           </div>
 
-          <p className="font-[family-name:var(--font-noto-serif)] italic text-[28px] leading-[1.85] text-white text-center max-w-[1000px] mx-auto">
+          <p className="font-[family-name:var(--font-noto-serif)] italic text-[28px] text-white text-center max-w-[1000px] mx-auto" style={{ lineHeight: "45px" }}>
             The framework is not a curriculum you complete. It is a practice you return to — a spiral you travel again and again, each time from somewhere new.
           </p>
         </div>
@@ -306,52 +308,53 @@ export default function WhatIsIntegrationPage() {
 
       {/* ── HOW YOU LIVE IT ───────────────────────────────────────── */}
       <section className="bg-white px-6 py-[100px]">
-        <div className="max-w-[1080px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px] text-center" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
+        <div className="max-w-[90vw] mx-auto">
+          <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
             How you live it
           </p>
-          <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[44px] text-center max-w-[800px] mx-auto" style={{ fontSize: "clamp(26px, 4vw, 42px)" }}>
-            The framework isn't something you read about here. It's something you practice inside of.
+          <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[44px]" style={{ fontSize: "clamp(30px, 4.6vw, 48px)" }}>
+            The framework isn't something you read about here.<br />
+            It's something you practice inside of.
           </h2>
 
-          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#222] max-w-[680px] mx-auto text-center mb-[44px]">
-            Every session, theme, and program inside The Infinity Container is organized within the Solar-Lunar Framework. Each month moves through a capacity. The community moves through it together.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-[44px] max-w-[920px] mx-auto">
-            <div>
-              <h3 className="font-[family-name:var(--font-gordon)] text-[24px] uppercase tracking-[0.02em] mb-[18px]">
-                Practice Membership
-              </h3>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#2a2a2a] mb-[24px]">
-                Practice the framework, live.
-              </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#2a2a2a] mb-[28px]">
-                Weekly Friday practice sessions, monthly integration themes, and a community moving through the spirals together. You don't study the framework — you experience it, one capacity at a time.
-              </p>
-              <a href="/membership" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[12px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity inline-block">
-                Explore the Practice Membership →
-              </a>
-            </div>
-
-            <div>
-              <h3 className="font-[family-name:var(--font-gordon)] text-[24px] uppercase tracking-[0.02em] mb-[18px]">
-                Practitioner Membership
-              </h3>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#2a2a2a] mb-[24px]">
-                Practice it — and learn to hold it.
-              </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#2a2a2a] mb-[28px]">
-                Everything in Practice, plus the professional layer: frameworks you can bring to your clients, practitioner-focused teaching, and a community of peers doing their own work alongside their client work.
-              </p>
-              <a href="/membership" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[12px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity inline-block">
-                Explore the Practitioner Membership →
-              </a>
-            </div>
+          <div className="grid md:grid-cols-[70%_30%] gap-[60px] items-start mb-[44px]">
+            <p className="font-[family-name:var(--font-noto-serif)] text-[28px] text-[#222]" style={{ lineHeight: "45px" }}>
+              Every session, theme, and program inside The Infinity Container is organized within the Solar-Lunar Framework. Each month moves through a capacity. The community moves through it together.
+            </p>
+            <Image
+              src="/assets/shell.svg"
+              alt="Shell"
+              width={400}
+              height={500}
+              className="h-auto"
+              style={{ width: "48%" }}
+              aria-hidden
+            />
           </div>
 
-          <div className="text-center mt-[44px]">
-            <a href="#" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[12px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity inline-block">
+          <MembershipCards
+            cards={[
+              {
+                label: "PRACTICE MEMBERSHIP",
+                heading: "PRACTICE THE FRAMEWORK, LIVE.",
+                description: "Weekly Friday practice sessions, monthly integration themes, and a community moving through the spirals together. You don't study the framework — you experience it, one capacity at a time.",
+                buttonText: "EXPLORE THE PRACTICE MEMBERSHIP →",
+                buttonHref: "/membership",
+                backgroundColor: "red",
+              },
+              {
+                label: "PRACTITIONER MEMBERSHIP",
+                heading: "PRACTICE IT — AND LEARN TO HOLD IT.",
+                description: "Everything in Practice, plus the professional layer: frameworks you can bring to your clients, practitioner-focused teaching, and a community of peers doing their own work alongside their client work.",
+                buttonText: "EXPLORE THE PRACTITIONER MEMBERSHIP →",
+                buttonHref: "/membership",
+                backgroundColor: "blue",
+              },
+            ]}
+          />
+
+          <div className="text-center" style={{ marginTop: "80px" }}>
+            <a href="#" className="font-[family-name:var(--font-noto-serif)] italic text-black hover:opacity-70 transition-opacity inline-block underline" style={{ fontSize: "18.4px" }}>
               Not sure which fits? Take the 7-question quiz →
             </a>
           </div>
@@ -359,57 +362,75 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── KEEP GOING ──────────────────────────────────────────────── */}
-      <section className="bg-white px-6 py-[100px]">
-        <div className="max-w-[1080px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px] text-center" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-            Keep going
+      <section className="px-6 py-[100px]" style={{ backgroundColor: "#D5D06A" }}>
+        <div className="max-w-[90vw] mx-auto">
+          <p className="font-[family-name:var(--font-gordon)] uppercase mb-[44px] text-center" style={{ fontSize: "clamp(70px, 12vw, 119px)", color: "black", letterSpacing: "0.09em", marginBottom: "-20px" }}>
+            Keep going.
           </p>
-          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#222] max-w-[680px] mx-auto text-center mb-[60px]">
+          <p className="font-[family-name:var(--font-noto-serif)] italic text-[28px] mx-auto text-center mb-[30px]" style={{ color: "#7C3537", lineHeight: "45px", maxWidth: "70vw" }}>
             You don't have to be ready to join anything. Integration happens a little at a time — start at whatever depth feels right.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-[44px] max-w-[1000px] mx-auto">
-            <div>
-              <h3 className="font-[family-name:var(--font-gordon)] text-[18px] uppercase tracking-[0.02em] mb-[14px]">
-                Read
-              </h3>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[16px] leading-[1.8] text-[#2a2a2a] font-bold mb-[12px]">
-                Go deeper on the blog
-              </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[14px] leading-[1.6] text-[#2a2a2a] mb-[18px]">
-                The complete guide to integration — the science, the practice, and the lived experience of the work. Free, no signup.
-              </p>
-              <a href="/blog/what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[12px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity inline-block">
+          <div className="flex justify-center mb-[60px]">
+            <Image
+              src="/assets/dropper.svg"
+              alt=""
+              width={200}
+              height={200}
+              className="h-auto"
+              style={{ width: "calc(var(--spacing) * 63)" }}
+              aria-hidden
+            />
+          </div>
+
+          <div className="grid gap-[44px] max-w-[1200px] mx-auto" style={{ gridTemplateColumns: "1fr 1.1fr 1fr" }}>
+            <div className="bg-white px-[32px] py-[44px] rounded flex flex-col justify-between">
+              <div>
+                <h3 className="font-[family-name:var(--font-gordon)] text-[20px] uppercase tracking-[0.02em] mb-[24px]" style={{ color: "#3A3A3A" }}>
+                  Read
+                </h3>
+                <p className="font-[family-name:var(--font-gordon)] text-[28px] leading-[1.3] mb-[18px]" style={{ color: "#2a2a2a" }}>
+                  Go deeper on the blog
+                </p>
+                <p className="font-[family-name:var(--font-noto-serif)] text-[16px] leading-[1.6] text-[#2a2a2a]">
+                  The complete guide to integration — the science, the practice, and the lived experience of the work. Free, no signup.
+                </p>
+              </div>
+              <a href="/blog/what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[14px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity inline-block mt-[28px]">
                 What is Integration? The Complete Guide →
               </a>
             </div>
 
-            <div>
-              <h3 className="font-[family-name:var(--font-gordon)] text-[18px] uppercase tracking-[0.02em] mb-[14px]">
-                Receive
-              </h3>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[16px] leading-[1.8] text-[#2a2a2a] font-bold mb-[12px]">
-                Get the newsletter
-              </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[14px] leading-[1.6] text-[#2a2a2a] mb-[18px]">
-                Integration frameworks, somatic tools, and practitioner resources — rooted in the Solar-Lunar system. Written by Dr. Victoria Sterkin.
-              </p>
-              <button className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[12px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity bg-none border-none cursor-pointer p-0">
-                Join
-              </button>
+            <div className="bg-white px-[32px] py-[44px] rounded flex flex-col justify-between">
+              <div>
+                <h3 className="font-[family-name:var(--font-gordon)] text-[20px] uppercase tracking-[0.02em] mb-[24px]" style={{ color: "#3A3A3A" }}>
+                  Receive
+                </h3>
+                <p className="font-[family-name:var(--font-gordon)] text-[28px] leading-[1.3] mb-[18px]" style={{ color: "#2a2a2a" }}>
+                  Get the newsletter
+                </p>
+                <p className="font-[family-name:var(--font-noto-serif)] text-[16px] leading-[1.6] text-[#2a2a2a]">
+                  Integration frameworks, somatic tools, and practitioner resources — rooted in the Solar-Lunar system. Written by Dr. Victoria Sterkin.
+                </p>
+              </div>
+              <div className="mt-[28px]">
+                <SimpleNewsletter />
+              </div>
             </div>
 
-            <div>
-              <h3 className="font-[family-name:var(--font-gordon)] text-[18px] uppercase tracking-[0.02em] mb-[14px]">
-                Join
-              </h3>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[16px] leading-[1.8] text-[#2a2a2a] font-bold mb-[12px]">
-                Join a call
-              </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[14px] leading-[1.6] text-[#2a2a2a] mb-[18px]">
-                Come to a community call. A free monthly gathering — experience the community and the practice before committing to anything. Join the free membership to get the call link.
-              </p>
-              <a href="/community-call" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[12px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity inline-block">
+            <div className="bg-white px-[32px] py-[44px] rounded flex flex-col justify-between">
+              <div>
+                <h3 className="font-[family-name:var(--font-gordon)] text-[20px] uppercase tracking-[0.02em] mb-[24px]" style={{ color: "#3A3A3A" }}>
+                  Join a call
+                </h3>
+                <p className="font-[family-name:var(--font-gordon)] text-[28px] leading-[1.3] mb-[18px]" style={{ color: "#2a2a2a" }}>
+                  Come to a community call
+                </p>
+                <p className="font-[family-name:var(--font-noto-serif)] text-[14px] leading-[1.6] text-[#2a2a2a]">
+                  Come to a community call. A free monthly gathering — experience the community and the practice before committing to anything. Join the free membership to get the call link.
+                </p>
+              </div>
+              <a href="/community-call" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[14px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity inline-block mt-[28px]">
                 About the community call →
               </a>
             </div>
