@@ -51,28 +51,31 @@ export default function SiteNav() {
   return (
     <>
       {/* Top bar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-3">
+      <nav className="sticky top-0 left-0 right-0 z-50 flex items-center justify-between bg-white border-b border-black/8 px-6 py-4 md:px-8">
         <button
           onClick={() => setDrawerOpen(true)}
-          className={`font-[family-name:var(--font-gordon)] text-xl tracking-widest uppercase hover:opacity-70 transition-opacity ${
-            isDark ? "text-tic-yellow" : ""
-          }`}
+          className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.14em] uppercase text-black hover:text-tic-pink transition-colors"
           aria-label="Open navigation"
           aria-expanded={drawerOpen}
         >
-          TIC INDEX
+          TIC: INDEX
         </button>
 
-        <div
-          className={`hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase ${
-            isDark ? "text-tic-pink" : ""
-          }`}
-        >
-          <NavLink href="/" active={isActive("/")}>Home</NavLink>
-          <NavLink href="https://the-infinity-container.mn.co/landing" external active={false}>
-            Membership
-          </NavLink>
+        <div className="absolute left-1/2 -translate-x-1/2">
+          <a
+            href="/find-my-membership"
+            className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.1em] uppercase bg-tic-orange text-black px-5 py-2.5 rounded hover:bg-tic-pink transition-colors"
+          >
+            Find My Membership
+          </a>
         </div>
+
+        <a
+          href="/sign-in"
+          className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.12em] uppercase text-black hover:text-tic-pink transition-colors"
+        >
+          Sign In
+        </a>
       </nav>
 
       {/* Backdrop */}

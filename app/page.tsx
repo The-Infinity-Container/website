@@ -81,11 +81,11 @@ export default function HomePage() {
       {/* ── What is this? ──────────────────────────────────────────── */}
       <section className="bg-white px-6 py-[110px]">
         <div className="max-w-[1080px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.22em] text-[11px] text-tic-dark-grey mb-[18px]">
+          <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-dark-grey mb-[18px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
             What is this?
           </p>
           <h2
-            className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.2] mb-[34px] max-w-[700px]"
+            className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[34px] max-w-[700px]"
             style={{ fontSize: "clamp(28px, 4.4vw, 44px)" }}
           >
             Integration support for the people who hold everyone else.
@@ -122,13 +122,13 @@ export default function HomePage() {
 
             {/* Text content - appears first on mobile, first on desktop */}
             <div className="flex flex-col gap-[22px] order-1 md:order-1 w-full">
-              <p className="font-[family-name:var(--font-noto-serif)] text-[16.5px] leading-[1.8] text-[#2a2a2a]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.8] text-[#2a2a2a]">
                 The Infinity Container is a community built for the full arc — preparation before the experience, and integration after. We work inside the Solar-Lunar Framework, a proprietary system rooted in behavioral science, somatic practice, and contemplative traditions.
               </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[16.5px] leading-[1.8] text-[#2a2a2a]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.8] text-[#2a2a2a]">
                 We are here for practitioners, therapists, coaches, healers, and helpers of all kinds — and for anyone navigating psychedelic experiences, life transitions, or expanded states who is ready to do the work with real support.
               </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[16.5px] leading-[1.8] text-[#2a2a2a]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.8] text-[#2a2a2a]">
                 Integration is not therapy. It is not a debrief. It is an ongoing practice of becoming — and TIC is built to hold that practice over time.
               </p>
             </div>
@@ -225,7 +225,7 @@ export default function HomePage() {
                   For Practitioners
                 </p>
                 <h3
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.25] mb-[28px] max-w-[800px]"
+                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.4] mb-[28px] w-full"
                   style={{ fontSize: "clamp(2rem, 4.5vw, 2.75rem)" }}
                 >
                   You hold a lot.
@@ -262,7 +262,7 @@ export default function HomePage() {
                   For Helpers &amp; Seekers
                 </p>
                 <h3
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.25] mb-[28px] max-w-[800px]"
+                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.4] mb-[28px] w-full"
                   style={{ fontSize: "clamp(2rem, 4.5vw, 2.75rem)" }}
                 >
                   You don&apos;t have to figure this out alone.
@@ -330,7 +330,7 @@ export default function HomePage() {
       {/* ── Framework ──────────────────────────────────────────────── */}
       <section className="text-white px-6 py-[120px]" style={{ backgroundColor: "#0b0d10" }}>
         <div className="max-w-[1080px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.22em] text-[11px] text-tic-yellow mb-[18px]">
+          <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-yellow mb-[18px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
             Our approach
           </p>
           <h2
@@ -349,7 +349,7 @@ export default function HomePage() {
           <div className="grid gap-7 mb-14 max-w-[920px]" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}>
             <div className="rounded-sm py-6 px-5 md:py-11 md:px-9.5 border border-white/15" style={{ background: "linear-gradient(145deg, rgba(242,95,193,0.14), rgba(235,115,31,0.14))" }}>
               <span className="text-[30px] mb-[18px] block">☀</span>
-              <h3 className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.06em] text-[22px] leading-[1.2] mb-[6px]" style={{ color: "#f56e71" }}>
+              <h3 className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.06em] text-[22px] leading-[1.4] mb-[6px]" style={{ color: "#f56e71" }}>
                 The Solar Spiral
               </h3>
               <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[12px] text-tic-grey mb-[18px]">
@@ -371,7 +371,7 @@ export default function HomePage() {
 
             <div className="rounded-sm py-6 px-5 md:py-11 md:px-9.5 border border-white/15" style={{ background: "linear-gradient(145deg, rgba(20,46,199,0.18), rgba(35,108,127,0.18))" }}>
               <span className="text-[30px] mb-[18px] block">☾</span>
-              <h3 className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.06em] text-[22px] leading-[1.2] mb-[6px]" style={{ color: "#7fb8c9" }}>
+              <h3 className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.06em] text-[22px] leading-[1.4] mb-[6px]" style={{ color: "#7fb8c9" }}>
                 The Lunar Spiral
               </h3>
               <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[12px] text-tic-grey mb-[18px]">
