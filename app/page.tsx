@@ -9,8 +9,8 @@ export default function HomePage() {
   return (
     <main>
       {/* ── Hero ───────────────────────────────────────────────────── */}
-      <header className="relative bg-black text-center overflow-hidden px-6 pt-[110px] pb-[120px]">
-        <div className="relative w-[84px] h-[84px] mx-auto mb-11 rounded-full overflow-hidden border-[1.5px] border-dashed border-tic-yellow flex items-center justify-center bg-black">
+      <header className="relative bg-black text-center overflow-hidden px-6 pt-[77px] pb-[84px]">
+        <div className="relative w-[59px] h-[59px] mx-auto mb-8 rounded-full overflow-hidden border-[1.5px] border-dashed border-tic-yellow flex items-center justify-center bg-black">
           <Image
             src="/assets/hero-logo.svg"
             alt="The Infinity Container"
@@ -25,16 +25,16 @@ export default function HomePage() {
         </div>
 
         <p
-          className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.15em] max-w-[900px] mx-auto mb-9 leading-snug"
-          style={{ fontSize: "clamp(1.125rem, 2.4vw, 1.75rem)" }}
+          className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.15em] max-w-[900px] mx-auto mb-6 leading-snug"
+          style={{ fontSize: "clamp(0.788rem, 1.68vw, 1.225rem)" }}
         >
           Psychedelic Integration <span className="mx-2">·</span> Life Transitions{" "}
           <span className="mx-2">·</span> Expanded Experience
         </p>
 
         <h1
-          className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-[0.03em] leading-[1.12] max-w-[1300px] mx-auto mb-[26px]"
-          style={{ fontSize: "clamp(2.75rem, 7.5vw, 6rem)" }}
+          className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-[0.03em] leading-[1.12] max-w-[1300px] mx-auto mb-[18px]"
+          style={{ fontSize: "clamp(1.925rem, 5.25vw, 4.2rem)" }}
         >
           This is where
           <br />
@@ -44,15 +44,15 @@ export default function HomePage() {
         </h1>
 
         <p
-          className="font-[family-name:var(--font-noto-serif)] italic text-tic-yellow mb-[30px]"
-          style={{ fontSize: "clamp(1.5rem, 3.2vw, 2rem)" }}
+          className="font-[family-name:var(--font-noto-serif)] italic text-tic-yellow mb-[21px]"
+          style={{ fontSize: "clamp(1.05rem, 2.24vw, 1.4rem)" }}
         >
           Prepare well. Integrate fully. Keep going.
         </p>
 
         <p
-          className="font-[family-name:var(--font-noto-serif)] text-tic-grey max-w-[640px] mx-auto mb-11 leading-[1.75]"
-          style={{ fontSize: "clamp(1.125rem, 2.2vw, 1.375rem)" }}
+          className="font-[family-name:var(--font-noto-serif)] text-tic-grey max-w-[640px] mx-auto mb-8 leading-[1.75]"
+          style={{ fontSize: "clamp(0.788rem, 1.54vw, 0.963rem)" }}
         >
           Psychedelic integration, life transitions, and expanded experience — for the people
           doing the work and the practitioners who hold that space.
@@ -62,7 +62,7 @@ export default function HomePage() {
           href={MEMBERSHIP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-lg bg-tic-salmon text-black px-14 py-6 rounded-sm hover:bg-tic-pink transition-colors"
+          className="inline-block font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm bg-tic-salmon text-black px-10 py-4 rounded-sm hover:bg-tic-pink transition-colors"
         >
           Find My Membership →
         </a>
@@ -70,7 +70,7 @@ export default function HomePage() {
           href={SIGNIN_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="block mt-5 text-lg text-tic-yellow"
+          className="block mt-3 text-sm text-tic-yellow"
         >
           Already a member? Sign in
         </a>
@@ -328,80 +328,99 @@ export default function HomePage() {
       </section>
 
       {/* ── Framework ──────────────────────────────────────────────── */}
-      <section className="text-white px-6 py-[120px]" style={{ backgroundColor: "#0b0d10" }}>
-        <div className="max-w-[1080px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-yellow mb-[18px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
+      <section className="relative text-white py-[120px] overflow-hidden" style={{ backgroundColor: "#0A0E10" }}>
+        <Image
+          src="/assets/solar-lunar-spiral.svg"
+          alt=""
+          aria-hidden
+          width={890}
+          height={1386}
+          style={{ filter: "invert(1)" }}
+          className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-[20px] w-[486px] h-auto opacity-20 z-0 pointer-events-none"
+        />
+
+        <div className="max-w-[1280px] mx-auto px-6">
+          <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.22em] text-[19px] text-tic-yellow mb-[18px]">
             Our approach
           </p>
           <h2
-            className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.18] mb-[30px] max-w-[720px]"
-            style={{ fontSize: "clamp(28px, 4.4vw, 46px)" }}
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.18] mb-[30px]"
+            style={{ fontSize: "clamp(2.1rem, 4.4vw, 3.45rem)" }}
           >
-            Integration is not an event.<br />
+            Integration is not an event.
+            <br />
             It is a system.
           </h2>
-          <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey leading-[1.8] text-[17px] mb-[56px] max-w-[640px]">
+          <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey leading-[1.8] text-[20px] mb-[56px]">
             The Solar-Lunar Framework is TIC&apos;s proprietary integration system — built on
             behavioral science, somatic practice, and contemplative traditions. It maps the full
             arc across two spirals:
           </p>
 
-          <div className="grid gap-7 mb-14 max-w-[920px]" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}>
-            <div className="rounded-sm py-6 px-5 md:py-11 md:px-9.5 border border-white/15" style={{ background: "linear-gradient(145deg, rgba(242,95,193,0.14), rgba(235,115,31,0.14))" }}>
-              <span className="text-[30px] mb-[18px] block">☀</span>
-              <h3 className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.06em] text-[22px] leading-[1.4] mb-[6px]" style={{ color: "#f56e71" }}>
+          <div className="grid gap-[76px] mb-[56px] relative" style={{ gridTemplateColumns: "1fr 1fr" }}>
+            <div className="rounded py-[75px] px-[80px]" style={{ backgroundColor: "#7C3537" }}>
+              <h3 className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[38px] mb-4" style={{ color: "#F56E71" }}>
                 The Solar Spiral
               </h3>
-              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[12px] text-tic-grey mb-[18px]">
+              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[26px] text-white mb-[40px]">
                 7 Preparation Capacities
               </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey text-[15px] leading-[1.7] mb-[22px]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-white text-[24px] leading-[1.8] mb-[48px]">
                 The capacities that help you arrive ready — grounded, receptive, and resourced
                 before the experience begins.
               </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-white/30 text-white rounded-full px-[14px] py-[7px]">
+              <div className="flex flex-wrap gap-4">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border border-white rounded-full px-[28px] py-[14px]">
                   Ground
                 </span>
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-dashed border-white/30 text-white rounded-full px-[14px] py-[7px] opacity-55">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border rounded-full px-[28px] py-[14px]" style={{ borderColor: "#7B7B7A", color: "#7B7B7A" }}>
                   + 6 more
                 </span>
               </div>
             </div>
 
-            <div className="rounded-sm py-6 px-5 md:py-11 md:px-9.5 border border-white/15" style={{ background: "linear-gradient(145deg, rgba(20,46,199,0.18), rgba(35,108,127,0.18))" }}>
-              <span className="text-[30px] mb-[18px] block">☾</span>
-              <h3 className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.06em] text-[22px] leading-[1.4] mb-[6px]" style={{ color: "#7fb8c9" }}>
+            <div className="rounded py-[100px] px-[80px]" style={{ backgroundColor: "#236C7F" }}>
+              <h3 className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[38px] mb-4" style={{ color: "#0A0E10" }}>
                 The Lunar Spiral
               </h3>
-              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[12px] text-tic-grey mb-[18px]">
+              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[26px] text-white mb-[40px]">
                 13 Integration Capacities
               </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey text-[15px] leading-[1.7] mb-[22px]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-white text-[24px] leading-[1.8] mb-[48px]">
                 The capacities that help you weave what you find into who you are becoming — a
                 little at a time.
               </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-white/30 text-white rounded-full px-[14px] py-[7px]">
+              <div className="flex flex-wrap gap-4">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border border-white rounded-full px-[28px] py-[14px]" style={{ color: "white" }}>
                   Weave
                 </span>
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-white/30 text-white rounded-full px-[14px] py-[7px]">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border border-white rounded-full px-[28px] py-[14px]" style={{ color: "white" }}>
                   Conduct
                 </span>
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[11px] border border-dashed border-white/30 text-white rounded-full px-[14px] py-[7px] opacity-55">
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border rounded-full px-[28px] py-[14px]" style={{ borderColor: "#7B7B7A", color: "#7B7B7A" }}>
                   + 11 more
                 </span>
               </div>
             </div>
           </div>
 
-          <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey leading-[1.8] text-[16px] mb-[30px] max-w-[620px]">
+          <Image
+            src="/assets/solar-lunar-spiral.svg"
+            alt=""
+            aria-hidden
+            width={890}
+            height={1386}
+            style={{ filter: "invert(1)" }}
+            className="hidden lg:block absolute left-1/2 -translate-x-1/2 w-[350px] h-auto opacity-15 z-0 pointer-events-none"
+          />
+
+          <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey leading-relaxed text-[24px] mb-[40px] relative z-10">
             Every program, session, and theme inside TIC is organized within this framework. It
             is not a curriculum you complete. It is a practice you return to.
           </p>
           <Link
             href="/what-is-integration"
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[13px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors"
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[20px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors"
           >
             Learn more about the Solar-Lunar Framework →
           </Link>
