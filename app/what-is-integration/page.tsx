@@ -163,51 +163,55 @@ export default function WhatIsIntegrationPage() {
 
       {/* ── WHY CAPACITIES SECTION ───────────────────────────────── */}
       <section className="bg-white px-6 py-[100px]">
-        <div className="max-w-[680px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-            Why capacities
-          </p>
-          <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]" style={{ fontSize: "clamp(26px, 4vw, 42px)" }}>
-            Who are you becoming?
-          </h2>
+        <div className="max-w-[90vw] mx-auto">
+          <div className="grid md:grid-cols-[1fr_1fr] gap-[60px] items-start mb-[60px]">
+            <div>
+              <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
+                Why capacities
+              </p>
+              <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] w-full mb-[28px]" style={{ fontSize: "clamp(26px, 4vw, 42px)" }}>
+                Who are you becoming?
+              </h2>
 
-          <Image
-            src="/assets/head.svg"
-            alt=""
-            width={190}
-            height={200}
-            className="float-right -mt-[20px] mb-[16px] ml-[24px] w-[190px] h-auto"
-            aria-hidden
-          />
+              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] mb-[24px] text-[#222]">
+                Most learning asks: what can you do? Integration asks a different question — who are you becoming?
+              </p>
 
-          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] mb-[24px] text-[#222]">
-            Most learning asks: what can you do? Integration asks a different question — who are you becoming?
-          </p>
+              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] mb-[24px] text-[#222]">
+                That is why the framework is built around behavioral capacities, not skills. A skill is something you deploy in a context. A capacity changes what you are able to be — across contexts, across relationships, across time.
+              </p>
+            </div>
 
-          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] mb-[24px] text-[#222]">
-            That is why the framework is built around behavioral capacities, not skills. A skill is something you deploy in a context. A capacity changes what you are able to be — across contexts, across relationships, across time.
-          </p>
+            <Image
+              src="/assets/head-olive.svg"
+              alt=""
+              width={570}
+              height={600}
+              className="w-full h-auto"
+              aria-hidden
+            />
+          </div>
 
           <div className="grid md:grid-cols-2 gap-[24px] my-[44px]">
             <div className="bg-tic-grey rounded px-[28px] py-[32px]">
-              <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[15px] uppercase tracking-[0.14em] mb-[14px]">
+              <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[30px] uppercase tracking-[0.14em] mb-[14px]">
                 Skills, learned in isolation
               </h4>
-              <p className="text-[14.5px] leading-[1.7] text-[#2a2a2a]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#2a2a2a] font-medium">
                 Acquired in a course. Practiced alone. Deployed when remembered. They add to what you can do — but leave who you are untouched.
               </p>
             </div>
             <div className="bg-tic-yellow rounded px-[28px] py-[32px]">
-              <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[15px] uppercase tracking-[0.14em] mb-[14px]">
+              <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[30px] uppercase tracking-[0.14em] mb-[14px]">
                 Capacities, built in community
               </h4>
-              <p className="text-[14.5px] leading-[1.7] text-[#2a2a2a]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#2a2a2a] font-medium">
                 Developed in relationship, over time, inside a container. They change what is available to you — more resilience, less burnout, a deeper sense of oneness with your life and the people in it.
               </p>
             </div>
           </div>
 
-          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] mb-[24px] text-[#222]">
+          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#222]" style={{ marginTop: "6rem", marginBottom: "6rem" }}>
             This is why we integrate rather than simply learn. Insight that stays intellectual fades. Capacity that is practiced in community becomes who you are.
           </p>
 
@@ -217,19 +221,33 @@ export default function WhatIsIntegrationPage() {
         </div>
       </section>
 
-      {/* ── DIVIDER ────────────────────────────────────────────────── */}
-      <WayDivider />
+      {/* ── INTEGRATION IS THE WAY / OUR SYSTEM ────────────────────── */}
+      <section className="bg-black px-6 py-[100px]">
+        <div className="max-w-[1290px] mx-auto text-center mb-[80px]">
+          <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(70px, 12vw, 119px)", color: "white", letterSpacing: "0.09em", marginBottom: "-68px" }}>
+            Integration
+            <br />
+            is the way
+          </h2>
+          <Image
+            src="/assets/lunar-pink-transparent-bg.svg"
+            alt="Solar-Lunar Framework"
+            width={900}
+            height={900}
+            className="mx-auto"
+            style={{ maxWidth: "1200px" }}
+            aria-hidden
+          />
+        </div>
 
-      {/* ── OUR SYSTEM / SOLAR-LUNAR FRAMEWORK ────────────────────── */}
-      <section className="bg-white px-6 py-[100px]">
-        <div className="max-w-[1080px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px] text-center" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
+        <div>
+          <p className="font-[family-name:var(--font-gordon)] uppercase" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px", color: "#D5D06A" }}>
             Our system
           </p>
-          <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px] text-center" style={{ fontSize: "clamp(26px, 4vw, 42px)" }}>
+          <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]" style={{ fontSize: "clamp(26px, 4vw, 42px)", color: "white" }}>
             The Solar-Lunar Framework
           </h2>
-          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] mb-[44px] text-[#222] max-w-[920px] mx-auto text-center">
+          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] mb-[44px]" style={{ color: "white" }}>
             Our proprietary integration system — built on behavioral science, somatic practice, and contemplative traditions. It maps the full arc of transformative experience across two spirals:
           </p>
 
@@ -396,15 +414,29 @@ export default function WhatIsIntegrationPage() {
 
 function WayDivider() {
   return (
-    <div className="bg-white px-6 text-center flex flex-col items-center justify-center" style={{ minHeight: "75vh", marginBottom: "2em" }}>
+    <div className="bg-black px-6 text-center flex flex-col items-center justify-center gap-[60px]" style={{ minHeight: "75vh", marginBottom: "2em" }}>
       <span
         className="font-[family-name:var(--font-gordon)] uppercase font-bold"
-        style={{ fontSize: "clamp(70px, 12vw, 119px)", color: "#F56E71", letterSpacing: "0.09em" }}
+        style={{ fontSize: "clamp(70px, 12vw, 119px)", color: "white", letterSpacing: "0.09em" }}
       >
         Integration
         <br />
         is the way
       </span>
+      <svg viewBox="0 0 113.09 113.08" width="200" height="200" style={{ maxWidth: "400px" }} xmlns="http://www.w3.org/2000/svg">
+        <circle cx="56.545" cy="56.54" r="50" fill="none" stroke="#E64E59" strokeWidth="2"/>
+        <g stroke="#E64E59" strokeWidth="3" strokeLinecap="round">
+          {/* Sun rays */}
+          <line x1="56.545" y1="10" x2="56.545" y2="20" />
+          <line x1="56.545" y1="103.08" x2="56.545" y2="93.08" />
+          <line x1="10" y1="56.54" x2="20" y2="56.54" />
+          <line x1="103.09" y1="56.54" x2="93.09" y2="56.54" />
+          <line x1="22" y1="22" x2="30" y2="30" />
+          <line x1="83.09" y1="83.08" x2="75.09" y2="75.08" />
+          <line x1="91.09" y1="22" x2="83.09" y2="30" />
+          <line x1="30" y1="83.08" x2="22" y2="91.08" />
+        </g>
+      </svg>
     </div>
   );
 }
