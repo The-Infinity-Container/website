@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import ApproachCards from "@/components/ApproachCards";
 
 export const metadata: Metadata = {
   title: "What is Integration? | The Infinity Container",
@@ -112,8 +113,16 @@ export default function WhatIsIntegrationPage() {
         </div>
       </section>
 
-      {/* ── DIVIDER ────────────────────────────────────────────────── */}
-      <WayDivider />
+      {/* ── INTEGRATION IS THE WAY SECTION ───────────────────────── */}
+      <section className="bg-white px-6 py-[100px]">
+        <div className="max-w-[1290px] mx-auto text-center">
+          <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(70px, 12vw, 119px)", color: "#E64E59", letterSpacing: "0.09em", marginBottom: "-68px" }}>
+            Integration
+            <br />
+            is the way
+          </h2>
+        </div>
+      </section>
 
       {/* ── THE GAP SECTION ───────────────────────────────────────── */}
       <section className="bg-tic-grey px-6 py-[100px]">
@@ -251,45 +260,45 @@ export default function WhatIsIntegrationPage() {
             Our proprietary integration system — built on behavioral science, somatic practice, and contemplative traditions. It maps the full arc of transformative experience across two spirals:
           </p>
 
-          <div className="grid md:grid-cols-2 gap-[80px] mb-[80px] max-w-[920px] mx-auto">
-            <div>
-              <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[12px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-                The Solar Spiral
-              </p>
-              <h3 className="font-[family-name:var(--font-gordon)] text-[24px] uppercase tracking-[0.02em] mb-[18px]">
-                7 Preparation Capacities
-              </h3>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#222] mb-[28px]">
-                The capacities that help you arrive ready — grounded, receptive, and resourced before the experience begins.
-              </p>
-            </div>
-            <div>
-              <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[12px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-                The Lunar Spiral
-              </p>
-              <h3 className="font-[family-name:var(--font-gordon)] text-[24px] uppercase tracking-[0.02em] mb-[18px]">
-                13 Integration Capacities
-              </h3>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#222]">
-                The capacities that help you weave what you find into who you are becoming — a little at a time.
-              </p>
+          <div className="max-w-[1280px] mx-auto">
+            <ApproachCards />
+          </div>
+
+<div className="mb-[60px]">
+            <div className="grid grid-cols-4 gap-[24px] mb-[44px] max-w-[1000px] mx-auto">
+              {["Ground", "Anchor", "Weave", "Titrate", "Play", "Kindle", "Shed"].map((capacity, index) => {
+                const isPink = capacity === "Ground" || capacity === "Play";
+                const borderColor = isPink ? "#7C3537" : "#236C80";
+                const textColor = isPink ? "#F56E71" : "#6FB3C5";
+
+                return (
+                  <div key={capacity} className="rounded overflow-hidden flex flex-col" style={{ border: `3px solid ${borderColor}` }}>
+                    <div className="flex-1 bg-black overflow-hidden">
+                      <Image
+                        src={`/assets/${capacity.toLowerCase()}.png`}
+                        alt={capacity}
+                        width={250}
+                        height={300}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="bg-black text-center py-[16px]">
+                      <p className="font-[family-name:var(--font-gordon)] text-[16px] uppercase tracking-[0.12em]" style={{ color: textColor }}>
+                        {capacity}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+              <div className="border-2 border-dashed rounded flex items-center justify-center bg-tic-grey" style={{ borderColor: "#236C80" }}>
+                <p className="font-[family-name:var(--font-noto-serif)] text-[16px] leading-[1.6] text-[#2a2a2a] text-center px-[16px]">
+                  ...and thirteen more,<br />practiced inside<br />the container.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="bg-tic-grey rounded px-[28px] py-[32px] max-w-[560px] mx-auto mb-[60px]">
-            <div className="grid grid-cols-4 gap-[16px] mb-[20px]">
-              {["Ground", "Anchor", "Weave", "Titrate", "Play", "Kindle", "Shed"].map((capacity) => (
-                <div key={capacity} className="font-[family-name:var(--font-gordon)] text-[14px] uppercase tracking-[0.12em] text-center">
-                  {capacity}
-                </div>
-              ))}
-            </div>
-            <p className="font-[family-name:var(--font-noto-serif)] text-[14px] leading-[1.6] text-[#2a2a2a] text-center">
-              ...and thirteen more, practiced inside the container.
-            </p>
-          </div>
-
-          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.85] text-[#222] text-center max-w-[680px] mx-auto">
+          <p className="font-[family-name:var(--font-noto-serif)] italic text-[28px] leading-[1.85] text-white text-center max-w-[1000px] mx-auto">
             The framework is not a curriculum you complete. It is a practice you return to — a spiral you travel again and again, each time from somewhere new.
           </p>
         </div>
@@ -409,34 +418,5 @@ export default function WhatIsIntegrationPage() {
       </section>
 
     </main>
-  );
-}
-
-function WayDivider() {
-  return (
-    <div className="bg-black px-6 text-center flex flex-col items-center justify-center gap-[60px]" style={{ minHeight: "75vh", marginBottom: "2em" }}>
-      <span
-        className="font-[family-name:var(--font-gordon)] uppercase font-bold"
-        style={{ fontSize: "clamp(70px, 12vw, 119px)", color: "white", letterSpacing: "0.09em" }}
-      >
-        Integration
-        <br />
-        is the way
-      </span>
-      <svg viewBox="0 0 113.09 113.08" width="200" height="200" style={{ maxWidth: "400px" }} xmlns="http://www.w3.org/2000/svg">
-        <circle cx="56.545" cy="56.54" r="50" fill="none" stroke="#E64E59" strokeWidth="2"/>
-        <g stroke="#E64E59" strokeWidth="3" strokeLinecap="round">
-          {/* Sun rays */}
-          <line x1="56.545" y1="10" x2="56.545" y2="20" />
-          <line x1="56.545" y1="103.08" x2="56.545" y2="93.08" />
-          <line x1="10" y1="56.54" x2="20" y2="56.54" />
-          <line x1="103.09" y1="56.54" x2="93.09" y2="56.54" />
-          <line x1="22" y1="22" x2="30" y2="30" />
-          <line x1="83.09" y1="83.08" x2="75.09" y2="75.08" />
-          <line x1="91.09" y1="22" x2="83.09" y2="30" />
-          <line x1="30" y1="83.08" x2="22" y2="91.08" />
-        </g>
-      </svg>
-    </div>
   );
 }
