@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import InlineNewsletter from "@/components/InlineNewsletter";
+import ApproachCards from "@/components/ApproachCards";
 
 const MEMBERSHIP_URL = "https://the-infinity-container.mn.co/landing";
 const SIGNIN_URL = "https://the-infinity-container.mn.co/sign_in";
@@ -357,52 +358,7 @@ export default function HomePage() {
             arc across two spirals:
           </p>
 
-          <div className="grid gap-[76px] mb-[56px] relative" style={{ gridTemplateColumns: "1fr 1fr" }}>
-            <div className="rounded py-[75px] px-[80px]" style={{ backgroundColor: "#7C3537" }}>
-              <h3 className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[38px] mb-4" style={{ color: "#F56E71" }}>
-                The Solar Spiral
-              </h3>
-              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[26px] text-white mb-[40px]">
-                7 Preparation Capacities
-              </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-white text-[24px] leading-[1.8] mb-[48px]">
-                The capacities that help you arrive ready — grounded, receptive, and resourced
-                before the experience begins.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border border-white rounded-full px-[28px] py-[14px]">
-                  Ground
-                </span>
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border rounded-full px-[28px] py-[14px]" style={{ borderColor: "#7B7B7A", color: "#7B7B7A" }}>
-                  + 6 more
-                </span>
-              </div>
-            </div>
-
-            <div className="rounded py-[100px] px-[80px]" style={{ backgroundColor: "#236C7F" }}>
-              <h3 className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[38px] mb-4" style={{ color: "#0A0E10" }}>
-                The Lunar Spiral
-              </h3>
-              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[26px] text-white mb-[40px]">
-                13 Integration Capacities
-              </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-white text-[24px] leading-[1.8] mb-[48px]">
-                The capacities that help you weave what you find into who you are becoming — a
-                little at a time.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border border-white rounded-full px-[28px] py-[14px]" style={{ color: "white" }}>
-                  Weave
-                </span>
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border border-white rounded-full px-[28px] py-[14px]" style={{ color: "white" }}>
-                  Conduct
-                </span>
-                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[16px] border rounded-full px-[28px] py-[14px]" style={{ borderColor: "#7B7B7A", color: "#7B7B7A" }}>
-                  + 11 more
-                </span>
-              </div>
-            </div>
-          </div>
+          <ApproachCards />
 
           <Image
             src="/assets/solar-lunar-spiral.svg"
