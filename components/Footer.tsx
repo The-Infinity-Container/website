@@ -8,12 +8,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-[60px] items-center" style={{ marginTop: "100px" }}>
           {/* Left column */}
           <div>
-            <h3 className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.09em] mb-[24px]" style={{ fontSize: "2em" }}>
+            <h3 className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.09em] mb-[24px]" style={{ fontSize: "1.8em" }}>
               The infinity
               <br />
               container
             </h3>
-            <p className="font-[family-name:var(--font-noto-serif)] italic text-[28px]" style={{ lineHeight: "45px" }}>
+            <p className="font-[family-name:var(--font-noto-serif)] italic text-[25px]" style={{ lineHeight: "41px" }}>
               Integration is the way.
             </p>
           </div>
@@ -23,10 +23,10 @@ export default function Footer() {
             <img
               src="/assets/window-view-yellow.svg"
               alt=""
-              style={{ width: "390px", height: "auto", maxWidth: "100%" }}
+              style={{ width: "351px", height: "auto", maxWidth: "100%" }}
               aria-hidden
             />
-            <a href="https://the-infinity-container.mn.co/sign_in" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-noto-serif)] mt-[24px] hover:opacity-70 transition-opacity" style={{ color: "#D5D06A", fontSize: "28px", lineHeight: "45px" }}>
+            <a href="https://the-infinity-container.mn.co/sign_in" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-noto-serif)] mt-[24px] hover:opacity-70 transition-opacity" style={{ color: "#D5D06A", fontSize: "25px", lineHeight: "41px" }}>
               Log In
             </a>
           </div>
@@ -36,17 +36,17 @@ export default function Footer() {
             <div className="flex gap-[80px] mb-[40px] items-start">
               {/* Socials column */}
               <div>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[28px] mb-[16px]" style={{ lineHeight: "45px" }}>
+                <p className="font-[family-name:var(--font-noto-serif)] text-[25px] mb-[16px]" style={{ lineHeight: "41px" }}>
                   <a href="https://www.instagram.com/theinfinitycontainer" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                     Instagram
                   </a>
                 </p>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[28px] mb-[16px]" style={{ lineHeight: "45px" }}>
+                <p className="font-[family-name:var(--font-noto-serif)] text-[25px] mb-[16px]" style={{ lineHeight: "41px" }}>
                   <a href="https://www.youtube.com/@TheInfinityContainer" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                     Youtube
                   </a>
                 </p>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[28px]" style={{ lineHeight: "45px" }}>
+                <p className="font-[family-name:var(--font-noto-serif)] text-[25px]" style={{ lineHeight: "41px" }}>
                   <a href="#" className="hover:opacity-70 transition-opacity">
                     Substack
                   </a>
@@ -56,11 +56,11 @@ export default function Footer() {
               <img
                 src="/assets/tic-globe-logo.svg"
                 alt="The Infinity Container"
-                style={{ height: "250px", flexShrink: 0, marginTop: "-50px", marginLeft: "-95px" }}
+                style={{ height: "225px", flexShrink: 0, marginTop: "-45px", marginLeft: "-86px" }}
               />
             </div>
             {/* Email row - full width */}
-            <p className="font-[family-name:var(--font-noto-serif)] text-[28px]" style={{ lineHeight: "45px", marginTop: "-65px" }}>
+            <p className="font-[family-name:var(--font-noto-serif)] text-[25px]" style={{ lineHeight: "41px", marginTop: "-59px" }}>
               <a href="mailto:info@theinfinitycontainer.com" className="hover:opacity-70 transition-opacity">
                 info@theinfinitycontainer.com
               </a>
@@ -71,10 +71,10 @@ export default function Footer() {
 
       {/* Bottom footer */}
       <div className="max-w-[1290px] mx-auto pt-[40px] flex justify-between items-center">
-        <p className="font-[family-name:var(--font-noto-serif)] text-[28px] text-white/60">
+        <p className="font-[family-name:var(--font-noto-serif)] text-[25px] text-white/60">
           © 2026 The Infinity Container
         </p>
-        <Link href="#" className="font-[family-name:var(--font-noto-serif)] text-[28px] text-white/60 hover:text-white transition-colors">
+        <Link href="#" className="font-[family-name:var(--font-noto-serif)] text-[25px] text-white/60 hover:text-white transition-colors">
           Privacy
         </Link>
       </div>

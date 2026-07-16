@@ -30,30 +30,30 @@ export default function MembershipCards({ cards }: MembershipCardsProps) {
   };
 
   return (
-    <div className="grid md:grid-cols-2 gap-[44px] max-w-[920px] mx-auto">
+    <div className="grid md:grid-cols-2 gap-[44px]">
       {cards.map((card) => {
         const colors = getColors(card.backgroundColor);
         return (
           <div
             key={card.label}
-            className={`${colors.text} px-[32px] py-[44px] rounded`}
+            className={`${colors.text} px-[29px] py-[40px] rounded`}
             style={{ backgroundColor: colors.bgColor }}
           >
             <p
-              className="font-[family-name:var(--font-gordon)] text-[16px] uppercase tracking-[0.12em] mb-[24px]"
+              className="font-[family-name:var(--font-gordon)] text-[14px] uppercase tracking-[0.12em] mb-[24px]"
               style={{ letterSpacing: "0.12em" }}
             >
               {card.label}
             </p>
-            <h3 className="font-[family-name:var(--font-gordon)] text-[32px] uppercase tracking-[0.02em] mb-[24px] font-normal leading-[1.3]">
+            <h3 className="font-[family-name:var(--font-gordon)] text-[29px] uppercase tracking-[0.02em] mb-[24px] font-normal leading-[1.3]">
               {card.heading}
             </h3>
-            <p className="font-[family-name:var(--font-noto-serif)] text-[18px] leading-[1.7] mb-[32px]">
+            <p className="font-[family-name:var(--font-noto-serif)] text-[16px] leading-[1.7] mb-[32px]">
               {card.description}
             </p>
             <a
               href={card.buttonHref}
-              className={`${colors.buttonText} font-[family-name:var(--font-gordon)] text-[14px] uppercase px-[24px] py-[16px] block text-center hover:opacity-70 transition-opacity`}
+              className={`${colors.buttonText} font-[family-name:var(--font-gordon)] text-[13px] uppercase px-[24px] py-[16px] block text-center hover:opacity-70 transition-opacity`}
               style={{ backgroundColor: colors.buttonBgColor, letterSpacing: "0.06em" }}
             >
               {card.buttonText}
