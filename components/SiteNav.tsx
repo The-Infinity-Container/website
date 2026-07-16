@@ -35,6 +35,7 @@ export default function SiteNav() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const isDark = DARK_NAV_ROUTES.some((r) => (r === "/" ? pathname === "/" : pathname.startsWith(r)));
+  const isSticky = !pathname.startsWith("/what-is-integration");
 
   function isActive(href: string) {
     if (href === "/") return pathname === "/";
@@ -51,7 +52,11 @@ export default function SiteNav() {
   return (
     <>
       {/* Top bar */}
-      <nav className="sticky top-0 left-0 right-0 z-50 flex items-center justify-between bg-white border-b border-black/8 px-6 py-4 md:px-8">
+      <nav
+        className={`${
+          isSticky ? "sticky top-0" : ""
+        } left-0 right-0 z-50 flex items-center justify-between bg-white border-b border-black/8 px-6 py-4 md:px-8`}
+      >
         <button
           onClick={() => setDrawerOpen(true)}
           className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.14em] uppercase text-black hover:text-tic-pink transition-colors"
