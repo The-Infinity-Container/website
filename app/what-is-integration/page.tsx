@@ -38,7 +38,7 @@ export default function WhatIsIntegrationPage() {
             }}
           />
           <h2 className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-[0.02em] leading-[1.15] mx-auto mb-[60px]" style={{ fontSize: "clamp(34px, 5.5vw, 56px)", fontWeight: "normal" }}>
-            becomes a part of all
+            becomes a part of who you are.
           </h2>
           <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-yellow max-w-[820px] mx-auto" style={{ fontSize: "clamp(22px, 2.86vw, 27px)" }}>
             A journey — psychedelic or otherwise — opens something. Integration is what you do with what opened.
@@ -47,7 +47,7 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── THE WORK SECTION ──────────────────────────────────────── */}
-      <section className="bg-white px-3 py-[100px]">
+      <section className="bg-white px-3 pt-[100px] pb-[140px]">
         <div className="max-w-[1290px] mx-auto">
           {/* Header row */}
           <div className="mb-[28px]">
@@ -116,7 +116,7 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── INTEGRATION IS THE WAY SECTION ───────────────────────── */}
-      <section className="bg-white px-6 py-[100px]">
+      <section className="bg-white px-6 pt-[100px] pb-[140px]">
         <div className="max-w-[1290px] mx-auto text-center">
           <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(63px, 10.8vw, 107px)", color: "#E64E59", letterSpacing: "0.09em", marginBottom: "-68px" }}>
             Integration
@@ -127,24 +127,24 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── THE GAP SECTION ───────────────────────────────────────── */}
-      <section className="bg-tic-grey px-6 py-[100px]">
+      <section className="bg-tic-grey px-6 pt-[100px] pb-[140px]">
         <div className="max-w-[1200px] mx-auto">
           {/* Row 1: Label, heading, first paragraph */}
           <div className="mb-[-36px]">
             <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
               The gap
             </p>
-            <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]" style={{ fontSize: "clamp(26px, 4vw, 42px)" }}>
+            <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]" style={{ fontSize: "clamp(23px, 3.6vw, 38px)" }}>
               It doesn't happen on its own.
             </h2>
-            <p className="font-[family-name:var(--font-noto-serif)] text-[28px] text-[#222]" style={{ lineHeight: "45px" }}>
+            <p className="font-[family-name:var(--font-noto-serif)] text-[25px] text-[#222]" style={{ lineHeight: "41px" }}>
               The experience is a doorway — but most people are handed the doorway and nothing else. No preparation beforehand. No container afterward. No community to witness the becoming.
             </p>
           </div>
 
           {/* Row 2: Two-column grid with italic text and hand image */}
           <div className="grid md:grid-cols-[2fr_3fr] gap-[60px] items-center mb-[60px]">
-            <div className="flex items-center font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-brown pl-[28px] min-h-[300px]" style={{ fontSize: "40px", lineHeight: "1.6" }}>
+            <div className="flex items-center font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-brown pl-[28px] min-h-[300px]" style={{ fontSize: "36px", lineHeight: "1.6" }}>
               Insight without integration fades. The journey that could have changed everything becomes a story you tell.
             </div>
             <div>
@@ -161,7 +161,7 @@ export default function WhatIsIntegrationPage() {
 
           {/* Row 3: Full-width paragraph and link */}
           <div>
-            <p className="font-[family-name:var(--font-noto-serif)] text-[28px] mb-[24px] text-[#222]" style={{ lineHeight: "45px" }}>
+            <p className="font-[family-name:var(--font-noto-serif)] text-[25px] mb-[24px] text-[#222]" style={{ lineHeight: "41px" }}>
               Integration takes structure, rhythm, and relationship. It takes a system that honors both the preparation before and the long, spiraling work after. That is what The Infinity Container was built for.
             </p>
 
@@ -173,22 +173,22 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── WHY CAPACITIES SECTION ───────────────────────────────── */}
-      <section className="bg-white px-6 py-[100px]">
+      <section className="bg-white px-6 pt-[100px] pb-[140px]">
         <div className="max-w-[90vw] mx-auto">
           <div className="grid md:grid-cols-[1fr_1fr] gap-[60px] items-start mb-[60px]">
             <div>
               <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
                 Why capacities
               </p>
-              <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] w-full mb-[28px]" style={{ fontSize: "clamp(26px, 4vw, 42px)" }}>
+              <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] w-full mb-[28px]" style={{ fontSize: "clamp(23px, 3.6vw, 38px)" }}>
                 Who are you becoming?
               </h2>
 
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] mb-[24px] text-[#222]" style={{ lineHeight: "45px" }}>
+              <p className="font-[family-name:var(--font-noto-serif)] text-[25px] mb-[24px] text-[#222]" style={{ lineHeight: "41px" }}>
                 Most learning asks: what can you do? Integration asks a different question — who are you becoming?
               </p>
 
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] mb-[24px] text-[#222]" style={{ lineHeight: "45px" }}>
+              <p className="font-[family-name:var(--font-noto-serif)] text-[25px] mb-[24px] text-[#222]" style={{ lineHeight: "41px" }}>
                 That is why the framework is built around behavioral capacities, not skills. A skill is something you deploy in a context. A capacity changes what you are able to be — across contexts, across relationships, across time.
               </p>
             </div>
@@ -205,24 +205,24 @@ export default function WhatIsIntegrationPage() {
 
           <div className="grid md:grid-cols-2 gap-[24px] my-[44px]">
             <div className="bg-tic-grey rounded px-[28px] py-[32px]">
-              <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[30px] uppercase tracking-[0.14em] mb-[14px]">
+              <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[27px] uppercase tracking-[0.14em] mb-[14px]">
                 Skills, learned in isolation
               </h4>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] text-[#2a2a2a] font-medium" style={{ lineHeight: "45px" }}>
+              <p className="font-[family-name:var(--font-noto-serif)] text-[25px] text-[#2a2a2a] font-medium" style={{ lineHeight: "41px" }}>
                 Acquired in a course. Practiced alone. Deployed when remembered. They add to what you can do — but leave who you are untouched.
               </p>
             </div>
             <div className="bg-tic-yellow rounded px-[28px] py-[32px]">
-              <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[30px] uppercase tracking-[0.14em] mb-[14px]">
+              <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[27px] uppercase tracking-[0.14em] mb-[14px]">
                 Capacities, built in community
               </h4>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] text-[#2a2a2a] font-medium" style={{ lineHeight: "45px" }}>
+              <p className="font-[family-name:var(--font-noto-serif)] text-[25px] text-[#2a2a2a] font-medium" style={{ lineHeight: "41px" }}>
                 Developed in relationship, over time, inside a container. They change what is available to you — more resilience, less burnout, a deeper sense of oneness with your life and the people in it.
               </p>
             </div>
           </div>
 
-          <p className="font-[family-name:var(--font-noto-serif)] text-[28px] text-[#222]" style={{ marginTop: "6rem", marginBottom: "6rem", lineHeight: "45px" }}>
+          <p className="font-[family-name:var(--font-noto-serif)] text-[25px] text-[#222]" style={{ marginTop: "6rem", marginBottom: "6rem", lineHeight: "41px" }}>
             This is why we integrate rather than simply learn. Insight that stays intellectual fades. Capacity that is practiced in community becomes who you are.
           </p>
 
@@ -233,7 +233,7 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── INTEGRATION IS THE WAY / OUR SYSTEM ────────────────────── */}
-      <section className="bg-black px-6 py-[100px]">
+      <section className="bg-black px-6 pt-[100px] pb-[140px]">
         <div className="max-w-[1290px] mx-auto text-center mb-[80px]">
           <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(63px, 10.8vw, 107px)", color: "white", letterSpacing: "0.09em", marginBottom: "-68px" }}>
             Integration
@@ -243,10 +243,10 @@ export default function WhatIsIntegrationPage() {
           <Image
             src="/assets/lunar-pink-transparent-bg.svg"
             alt="Solar-Lunar Framework"
-            width={900}
-            height={900}
+            width={810}
+            height={810}
             className="mx-auto"
-            style={{ maxWidth: "1200px" }}
+            style={{ maxWidth: "1080px" }}
             aria-hidden
           />
         </div>
@@ -267,7 +267,7 @@ export default function WhatIsIntegrationPage() {
           </div>
 
 <div className="mb-[60px]">
-            <div className="grid grid-cols-4 gap-[24px] mb-[44px] max-w-[1000px] mx-auto">
+            <div className="grid grid-cols-4 gap-[24px] mb-[44px] max-w-[1280px] mx-auto">
               {["Ground", "Anchor", "Weave", "Titrate", "Play", "Kindle", "Shed"].map((capacity, index) => {
                 const isPink = capacity === "Ground" || capacity === "Play";
                 const borderColor = isPink ? "#7C3537" : "#236C80";
@@ -307,18 +307,18 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── HOW YOU LIVE IT ───────────────────────────────────────── */}
-      <section className="bg-white px-6 py-[100px]">
+      <section className="bg-white px-6 pt-[100px] pb-[140px]">
         <div className="max-w-[90vw] mx-auto">
           <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
             How you live it
           </p>
-          <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[44px]" style={{ fontSize: "clamp(30px, 4.6vw, 48px)" }}>
+          <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[44px]" style={{ fontSize: "clamp(23px, 3.6vw, 38px)" }}>
             The framework isn't something you read about here.<br />
             It's something you practice inside of.
           </h2>
 
           <div className="grid md:grid-cols-[70%_30%] gap-[60px] items-start mb-[44px]">
-            <p className="font-[family-name:var(--font-noto-serif)] text-[28px] text-[#222]" style={{ lineHeight: "45px" }}>
+            <p className="font-[family-name:var(--font-noto-serif)] text-[25px] text-[#222]" style={{ lineHeight: "41px" }}>
               Every session, theme, and program inside The Infinity Container is organized within the Solar-Lunar Framework. Each month moves through a capacity. The community moves through it together.
             </p>
             <Image
@@ -354,7 +354,7 @@ export default function WhatIsIntegrationPage() {
           />
 
           <div className="text-center" style={{ marginTop: "80px" }}>
-            <a href="#" className="font-[family-name:var(--font-noto-serif)] italic text-black hover:opacity-70 transition-opacity inline-block underline" style={{ fontSize: "18.4px" }}>
+            <a href="#" className="font-[family-name:var(--font-noto-serif)] italic text-black hover:opacity-70 transition-opacity inline-block underline" style={{ fontSize: "16.5px" }}>
               Not sure which fits? Take the 7-question quiz →
             </a>
           </div>
@@ -362,12 +362,12 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── KEEP GOING ──────────────────────────────────────────────── */}
-      <section className="px-6 py-[100px]" style={{ backgroundColor: "#D5D06A" }}>
+      <section className="px-6 pt-[100px] pb-[140px]" style={{ backgroundColor: "#D5D06A" }}>
         <div className="max-w-[90vw] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] uppercase mb-[44px] text-center" style={{ fontSize: "clamp(70px, 12vw, 119px)", color: "black", letterSpacing: "0.09em", marginBottom: "-20px" }}>
+          <p className="font-[family-name:var(--font-gordon)] uppercase mb-[44px] text-center" style={{ fontSize: "clamp(63px, 10.8vw, 107px)", color: "black", letterSpacing: "0.09em", marginBottom: "-20px" }}>
             Keep going.
           </p>
-          <p className="font-[family-name:var(--font-noto-serif)] italic text-[28px] mx-auto text-center mb-[30px]" style={{ color: "#7C3537", lineHeight: "45px", maxWidth: "70vw" }}>
+          <p className="font-[family-name:var(--font-noto-serif)] italic text-[25px] mx-auto text-center mb-[30px]" style={{ color: "#7C3537", lineHeight: "41px", maxWidth: "70vw" }}>
             You don't have to be ready to join anything. Integration happens a little at a time — start at whatever depth feels right.
           </p>
 
@@ -378,38 +378,38 @@ export default function WhatIsIntegrationPage() {
               width={200}
               height={200}
               className="h-auto"
-              style={{ width: "calc(var(--spacing) * 63)" }}
+              style={{ width: "calc(var(--spacing) * 57)" }}
               aria-hidden
             />
           </div>
 
           <div className="grid gap-[44px] max-w-[1200px] mx-auto" style={{ gridTemplateColumns: "1fr 1.1fr 1fr", marginTop: "-135px" }}>
-            <div className="bg-white px-[32px] py-[44px] rounded flex flex-col justify-between">
+            <div className="bg-white px-[29px] py-[40px] rounded flex flex-col justify-between">
               <div>
-                <h3 className="font-[family-name:var(--font-gordon)] text-[20px] uppercase tracking-[0.02em] mb-[24px]" style={{ color: "#3A3A3A" }}>
+                <h3 className="font-[family-name:var(--font-gordon)] text-[18px] uppercase tracking-[0.02em] mb-[24px]" style={{ color: "#3A3A3A" }}>
                   Read
                 </h3>
-                <p className="font-[family-name:var(--font-gordon)] text-[28px] leading-[1.3] mb-[18px]" style={{ color: "#2a2a2a" }}>
+                <p className="font-[family-name:var(--font-gordon)] text-[25px] leading-[1.3] mb-[18px]" style={{ color: "#2a2a2a" }}>
                   Go deeper on the blog
                 </p>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[16px] leading-[1.6] text-[#2a2a2a]">
+                <p className="font-[family-name:var(--font-noto-serif)] text-[14px] leading-[1.6] text-[#2a2a2a]">
                   The complete guide to integration — the science, the practice, and the lived experience of the work. Free, no signup.
                 </p>
               </div>
-              <a href="/blog/what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[14px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity inline-block mt-[28px]">
+              <a href="/blog/what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[13px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity inline-block mt-[28px]">
                 What is Integration? The Complete Guide →
               </a>
             </div>
 
-            <div className="bg-white px-[32px] py-[44px] rounded flex flex-col justify-between">
+            <div className="bg-white px-[29px] py-[40px] rounded flex flex-col justify-between">
               <div>
-                <h3 className="font-[family-name:var(--font-gordon)] text-[20px] uppercase tracking-[0.02em] mb-[24px]" style={{ color: "#3A3A3A" }}>
+                <h3 className="font-[family-name:var(--font-gordon)] text-[18px] uppercase tracking-[0.02em] mb-[24px]" style={{ color: "#3A3A3A" }}>
                   Receive
                 </h3>
-                <p className="font-[family-name:var(--font-gordon)] text-[28px] leading-[1.3] mb-[18px]" style={{ color: "#2a2a2a" }}>
+                <p className="font-[family-name:var(--font-gordon)] text-[25px] leading-[1.3] mb-[18px]" style={{ color: "#2a2a2a" }}>
                   Get the newsletter
                 </p>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[16px] leading-[1.6] text-[#2a2a2a]">
+                <p className="font-[family-name:var(--font-noto-serif)] text-[14px] leading-[1.6] text-[#2a2a2a]">
                   Integration frameworks, somatic tools, and practitioner resources — rooted in the Solar-Lunar system. Written by Dr. Victoria Sterkin.
                 </p>
               </div>
@@ -418,19 +418,19 @@ export default function WhatIsIntegrationPage() {
               </div>
             </div>
 
-            <div className="bg-white px-[32px] py-[44px] rounded flex flex-col justify-between">
+            <div className="bg-white px-[29px] py-[40px] rounded flex flex-col justify-between">
               <div>
-                <h3 className="font-[family-name:var(--font-gordon)] text-[20px] uppercase tracking-[0.02em] mb-[24px]" style={{ color: "#3A3A3A" }}>
+                <h3 className="font-[family-name:var(--font-gordon)] text-[18px] uppercase tracking-[0.02em] mb-[24px]" style={{ color: "#3A3A3A" }}>
                   Join a call
                 </h3>
-                <p className="font-[family-name:var(--font-gordon)] text-[28px] leading-[1.3] mb-[18px]" style={{ color: "#2a2a2a" }}>
+                <p className="font-[family-name:var(--font-gordon)] text-[25px] leading-[1.3] mb-[18px]" style={{ color: "#2a2a2a" }}>
                   Come to a community call
                 </p>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[14px] leading-[1.6] text-[#2a2a2a]">
+                <p className="font-[family-name:var(--font-noto-serif)] text-[13px] leading-[1.6] text-[#2a2a2a]">
                   Come to a community call. A free monthly gathering — experience the community and the practice before committing to anything. Join the free membership to get the call link.
                 </p>
               </div>
-              <a href="/community-call" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[14px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity inline-block mt-[28px]">
+              <a href="/community-call" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[13px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity inline-block mt-[28px]">
                 About the community call →
               </a>
             </div>
@@ -443,7 +443,7 @@ export default function WhatIsIntegrationPage() {
               width={200}
               height={200}
               className="h-auto"
-              style={{ width: "calc(var(--spacing) * 123)" }}
+              style={{ width: "calc(var(--spacing) * 111)" }}
               aria-hidden
             />
           </div>
