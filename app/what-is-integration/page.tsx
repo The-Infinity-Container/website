@@ -118,7 +118,7 @@ export default function WhatIsIntegrationPage() {
       {/* ── INTEGRATION IS THE WAY SECTION ───────────────────────── */}
       <section className="bg-white px-6 py-[100px]">
         <div className="max-w-[1290px] mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(70px, 12vw, 119px)", color: "#E64E59", letterSpacing: "0.09em", marginBottom: "-68px" }}>
+          <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(63px, 10.8vw, 107px)", color: "#E64E59", letterSpacing: "0.09em", marginBottom: "-68px" }}>
             Integration
             <br />
             is the way
@@ -235,7 +235,7 @@ export default function WhatIsIntegrationPage() {
       {/* ── INTEGRATION IS THE WAY / OUR SYSTEM ────────────────────── */}
       <section className="bg-black px-6 py-[100px]">
         <div className="max-w-[1290px] mx-auto text-center mb-[80px]">
-          <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(70px, 12vw, 119px)", color: "white", letterSpacing: "0.09em", marginBottom: "-68px" }}>
+          <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(63px, 10.8vw, 107px)", color: "white", letterSpacing: "0.09em", marginBottom: "-68px" }}>
             Integration
             <br />
             is the way
@@ -371,7 +371,7 @@ export default function WhatIsIntegrationPage() {
             You don't have to be ready to join anything. Integration happens a little at a time — start at whatever depth feels right.
           </p>
 
-          <div className="flex justify-center mb-[60px]">
+          <div className="flex justify-center mb-[60px]" style={{ position: "relative", zIndex: 10 }}>
             <Image
               src="/assets/dropper.svg"
               alt=""
@@ -383,7 +383,7 @@ export default function WhatIsIntegrationPage() {
             />
           </div>
 
-          <div className="grid gap-[44px] max-w-[1200px] mx-auto" style={{ gridTemplateColumns: "1fr 1.1fr 1fr" }}>
+          <div className="grid gap-[44px] max-w-[1200px] mx-auto" style={{ gridTemplateColumns: "1fr 1.1fr 1fr", marginTop: "-135px" }}>
             <div className="bg-white px-[32px] py-[44px] rounded flex flex-col justify-between">
               <div>
                 <h3 className="font-[family-name:var(--font-gordon)] text-[20px] uppercase tracking-[0.02em] mb-[24px]" style={{ color: "#3A3A3A" }}>
@@ -434,6 +434,18 @@ export default function WhatIsIntegrationPage() {
                 About the community call →
               </a>
             </div>
+          </div>
+
+          <div className="flex justify-center mt-[60px]">
+            <Image
+              src="/assets/satellite.svg"
+              alt=""
+              width={200}
+              height={200}
+              className="h-auto"
+              style={{ width: "calc(var(--spacing) * 123)" }}
+              aria-hidden
+            />
           </div>
         </div>
       </section>
