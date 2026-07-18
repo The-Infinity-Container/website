@@ -83,12 +83,12 @@ export default function HomePage() {
       {/* ── What is this? ──────────────────────────────────────────── */}
       <section className="bg-white px-6 py-[110px]">
         <div className="max-w-[1080px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-dark-grey mb-[18px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
+          <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-dark-grey mb-[18px]" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
             What is this?
           </p>
           <h2
             className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[34px] max-w-[700px]"
-            style={{ fontSize: "clamp(28px, 4.4vw, 44px)" }}
+            style={{ fontSize: "clamp(27px, 4.14vw, 43px)" }}
           >
             Integration support for the people who hold everyone else.
           </h2>
@@ -107,7 +107,7 @@ export default function HomePage() {
             </div>
 
             {/* Mobile: Poem appears third */}
-            <div className="md:hidden order-3 w-full font-[family-name:var(--font-noto-serif)] italic text-[17px] leading-[1.9] text-black border-l-[3px] border-tic-yellow pl-[26px]">
+            <div className="md:hidden order-3 w-full font-[family-name:var(--font-noto-serif)] italic text-[22px] leading-[1.65] text-black border-l-[3px] border-tic-yellow pl-[26px]">
               Integration is a birthday<br />
               &amp; a funeral.<br />
               It is playing in the unknown,<br />
@@ -123,14 +123,14 @@ export default function HomePage() {
             </div>
 
             {/* Text content - appears first on mobile, first on desktop */}
-            <div className="flex flex-col gap-[22px] order-1 md:order-1 w-full">
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.8] text-[#2a2a2a]">
+            <div className="flex flex-col gap-[22px] order-1 md:order-1 w-full font-[family-name:var(--font-noto-serif)] text-[25px] text-[#2a2a2a]" style={{ lineHeight: "41px" }}>
+              <p>
                 The Infinity Container is a community built for the full arc — preparation before the experience, and integration after. We work inside the Solar-Lunar Framework, a proprietary system rooted in behavioral science, somatic practice, and contemplative traditions.
               </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.8] text-[#2a2a2a]">
+              <p>
                 We are here for practitioners, therapists, coaches, healers, and helpers of all kinds — and for anyone navigating psychedelic experiences, life transitions, or expanded states who is ready to do the work with real support.
               </p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[28px] leading-[1.8] text-[#2a2a2a]">
+              <p>
                 Integration is not therapy. It is not a debrief. It is an ongoing practice of becoming — and TIC is built to hold that practice over time.
               </p>
             </div>
@@ -144,7 +144,7 @@ export default function HomePage() {
                 height={100}
                 className="w-full h-auto"
               />
-              <div className="font-[family-name:var(--font-noto-serif)] italic text-[17px] leading-[1.9] text-black border-l-[3px] border-tic-yellow pl-[26px]">
+              <div className="font-[family-name:var(--font-noto-serif)] italic text-[22px] leading-[1.65] text-black border-l-[3px] border-tic-yellow pl-[26px]">
                 Integration is a birthday<br />
                 &amp; a funeral.<br />
                 It is playing in the unknown,<br />
@@ -189,19 +189,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="hidden">
-        <WayDivider onBlack />
-      </div>
+      <WayDivider onBlack />
 
       {/* ── Two Paths ──────────────────────────────────────────────── */}
       <section className="bg-white px-6 py-[110px]">
         <div className="max-w-[1080px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-dark-grey mb-[18px]" style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}>
+          <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-dark-grey mb-[18px]" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
             Who is this for?
           </p>
           <h2
             className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[44px]"
-            style={{ fontSize: "clamp(30px, 4.6vw, 48px)" }}
+            style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
           >
             Two containers. One ecosystem.
           </h2>
@@ -285,18 +283,18 @@ export default function HomePage() {
         />
 
         <div className="max-w-[1280px] mx-auto px-6">
-          <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.22em] text-[19px] text-tic-yellow mb-[18px]">
+          <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-yellow" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
             Our approach
           </p>
           <h2
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.18] mb-[30px]"
-            style={{ fontSize: "clamp(2.1rem, 4.4vw, 3.45rem)" }}
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.18] mb-[28px]"
+            style={{ fontSize: "clamp(23px, 3.6vw, 38px)" }}
           >
             Integration is not an event.
             <br />
             It is a system.
           </h2>
-          <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey leading-[1.8] text-[20px] mb-[56px]">
+          <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey text-[25px] mb-[44px]" style={{ lineHeight: "41px" }}>
             The Solar-Lunar Framework is TIC&apos;s proprietary integration system — built on
             behavioral science, somatic practice, and contemplative traditions. It maps the full
             arc across two spirals:
@@ -314,13 +312,13 @@ export default function HomePage() {
             className="hidden lg:block absolute left-1/2 -translate-x-1/2 w-[350px] h-auto opacity-15 z-0 pointer-events-none"
           />
 
-          <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey leading-relaxed text-[24px] mb-[40px] relative z-10">
+          <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey text-[25px] mb-[40px] relative z-10" style={{ lineHeight: "41px" }}>
             Every program, session, and theme inside TIC is organized within this framework. It
             is not a curriculum you complete. It is a practice you return to.
           </p>
           <Link
             href="/what-is-integration"
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[20px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors"
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[22px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors"
           >
             Learn more about the Solar-Lunar Framework →
           </Link>
@@ -332,12 +330,12 @@ export default function HomePage() {
       {/* ── Testimonials ───────────────────────────────────────────── */}
       <section className="relative bg-white px-6 py-[110px] overflow-hidden">
         <Image
-          src="/assets/spider-thick.svg"
+          src="/assets/frog.svg"
           alt=""
           aria-hidden
-          width={890}
-          height={1386}
-          className="hidden md:block absolute top-24 right-10 w-20 h-auto opacity-70"
+          width={306}
+          height={207}
+          className="hidden md:block absolute bottom-0 right-0 w-[380px] h-auto pointer-events-none"
         />
         <div className="max-w-[1080px] mx-auto">
           <h2
@@ -386,27 +384,6 @@ export default function HomePage() {
         <p className="mt-4 text-xs text-[#5a570f]">No spam. Unsubscribe anytime.</p>
       </section>
 
-      {/* ── Closing CTA ────────────────────────────────────────────── */}
-      <section className="relative bg-black text-white px-6 py-20 text-center overflow-hidden">
-        <Image
-          src="/assets/window-view.svg"
-          alt="The Infinity Container membership portal"
-          width={480}
-          height={660}
-          className="mx-auto w-full max-w-[180px] h-auto mb-8"
-        />
-        <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey max-w-md mx-auto mb-8 leading-relaxed">
-          Whenever you&apos;re ready, the container is open.
-        </p>
-        <a
-          href={MEMBERSHIP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block font-[family-name:var(--font-gordon)] uppercase tracking-wider text-sm border border-tic-yellow text-tic-yellow px-9 py-4 rounded-sm hover:bg-tic-yellow hover:text-black transition-colors"
-        >
-          Enter Our Membership Portal
-        </a>
-      </section>
     </main>
   );
 }
@@ -414,21 +391,20 @@ export default function HomePage() {
 function WayDivider({ onBlack = false }: { onBlack?: boolean }) {
   return (
     <div
-      className={`px-6 text-center ${
+      className={`px-6 pt-[100px] pb-[140px] text-center ${
         onBlack ? "bg-black" : "bg-tic-olive"
       }`}
-      style={{ padding: "90px 24px" }}
     >
-      <span
-        className={`font-[family-name:var(--font-gordon)] uppercase tracking-[0.32em] ${
+      <h2
+        className={`font-[family-name:var(--font-gordon)] uppercase font-bold ${
           onBlack ? "text-white" : "text-tic-yellow"
         }`}
-        style={{ fontSize: "clamp(20px, 3.4vw, 34px)" }}
+        style={{ fontSize: "clamp(68px, 11.66vw, 115px)", letterSpacing: "0.09em", marginBottom: "-68px" }}
       >
         Integration
         <br />
         is the way
-      </span>
+      </h2>
     </div>
   );
 }
