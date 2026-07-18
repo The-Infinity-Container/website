@@ -20,7 +20,7 @@ const APPROACH_CARDS: ApproachCard[] = [
     ],
     backgroundColor: "#7C3537",
     titleColor: "#F56E71",
-    paddingY: "py-[68px]",
+    paddingY: "py-[61px]",
   },
   {
     title: "The Lunar Spiral",
@@ -34,39 +34,39 @@ const APPROACH_CARDS: ApproachCard[] = [
     ],
     backgroundColor: "#236C7F",
     titleColor: "#0A0E10",
-    paddingY: "py-[90px]",
+    paddingY: "py-[81px]",
   },
 ];
 
 export default function ApproachCards() {
   return (
     <div
-      className="grid gap-[68px] mb-[56px] relative"
+      className="grid gap-[61px] mb-[56px] relative"
       style={{ gridTemplateColumns: "1fr 1fr" }}
     >
       {APPROACH_CARDS.map((card) => (
         <div
           key={card.title}
-          className={`rounded ${card.paddingY} px-[72px]`}
+          className={`rounded ${card.paddingY} px-[65px]`}
           style={{ backgroundColor: card.backgroundColor }}
         >
           <h3
-            className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[34px] mb-4"
+            className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[31px] mb-4"
             style={{ color: card.titleColor }}
           >
             {card.title}
           </h3>
-          <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[23px] text-white mb-[40px]">
+          <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[21px] text-white mb-[40px]">
             {card.heading}
           </p>
-          <p className="font-[family-name:var(--font-noto-serif)] text-white text-[22px] leading-[1.8] mb-[48px]">
+          <p className="font-[family-name:var(--font-noto-serif)] text-white text-[20px] leading-[1.8] mb-[48px]">
             {card.description}
           </p>
           <div className="flex flex-wrap gap-4">
             {card.badges.map((badge) => (
               <span
                 key={badge.text}
-                className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[14px] rounded-full px-[25px] py-[13px] border"
+                className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[13px] rounded-full px-[23px] py-[12px] border"
                 style={{
                   borderColor:
                     badge.color === "white" ? "white" : "#7B7B7A",

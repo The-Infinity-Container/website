@@ -14,26 +14,24 @@ type NavLink =
 
 const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "What is this?", href: "/what-is-the-infinity-container" },
   { label: "Membership Info", href: "https://the-infinity-container.mn.co/landing", external: true },
-  { label: "Who is this for?", href: "/who-is-this-for" },
-  { label: "What is integration?", href: "/what-is-integration" },
+  {
+    label: "Integration",
+    children: [
+      { label: "What is Integration?", href: "/what-is-integration" },
+      { label: "Our System", href: "/what-is-integration#our-system" },
+    ],
+  },
   { label: "Community Call", href: "/community-call" },
   { label: "Partnerships", href: "/partnerships" },
   { label: "Blog", href: "/blog" },
-  {
-    label: "About",
-    children: [
-      { label: "About us", href: "/about-us" },
-      { label: "Testimonials", href: "/testimonials" },
-    ],
-  },
+  { label: "About", href: "/about-us" },
 ];
 
 export default function SiteNav() {
   const pathname = usePathname();
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [aboutOpen, setAboutOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const isDark = DARK_NAV_ROUTES.some((r) => (r === "/" ? pathname === "/" : pathname.startsWith(r)));
   const isSticky = !pathname.startsWith("/what-is-integration");
 
@@ -119,17 +117,17 @@ export default function SiteNav() {
                 <li key={link.label}>
                   <button
                     className={`${linkBase} flex items-center justify-end gap-3 ${
-                      childActive || aboutOpen ? "bg-tic-pink" : ""
+                      childActive || dropdownOpen ? "bg-tic-pink" : ""
                     }`}
-                    onClick={() => setAboutOpen((o) => !o)}
-                    aria-expanded={aboutOpen}
+                    onClick={() => setDropdownOpen((o) => !o)}
+                    aria-expanded={dropdownOpen}
                   >
                     {link.label}
-                    <span className="text-xl">{aboutOpen ? "^" : "v"}</span>
+                    <span className="text-xl">{dropdownOpen ? "^" : "v"}</span>
                   </button>
                   <ul
                     className={`overflow-hidden transition-all duration-200 ${
-                      aboutOpen ? "max-h-40" : "max-h-0"
+                      dropdownOpen ? "max-h-40" : "max-h-0"
                     }`}
                   >
                     {link.children.map((child) => (
