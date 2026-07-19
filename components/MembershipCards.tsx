@@ -53,6 +53,8 @@ export default function MembershipCards({ cards }: MembershipCardsProps) {
             </p>
             <a
               href={card.buttonHref}
+              target={card.buttonHref.startsWith("http") ? "_blank" : undefined}
+              rel={card.buttonHref.startsWith("http") ? "noopener noreferrer" : undefined}
               className={`${colors.buttonText} font-[family-name:var(--font-gordon)] text-[12px] uppercase px-[24px] py-[16px] block text-center hover:opacity-70 transition-opacity`}
               style={{ backgroundColor: colors.buttonBgColor, letterSpacing: "0.06em" }}
             >

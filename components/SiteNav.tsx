@@ -75,7 +75,9 @@ export default function SiteNav() {
         </div>
 
         <a
-          href="/sign-in"
+          href="https://the-infinity-container.mn.co/sign_in?from=https%3A%2F%2Fthe-infinity-container.mn.co%2F"
+          target="_blank"
+          rel="noopener noreferrer"
           className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.12em] uppercase text-black hover:text-tic-pink transition-colors"
         >
           Sign In

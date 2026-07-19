@@ -96,7 +96,7 @@ export default function WhatIsIntegrationPage() {
 
           {/* Full-width blue link */}
           <div className="mb-[60px]">
-            <a href="/blog/what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full" style={{ marginTop: "4px" }}>
+            <a href="/blog/blog-what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full" style={{ marginTop: "4px" }}>
               <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: read the full essay on the blog →</span>
             </a>
           </div>
@@ -339,7 +339,7 @@ export default function WhatIsIntegrationPage() {
                 heading: "PRACTICE THE FRAMEWORK, LIVE.",
                 description: "Weekly Friday practice sessions, monthly integration themes, and a community moving through the spirals together. You don't study the framework — you experience it, one capacity at a time.",
                 buttonText: "EXPLORE THE PRACTICE MEMBERSHIP →",
-                buttonHref: "/membership",
+                buttonHref: "https://the-infinity-container.mn.co/users/onboarding/plans/1898747",
                 backgroundColor: "red",
               },
               {
@@ -347,14 +347,14 @@ export default function WhatIsIntegrationPage() {
                 heading: "PRACTICE IT — AND LEARN TO HOLD IT.",
                 description: "Everything in Practice, plus the professional layer: frameworks you can bring to your clients, practitioner-focused teaching, and a community of peers doing their own work alongside their client work.",
                 buttonText: "EXPLORE THE PRACTITIONER MEMBERSHIP →",
-                buttonHref: "/membership",
+                buttonHref: "https://the-infinity-container.mn.co/users/onboarding/plans/1483936",
                 backgroundColor: "blue",
               },
             ]}
           />
 
           <div className="text-center" style={{ marginTop: "80px" }}>
-            <a href="#" className="font-[family-name:var(--font-noto-serif)] italic text-black hover:opacity-70 transition-opacity inline-block underline" style={{ fontSize: "15px" }}>
+            <a href="/find-my-membership" className="font-[family-name:var(--font-noto-serif)] italic text-black hover:opacity-70 transition-opacity inline-block underline" style={{ fontSize: "15px" }}>
               Not sure which fits? Take the 7-question quiz →
             </a>
           </div>
@@ -396,7 +396,7 @@ export default function WhatIsIntegrationPage() {
                   The complete guide to integration — the science, the practice, and the lived experience of the work. Free, no signup.
                 </p>
               </div>
-              <a href="/blog/what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[12px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity inline-block mt-[28px]">
+              <a href="/blog/blog-what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[12px] border-b-[1.5px] border-tic-cobalt pb-[3px] hover:opacity-70 transition-opacity inline-block mt-[28px]">
                 What is Integration? The Complete Guide →
               </a>
             </div>

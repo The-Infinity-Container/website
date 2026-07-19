@@ -4,7 +4,8 @@ import InlineNewsletter from "@/components/InlineNewsletter";
 import ApproachCards from "@/components/ApproachCards";
 import MembershipCards from "@/components/MembershipCards";
 
-const MEMBERSHIP_URL = "https://the-infinity-container.mn.co/landing";
+const FIND_MEMBERSHIP_URL = "https://the-infinity-container.mn.co/users/onboarding/plans";
+const JOIN_FREE_URL = "https://the-infinity-container.mn.co/users/onboarding/plans/1484020";
 const SIGNIN_URL = "https://the-infinity-container.mn.co/sign_in";
 
 export default function HomePage() {
@@ -63,7 +64,7 @@ export default function HomePage() {
           </p>
 
           <a
-            href={MEMBERSHIP_URL}
+            href={FIND_MEMBERSHIP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm bg-tic-salmon text-black px-10 py-4 rounded-sm hover:bg-tic-pink transition-colors"
@@ -214,7 +215,7 @@ export default function HomePage() {
                 heading: "YOU HOLD A LOT. THIS HOLDS YOU.",
                 description: "For therapists, coaches, healers, bodyworkers, and space holders who are ready for a consistent place to be held — not just to hold. Weekly practice. Real tools. A community that understands the work.",
                 buttonText: "EXPLORE THE PRACTITIONER PATH →",
-                buttonHref: "/who-is-this-for",
+                buttonHref: "https://the-infinity-container.mn.co/users/onboarding/plans/1483936",
                 backgroundColor: "blue",
               },
               {
@@ -222,7 +223,7 @@ export default function HomePage() {
                 heading: "YOU DON'T HAVE TO FIGURE THIS OUT ALONE.",
                 description: "For helpers, caregivers, educators, artists, and curious humans integrating their own experiences. Drop-in practice. Integration frameworks. A community of people doing the work alongside you.",
                 buttonText: "EXPLORE THE PRACTICE PATH →",
-                buttonHref: "/what-is-integration",
+                buttonHref: "https://the-infinity-container.mn.co/users/onboarding/plans/1898747",
                 backgroundColor: "red",
               },
             ]}
@@ -250,7 +251,7 @@ export default function HomePage() {
               </p>
             </div>
             <a
-              href={MEMBERSHIP_URL}
+              href={JOIN_FREE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm border-[1.5px] border-black text-black px-8 py-[16px] rounded-sm hover:bg-black hover:text-white transition-colors"
@@ -261,14 +262,12 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <a
-              href={MEMBERSHIP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/find-my-membership"
               className="font-[family-name:var(--font-noto-serif)] italic text-[36px] underline underline-offset-4 hover:text-tic-brown transition-colors"
             >
               Not sure which path fits you? Take the 7-question quiz →
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -320,7 +319,7 @@ export default function HomePage() {
             is not a curriculum you complete. It is a practice you return to.
           </p>
           <Link
-            href="/what-is-integration"
+            href="/what-is-integration#our-system"
             className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[22px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors"
           >
             Learn more about the Solar-Lunar Framework →

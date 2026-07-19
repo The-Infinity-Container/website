@@ -107,7 +107,9 @@ export default function CommunityCallPage() {
         <br />
 
         <a
-          href="#join"
+          href={FREE_MEMBERSHIP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block font-[family-name:var(--font-gordon)] text-sm uppercase tracking-[0.12em] bg-[#eb731f] text-[#0b0d10] px-10 py-[17px] rounded-[3px] mb-5 hover:bg-tic-pink transition-colors"
         >
           Join Free to Get the Link →
@@ -501,7 +503,9 @@ export default function CommunityCallPage() {
                 Weekly Friday sessions, monthly themes, the full integration library. For anyone ready to practice the capacities, not just learn about them.
               </p>
               <a
-                href="#"
+                href="https://the-infinity-container.mn.co/users/onboarding/plans/1898747"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.12em] uppercase no-underline px-6 py-3 rounded-[3px] self-start bg-[#0b0d10] text-[#fcfcfc]"
               >
                 Explore the Practice Membership →
@@ -521,7 +525,9 @@ export default function CommunityCallPage() {
                 Everything in Practice, plus professional tools, practitioner-focused teaching, and a peer community doing their own work alongside their client work.
               </p>
               <a
-                href="#"
+                href="https://the-infinity-container.mn.co/users/onboarding/plans/1483936"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.12em] uppercase no-underline px-6 py-3 rounded-[3px] self-start bg-[#fcfcfc] text-tic-blue"
               >
                 Explore the Practitioner Membership →
