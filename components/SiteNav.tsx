@@ -124,7 +124,22 @@ export default function SiteNav() {
                     aria-expanded={dropdownOpen}
                   >
                     {link.label}
-                    <span className="text-xl">{dropdownOpen ? "^" : "v"}</span>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      className={`transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M2.5 4.5L7 9.5L11.5 4.5"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                   </button>
                   <ul
                     className={`overflow-hidden transition-all duration-200 ${
