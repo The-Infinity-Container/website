@@ -6,7 +6,7 @@ import QuizQuestion from "./QuizQuestion";
 import EmailGate from "./EmailGate";
 import ResultScreen from "./ResultScreen";
 import { questions, calculateResult } from "@/lib/quiz/data";
-import type { Score, QuizScores, ResultType } from "@/lib/quiz/types";
+import type { QuizScores, ResultType } from "@/lib/quiz/types";
 
 type Stage = "quiz" | "email" | "result";
 
@@ -21,17 +21,17 @@ export default function QuizEngine() {
   // original mockup behavior.
   const [answeredCount, setAnsweredCount] = useState(0);
 
-  function handleSelectSingle(score: Score) {
-    setScores((prev) => ({ ...prev, [currentIndex]: score }));
+  function handleSelectSingle(optionIndex: number) {
+    setScores((prev) => ({ ...prev, [currentIndex]: optionIndex }));
     setAnsweredCount(currentIndex + 1);
   }
 
-  function handleToggleMulti(score: Score) {
+  function handleToggleMulti(optionIndex: number) {
     setScores((prev) => {
-      const existing = Array.isArray(prev[currentIndex]) ? (prev[currentIndex] as Score[]) : [];
-      const next = existing.includes(score)
-        ? existing.filter((s) => s !== score)
-        : [...existing, score];
+      const existing = Array.isArray(prev[currentIndex]) ? (prev[currentIndex] as number[]) : [];
+      const next = existing.includes(optionIndex)
+        ? existing.filter((i) => i !== optionIndex)
+        : [...existing, optionIndex];
       setAnsweredCount(next.length > 0 ? 1 : 0);
       return { ...prev, [currentIndex]: next };
     });

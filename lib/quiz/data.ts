@@ -91,17 +91,20 @@ export function calculateResult(scores: QuizScores): ResultType {
   let p = 0;
   let pr = 0;
 
-  Object.values(scores).forEach((s) => {
-    if (Array.isArray(s)) {
-      s.forEach((v) => {
+  Object.entries(scores).forEach(([questionIndex, answer]) => {
+    const options = questions[Number(questionIndex)].options;
+    if (Array.isArray(answer)) {
+      answer.forEach((optionIndex) => {
+        const v = options[optionIndex].score;
         if (v === "f") f += 0.5;
         else if (v === "p") p += 0.5;
         else if (v === "pr") pr += 0.5;
       });
     } else {
-      if (s === "f") f++;
-      else if (s === "p") p++;
-      else if (s === "pr") pr++;
+      const v = options[answer].score;
+      if (v === "f") f++;
+      else if (v === "p") p++;
+      else if (v === "pr") pr++;
     }
   });
 
