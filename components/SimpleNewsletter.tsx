@@ -32,19 +32,19 @@ export default function SimpleNewsletter() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="flex gap-3 justify-center">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center">
         <input
           type="email"
           placeholder="Your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="px-5 py-3 text-black placeholder-black/60 outline-none border border-black/20 min-w-[300px]"
+          className="px-5 py-3 text-black placeholder-black/60 outline-none border border-black/20 w-full sm:min-w-[300px] sm:w-auto"
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="bg-black text-white px-8 py-3 font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[14px] hover:bg-[#333] transition-colors disabled:opacity-60"
+          className="bg-black text-white px-8 py-3 font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[14px] hover:bg-[#333] transition-colors disabled:opacity-60 w-full sm:w-auto"
         >
           {status === "loading" ? "Joining…" : "Join"}
         </button>

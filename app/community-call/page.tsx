@@ -186,7 +186,7 @@ export default function CommunityCallPage() {
               alt=""
               width={500}
               height={500}
-              className="w-[336px] shrink-0 mt-1 mb-2 md:mb-0 order-0 md:order-none -translate-x-[50px] -translate-y-[100px]"
+              className="w-[336px] shrink-0 mt-1 mb-2 md:mb-0 order-0 md:order-none md:-translate-x-[50px] -translate-y-[100px]"
             />
           </div>
 
@@ -264,7 +264,7 @@ export default function CommunityCallPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[35%_65%] gap-8 items-center text-center md:text-left">
+          <div className="grid grid-cols-1 md:[grid-template-columns:minmax(0,35%)_minmax(0,65%)] gap-8 items-center text-center md:text-left">
             <Image
               src="/assets/plant-pot-maroon.svg"
               alt=""

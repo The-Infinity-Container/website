@@ -40,14 +40,11 @@ const APPROACH_CARDS: ApproachCard[] = [
 
 export default function ApproachCards() {
   return (
-    <div
-      className="grid gap-[61px] mb-[56px] relative"
-      style={{ gridTemplateColumns: "1fr 1fr" }}
-    >
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-[61px] mb-[56px] relative">
       {APPROACH_CARDS.map((card) => (
         <div
           key={card.title}
-          className={`rounded ${card.paddingY} px-[65px]`}
+          className={`rounded ${card.paddingY} px-8 md:px-[65px]`}
           style={{ backgroundColor: card.backgroundColor }}
         >
           <h3

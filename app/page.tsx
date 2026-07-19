@@ -401,7 +401,7 @@ function WayDivider({ onBlack = false }: { onBlack?: boolean }) {
         className={`font-[family-name:var(--font-gordon)] uppercase font-bold ${
           onBlack ? "text-white" : "text-tic-yellow"
         }`}
-        style={{ fontSize: "clamp(68px, 11.66vw, 115px)", letterSpacing: "0.09em", marginBottom: "-68px" }}
+        style={{ fontSize: "clamp(24px, 8vw, 115px)", letterSpacing: "0.09em", marginBottom: "-68px" }}
       >
         Integration
         <br />
