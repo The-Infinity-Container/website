@@ -3,8 +3,6 @@
 import { useState } from "react";
 
 interface NewsletterFormProps {
-  /** ConvertKit form ID — set once you have it */
-  formId?: string;
   heading?: string;
   description?: string;
   dark?: boolean;
@@ -17,17 +15,26 @@ export default function NewsletterForm({
 }: NewsletterFormProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const textColor = dark ? "text-tic-yellow" : "text-black";
   const borderColor = dark ? "border-tic-yellow" : "border-black";
   const inputBg = dark ? "bg-transparent placeholder-tic-yellow/60 text-tic-yellow" : "bg-transparent placeholder-black/50 text-black";
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // TODO: wire up ConvertKit form ID
-    console.log("Subscribe:", { name, email });
-    setStatus("success");
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/newsletter-subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email }),
+      });
+      const data = await res.json();
+      setStatus(data.success ? "success" : "error");
+    } catch {
+      setStatus("error");
+    }
   }
 
   if (status === "success") {
@@ -50,7 +57,6 @@ export default function NewsletterForm({
           {description}
         </p>
       )}
-      {/* ConvertKit integration pending — replace action + hidden fields when form ID is ready */}
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 w-full max-w-xl">
         <input
           type="text"
@@ -70,14 +76,17 @@ export default function NewsletterForm({
         />
         <button
           type="submit"
-          className={`border-2 ${borderColor} ${textColor} px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-black hover:text-tic-yellow transition-colors shrink-0`}
+          disabled={status === "loading"}
+          className={`border-2 ${borderColor} ${textColor} px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-black hover:text-tic-yellow transition-colors shrink-0 disabled:opacity-60`}
         >
-          Subscribe
+          {status === "loading" ? "Subscribing…" : "Subscribe"}
         </button>
       </form>
-      <p className={`text-[11px] mt-2 opacity-50 ${textColor}`}>
-        ✦ ConvertKit integration — coming soon
-      </p>
+      {status === "error" && (
+        <p className={`text-[11px] mt-2 ${textColor}`}>
+          Something went wrong. Please try again.
+        </p>
+      )}
     </div>
   );
 }

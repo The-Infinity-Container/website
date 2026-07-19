@@ -9,15 +9,25 @@ export default function InlineNewsletter({
 }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // TODO: wire up ConvertKit form ID
-    setSubmitted(true);
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/newsletter-subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email }),
+      });
+      const data = await res.json();
+      setStatus(data.success ? "success" : "error");
+    } catch {
+      setStatus("error");
+    }
   }
 
-  if (submitted) {
+  if (status === "success") {
     return (
       <p className="text-center font-[family-name:var(--font-noto-serif)] italic text-lg">
         Thanks for subscribing!
@@ -45,10 +55,16 @@ export default function InlineNewsletter({
       />
       <button
         type="submit"
-        className="bg-[#555] text-white px-6 py-3 font-medium hover:bg-[#333] transition-colors"
+        disabled={status === "loading"}
+        className="bg-[#555] text-white px-6 py-3 font-medium hover:bg-[#333] transition-colors disabled:opacity-60"
       >
-        Subscribe to Newsletter
+        {status === "loading" ? "Subscribing…" : "Subscribe to Newsletter"}
       </button>
+      {status === "error" && (
+        <p className="w-full text-center text-sm text-red-700">
+          Something went wrong. Please try again.
+        </p>
+      )}
     </form>
   );
 }
