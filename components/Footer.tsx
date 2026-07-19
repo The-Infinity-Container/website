@@ -5,9 +5,9 @@ export default function Footer() {
     <footer className="bg-black text-white pt-[40px] pb-[32px] px-6">
       {/* Main footer content */}
       <div className="max-w-[1290px] mx-auto mb-[28px]">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-[42px]" style={{ marginTop: "40px" }}>
+        <div className="flex flex-col md:flex-row md:items-center gap-[42px]" style={{ marginTop: "40px" }}>
           {/* Left column */}
-          <div>
+          <div className="md:flex-1">
             <h3 className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.09em] mb-[19px]" style={{ fontSize: "1.5em" }}>
               The infinity
               <br />
@@ -18,7 +18,8 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Center column - window view image */}
+          {/* Center column - window view image (equal-flex flanks on either side keep this
+              mathematically centered regardless of how wide the left/right content is) */}
           <div className="flex flex-col items-center">
             <img
               src="/assets/window-view-yellow.svg"
@@ -32,7 +33,7 @@ export default function Footer() {
           </div>
 
           {/* Right column - socials and logo */}
-          <div className="flex flex-col relative">
+          <div className="flex flex-col relative md:flex-1 md:items-end">
             <div className="flex gap-[56px] mb-[28px] items-start">
               {/* Socials column */}
               <div>
