@@ -1,12 +1,12 @@
-import type { Question, Score } from "@/lib/quiz/types";
+import type { Question } from "@/lib/quiz/types";
 import { TOTAL_QUESTIONS } from "@/lib/quiz/data";
 
 interface QuizQuestionProps {
   question: Question;
   index: number; // 0-based
-  selected: Score | Score[] | undefined;
-  onSelectSingle: (score: Score) => void;
-  onToggleMulti: (score: Score) => void;
+  selected: number | number[] | undefined;
+  onSelectSingle: (optionIndex: number) => void;
+  onToggleMulti: (optionIndex: number) => void;
   onBack: () => void;
   onNext: () => void;
 }
@@ -41,16 +41,16 @@ export default function QuizQuestion({
       </p>
 
       <div className="flex flex-col gap-3">
-        {question.options.map((option) => {
+        {question.options.map((option, optionIndex) => {
           const isSelected = isMulti
-            ? selectedArray.includes(option.score)
-            : selected === option.score;
+            ? selectedArray.includes(optionIndex)
+            : selected === optionIndex;
 
           return (
             <button
               key={option.text}
               type="button"
-              onClick={() => (isMulti ? onToggleMulti(option.score) : onSelectSingle(option.score))}
+              onClick={() => (isMulti ? onToggleMulti(optionIndex) : onSelectSingle(optionIndex))}
               className={[
                 "font-[family-name:var(--font-noto-serif)] text-base leading-normal text-left bg-white border-[1.5px] rounded text-black px-[22px] py-[18px] cursor-pointer transition-colors",
                 "hover:border-tic-pink hover:bg-tic-pink/4",

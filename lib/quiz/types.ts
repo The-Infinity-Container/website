@@ -14,9 +14,13 @@ export interface Question {
   options: Option[];
 }
 
-// Answers collected so far: single-select questions store one Score,
-// the multi-select question (id 0) stores an array of Score.
-export type QuizScores = Record<number, Score | Score[]>;
+// Answers collected so far, keyed by question index: single-select
+// questions store the selected option's index, the multi-select question
+// (id 0) stores an array of selected option indices. Selection is tracked
+// by index rather than Score because options within a question routinely
+// share a Score (e.g. question 1 has three "p" options) — Score is only
+// resolved from the index when computing the result.
+export type QuizScores = Record<number, number | number[]>;
 
 export interface OtherCard {
   title: string;
