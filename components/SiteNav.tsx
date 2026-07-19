@@ -54,7 +54,7 @@ export default function SiteNav() {
       <nav
         className={`${
           isSticky ? "sticky top-0" : ""
-        } left-0 right-0 z-50 flex items-center justify-between bg-white border-b border-black/8 px-6 py-4 md:px-8`}
+        } relative left-0 right-0 z-50 flex flex-wrap items-center justify-between bg-white border-b border-black/8 px-6 py-4 md:px-8`}
       >
         <button
           onClick={() => setDrawerOpen(true)}
@@ -65,7 +65,7 @@ export default function SiteNav() {
           TIC: INDEX
         </button>
 
-        <div className="absolute left-1/2 -translate-x-1/2">
+        <div className="order-3 w-full flex justify-center mt-3 md:order-none md:w-auto md:mt-0 md:absolute md:left-1/2 md:-translate-x-1/2">
           <a
             href="/find-my-membership"
             className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.1em] uppercase bg-tic-orange text-black px-5 py-2.5 rounded hover:bg-tic-pink transition-colors"

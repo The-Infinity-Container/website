@@ -102,7 +102,7 @@ export default function WhatIsIntegrationPage() {
           </div>
 
           {/* Full-width snake image */}
-          <div>
+          <div className="overflow-hidden">
             <Image
               src="/assets/snake-shape.svg"
               alt="Integration journey"
@@ -118,7 +118,7 @@ export default function WhatIsIntegrationPage() {
       {/* ── INTEGRATION IS THE WAY SECTION ───────────────────────── */}
       <section className="bg-white px-6 pt-[100px] pb-[140px]">
         <div className="max-w-[1290px] mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(68px, 11.66vw, 115px)", color: "#E64E59", letterSpacing: "0.09em", marginBottom: "-68px" }}>
+          <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(24px, 8vw, 115px)", color: "#E64E59", letterSpacing: "0.09em", marginBottom: "-68px" }}>
             Integration
             <br />
             is the way
@@ -235,7 +235,7 @@ export default function WhatIsIntegrationPage() {
       {/* ── INTEGRATION IS THE WAY / OUR SYSTEM ────────────────────── */}
       <section className="bg-black px-6 pt-[100px] pb-[140px]">
         <div className="max-w-[1290px] mx-auto text-center mb-[80px]">
-          <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(68px, 11.66vw, 115px)", color: "white", letterSpacing: "0.09em", marginBottom: "-68px" }}>
+          <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(24px, 8vw, 115px)", color: "white", letterSpacing: "0.09em", marginBottom: "-68px" }}>
             Integration
             <br />
             is the way
@@ -245,7 +245,7 @@ export default function WhatIsIntegrationPage() {
             alt="Solar-Lunar Framework"
             width={729}
             height={729}
-            className="mx-auto"
+            className="mx-auto w-full h-auto"
             style={{ maxWidth: "972px" }}
             aria-hidden
           />
@@ -267,7 +267,7 @@ export default function WhatIsIntegrationPage() {
           </div>
 
 <div className="mb-[60px]">
-            <div className="grid grid-cols-4 gap-[24px] mb-[44px] max-w-[1280px] mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-[24px] mb-[44px] max-w-[1280px] mx-auto">
               {["Ground", "Anchor", "Weave", "Titrate", "Play", "Kindle", "Shed"].map((capacity, index) => {
                 const isPink = capacity === "Ground" || capacity === "Play";
                 const borderColor = isPink ? "#7C3537" : "#236C80";
@@ -383,7 +383,7 @@ export default function WhatIsIntegrationPage() {
             />
           </div>
 
-          <div className="grid gap-[44px] max-w-[1200px] mx-auto" style={{ gridTemplateColumns: "1fr 1.1fr 1fr", marginTop: "-135px" }}>
+          <div className="grid grid-cols-1 xl:[grid-template-columns:1fr_1.1fr_1fr] gap-[44px] max-w-[1200px] mx-auto xl:-mt-[135px]">
             <div className="bg-white px-[26px] py-[36px] rounded flex flex-col justify-between">
               <div>
                 <h3 className="font-[family-name:var(--font-gordon)] text-[16px] uppercase tracking-[0.02em] mb-[24px]" style={{ color: "#3A3A3A" }}>

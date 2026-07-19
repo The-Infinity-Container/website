@@ -131,13 +131,13 @@ export default function PartnershipsPage() {
       {/* ── Reset Academy — sage ───────────────────────────────────── */}
       <section className="px-6 md:px-10 py-16" style={{ backgroundColor: "#dfe3de" }}>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-start">
-          <div className="w-full md:w-48 shrink-0 flex justify-center md:justify-start mt-1">
+          <div className="w-40 md:w-48 shrink-0 flex justify-center md:justify-start mt-1">
             <Image
               src="/assets/reset-academy-logo.png"
               alt="Reset Academy — Empowering Women To Believe In Their Minds & Bodies, with Dr. Mindy Pelz"
               width={1235}
               height={360}
-              className="w-full md:w-[348px] h-auto md:-ml-[157px] shrink-0"
+              className="w-40 md:w-48 h-auto shrink-0 2xl:w-[348px] 2xl:-ml-[157px]"
             />
           </div>
 

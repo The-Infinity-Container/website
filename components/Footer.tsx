@@ -33,10 +33,10 @@ export default function Footer() {
           </div>
 
           {/* Right column - socials and logo */}
-          <div className="flex flex-col relative md:flex-1 md:items-end">
-            <div className="flex gap-[56px] items-start">
+          <div className="flex flex-col relative md:flex-1 xl:items-end">
+            <div className="flex flex-col items-center gap-6 xl:flex-row xl:items-start xl:gap-[56px]">
               {/* Socials + email column */}
-              <div style={{ marginLeft: "180px" }}>
+              <div className="xl:ml-[180px]">
                 <p className="font-[family-name:var(--font-noto-serif)] text-[21px] mb-[12px]" style={{ lineHeight: "34px" }}>
                   <a href="https://www.instagram.com/theinfinitycontainer" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                     Instagram
@@ -62,7 +62,7 @@ export default function Footer() {
               <img
                 src="/assets/tic-globe-logo.svg"
                 alt="The Infinity Container"
-                style={{ height: "187px", flexShrink: 0, marginTop: "-39px", marginLeft: "-259px" }}
+                className="h-[187px] flex-shrink-0 xl:-mt-[39px] xl:-ml-[259px]"
               />
             </div>
           </div>
