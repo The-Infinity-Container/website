@@ -110,10 +110,7 @@ export function calculateResult(scores: QuizScores): ResultType {
   return "free";
 }
 
-// CTA hrefs: only the free-membership signup link is real (Mighty Network
-// onboarding URL, reused from the community-call page). Practice/Practitioner
-// membership URLs and all "Learn more" card links are TODO — not given in
-// the source material.
+// CTA hrefs are Mighty Network onboarding URLs, one plan per membership tier.
 export const results: Record<ResultType, ResultContent> = {
   free: {
     eyebrow: "Your result",
@@ -128,12 +125,12 @@ export const results: Record<ResultType, ResultContent> = {
       {
         title: "Practice Membership",
         body: "Weekly Friday practice sessions and monthly integration themes. For when you're ready for consistency.",
-        href: "#", // TODO: Practice membership page URL
+        href: "https://the-infinity-container.mn.co/users/onboarding/plans/1898747",
       },
       {
         title: "Practitioner Membership",
         body: "Everything in Practice, plus professional tools and a peer community for the work you hold.",
-        href: "#", // TODO: Practitioner membership page URL
+        href: "https://the-infinity-container.mn.co/users/onboarding/plans/1483936",
       },
     ],
   },
@@ -144,18 +141,18 @@ export const results: Record<ResultType, ResultContent> = {
     heading: "You're ready for a weekly practice.",
     body: "You're not just curious about integration — you're ready to do the work consistently. The Practice Membership gives you weekly Friday sessions, monthly integration themes, and a community moving through the Solar-Lunar Framework together. The framework holds the rhythm so you don't have to.",
     ctaLabel: "Explore the Practice Membership →",
-    ctaHref: "#", // TODO: Practice membership page URL
+    ctaHref: "https://the-infinity-container.mn.co/users/onboarding/plans/1898747",
     otherOptionsHeading: "Also worth considering",
     otherCards: [
       {
         title: "Free Membership",
         body: "Just the monthly Community Call. A good starting point if you want to feel the container before committing.",
-        href: "#", // TODO: Practice/Free "learn more" URL
+        href: "https://the-infinity-container.mn.co/users/onboarding/plans/1484020",
       },
       {
         title: "Practitioner Membership",
         body: "Everything in Practice, plus professional tools for the helpers and space-holders.",
-        href: "#", // TODO: Practitioner membership page URL
+        href: "https://the-infinity-container.mn.co/users/onboarding/plans/1483936",
       },
     ],
   },
@@ -166,13 +163,13 @@ export const results: Record<ResultType, ResultContent> = {
     heading: "You hold a lot. This holds you.",
     body: "You're here for your own integration and for the people you hold. The Practitioner Membership includes everything in Practice — weekly sessions, monthly themes, the full library — plus professional frameworks, practitioner-focused teaching, and a peer community doing their own work alongside their client work.",
     ctaLabel: "Explore the Practitioner Membership →",
-    ctaHref: "#", // TODO: Practitioner membership page URL
+    ctaHref: "https://the-infinity-container.mn.co/users/onboarding/plans/1483936",
     otherOptionsHeading: "Also worth considering",
     otherCards: [
       {
         title: "Practice Membership",
         body: "Weekly practice without the professional layer. A solid starting point if you want to ease in.",
-        href: "#", // TODO: Practice membership page URL
+        href: "https://the-infinity-container.mn.co/users/onboarding/plans/1898747",
       },
       {
         title: "Free Membership",
