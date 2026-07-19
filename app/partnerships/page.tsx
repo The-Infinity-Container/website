@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function PartnershipsPage() {
   return (
-    <main className="pt-14 pb-[5em]">
+    <main className="pt-14">
 
       {/* ── Header — olive, scribble balls, intro copy ────────────── */}
-      <section className="relative bg-tic-yellow px-6 md:px-16 pt-14 pb-16 overflow-hidden">
+      <section className="relative bg-tic-yellow px-6 md:px-10 pt-14 pb-16 overflow-hidden">
         <div className="flex items-center justify-center gap-4 md:gap-10">
           <ScribbleBall color="#e64e59" className="w-14 h-14 md:w-20 md:h-20 shrink-0" />
           <h1
@@ -25,51 +25,71 @@ export default function PartnershipsPage() {
           <ScribbleBall color="#e64e59" className="w-14 h-14 md:w-20 md:h-20 shrink-0" />
         </div>
 
-        <div className="relative max-w-2xl mx-auto mt-10">
-          <ScribbleBall
-            color="#dfe3de"
-            className="hidden md:block absolute -left-28 top-0 w-24 h-24"
-          />
-          <ScribbleBall
-            color="#ed7e21"
-            className="hidden md:block absolute -right-24 top-2 w-14 h-14"
-          />
-          <ScribbleBall
-            color="#0b0d10"
-            className="hidden md:block absolute -right-32 top-24 w-16 h-16"
-          />
+        {/* Spacer matches the image column (w-48) + gap-10 used below, so this
+            paragraph's left edge lines up with the Lacuna/Reset paragraph text. */}
+        <div className="max-w-6xl mx-auto mt-10 flex flex-col md:flex-row gap-10 items-start">
+          <div className="hidden md:block w-48 shrink-0" aria-hidden="true" />
 
-          <p className="font-[family-name:var(--font-noto-serif)] font-bold text-lg leading-relaxed">
-            Partnership for us, is relational. We&apos;re creating an ecosystem.
-          </p>
-          <p className="font-[family-name:var(--font-noto-serif)] leading-relaxed mt-3">
-            Each offering shared here reflects work we engage with personally and feel
-            confident standing behind. We choose partnerships rooted in care, integrity,
-            and a shared commitment to supporting the body, community and conscious
-            evolution.
-          </p>
-          <p className="font-[family-name:var(--font-noto-serif)] leading-relaxed mt-6">
-            Some of these partnerships include affiliate links. If you feel called to
-            purchase through them, we receive a small commission at no extra cost to
-            you. Some of these partnerships also include a discount for you, as a gift
-            to our community. This reciprocity supports the ongoing creation of The
-            Infinity Container, keeping memberships at an affordable rate.
-          </p>
+          <div className="relative max-w-2xl">
+            <ScribbleBall
+              color="#dfe3de"
+              className="hidden md:block absolute -left-28 top-0 w-24 h-24"
+            />
+            <ScribbleBall
+              color="#ed7e21"
+              className="hidden md:block absolute -right-24 top-2 w-14 h-14"
+            />
+            <ScribbleBall
+              color="#0b0d10"
+              className="hidden md:block absolute -right-32 top-24 w-16 h-16"
+            />
+
+            <p
+              className="font-[family-name:var(--font-noto-serif)] font-bold text-[23px] text-[#222]"
+              style={{ lineHeight: "37px" }}
+            >
+              Partnership for us, is relational. We&apos;re creating an ecosystem.
+            </p>
+            <p
+              className="font-[family-name:var(--font-noto-serif)] text-[23px] text-[#222] mt-3"
+              style={{ lineHeight: "37px" }}
+            >
+              Each offering shared here reflects work we engage with personally and feel
+              confident standing behind. We choose partnerships rooted in care, integrity,
+              and a shared commitment to supporting the body, community and conscious
+              evolution.
+            </p>
+            <p
+              className="font-[family-name:var(--font-noto-serif)] text-[23px] text-[#222] mt-6"
+              style={{ lineHeight: "37px" }}
+            >
+              Some of these partnerships include affiliate links. If you feel called to
+              purchase through them, we receive a small commission at no extra cost to
+              you. Some of these partnerships also include a discount for you, as a gift
+              to our community. This reciprocity supports the ongoing creation of The
+              Infinity Container, keeping memberships at an affordable rate.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* ── Lacuna Medicinals — orange ─────────────────────────────── */}
-      <section className="bg-tic-orange px-6 md:px-16 py-16">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-10 items-start">
-          <Image
-            src="/assets/lacuna-medicinals-logo.png"
-            alt="Lacuna Medicinals"
-            width={800}
-            height={1171}
-            className="w-40 md:w-48 h-auto shrink-0 mx-auto md:mx-0"
-          />
+      <section className="bg-tic-orange px-6 md:px-10 py-16">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+          <div className="w-40 md:w-48 shrink-0 flex justify-center md:justify-start">
+            <Image
+              src="/assets/lacuna-medicinals-logo.png"
+              alt="Lacuna Medicinals"
+              width={800}
+              height={1171}
+              className="w-40 md:w-48 h-auto"
+            />
+          </div>
 
-          <div className="font-[family-name:var(--font-noto-serif)] leading-relaxed space-y-5">
+          <div
+            className="font-[family-name:var(--font-noto-serif)] text-[23px] text-[#222] space-y-5"
+            style={{ lineHeight: "37px" }}
+          >
             <p>
               <strong>Lacuna Medicinals</strong> is a small, women-owned endeavor rooted
               in deep love and reverence for plants and fungi. Through our own mystical
@@ -109,17 +129,22 @@ export default function PartnershipsPage() {
       </section>
 
       {/* ── Reset Academy — sage ───────────────────────────────────── */}
-      <section className="px-6 md:px-16 py-16" style={{ backgroundColor: "#dfe3de" }}>
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-10 items-start">
-          <Image
-            src="/assets/reset-academy-logo.png"
-            alt="Reset Academy — Empowering Women To Believe In Their Minds & Bodies, with Dr. Mindy Pelz"
-            width={1235}
-            height={360}
-            className="w-full md:w-72 h-auto shrink-0 mx-auto md:mx-0 mt-1"
-          />
+      <section className="px-6 md:px-10 py-16" style={{ backgroundColor: "#dfe3de" }}>
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+          <div className="w-full md:w-48 shrink-0 flex justify-center md:justify-start mt-1">
+            <Image
+              src="/assets/reset-academy-logo.png"
+              alt="Reset Academy — Empowering Women To Believe In Their Minds & Bodies, with Dr. Mindy Pelz"
+              width={1235}
+              height={360}
+              className="w-full md:w-[348px] h-auto md:-ml-[157px] shrink-0"
+            />
+          </div>
 
-          <div className="font-[family-name:var(--font-noto-serif)] leading-relaxed space-y-5">
+          <div
+            className="font-[family-name:var(--font-noto-serif)] text-[23px] text-[#222] space-y-5"
+            style={{ lineHeight: "37px" }}
+          >
             <p>
               <strong>The Reset Academy</strong> is <strong>Dr. Mindy Pelz&apos;s
               membership program</strong> designed to help women improve metabolic
