@@ -11,71 +11,74 @@ export default function HomePage() {
   return (
     <main>
       {/* ── Hero ───────────────────────────────────────────────────── */}
-      <header className="relative bg-black text-center overflow-hidden px-6 pt-[77px] pb-[84px]">
-        <div className="relative w-[59px] h-[59px] mx-auto mb-8 rounded-full overflow-hidden border-[1.5px] border-dashed border-tic-yellow flex items-center justify-center bg-black">
-          <Image
-            src="/assets/hero-logo.svg"
-            alt="The Infinity Container"
-            width={96}
-            height={96}
-            priority
-            className="w-12 h-12 object-contain"
-          />
-          <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-            <source src="/assets/videos/hero.mp4" type="video/mp4" />
+      <header className="bg-black">
+        {/* Logo-open animation, full viewport height, no overlay */}
+        <div className="relative w-full h-screen overflow-hidden bg-black">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
+            style={{ marginTop: "20em" }}
+          >
+            <source src="/assets/videos/hero-mobile.mp4" media="(max-width: 767px)" type="video/mp4" />
+            <source src="/assets/videos/hero-desktop.mp4" type="video/mp4" />
           </video>
         </div>
 
-        <p
-          className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.15em] max-w-[900px] mx-auto mb-6 leading-snug"
-          style={{ fontSize: "clamp(0.788rem, 1.68vw, 1.225rem)" }}
-        >
-          Psychedelic Integration <span className="mx-2">·</span> Life Transitions{" "}
-          <span className="mx-2">·</span> Expanded Experience
-        </p>
+        <div className="text-center px-6 pt-[77px] pb-[84px]">
+          <p
+            className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.15em] max-w-[900px] mx-auto mb-6 leading-snug"
+            style={{ fontSize: "clamp(0.788rem, 1.68vw, 1.225rem)" }}
+          >
+            Psychedelic Integration <span className="mx-2">·</span> Life Transitions{" "}
+            <span className="mx-2">·</span> Expanded Experience
+          </p>
 
-        <h1
-          className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-[0.03em] leading-[1.12] max-w-[1300px] mx-auto mb-[18px]"
-          style={{ fontSize: "clamp(1.925rem, 5.25vw, 4.2rem)" }}
-        >
-          This is where
-          <br />
-          the work
-          <br />
-          continues.
-        </h1>
+          <h1
+            className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-[0.03em] leading-[1.12] max-w-[1300px] mx-auto mb-[18px]"
+            style={{ fontSize: "clamp(1.925rem, 5.25vw, 4.2rem)" }}
+          >
+            This is where
+            <br />
+            the work
+            <br />
+            continues.
+          </h1>
 
-        <p
-          className="font-[family-name:var(--font-noto-serif)] italic text-tic-yellow mb-[21px]"
-          style={{ fontSize: "clamp(1.05rem, 2.24vw, 1.4rem)" }}
-        >
-          Prepare well. Integrate fully. Keep going.
-        </p>
+          <p
+            className="font-[family-name:var(--font-noto-serif)] italic text-tic-yellow mb-[21px]"
+            style={{ fontSize: "clamp(1.05rem, 2.24vw, 1.4rem)" }}
+          >
+            Prepare well. Integrate fully. Keep going.
+          </p>
 
-        <p
-          className="font-[family-name:var(--font-noto-serif)] text-tic-grey max-w-[640px] mx-auto mb-8 leading-[1.75]"
-          style={{ fontSize: "clamp(0.788rem, 1.54vw, 0.963rem)" }}
-        >
-          Psychedelic integration, life transitions, and expanded experience — for the people
-          doing the work and the practitioners who hold that space.
-        </p>
+          <p
+            className="font-[family-name:var(--font-noto-serif)] text-tic-grey max-w-[640px] mx-auto mb-8 leading-[1.75]"
+            style={{ fontSize: "clamp(0.788rem, 1.54vw, 0.963rem)" }}
+          >
+            Psychedelic integration, life transitions, and expanded experience — for the people
+            doing the work and the practitioners who hold that space.
+          </p>
 
-        <a
-          href={MEMBERSHIP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm bg-tic-salmon text-black px-10 py-4 rounded-sm hover:bg-tic-pink transition-colors"
-        >
-          Find My Membership →
-        </a>
-        <a
-          href={SIGNIN_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block mt-3 text-sm text-tic-yellow"
-        >
-          Already a member? Sign in
-        </a>
+          <a
+            href={MEMBERSHIP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm bg-tic-salmon text-black px-10 py-4 rounded-sm hover:bg-tic-pink transition-colors"
+          >
+            Find My Membership →
+          </a>
+          <a
+            href={SIGNIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block mt-3 text-sm text-tic-yellow"
+          >
+            Already a member? Sign in
+          </a>
+        </div>
       </header>
 
       <WayDivider />
