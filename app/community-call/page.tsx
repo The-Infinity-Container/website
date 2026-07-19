@@ -452,38 +452,37 @@ export default function CommunityCallPage() {
 
       {/* ── Go deeper ──────────────────────────────────────────────── */}
       <section className="bg-[#fcfcfc] px-6 py-[100px]">
-        <div className="relative max-w-[1290px] mx-auto">
-          <Image
-            src="/assets/shell.svg"
-            alt=""
-            width={1203}
-            height={1662}
-            className="hidden md:block absolute top-0 right-0 w-[100px]"
-          />
-          <Image
-            src="/assets/shell.svg"
-            alt=""
-            width={1203}
-            height={1662}
-            className="md:hidden w-[70px] mx-auto mb-3"
-          />
-          <p
-            className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase text-center"
-            style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}
-          >
-            Keep going
-          </p>
-          <h2
-            className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px] text-center max-w-[680px] mx-auto"
-            style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
-          >
-            The call is where many people start.
-            <br />
-            The memberships are where the work continues.
-          </h2>
-          <p className="text-[#222] max-w-[680px] mx-auto mb-[52px] text-center" style={{ fontSize: "23px", lineHeight: "37px" }}>
-            The Practice and Practitioner memberships include everything in the free tier — plus weekly Friday practice sessions, monthly integration themes, the full capacity library, and a community moving through the Solar-Lunar Framework together.
-          </p>
+        <div className="max-w-[1290px] mx-auto">
+          <div className="max-w-[920px] mx-auto">
+            <p
+              className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase"
+              style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}
+            >
+              Keep going
+            </p>
+            <h2
+              className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]"
+              style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
+            >
+              The call is where many people start.
+              <br />
+              The memberships are where the work continues.
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-[52px]">
+              <p className="order-2 md:order-1 text-[#222]" style={{ fontSize: "23px", lineHeight: "37px" }}>
+                The Practice and Practitioner memberships include everything in the free tier — plus weekly Friday practice sessions, monthly integration themes, the full capacity library, and a community moving through the Solar-Lunar Framework together.
+              </p>
+              <div className="order-1 md:order-2 flex justify-center md:justify-end">
+                <Image
+                  src="/assets/shell.svg"
+                  alt=""
+                  width={1203}
+                  height={1662}
+                  className="w-[140px] md:w-[200px]"
+                />
+              </div>
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[920px] mx-auto mb-10">
             <div className="rounded-[4px] p-11 px-9 flex flex-col bg-tic-salmon text-[#0b0d10]">
