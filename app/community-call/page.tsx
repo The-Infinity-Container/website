@@ -332,8 +332,7 @@ export default function CommunityCallPage() {
       {/* ── Divider ────────────────────────────────────────────────── */}
       <div className="py-[70px] px-2 text-center bg-[#817202]">
         <span
-          className="font-[family-name:var(--font-gordon)] tracking-[0.03em] leading-[1.12] uppercase text-[#d5d069] block"
-          style={{ fontSize: "clamp(40px, 9.5vw, 124px)" }}
+          className="font-[family-name:var(--font-gordon)] tracking-[0.03em] leading-[1.12] uppercase text-[#d5d069] block text-[clamp(24px,8.5vw,124px)] md:text-[clamp(40px,9.5vw,124px)]"
         >
           Integration
           <br />

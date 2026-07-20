@@ -19,8 +19,8 @@ export default function WhatIsIntegrationPage() {
 
       {/* ── PAGE HERO ────────────────────────────────────────────────── */}
       <section className="bg-tic-olive px-4 text-center flex flex-col items-center justify-center" style={{ minHeight: "100vh" }}>
-        <div className="max-w-[1200px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.24em] mb-[80px]" style={{ fontSize: "30px" }}>
+        <div className="max-w-[1200px] mx-auto scale-[0.97] md:scale-100">
+          <p className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.24em] mb-[80px]" style={{ fontSize: "clamp(20px, 6vw, 30px)" }}>
             What is Integration?
           </p>
           <h1 className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-[0.02em] leading-[1.15] mx-auto" style={{ fontSize: "clamp(31px, 4.95vw, 50px)" }}>
@@ -102,14 +102,14 @@ export default function WhatIsIntegrationPage() {
           </div>
 
           {/* Full-width snake image */}
-          <div className="overflow-hidden">
+          <div className="overflow-hidden flex justify-center items-center -mb-[265px] md:mb-0">
             <Image
               src="/assets/snake-shape.svg"
               alt="Integration journey"
               width={600}
               height={800}
-              className="w-full max-w-full"
-              style={{ height: "90vh", objectFit: "contain", transform: "rotate(60deg)" }}
+              className="w-full max-w-full rotate-[60deg] scale-[0.85] md:scale-100"
+              style={{ height: "90vh", objectFit: "contain" }}
             />
           </div>
         </div>
