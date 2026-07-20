@@ -29,7 +29,7 @@ export default function CategoryBanner({
           aria-hidden
           width={278}
           height={282}
-          className="absolute left-1/4 bottom-0 -translate-x-1/2 translate-y-1/2 w-auto h-14 sm:h-20 md:h-28 pointer-events-none select-none"
+          className="absolute left-[13%] md:left-1/4 bottom-0 -translate-x-1/2 translate-y-1/2 w-auto h-14 sm:h-20 md:h-28 pointer-events-none select-none"
           priority
         />
         <Image
@@ -38,7 +38,7 @@ export default function CategoryBanner({
           aria-hidden
           width={287}
           height={283}
-          className="absolute left-3/4 bottom-0 -translate-x-1/2 translate-y-1/2 w-auto h-14 sm:h-20 md:h-28 pointer-events-none select-none"
+          className="absolute left-[88%] md:left-3/4 bottom-0 -translate-x-1/2 translate-y-1/2 w-auto h-14 sm:h-20 md:h-28 pointer-events-none select-none"
         />
       </div>
 

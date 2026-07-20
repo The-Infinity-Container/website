@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-[1290px] mx-auto mb-[28px]">
         <div className="flex flex-col md:flex-row md:items-center gap-[42px]" style={{ marginTop: "40px" }}>
           {/* Left column */}
-          <div className="md:flex-1">
+          <div className="text-center md:flex-1 md:text-left">
             <h3 className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.09em] mb-[19px]" style={{ fontSize: "1.5em" }}>
               The infinity
               <br />
@@ -62,7 +62,7 @@ export default function Footer() {
               <img
                 src="/assets/tic-globe-logo.svg"
                 alt="The Infinity Container"
-                className="h-[187px] flex-shrink-0 xl:-mt-[39px] xl:-ml-[259px]"
+                className="h-[187px] flex-shrink-0 -mt-[231px] -mr-[95px] md:mt-0 md:mr-0 xl:-mt-[39px] xl:-ml-[259px]"
               />
             </div>
           </div>
