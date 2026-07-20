@@ -39,7 +39,7 @@ export default function BlogHero({ posts }: { posts: Post[] }) {
                 className="group shrink-0 w-44 h-44 md:w-52 md:h-52 rounded-full flex flex-col items-center justify-center text-center px-5 transition-transform hover:scale-105"
                 style={{ backgroundColor: categoryColor(post.category) }}
               >
-                <span className="font-[family-name:var(--font-noto-serif)] font-bold text-white text-lg md:text-xl leading-tight">
+                <span className="font-[family-name:var(--font-noto-serif)] font-bold text-white text-lg md:text-xl leading-tight line-clamp-4">
                   {post.title}
                 </span>
                 <span className="mt-3 text-white text-xs font-bold uppercase tracking-widest group-hover:underline">

@@ -61,7 +61,7 @@ export default function CommunityCallPage() {
           Meet us before you join anything.
         </h1>
         <p
-          className="font-[family-name:var(--font-noto-serif)] italic text-[#817202] max-w-[820px] mx-auto mb-[52px] leading-[1.7] whitespace-nowrap"
+          className="font-[family-name:var(--font-noto-serif)] italic text-[#817202] max-w-[820px] mx-auto mb-[52px] leading-[1.7]"
           style={{ fontSize: "clamp(17px, 2.2vw, 21px)" }}
         >
           Once a month, we gather. You don&apos;t have to be ready for anything else.
@@ -164,7 +164,7 @@ export default function CommunityCallPage() {
       {/* ── What is it? ────────────────────────────────────────────── */}
       <section className="bg-[#fcfcfc] px-6 py-[100px]">
         <div className="max-w-[1290px] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-[-50px]">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:mb-[-50px]">
             <div className="order-1 md:order-none">
               <p
                 className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase"

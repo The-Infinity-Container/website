@@ -15,14 +15,14 @@ export default function PartnershipsPage() {
       {/* ── Header — olive, scribble balls, intro copy ────────────── */}
       <section className="relative bg-tic-yellow px-6 md:px-10 pt-14 pb-16 overflow-hidden">
         <div className="flex items-center justify-center gap-4 md:gap-10">
-          <ScribbleBall color="#e64e59" className="w-14 h-14 md:w-20 md:h-20 shrink-0" />
+          <ScribbleBall color="#e64e59" className="hidden sm:block sm:w-14 sm:h-14 md:w-20 md:h-20 shrink-0" />
           <h1
-            className="text-center font-[family-name:var(--font-gordon)] uppercase tracking-wide leading-none"
-            style={{ color: "#7c3537", fontSize: "clamp(2.5rem, 8vw, 5.5rem)" }}
+            className="text-center font-[family-name:var(--font-gordon)] uppercase tracking-wide leading-none text-[2rem] md:text-[clamp(2.5rem,8vw,5.5rem)]"
+            style={{ color: "#7c3537" }}
           >
             Partnerships
           </h1>
-          <ScribbleBall color="#e64e59" className="w-14 h-14 md:w-20 md:h-20 shrink-0" />
+          <ScribbleBall color="#e64e59" className="hidden sm:block sm:w-14 sm:h-14 md:w-20 md:h-20 shrink-0" />
         </div>
 
         {/* Spacer matches the image column (w-48) + gap-10 used below, so this
@@ -76,7 +76,7 @@ export default function PartnershipsPage() {
       {/* ── Lacuna Medicinals — orange ─────────────────────────────── */}
       <section className="bg-tic-orange px-6 md:px-10 py-16">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-start">
-          <div className="w-40 md:w-48 shrink-0 flex justify-center md:justify-start">
+          <div className="w-full md:w-48 shrink-0 flex justify-center md:justify-start">
             <Image
               src="/assets/lacuna-medicinals-logo.png"
               alt="Lacuna Medicinals"
@@ -113,7 +113,7 @@ export default function PartnershipsPage() {
               within.
             </p>
 
-            <div className="flex flex-wrap items-center gap-5 pt-2">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-5 pt-2">
               <a
                 href="https://lacunamedicinals.com/?ref=INFINITY"
                 target="_blank"
@@ -122,7 +122,7 @@ export default function PartnershipsPage() {
               >
                 Explore With<br />Our Link
               </a>
-              <p className="font-bold">10% off Discount Code: INFINITY</p>
+              <p className="font-bold text-center md:text-left">10% off Discount Code: INFINITY</p>
             </div>
           </div>
         </div>
@@ -131,13 +131,13 @@ export default function PartnershipsPage() {
       {/* ── Reset Academy — sage ───────────────────────────────────── */}
       <section className="px-6 md:px-10 py-16" style={{ backgroundColor: "#dfe3de" }}>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-start">
-          <div className="w-40 md:w-48 shrink-0 flex justify-center md:justify-start mt-1">
+          <div className="w-full md:w-48 shrink-0 flex justify-center md:justify-start mt-1">
             <Image
               src="/assets/reset-academy-logo.png"
               alt="Reset Academy — Empowering Women To Believe In Their Minds & Bodies, with Dr. Mindy Pelz"
               width={1235}
               height={360}
-              className="w-40 md:w-48 h-auto shrink-0 2xl:w-[348px] 2xl:-ml-[157px]"
+              className="w-82 md:w-48 h-auto shrink-0 2xl:w-[348px] 2xl:-ml-[157px]"
             />
           </div>
 
@@ -167,7 +167,7 @@ export default function PartnershipsPage() {
               challenges while supporting the fasting lifestyle Dr. Mindy teaches.
             </p>
 
-            <div className="pt-2">
+            <div className="pt-2 text-center md:text-left">
               <a
                 href="https://resetacademy.drmindypelz.com"
                 target="_blank"

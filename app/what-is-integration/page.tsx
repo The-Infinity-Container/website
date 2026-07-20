@@ -130,7 +130,7 @@ export default function WhatIsIntegrationPage() {
       <section className="bg-tic-grey px-6 pt-[100px] pb-[140px]">
         <div className="max-w-[1200px] mx-auto">
           {/* Row 1: Label, heading, first paragraph */}
-          <div className="mb-[-36px]">
+          <div className="mb-[24px] md:mb-[-36px]">
             <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px]" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
               The gap
             </p>
@@ -245,7 +245,7 @@ export default function WhatIsIntegrationPage() {
             alt="Solar-Lunar Framework"
             width={729}
             height={729}
-            className="mx-auto w-full h-auto"
+            className="mx-auto w-full h-auto -mb-[50px] mt-[73px] md:mb-0 md:mt-0"
             style={{ maxWidth: "972px" }}
             aria-hidden
           />
@@ -326,7 +326,7 @@ export default function WhatIsIntegrationPage() {
               alt="Shell"
               width={360}
               height={450}
-              className="h-auto"
+              className="h-auto mx-auto md:mx-0"
               style={{ width: "43%" }}
               aria-hidden
             />
@@ -377,7 +377,7 @@ export default function WhatIsIntegrationPage() {
               alt=""
               width={200}
               height={200}
-              className="h-auto"
+              className="h-auto -mb-[122px] md:mb-0"
               style={{ width: "calc(var(--spacing) * 51)" }}
               aria-hidden
             />
