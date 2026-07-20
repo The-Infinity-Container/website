@@ -20,8 +20,7 @@ export default function HomePage() {
             muted
             loop
             playsInline
-            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
-            style={{ marginTop: "20em" }}
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover md:mt-[20em]"
           >
             <source src="/assets/videos/hero-mobile.mp4" media="(max-width: 767px)" type="video/mp4" />
             <source src="/assets/videos/hero-desktop.mp4" type="video/mp4" />
