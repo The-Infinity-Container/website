@@ -3,6 +3,7 @@ import Link from "next/link";
 import InlineNewsletter from "@/components/InlineNewsletter";
 import ApproachCards from "@/components/ApproachCards";
 import MembershipCards from "@/components/MembershipCards";
+import SpotifyEmbed from "@/components/SpotifyEmbed";
 
 const FIND_MEMBERSHIP_URL = "https://the-infinity-container.mn.co/users/onboarding/plans";
 const JOIN_FREE_URL = "https://the-infinity-container.mn.co/users/onboarding/plans/1484020";
@@ -161,6 +162,33 @@ export default function HomePage() {
                   [full poem + handwritten "Integration" SVG from current site]
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Spotify Playlist + Mushrooms */}
+          <div className="flex items-end justify-center gap-4 md:gap-8 mt-16">
+            <div className="hidden lg:block flex-shrink-0">
+              <Image
+                src="/assets/mushrooms-trio.svg"
+                alt=""
+                aria-hidden
+                width={233}
+                height={359}
+                className="w-[150px] h-auto"
+              />
+            </div>
+            <div className="w-full max-w-md" style={{ marginBottom: "-7em" }}>
+              <SpotifyEmbed />
+            </div>
+            <div className="hidden lg:block flex-shrink-0">
+              <Image
+                src="/assets/mushrooms-trio.svg"
+                alt=""
+                aria-hidden
+                width={233}
+                height={359}
+                className="w-[150px] h-auto scale-x-[-1]"
+              />
             </div>
           </div>
         </div>
