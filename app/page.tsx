@@ -174,7 +174,7 @@ export default function HomePage() {
                 aria-hidden
                 width={233}
                 height={359}
-                className="w-[150px] h-auto"
+                className="w-[150px] h-auto scale-x-[-1]"
               />
             </div>
             <div className="w-full max-w-md" style={{ marginBottom: "-7em" }}>
@@ -187,7 +187,7 @@ export default function HomePage() {
                 aria-hidden
                 width={233}
                 height={359}
-                className="w-[150px] h-auto scale-x-[-1]"
+                className="w-[150px] h-auto"
               />
             </div>
           </div>
