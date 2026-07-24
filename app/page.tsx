@@ -89,7 +89,7 @@ export default function HomePage() {
 
       {/* ── What is this? ──────────────────────────────────────────── */}
       <section className="bg-white px-6 py-[110px]">
-        <div className="max-w-[1080px] mx-auto">
+        <div className="max-w-[1080px] mx-auto mt-[6em]">
           <div className="relative">
             <SectionLabel>What is TIC</SectionLabel>
             <SectionHeading className="max-w-[68%]">
@@ -101,12 +101,12 @@ export default function HomePage() {
               aria-hidden
               width={463}
               height={305}
-              className="hidden md:block absolute -top-[40px] -right-[20px] lg:-top-[60px] lg:-right-[30px] pointer-events-none w-[364px] h-auto"
+              className="hidden md:block absolute -top-[100px] -right-[20px] lg:-right-[30px] pointer-events-none w-[364px] h-auto"
             />
           </div>
 
           {/* Mobile: stacked, Desktop: 2-column grid */}
-          <div className="flex flex-col gap-8 md:gap-16 w-full md:grid" style={{ gridTemplateColumns: "1.4fr 1fr", alignItems: "start" }}>
+          <div className="flex flex-col gap-8 md:gap-16 w-full md:grid mt-[7em]" style={{ gridTemplateColumns: "1.4fr 1fr", alignItems: "start" }}>
             {/* Mobile: Integration image second */}
             <div className="md:hidden order-2 w-full">
               <Image
@@ -153,15 +153,16 @@ export default function HomePage() {
             </div>
 
             {/* Desktop: Integration image and poem in right column */}
-            <div className="hidden md:flex flex-col gap-8 md:order-2 md:-mt-16">
+            <div className="hidden md:flex flex-col gap-8 md:order-2 md:-mt-16 relative">
+              <div className="absolute left-0 -top-[12px] bottom-0 w-[3px] bg-tic-yellow" />
               <Image
                 src="/assets/integration.svg"
                 alt="Integration"
                 width={320}
                 height={100}
-                className="w-full h-auto"
+                className="w-[89%] h-auto ml-[2em]"
               />
-              <div className="font-[family-name:var(--font-noto-serif)] italic text-[22px] leading-[1.65] text-black border-l-[3px] border-tic-yellow pl-[26px]">
+              <div className="font-[family-name:var(--font-noto-serif)] italic text-[22px] leading-[1.65] text-black pl-[26px]">
                 Integration is a birthday<br />
                 &amp; a funeral.<br />
                 It is playing in the unknown,<br />
@@ -192,7 +193,7 @@ export default function HomePage() {
                 aria-hidden
                 width={233}
                 height={359}
-                className="w-[292.5px] h-auto scale-x-[-1]"
+                className="w-[315.5px] h-auto scale-x-[-1]"
               />
             </div>
             <div className="w-full max-w-md relative z-10" style={{ marginBottom: "-7em" }}>
@@ -254,7 +255,7 @@ export default function HomePage() {
               height={900}
               unoptimized
               className="hidden md:block absolute top-0 -right-16 lg:-right-24 w-56 lg:w-80 h-auto pointer-events-none"
-              style={{ marginRight: "-12em", marginTop: "-3em" }}
+              style={{ marginRight: "-9em", marginTop: "-3em" }}
             />
           </div>
 
