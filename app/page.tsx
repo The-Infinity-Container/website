@@ -87,15 +87,27 @@ export default function HomePage() {
       {/* ── What is this? ──────────────────────────────────────────── */}
       <section className="bg-white px-6 py-[110px]">
         <div className="max-w-[1080px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-dark-grey mb-[18px]" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-            What is this?
-          </p>
-          <h2
-            className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[34px] max-w-[700px]"
-            style={{ fontSize: "clamp(27px, 4.14vw, 43px)" }}
-          >
-            Integration support for the people who hold everyone else.
-          </h2>
+          <div className="flex items-start justify-between gap-8">
+            <div className="flex-1">
+              <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-dark-grey mb-[18px]" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
+                What is TIC
+              </p>
+              <h2
+                className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[34px] max-w-[820px]"
+                style={{ fontSize: "clamp(27px, 4.14vw, 43px)" }}
+              >
+                Integration support for the people who hold everyone else.
+              </h2>
+            </div>
+            <Image
+              src="/assets/eye-grey.svg"
+              alt=""
+              aria-hidden
+              width={463}
+              height={305}
+              className="hidden md:block flex-shrink-0 w-[240px] lg:w-[360px] xl:w-[440px] h-auto"
+            />
+          </div>
 
           {/* Mobile: stacked, Desktop: 2-column grid */}
           <div className="flex flex-col gap-8 md:gap-16 w-full md:grid" style={{ gridTemplateColumns: "1.4fr 1fr", alignItems: "start" }}>
@@ -120,10 +132,15 @@ export default function HomePage() {
               It is collaborating.<br />
               It is titration &amp; digestion.<br />
               It is process.<br />
-              It is practice with awareness.
-              <p className="font-[family-name:var(--font-noto-serif)] not-italic text-[11px] text-tic-dark-grey mt-[14px]">
-                [full poem + handwritten "Integration" SVG from current site]
-              </p>
+              It is practice with awareness.<br />
+              It is the evolution of a differentiated,<br />
+              connected self.<br />
+              It is intra-connected identity.<br />
+              It is WE, it is us.<br />
+              It is the link between possibility and actuality.
+              <br /><br />
+              And it happens in The Infinity Container.<br />
+              A little at a time.
             </div>
 
             {/* Text content - appears first on mobile, first on desktop */}
@@ -140,7 +157,7 @@ export default function HomePage() {
             </div>
 
             {/* Desktop: Integration image and poem in right column */}
-            <div className="hidden md:flex flex-col gap-8 md:order-2">
+            <div className="hidden md:flex flex-col gap-8 md:order-2 md:-mt-16">
               <Image
                 src="/assets/integration.svg"
                 alt="Integration"
@@ -157,37 +174,42 @@ export default function HomePage() {
                 It is collaborating.<br />
                 It is titration &amp; digestion.<br />
                 It is process.<br />
-                It is practice with awareness.
-                <p className="font-[family-name:var(--font-noto-serif)] not-italic text-[11px] text-tic-dark-grey mt-[14px]">
-                  [full poem + handwritten "Integration" SVG from current site]
-                </p>
+                It is practice with awareness.<br />
+                It is the evolution of a differentiated,<br />
+                connected self.<br />
+                It is intra-connected identity.<br />
+                It is WE, it is us.<br />
+                It is the link between possibility and actuality.
+                <br /><br />
+                And it happens in The Infinity Container.<br />
+                A little at a time.
               </div>
             </div>
           </div>
 
           {/* Spotify Playlist + Mushrooms */}
           <div className="flex items-end justify-center gap-4 md:gap-8 mt-16">
-            <div className="hidden lg:block flex-shrink-0">
+            <div className="hidden lg:block flex-shrink-0 relative z-0 -mr-[6.5rem]">
               <Image
                 src="/assets/mushrooms-trio.svg"
                 alt=""
                 aria-hidden
                 width={233}
                 height={359}
-                className="w-[150px] h-auto scale-x-[-1]"
+                className="w-[292.5px] h-auto scale-x-[-1]"
               />
             </div>
-            <div className="w-full max-w-md" style={{ marginBottom: "-7em" }}>
+            <div className="w-full max-w-md relative z-10" style={{ marginBottom: "-7em" }}>
               <SpotifyEmbed />
             </div>
-            <div className="hidden lg:block flex-shrink-0">
+            <div className="hidden lg:block flex-shrink-0 relative z-0 -ml-[5.5rem]">
               <Image
                 src="/assets/mushrooms-trio.svg"
                 alt=""
                 aria-hidden
                 width={233}
                 height={359}
-                className="w-[150px] h-auto"
+                className="w-[225px] h-auto"
               />
             </div>
           </div>
@@ -223,20 +245,44 @@ export default function HomePage() {
       <WayDivider onBlack />
 
       {/* ── Two Paths ──────────────────────────────────────────────── */}
-      <section className="bg-white px-6 py-[110px]">
+      <section className="px-6 py-[110px] overflow-hidden" style={{ backgroundColor: "#DFE3DE" }}>
         <div className="max-w-[1080px] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-dark-grey mb-[18px]" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-            Who is this for?
-          </p>
-          <h2
-            className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[44px]"
-            style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
-          >
-            Two containers. One ecosystem.
-          </h2>
+          <div className="relative">
+            <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-dark-grey mb-[18px]" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
+              Who is this for?
+            </p>
+            <h2
+              className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[44px]"
+              style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
+            >
+              Two containers. One ecosystem.
+            </h2>
+            <Image
+              src="/assets/closed-hand.svg"
+              alt=""
+              aria-hidden
+              width={900}
+              height={900}
+              unoptimized
+              className="hidden md:block absolute top-0 -right-16 lg:-right-24 w-56 lg:w-80 h-auto pointer-events-none"
+              style={{ marginRight: "-12em", marginTop: "-3em" }}
+            />
+          </div>
 
-          <MembershipCards
-            cards={[
+          <div className="relative z-0">
+            <Image
+              src="/assets/open-hand.svg"
+              alt=""
+              aria-hidden
+              width={900}
+              height={900}
+              unoptimized
+              className="hidden md:block absolute -left-16 lg:-left-24 top-1/3 w-56 lg:w-[27rem] h-auto -z-10 pointer-events-none"
+              style={{ transform: "scaleX(-1) rotate(45deg)", marginLeft: "-11em", marginTop: "13em" }}
+            />
+
+            <MembershipCards
+              cards={[
               {
                 label: "FOR PRACTITIONERS",
                 heading: "YOU HOLD A LOT. THIS HOLDS YOU.",
@@ -255,17 +301,9 @@ export default function HomePage() {
               },
             ]}
           />
+          </div>
 
-          <div className="relative mx-auto mt-[160px]">
-            <Image
-              src="/assets/spider-thick.svg"
-              alt=""
-              aria-hidden
-              width={400}
-              height={600}
-              className="absolute right-[100px] -top-[160px] w-24 lg:w-36 h-auto opacity-20 z-20 pointer-events-none"
-            />
-
+          <div className="relative mx-auto mt-[192px]">
             <div className="max-w-[95vw] mx-auto bg-white border border-black/10 rounded py-[40px] px-6 md:py-[80px] md:px-[100px] flex flex-col items-start justify-start gap-8 relative z-10">
             <div className="max-w-[800px]">
               <h4 className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.25] mb-[28px]" style={{ fontSize: "clamp(2rem, 4.5vw, 2.75rem)" }}>
@@ -300,57 +338,75 @@ export default function HomePage() {
       </section>
 
       {/* ── Framework ──────────────────────────────────────────────── */}
-      <section className="relative text-white py-[120px] overflow-hidden" style={{ backgroundColor: "#0A0E10" }}>
-        <Image
-          src="/assets/solar-lunar-spiral.svg"
-          alt=""
-          aria-hidden
-          width={890}
-          height={1386}
-          style={{ filter: "invert(1)" }}
-          className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-[20px] w-[486px] h-auto opacity-20 z-0 pointer-events-none"
-        />
+      <section className="relative text-white pt-[120px] pb-[100px] overflow-hidden" style={{ backgroundColor: "#0A0E10" }}>
+        <div className="relative z-10 max-w-[1280px] mx-auto px-6 flex flex-col lg:justify-center lg:min-h-[1750px]">
+          {/* Stable content block — the images below anchor to THIS box, not the
+              section, so growing the paragraph's margin below never moves them.
+              Fixed (not min) height so the three images have room to spread out
+              without overlapping, and this whole block gets centered in the
+              section by the flex parent above. */}
+          <div className="relative lg:h-[1600px]">
+            {/* Spiral image row — three true siblings in one overlay */}
+            <div className="hidden lg:block absolute inset-0 pointer-events-none" aria-hidden>
+              <Image
+                src="/assets/solar-lunar-spiral.svg"
+                alt=""
+                width={890}
+                height={1386}
+                style={{ filter: "invert(1)" }}
+                className="absolute left-1/2 -translate-x-1/2 top-8 w-[420px] h-auto opacity-20"
+              />
+              <Image
+                src="/assets/solar-lunar-spiral.svg"
+                alt=""
+                width={890}
+                height={1386}
+                style={{ filter: "invert(1)" }}
+                className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[420px] h-auto opacity-20"
+              />
+              <Image
+                src="/assets/solar-lunar-spiral.svg"
+                alt=""
+                width={890}
+                height={1386}
+                style={{ filter: "invert(1)" }}
+                className="absolute left-1/2 -translate-x-1/2 bottom-8 w-[420px] h-auto opacity-20"
+              />
+            </div>
 
-        <div className="max-w-[1280px] mx-auto px-6">
-          <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-yellow" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-            Our approach
-          </p>
-          <h2
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.18] mb-[28px]"
-            style={{ fontSize: "clamp(23px, 3.6vw, 38px)" }}
-          >
-            Integration is not an event.
-            <br />
-            It is a system.
-          </h2>
-          <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey text-[25px] mb-[44px]" style={{ lineHeight: "41px" }}>
-            The Solar-Lunar Framework is TIC&apos;s proprietary integration system — built on
-            behavioral science, somatic practice, and contemplative traditions. It maps the full
-            arc across two spirals:
-          </p>
+            <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-yellow" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
+              Our approach
+            </p>
+            <h2
+              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.18] mb-[28px]"
+              style={{ fontSize: "clamp(23px, 3.6vw, 38px)" }}
+            >
+              Integration is not an event.
+              <br />
+              It is a system.
+            </h2>
+            <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey text-[25px] mb-[44px]" style={{ lineHeight: "41px" }}>
+              The Solar-Lunar Framework is TIC&apos;s proprietary integration system — built on
+              behavioral science, somatic practice, and contemplative traditions. It maps the full
+              arc across two spirals:
+            </p>
 
-          <ApproachCards />
+            <div className="mt-[11em]">
+              <ApproachCards />
+            </div>
 
-          <Image
-            src="/assets/solar-lunar-spiral.svg"
-            alt=""
-            aria-hidden
-            width={890}
-            height={1386}
-            style={{ filter: "invert(1)" }}
-            className="hidden lg:block absolute left-1/2 -translate-x-1/2 w-[350px] h-auto opacity-15 z-0 pointer-events-none"
-          />
+            <Link
+              href="/what-is-integration#our-system"
+              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[22px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors block w-fit mx-auto text-center mt-[14em]"
+            >
+              Learn more about the Solar-Lunar Framework →
+            </Link>
+          </div>
 
-          <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey text-[25px] mb-[40px] relative z-10" style={{ lineHeight: "41px" }}>
+          <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-grey text-[25px] mt-12 text-center max-w-[650px] mx-auto" style={{ lineHeight: "41px" }}>
             Every program, session, and theme inside TIC is organized within this framework. It
             is not a curriculum you complete. It is a practice you return to.
           </p>
-          <Link
-            href="/what-is-integration#our-system"
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[22px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors"
-          >
-            Learn more about the Solar-Lunar Framework →
-          </Link>
         </div>
       </section>
 
@@ -364,7 +420,8 @@ export default function HomePage() {
           aria-hidden
           width={306}
           height={207}
-          className="hidden md:block absolute bottom-0 right-0 w-[380px] h-auto pointer-events-none"
+          className="hidden md:block absolute h-auto pointer-events-none"
+          style={{ bottom: "33px", right: "62px", width: "244px" }}
         />
         <div className="max-w-[1080px] mx-auto">
           <h2
