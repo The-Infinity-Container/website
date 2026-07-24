@@ -37,7 +37,7 @@ export default function WhatIsIntegrationPage() {
               height: "auto"
             }}
           />
-          <h2 className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-[0.02em] leading-[1.15] mx-auto mb-[60px]" style={{ fontSize: "clamp(31px, 4.95vw, 50px)", fontWeight: "normal" }}>
+          <h2 className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-[0.02em] leading-[1.4] mx-auto mb-[60px]" style={{ fontSize: "clamp(31px, 4.95vw, 50px)", fontWeight: "normal" }}>
             becomes a part of
             <br />
             who you are.
@@ -57,7 +57,9 @@ export default function WhatIsIntegrationPage() {
               The work
             </p>
             <h3 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] w-full" style={{ fontSize: "clamp(27px, 4.14vw, 43px)" }}>
-              More than a conversation after the fact.
+              More than a conversation
+              <br />
+              after the fact.
             </h3>
           </div>
 
@@ -98,7 +100,7 @@ export default function WhatIsIntegrationPage() {
 
           {/* Full-width blue link */}
           <div className="mb-[60px]">
-            <a href="/blog/blog-what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full" style={{ marginTop: "4px" }}>
+            <a href="/blog/blog-what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full" style={{ marginTop: "80px" }}>
               <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: read the full essay on the blog →</span>
             </a>
           </div>
