@@ -4,6 +4,9 @@ import InlineNewsletter from "@/components/InlineNewsletter";
 import ApproachCards from "@/components/ApproachCards";
 import MembershipCards from "@/components/MembershipCards";
 import SpotifyEmbed from "@/components/SpotifyEmbed";
+import SectionLabel from "@/components/SectionLabel";
+import SectionHeading from "@/components/SectionHeading";
+import BodyText from "@/components/BodyText";
 
 const FIND_MEMBERSHIP_URL = "https://the-infinity-container.mn.co/users/onboarding/plans";
 const JOIN_FREE_URL = "https://the-infinity-container.mn.co/users/onboarding/plans/1484020";
@@ -89,15 +92,10 @@ export default function HomePage() {
         <div className="max-w-[1080px] mx-auto">
           <div className="flex items-start justify-between gap-8">
             <div className="flex-1">
-              <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-dark-grey mb-[18px]" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-                What is TIC
-              </p>
-              <h2
-                className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[34px] max-w-[820px]"
-                style={{ fontSize: "clamp(27px, 4.14vw, 43px)" }}
-              >
+              <SectionLabel>What is TIC</SectionLabel>
+              <SectionHeading className="max-w-[820px]">
                 Integration support for the people who hold everyone else.
-              </h2>
+              </SectionHeading>
             </div>
             <Image
               src="/assets/eye-grey.svg"
@@ -144,16 +142,16 @@ export default function HomePage() {
             </div>
 
             {/* Text content - appears first on mobile, first on desktop */}
-            <div className="flex flex-col gap-[22px] order-1 md:order-1 w-full font-[family-name:var(--font-noto-serif)] text-[25px] text-[#2a2a2a]" style={{ lineHeight: "41px" }}>
-              <p>
+            <div className="flex flex-col gap-[22px] order-1 md:order-1 w-full text-[#2a2a2a]">
+              <BodyText>
                 The Infinity Container is a community built for the full arc — preparation before the experience, and integration after. We work inside the Solar-Lunar Framework, a proprietary system rooted in behavioral science, somatic practice, and contemplative traditions.
-              </p>
-              <p>
+              </BodyText>
+              <BodyText>
                 We are here for practitioners, therapists, coaches, healers, and helpers of all kinds — and for anyone navigating psychedelic experiences, life transitions, or expanded states who is ready to do the work with real support.
-              </p>
-              <p>
+              </BodyText>
+              <BodyText>
                 Integration is not therapy. It is not a debrief. It is an ongoing practice of becoming — and TIC is built to hold that practice over time.
-              </p>
+              </BodyText>
             </div>
 
             {/* Desktop: Integration image and poem in right column */}
@@ -248,15 +246,8 @@ export default function HomePage() {
       <section className="px-6 py-[110px] overflow-hidden" style={{ backgroundColor: "#DFE3DE" }}>
         <div className="max-w-[1080px] mx-auto">
           <div className="relative">
-            <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-dark-grey mb-[18px]" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-              Who is this for?
-            </p>
-            <h2
-              className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[44px]"
-              style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
-            >
-              Two containers. One ecosystem.
-            </h2>
+            <SectionLabel>Who is this for?</SectionLabel>
+            <SectionHeading>Two containers. One ecosystem.</SectionHeading>
             <Image
               src="/assets/closed-hand.svg"
               alt=""
@@ -306,7 +297,7 @@ export default function HomePage() {
           <div className="relative mx-auto mt-[192px]">
             <div className="max-w-[95vw] mx-auto bg-white border border-black/10 rounded py-[40px] px-6 md:py-[80px] md:px-[100px] flex flex-col items-start justify-start gap-8 relative z-10">
             <div className="max-w-[800px]">
-              <h4 className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.25] mb-[28px]" style={{ fontSize: "clamp(2rem, 4.5vw, 2.75rem)" }}>
+              <h4 className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.25] mb-[28px]" style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}>
                 Not ready for a membership? Start free.
               </h4>
               <p className="font-[family-name:var(--font-noto-serif)] text-[20px] leading-[1.7] text-[#3a3a3a] mb-[40px]">
@@ -329,7 +320,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Link
               href="/find-my-membership"
-              className="font-[family-name:var(--font-noto-serif)] italic text-[36px] underline underline-offset-4 hover:text-tic-brown transition-colors"
+              className="font-[family-name:var(--font-noto-serif)] italic text-[23px] underline underline-offset-4 hover:text-tic-brown transition-colors"
             >
               Not sure which path fits you? Take the 7-question quiz →
             </Link>
@@ -374,22 +365,17 @@ export default function HomePage() {
               />
             </div>
 
-            <p className="font-[family-name:var(--font-gordon)] uppercase text-tic-yellow" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-              Our approach
-            </p>
-            <h2
-              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.18] mb-[28px]"
-              style={{ fontSize: "clamp(23px, 3.6vw, 38px)" }}
-            >
+            <SectionLabel color="text-tic-yellow">Our approach</SectionLabel>
+            <SectionHeading>
               Integration is not an event.
               <br />
               It is a system.
-            </h2>
-            <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey text-[25px] mb-[44px]" style={{ lineHeight: "41px" }}>
+            </SectionHeading>
+            <BodyText className="text-tic-grey mb-[44px]">
               The Solar-Lunar Framework is TIC&apos;s proprietary integration system — built on
               behavioral science, somatic practice, and contemplative traditions. It maps the full
               arc across two spirals:
-            </p>
+            </BodyText>
 
             <div className="mt-[11em]">
               <ApproachCards />

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import LocalCallTime from "@/components/LocalCallTime";
+import SectionLabel from "@/components/SectionLabel";
+import SectionHeading from "@/components/SectionHeading";
+import BodyText from "@/components/BodyText";
 
 export const metadata: Metadata = {
   title: "Community Call | The Infinity Container",
@@ -130,7 +133,7 @@ export default function CommunityCallPage() {
               alt=""
               width={1074}
               height={1012}
-              className="w-[600px] ml-auto block"
+              className="w-[500px] ml-[14em] block"
               priority
             />
             <Image
@@ -138,7 +141,7 @@ export default function CommunityCallPage() {
               alt="No cost. All are welcome."
               width={748}
               height={263}
-              className="w-[510px] mr-auto rotate-[-6deg]"
+              className="w-[510px] mr-auto ml-[-4em] mt-[6em] rotate-[-6deg]"
             />
           </div>
           <div className="md:hidden max-w-[260px] mx-auto">
@@ -166,20 +169,12 @@ export default function CommunityCallPage() {
         <div className="max-w-[1290px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:mb-[-50px]">
             <div className="order-1 md:order-none">
-              <p
-                className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase"
-                style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}
-              >
-                What is it?
-              </p>
-              <h2
-                className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]"
-                style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
-              >
+              <SectionLabel>What is it?</SectionLabel>
+              <SectionHeading>
                 90 minutes. A teaching,
                 <br />
                 a practice, and each other.
-              </h2>
+              </SectionHeading>
             </div>
             <Image
               src="/assets/Lunar.png"
@@ -191,15 +186,15 @@ export default function CommunityCallPage() {
           </div>
 
           <div>
-            <p className="text-[#222] mb-6" style={{ fontSize: "23px", lineHeight: "37px" }}>
+            <BodyText className="text-[#222] mb-6">
               Each Community Call holds a teaching and an embodied practice led by behaviorist and TIC founder Dr. Victoria Sterkin. There&apos;s always an inquiry that opens into community sharing — a chance to hear how many different people are living the same question. We expand and learn from listening, and from holding space for the many.
-            </p>
-            <p className="text-[#222] mb-6" style={{ fontSize: "23px", lineHeight: "37px" }}>
+            </BodyText>
+            <BodyText className="text-[#222] mb-6">
               Calls are tied to the capacity we&apos;re focusing on that month inside the Solar-Lunar Framework. They&apos;re robust, real, and always bring together people who&apos;ve been in the container for years alongside people who just found us.
-            </p>
-            <p className="text-[#222] mb-6" style={{ fontSize: "23px", lineHeight: "37px" }}>
+            </BodyText>
+            <BodyText className="text-[#222] mb-6">
               Recordings are edited (member shares removed) and archived in the free membership library and on YouTube.
-            </p>
+            </BodyText>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-9 items-center mt-10">
@@ -224,18 +219,8 @@ export default function CommunityCallPage() {
       <section className="bg-tic-grey px-6 py-[100px]">
         <div className="max-w-[1290px] mx-auto">
           <div className="max-w-[760px] mx-auto">
-            <p
-              className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase"
-              style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}
-            >
-              The only requirement
-            </p>
-            <h2
-              className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]"
-              style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
-            >
-              Come as you are.
-            </h2>
+            <SectionLabel>The only requirement</SectionLabel>
+            <SectionHeading>Come as you are.</SectionHeading>
             <p className="font-[family-name:var(--font-noto-serif)] italic text-[18px] text-[#2a2a2a] mb-11 leading-[1.7]">
               No requirement to share. No requirement to be on camera. No requirement to be ready.
             </p>
@@ -292,25 +277,15 @@ export default function CommunityCallPage() {
           <div className="max-w-[980px] mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start gap-6">
               <div>
-                <p
-                  className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase"
-                  style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}
-                >
-                  What members say
-                </p>
-                <h2
-                  className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]"
-                  style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
-                >
-                  Real people. Real calls.
-                </h2>
+                <SectionLabel>What members say</SectionLabel>
+                <SectionHeading>Real people. Real calls.</SectionHeading>
               </div>
               <Image
                 src="/assets/postage-stamp.svg"
                 alt=""
                 width={76}
                 height={82}
-                className="w-[130px] shrink-0"
+                className="w-[130px] shrink-0 md:w-[200px] md:mr-[-17em]"
               />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-9 mt-14">
@@ -366,24 +341,16 @@ export default function CommunityCallPage() {
               height={417}
               className="hidden md:block absolute w-[136px] top-[80px] right-[10%] rotate-[-6deg] z-10"
             />
-            <p
-              className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase"
-              style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}
-            >
-              The free membership
-            </p>
-            <h2
-              className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px] text-[#0b0d10]"
-              style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
-            >
+            <SectionLabel>The free membership</SectionLabel>
+            <SectionHeading color="text-[#0b0d10]">
               The call is just the
               <br />
               beginning.
-            </h2>
+            </SectionHeading>
           </div>
-          <p className="text-[#0b0d10] mb-[52px]" style={{ fontSize: "23px", lineHeight: "37px" }}>
+          <BodyText className="text-[#0b0d10] mb-[52px]">
             When you join the free membership, you get access to:
-          </p>
+          </BodyText>
 
           <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 mb-[52px]">
             <Image
@@ -444,7 +411,7 @@ export default function CommunityCallPage() {
             >
               Join the Free Membership →
             </a>
-            <p className="font-[family-name:var(--font-noto-serif)] italic text-[13px] text-[#817202]">
+            <p className="font-[family-name:var(--font-noto-serif)] italic text-[18px] mt-[5px] text-[#817202]">
               Already in the Practice or Practitioner membership? The call link is already yours — check your membership space.
             </p>
           </div>
@@ -455,24 +422,16 @@ export default function CommunityCallPage() {
       <section className="bg-[#fcfcfc] px-6 py-[100px]">
         <div className="max-w-[1290px] mx-auto">
           <div className="max-w-[920px] mx-auto">
-            <p
-              className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase"
-              style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}
-            >
-              Keep going
-            </p>
-            <h2
-              className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]"
-              style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
-            >
+            <SectionLabel>Keep going</SectionLabel>
+            <SectionHeading>
               The call is where many people start.
               <br />
               The memberships are where the work continues.
-            </h2>
+            </SectionHeading>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-[52px]">
-              <p className="order-2 md:order-1 text-[#222]" style={{ fontSize: "23px", lineHeight: "37px" }}>
+              <BodyText className="order-2 md:order-1 text-[#222]">
                 The Practice and Practitioner memberships include everything in the free tier — plus weekly Friday practice sessions, monthly integration themes, the full capacity library, and a community moving through the Solar-Lunar Framework together.
-              </p>
+              </BodyText>
               <div className="order-1 md:order-2 flex justify-center md:justify-end">
                 <Image
                   src="/assets/shell.svg"
@@ -537,7 +496,7 @@ export default function CommunityCallPage() {
           <div className="text-center">
             <a
               href="/find-my-membership"
-              className="font-[family-name:var(--font-noto-serif)] text-[16px] italic text-[#0b0d10] underline decoration-1 underline-offset-4 hover:text-tic-brown transition-colors"
+              className="font-[family-name:var(--font-noto-serif)] text-[23px] italic text-[#0b0d10] underline decoration-1 underline-offset-4 hover:text-tic-brown transition-colors"
             >
               Not sure which fits? Take the 7-question quiz →
             </a>

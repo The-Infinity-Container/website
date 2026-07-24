@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import SectionLabel from "@/components/SectionLabel";
+import SectionHeading from "@/components/SectionHeading";
+import BodyText from "@/components/BodyText";
 
 export const metadata: Metadata = {
   title: "About | The Infinity Container",
@@ -31,12 +34,7 @@ export default function AboutUsPage() {
       <header className="bg-white px-6 pt-[100px] pb-[100px]">
         <div className="max-w-[1290px] mx-auto grid grid-cols-1 md:grid-cols-[1.25fr_0.9fr] gap-[60px] items-center">
           <div>
-            <p
-              className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase"
-              style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}
-            >
-              About
-            </p>
+            <SectionLabel>About</SectionLabel>
             <h1
               className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.08] text-[#0b0d10]"
               style={{ fontSize: "clamp(34px, 5.2vw, 58px)" }}
@@ -67,30 +65,20 @@ export default function AboutUsPage() {
       <section className="bg-tic-yellow px-6 py-[100px]">
         <div className="max-w-[1290px] mx-auto">
           <div className="max-w-[820px] mx-auto">
-            <p
-              className="font-[family-name:var(--font-gordon)] uppercase"
-              style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px", color: "#6a6410" }}
-            >
-              My story
-            </p>
-            <h2
-              className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]"
-              style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
-            >
-              How I got here.
-            </h2>
-            <div className="font-[family-name:var(--font-noto-serif)]" style={{ fontSize: "23px", lineHeight: "37px", color: "#26240f" }}>
-              <p className="mb-6">We are living in a crisis of unintegrated time — a world that keeps us fragmented, living in the past, and disconnected from the present. My own path to understanding this began with a talk by Dr. Dan Siegel at the former Blue School in lower Manhattan, where I was consulting at the time. He spoke about interpersonal neurobiology — about integration as collaborative communication between the parts of yourself, your body, and the larger Earth body. About what he now calls MWe: a sense of oneness. Something clicked into place I&apos;ve never been able to unsee. Fragmentation is at the root of dysfunction. Personal, biological, social — all of it.</p>
-              <p className="mb-6">I started seeing integration opportunities everywhere. In grief. In role changes. In transformative moments and psychedelic journeys.</p>
-              <p className="mb-6">And in myself. I was a young behaviorist then, working with children — and in doing that work, I began to update my own developmental holes, the ones that opened around age six, when my mother died. Riding the subway between clients&apos; homes and schools, I began to feel the in-between itself — the shift, the time it takes to shift, the awareness it takes to transform — and how the digital age was quietly taking that time from us.</p>
-              <p className="mb-6">We stopped digesting life.</p>
-              <p className="mb-6">We became trapped in a thinking mind that dictates reality, disconnected from the body that holds a more accurate reading of the present truth. Fragmentation causes overwhelm, burnout, dissociation, abuse, pain, disease, war, scarcity. We cut ourselves off from what&apos;s here, and often live inside a program written in the past.</p>
-              <p className="mb-6">During COVID, that awareness became urgent. We needed something to better help people manage the new version of chaos life brought forward — and particularly a way to help buoy the helpers. The mushrooms came to me in my dreams, and I answered the call. I helped create a psychedelic company focused on microdosing — building a practitioner program, weekly trainings, and a curriculum certifying practitioners to help their clients work with the medicine.</p>
-              <p className="mb-6">When I left that business, I saw a profound gap. Integration had become a buzzword — but no communities were offering the containment, consistency, and support the work actually requires. I hadn&apos;t seen a program that names the capacities needed to integrate more fluidly with life.</p>
-              <p className="mb-6">I didn&apos;t just come to this work as a facilitator; I came to it as a behaviorist. Training with Dr. Douglas Greer taught me to think about human development not as a list of skills to teach, but as the induction of whole repertoires of capacity. The capacity, not the skill.</p>
-              <p className="mb-6">So I built The Infinity Container. I was grieving many aspects of my life at the time and started paying closer attention to what I was needing to integrate. I needed a Salon, to listen to others and be heard. A practice space not to verbally process, but to feel the capacities I needed to grow. A practitioner&apos;s lab that could be both laboratory and playground. A container that was flexible but consistent, and an ecosystem that could hold the helpers, too.</p>
-              <p className="mb-6">After decades of building these capacities with clients, what I found missing was a way for the nervous system to trust the bottom-up processing of life again. To trust the magic of the body — and its place in something larger. Our society relentlessly orients us toward the myopic top-down — the cognitive, the psychological — and the pace of modern life doesn&apos;t support anyone&apos;s growth toward a more integrated state. Watching what people move through with entheogens and integration, and what I moved through myself, has been like watching years of therapy get digested into the body in a matter of weeks. The entropic state of the journey moves us from the thinking mind down into the felt experience of awake aliveness.</p>
-              <p>Grief has always done this to me too.</p>
+            <SectionLabel color="text-[#6a6410]">My story</SectionLabel>
+            <SectionHeading>How I got here.</SectionHeading>
+            <div className="text-[#26240f]">
+              <BodyText className="mb-6">We are living in a crisis of unintegrated time — a world that keeps us fragmented, living in the past, and disconnected from the present. My own path to understanding this began with a talk by Dr. Dan Siegel at the former Blue School in lower Manhattan, where I was consulting at the time. He spoke about interpersonal neurobiology — about integration as collaborative communication between the parts of yourself, your body, and the larger Earth body. About what he now calls MWe: a sense of oneness. Something clicked into place I&apos;ve never been able to unsee. Fragmentation is at the root of dysfunction. Personal, biological, social — all of it.</BodyText>
+              <BodyText className="mb-6">I started seeing integration opportunities everywhere. In grief. In role changes. In transformative moments and psychedelic journeys.</BodyText>
+              <BodyText className="mb-6">And in myself. I was a young behaviorist then, working with children — and in doing that work, I began to update my own developmental holes, the ones that opened around age six, when my mother died. Riding the subway between clients&apos; homes and schools, I began to feel the in-between itself — the shift, the time it takes to shift, the awareness it takes to transform — and how the digital age was quietly taking that time from us.</BodyText>
+              <BodyText className="mb-6">We stopped digesting life.</BodyText>
+              <BodyText className="mb-6">We became trapped in a thinking mind that dictates reality, disconnected from the body that holds a more accurate reading of the present truth. Fragmentation causes overwhelm, burnout, dissociation, abuse, pain, disease, war, scarcity. We cut ourselves off from what&apos;s here, and often live inside a program written in the past.</BodyText>
+              <BodyText className="mb-6">During COVID, that awareness became urgent. We needed something to better help people manage the new version of chaos life brought forward — and particularly a way to help buoy the helpers. The mushrooms came to me in my dreams, and I answered the call. I helped create a psychedelic company focused on microdosing — building a practitioner program, weekly trainings, and a curriculum certifying practitioners to help their clients work with the medicine.</BodyText>
+              <BodyText className="mb-6">When I left that business, I saw a profound gap. Integration had become a buzzword — but no communities were offering the containment, consistency, and support the work actually requires. I hadn&apos;t seen a program that names the capacities needed to integrate more fluidly with life.</BodyText>
+              <BodyText className="mb-6">I didn&apos;t just come to this work as a facilitator; I came to it as a behaviorist. Training with Dr. Douglas Greer taught me to think about human development not as a list of skills to teach, but as the induction of whole repertoires of capacity. The capacity, not the skill.</BodyText>
+              <BodyText className="mb-6">So I built The Infinity Container. I was grieving many aspects of my life at the time and started paying closer attention to what I was needing to integrate. I needed a Salon, to listen to others and be heard. A practice space not to verbally process, but to feel the capacities I needed to grow. A practitioner&apos;s lab that could be both laboratory and playground. A container that was flexible but consistent, and an ecosystem that could hold the helpers, too.</BodyText>
+              <BodyText className="mb-6">After decades of building these capacities with clients, what I found missing was a way for the nervous system to trust the bottom-up processing of life again. To trust the magic of the body — and its place in something larger. Our society relentlessly orients us toward the myopic top-down — the cognitive, the psychological — and the pace of modern life doesn&apos;t support anyone&apos;s growth toward a more integrated state. Watching what people move through with entheogens and integration, and what I moved through myself, has been like watching years of therapy get digested into the body in a matter of weeks. The entropic state of the journey moves us from the thinking mind down into the felt experience of awake aliveness.</BodyText>
+              <BodyText>Grief has always done this to me too.</BodyText>
             </div>
           </div>
         </div>
@@ -112,22 +100,12 @@ export default function AboutUsPage() {
       <section className="bg-white px-6 py-[100px]">
         <div className="max-w-[1290px] mx-auto grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-16 items-start">
           <div>
-            <p
-              className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase"
-              style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}
-            >
-              Training &amp; lineage
-            </p>
-            <h2
-              className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]"
-              style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
-            >
-              Where the work comes from.
-            </h2>
-            <div className="font-[family-name:var(--font-noto-serif)] text-[#222]" style={{ fontSize: "23px", lineHeight: "37px" }}>
-              <p className="mb-6">The Solar-Lunar Framework didn&apos;t come from one tradition. It was built at the intersection of several — held to the standard of each.</p>
-              <p className="mb-6">My doctoral training in behavior analysis at Teachers College, Columbia University taught me how capacities are actually built: not through insight alone, but through practice, repetition, and the right conditions for change. Twenty-five years of clinical work taught me what the textbooks couldn&apos;t — that the body keeps its own counsel, and that transformation that ignores it doesn&apos;t last. My fairy godmother, clinical psychologist Dr. Joyce Wyden, taught me to see all human development as relational — starting in utero — so that our pasts can be resolved through awareness, comfort, and learning new sequences of behavior.</p>
-              <p>The framework draws on verbal behavior science, somatic and body-based practice, interpersonal neurobiology, and contemplative traditions — woven into a system designed for one thing: helping experience become capacity.</p>
+            <SectionLabel>Training &amp; lineage</SectionLabel>
+            <SectionHeading>Where the work comes from.</SectionHeading>
+            <div className="text-[#222]">
+              <BodyText className="mb-6">The Solar-Lunar Framework didn&apos;t come from one tradition. It was built at the intersection of several — held to the standard of each.</BodyText>
+              <BodyText className="mb-6">My doctoral training in behavior analysis at Teachers College, Columbia University taught me how capacities are actually built: not through insight alone, but through practice, repetition, and the right conditions for change. Twenty-five years of clinical work taught me what the textbooks couldn&apos;t — that the body keeps its own counsel, and that transformation that ignores it doesn&apos;t last. My fairy godmother, clinical psychologist Dr. Joyce Wyden, taught me to see all human development as relational — starting in utero — so that our pasts can be resolved through awareness, comfort, and learning new sequences of behavior.</BodyText>
+              <BodyText>The framework draws on verbal behavior science, somatic and body-based practice, interpersonal neurobiology, and contemplative traditions — woven into a system designed for one thing: helping experience become capacity.</BodyText>
             </div>
           </div>
           <div>
@@ -177,27 +155,17 @@ export default function AboutUsPage() {
             className="float-right w-[110px] md:w-[150px] ml-7 mb-4 -mt-2"
             style={{ filter: "invert(0.48)" }}
           />
-          <p
-            className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase"
-            style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}
-          >
-            Why the Infinity Container
-          </p>
-          <h2
-            className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]"
-            style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
-          >
-            Built for the people who hold everyone else.
-          </h2>
-          <div className="font-[family-name:var(--font-noto-serif)] text-[#242424]" style={{ fontSize: "23px", lineHeight: "37px" }}>
-            <p className="mb-6">Twenty-five years of clinical work showed me a pattern I couldn&apos;t unsee: the practitioners, healers, and helpers doing the most holding were the least likely to be held themselves. They gave endlessly and received rarely — not because support didn&apos;t exist, but because nothing was built for the way they actually needed it.</p>
+          <SectionLabel>Why the Infinity Container</SectionLabel>
+          <SectionHeading>Built for the people who hold everyone else.</SectionHeading>
+          <div className="text-[#242424]">
+            <BodyText className="mb-6">Twenty-five years of clinical work showed me a pattern I couldn&apos;t unsee: the practitioners, healers, and helpers doing the most holding were the least likely to be held themselves. They gave endlessly and received rarely — not because support didn&apos;t exist, but because nothing was built for the way they actually needed it.</BodyText>
             <p
               className="italic text-tic-brown border-l-[3px] border-tic-brown pl-[28px] my-8"
               style={{ fontSize: "clamp(19px, 2.8vw, 25px)", lineHeight: "1.55" }}
             >
               &quot;For the helpers, healers, and holders of space — a community built to hold you back.&quot;
             </p>
-            <p>The Infinity Container is that structure: an ongoing practice community where integration is lived rather than studied, where the framework holds the rhythm, and where the people who spend their lives showing up for others finally have a place that shows up for them.</p>
+            <BodyText>The Infinity Container is that structure: an ongoing practice community where integration is lived rather than studied, where the framework holds the rhythm, and where the people who spend their lives showing up for others finally have a place that shows up for them.</BodyText>
           </div>
         </div>
       </section>
@@ -207,18 +175,8 @@ export default function AboutUsPage() {
         <div className="max-w-[1290px] mx-auto">
           <div className="flex items-start justify-between gap-6">
             <div>
-              <p
-                className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase"
-                style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}
-              >
-                The people
-              </p>
-              <h2
-                className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4]"
-                style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}
-              >
-                The hands that build the container.
-              </h2>
+              <SectionLabel>The people</SectionLabel>
+              <SectionHeading>The hands that build the container.</SectionHeading>
             </div>
             <Image
               src="/assets/spider-thick.svg"
