@@ -17,21 +17,20 @@ export default function HomePage() {
     <main>
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="bg-black">
-        {/* Logo-open animation, full viewport height, no overlay */}
-        <div className="relative w-full h-screen overflow-hidden bg-black">
+        {/* Logo-open animation, extended height, text overlaid below the globe */}
+        <div className="relative w-full h-[200vh] overflow-hidden bg-black">
           <video
             autoPlay
             muted
             loop
             playsInline
-            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover md:mt-[20em]"
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
           >
             <source src="/assets/videos/hero-mobile.mp4" media="(max-width: 767px)" type="video/mp4" />
             <source src="/assets/videos/hero-desktop.mp4" type="video/mp4" />
           </video>
-        </div>
 
-        <div className="text-center px-6 pt-[77px] pb-[84px]">
+          <div className="absolute inset-x-0 top-1/2 z-10 text-center px-6 pt-[60px] pb-[84px] mt-[4em]">
           <p
             className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.15em] max-w-[900px] mx-auto mb-6 leading-snug"
             style={{ fontSize: "clamp(0.788rem, 1.68vw, 1.225rem)" }}
@@ -82,6 +81,7 @@ export default function HomePage() {
           >
             Already a member? Sign in
           </a>
+          </div>
         </div>
       </header>
 
