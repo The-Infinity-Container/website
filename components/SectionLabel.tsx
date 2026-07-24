@@ -1,8 +1,16 @@
-export default function SectionLabel({ children }: { children: React.ReactNode }) {
+export default function SectionLabel({
+  children,
+  className = "",
+  color = "text-tic-dark-grey",
+}: {
+  children: React.ReactNode;
+  className?: string;
+  color?: string;
+}) {
   return (
     <p
-      className="font-[family-name:var(--font-gordon)] uppercase text-tic-dark-grey"
-      style={{ fontSize: "28px", letterSpacing: "0.42px", marginBottom: "60px" }}
+      className={`font-[family-name:var(--font-gordon)] uppercase ${color} ${className}`}
+      style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}
     >
       {children}
     </p>

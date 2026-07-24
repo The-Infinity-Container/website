@@ -4,6 +4,9 @@ import Link from "next/link";
 import ApproachCards from "@/components/ApproachCards";
 import MembershipCards from "@/components/MembershipCards";
 import SimpleNewsletter from "@/components/SimpleNewsletter";
+import SectionLabel from "@/components/SectionLabel";
+import SectionHeading from "@/components/SectionHeading";
+import BodyText from "@/components/BodyText";
 
 export const metadata: Metadata = {
   title: "What is Integration? | The Infinity Container",
@@ -53,28 +56,22 @@ export default function WhatIsIntegrationPage() {
         <div className="max-w-[1290px] mx-auto">
           {/* Header row */}
           <div className="mb-[28px]">
-            <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px]" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-              The work
-            </p>
-            <h3 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] w-full" style={{ fontSize: "clamp(27px, 4.14vw, 43px)" }}>
-              More than a conversation
-              <br />
-              after the fact.
-            </h3>
+            <SectionLabel>The work</SectionLabel>
+            <SectionHeading>More than a conversation.</SectionHeading>
           </div>
 
           {/* Two-column row: paragraphs and poem */}
           <div className="grid md:grid-cols-[1.35fr_1fr] gap-[72px] items-start mb-[40px]">
-            <div className="space-y-[24px] font-[family-name:var(--font-noto-serif)] text-[25px] text-[#222]" style={{ lineHeight: "41px" }}>
-              <p>
+            <div className="space-y-[24px] text-[#222]">
+              <BodyText>
                 Integration is often described as "making meaning" from a psychedelic experience — a session or two of talking about what happened. But meaning that stays in language stays in your head. Real integration lives in the body, in behavior, in relationship, in time.
-              </p>
-              <p>
+              </BodyText>
+              <BodyText>
                 Integration is how insight becomes practice. How an opening becomes a capacity. How the person who returned from the journey and the person living your Tuesday afternoon become the same person.
-              </p>
-              <p>
+              </BodyText>
+              <BodyText>
                 And it applies far beyond psychedelics. Life transitions, grief, awe, birth, loss, love — any experience big enough to change you asks to be integrated. The question is whether it gets what it needs.
-              </p>
+              </BodyText>
             </div>
 
             <div className="font-[family-name:var(--font-noto-serif)] italic text-[22px] leading-[1.65] text-black border-l-[3px] border-tic-yellow pl-[26px]">
@@ -135,15 +132,11 @@ export default function WhatIsIntegrationPage() {
         <div className="max-w-[1200px] mx-auto">
           {/* Row 1: Label, heading, first paragraph */}
           <div className="mb-[24px] md:mb-[-36px]">
-            <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px]" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-              The gap
-            </p>
-            <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]" style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}>
-              It doesn't happen on its own.
-            </h2>
-            <p className="font-[family-name:var(--font-noto-serif)] text-[23px] text-[#222]" style={{ lineHeight: "37px" }}>
+            <SectionLabel>The gap</SectionLabel>
+            <SectionHeading>It doesn't happen on its own.</SectionHeading>
+            <BodyText className="text-[#222]">
               The experience is a doorway — but most people are handed the doorway and nothing else. No preparation beforehand. No container afterward. No community to witness the becoming.
-            </p>
+            </BodyText>
           </div>
 
           {/* Row 2: Two-column grid with italic text and hand image */}
@@ -166,9 +159,9 @@ export default function WhatIsIntegrationPage() {
 
           {/* Row 3: Full-width paragraph and link */}
           <div>
-            <p className="font-[family-name:var(--font-noto-serif)] text-[23px] mb-[24px] text-[#222]" style={{ lineHeight: "37px" }}>
+            <BodyText className="mb-[24px] text-[#222]">
               Integration takes structure, rhythm, and relationship. It takes a system that honors both the preparation before and the long, spiraling work after. That is what The Infinity Container was built for.
-            </p>
+            </BodyText>
 
             <a href="/blog/what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity inline-block" style={{ marginTop: "4px" }}>
               <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: why integration needs a container →</span>
@@ -182,20 +175,16 @@ export default function WhatIsIntegrationPage() {
         <div className="max-w-[90vw] mx-auto">
           <div className="grid md:grid-cols-[1fr_1fr] gap-[60px] items-start mb-[60px]">
             <div>
-              <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px]" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-                Why capacities
-              </p>
-              <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] w-full mb-[28px]" style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}>
-                Who are you becoming?
-              </h2>
+              <SectionLabel>Why capacities</SectionLabel>
+              <SectionHeading>Who are you becoming?</SectionHeading>
 
-              <p className="font-[family-name:var(--font-noto-serif)] text-[23px] mb-[24px] text-[#222]" style={{ lineHeight: "37px" }}>
+              <BodyText className="mb-[24px] text-[#222]">
                 Most learning asks: what can you do? Integration asks a different question — who are you becoming?
-              </p>
+              </BodyText>
 
-              <p className="font-[family-name:var(--font-noto-serif)] text-[23px] mb-[24px] text-[#222]" style={{ lineHeight: "37px" }}>
+              <BodyText className="mb-[24px] text-[#222]">
                 That is why the framework is built around behavioral capacities, not skills. A skill is something you deploy in a context. A capacity changes what you are able to be — across contexts, across relationships, across time.
-              </p>
+              </BodyText>
             </div>
 
             <Image
@@ -213,23 +202,23 @@ export default function WhatIsIntegrationPage() {
               <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[24px] uppercase tracking-[0.14em] mb-[14px]">
                 Skills, learned in isolation
               </h4>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[23px] text-[#2a2a2a] font-medium" style={{ lineHeight: "37px" }}>
+              <BodyText className="text-[#2a2a2a] font-medium">
                 Acquired in a course. Practiced alone. Deployed when remembered. They add to what you can do — but leave who you are untouched.
-              </p>
+              </BodyText>
             </div>
             <div className="bg-tic-yellow rounded px-[28px] py-[32px]">
               <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[24px] uppercase tracking-[0.14em] mb-[14px]">
                 Capacities, built in community
               </h4>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[23px] text-[#2a2a2a] font-medium" style={{ lineHeight: "37px" }}>
+              <BodyText className="text-[#2a2a2a] font-medium">
                 Developed in relationship, over time, inside a container. They change what is available to you — more resilience, less burnout, a deeper sense of oneness with your life and the people in it.
-              </p>
+              </BodyText>
             </div>
           </div>
 
-          <p className="font-[family-name:var(--font-noto-serif)] text-[23px] text-[#222]" style={{ marginTop: "6rem", marginBottom: "6rem", lineHeight: "37px" }}>
+          <BodyText className="text-[#222] mt-[6rem] mb-[6rem]">
             This is why we integrate rather than simply learn. Insight that stays intellectual fades. Capacity that is practiced in community becomes who you are.
-          </p>
+          </BodyText>
 
           <a href="/blog/what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity inline-block" style={{ marginTop: "4px" }}>
             <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: capacities, not skills →</span>
@@ -258,15 +247,11 @@ export default function WhatIsIntegrationPage() {
 
         <div id="our-system">
           <div className="max-w-[1280px] mx-auto">
-            <p className="font-[family-name:var(--font-gordon)] uppercase" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px", color: "#D5D06A" }}>
-              Our system
-            </p>
-            <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]" style={{ fontSize: "clamp(23px, 3.6vw, 38px)", color: "white" }}>
-              The Solar-Lunar Framework
-            </h2>
-            <p className="font-[family-name:var(--font-noto-serif)] text-[25px] mb-[44px]" style={{ color: "white", lineHeight: "41px" }}>
+            <SectionLabel color="text-[#D5D06A]">Our system</SectionLabel>
+            <SectionHeading color="text-white">The Solar-Lunar Framework</SectionHeading>
+            <BodyText className="text-white mb-[44px]">
               Our proprietary integration system — built on behavioral science, somatic practice, and contemplative traditions. It maps the full arc of transformative experience across two spirals:
-            </p>
+            </BodyText>
           </div>
 
           <div className="max-w-[1280px] mx-auto">
@@ -316,20 +301,18 @@ export default function WhatIsIntegrationPage() {
       {/* ── HOW YOU LIVE IT ───────────────────────────────────────── */}
       <section className="bg-white px-6 pt-[100px] pb-[140px]">
         <div className="max-w-[90vw] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] text-tic-dark-grey uppercase mb-[18px]" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px" }}>
-            How you live it
-          </p>
-          <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[44px]" style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}>
+          <SectionLabel>How you live it</SectionLabel>
+          <SectionHeading>
             The framework isn't something
             <br />
             you read about here.<br />
             It's something you practice inside of.
-          </h2>
+          </SectionHeading>
 
           <div className="grid md:grid-cols-[70%_30%] gap-[60px] items-start mb-[44px]">
-            <p className="font-[family-name:var(--font-noto-serif)] text-[23px] text-[#222]" style={{ lineHeight: "37px" }}>
+            <BodyText className="text-[#222]">
               Every session, theme, and program inside The Infinity Container is organized within the Solar-Lunar Framework. Each month moves through a capacity. The community moves through it together.
-            </p>
+            </BodyText>
             <Image
               src="/assets/shell.svg"
               alt="Shell"

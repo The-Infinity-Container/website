@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface ApproachCard {
   title: string;
   icon?: string;
@@ -6,13 +8,14 @@ interface ApproachCard {
   badges: { text: string; color?: "white" | "grey" }[];
   backgroundColor: string;
   titleColor: string;
-  paddingY: string;
+  paddingTop: string;
+  paddingBottom: string;
 }
 
 const APPROACH_CARDS: ApproachCard[] = [
   {
     title: "The Solar Spiral",
-    icon: "/assets/sun.svg",
+    icon: "/assets/sun-icon.svg",
     heading: "7 Preparation Capacities",
     description:
       "The capacities that help you arrive ready — grounded, receptive, and resourced before the experience begins.",
@@ -22,12 +25,12 @@ const APPROACH_CARDS: ApproachCard[] = [
     ],
     backgroundColor: "#7C3537",
     titleColor: "#F56E71",
-    paddingY: "py-[61px]",
+    paddingTop: "pt-[61px]",
+    paddingBottom: "pb-[24px]",
   },
   {
     title: "The Lunar Spiral",
-    // TODO: swap in a proper lunar icon path once one is added to public/assets
-    icon: undefined,
+    icon: "/assets/moon-icon.svg",
     heading: "13 Integration Capacities",
     description:
       "The capacities that help you weave what you find into who you are becoming — a little at a time.",
@@ -38,25 +41,38 @@ const APPROACH_CARDS: ApproachCard[] = [
     ],
     backgroundColor: "#236C7F",
     titleColor: "#D6D06C",
-    paddingY: "py-[81px]",
+    paddingTop: "pt-[61px]",
+    paddingBottom: "pb-[24px]",
   },
 ];
 
 export default function ApproachCards() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-[61px] mb-[56px] relative">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-[140px] mb-[56px] relative">
       {APPROACH_CARDS.map((card) => (
         <div
           key={card.title}
-          className={`rounded ${card.paddingY} px-8 md:px-[65px]`}
+          className={`rounded ${card.paddingTop} ${card.paddingBottom} px-8 md:px-[65px]`}
           style={{ backgroundColor: card.backgroundColor }}
         >
-          <h3
-            className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[31px] mb-4"
-            style={{ color: card.titleColor }}
-          >
-            {card.title}
-          </h3>
+          <div className="flex items-center gap-5 mb-4">
+            {card.icon && (
+              <Image
+                src={card.icon}
+                alt=""
+                aria-hidden
+                width={90}
+                height={90}
+                className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] shrink-0"
+              />
+            )}
+            <h3
+              className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[31px]"
+              style={{ color: card.titleColor }}
+            >
+              {card.title}
+            </h3>
+          </div>
           <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[21px] text-white mb-[40px]">
             {card.heading}
           </p>
