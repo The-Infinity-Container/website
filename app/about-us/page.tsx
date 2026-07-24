@@ -176,7 +176,7 @@ export default function AboutUsPage() {
           <div className="flex items-start justify-between gap-6">
             <div>
               <SectionLabel>The people</SectionLabel>
-              <SectionHeading>The hands that build the container.</SectionHeading>
+              <SectionHeading marginBottom="0">The hands that build the container.</SectionHeading>
             </div>
             <Image
               src="/assets/spider-thick.svg"

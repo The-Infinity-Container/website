@@ -97,7 +97,7 @@ export default function WhatIsIntegrationPage() {
 
           {/* Full-width blue link */}
           <div className="mb-[60px]">
-            <a href="/blog/blog-what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full" style={{ marginTop: "80px" }}>
+            <a href="/blog/blog-what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full mt-1 md:mt-[80px]">
               <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: read the full essay on the blog →</span>
             </a>
           </div>
@@ -150,8 +150,7 @@ export default function WhatIsIntegrationPage() {
                 alt=""
                 width={600}
                 height={600}
-                className="h-auto"
-                style={{ width: "90%", marginTop: "3em" }}
+                className="w-full h-auto md:w-[90%] md:mt-[3em]"
                 aria-hidden
               />
             </div>

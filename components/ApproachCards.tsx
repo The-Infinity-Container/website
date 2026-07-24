@@ -48,7 +48,7 @@ const APPROACH_CARDS: ApproachCard[] = [
 
 export default function ApproachCards() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-[140px] mb-[56px] relative">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-[61px] md:gap-[140px] mb-[56px] relative">
       {APPROACH_CARDS.map((card) => (
         <div
           key={card.title}
