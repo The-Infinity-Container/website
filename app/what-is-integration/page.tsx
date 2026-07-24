@@ -38,7 +38,9 @@ export default function WhatIsIntegrationPage() {
             }}
           />
           <h2 className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-[0.02em] leading-[1.15] mx-auto mb-[60px]" style={{ fontSize: "clamp(31px, 4.95vw, 50px)", fontWeight: "normal" }}>
-            becomes a part of who you are.
+            becomes a part of
+            <br />
+            who you are.
           </h2>
           <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-yellow max-w-[820px] mx-auto" style={{ fontSize: "clamp(20px, 2.57vw, 24px)" }}>
             A journey — psychedelic or otherwise — opens something. Integration is what you do with what opened.
@@ -153,7 +155,8 @@ export default function WhatIsIntegrationPage() {
                 alt=""
                 width={600}
                 height={600}
-                className="w-full h-auto"
+                className="h-auto"
+                style={{ width: "90%", marginTop: "3em" }}
                 aria-hidden
               />
             </div>
@@ -246,21 +249,23 @@ export default function WhatIsIntegrationPage() {
             width={729}
             height={729}
             className="mx-auto w-full h-auto -mb-[50px] mt-[73px] md:mb-0 md:mt-0"
-            style={{ maxWidth: "972px" }}
+            style={{ maxWidth: "875px" }}
             aria-hidden
           />
         </div>
 
         <div id="our-system">
-          <p className="font-[family-name:var(--font-gordon)] uppercase" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px", color: "#D5D06A" }}>
-            Our system
-          </p>
-          <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]" style={{ fontSize: "clamp(23px, 3.6vw, 38px)", color: "white" }}>
-            The Solar-Lunar Framework
-          </h2>
-          <p className="font-[family-name:var(--font-noto-serif)] text-[25px] mb-[44px]" style={{ color: "white", lineHeight: "41px" }}>
-            Our proprietary integration system — built on behavioral science, somatic practice, and contemplative traditions. It maps the full arc of transformative experience across two spirals:
-          </p>
+          <div className="max-w-[1280px] mx-auto">
+            <p className="font-[family-name:var(--font-gordon)] uppercase" style={{ fontSize: "25px", letterSpacing: "0.42px", marginBottom: "60px", color: "#D5D06A" }}>
+              Our system
+            </p>
+            <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[28px]" style={{ fontSize: "clamp(23px, 3.6vw, 38px)", color: "white" }}>
+              The Solar-Lunar Framework
+            </h2>
+            <p className="font-[family-name:var(--font-noto-serif)] text-[25px] mb-[44px]" style={{ color: "white", lineHeight: "41px" }}>
+              Our proprietary integration system — built on behavioral science, somatic practice, and contemplative traditions. It maps the full arc of transformative experience across two spirals:
+            </p>
+          </div>
 
           <div className="max-w-[1280px] mx-auto">
             <ApproachCards />
@@ -313,7 +318,9 @@ export default function WhatIsIntegrationPage() {
             How you live it
           </p>
           <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] mb-[44px]" style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}>
-            The framework isn't something you read about here.<br />
+            The framework isn't something
+            <br />
+            you read about here.<br />
             It's something you practice inside of.
           </h2>
 
@@ -354,7 +361,7 @@ export default function WhatIsIntegrationPage() {
           />
 
           <div className="text-center" style={{ marginTop: "80px" }}>
-            <a href="/find-my-membership" className="font-[family-name:var(--font-noto-serif)] italic text-black hover:opacity-70 transition-opacity inline-block underline" style={{ fontSize: "15px" }}>
+            <a href="/find-my-membership" className="font-[family-name:var(--font-noto-serif)] italic text-black hover:opacity-70 transition-opacity inline-block underline" style={{ fontSize: "23px", lineHeight: "37px" }}>
               Not sure which fits? Take the 7-question quiz →
             </a>
           </div>

@@ -1,5 +1,6 @@
 interface ApproachCard {
   title: string;
+  icon?: string;
   heading: string;
   description: string;
   badges: { text: string; color?: "white" | "grey" }[];
@@ -11,6 +12,7 @@ interface ApproachCard {
 const APPROACH_CARDS: ApproachCard[] = [
   {
     title: "The Solar Spiral",
+    icon: "/assets/sun.svg",
     heading: "7 Preparation Capacities",
     description:
       "The capacities that help you arrive ready — grounded, receptive, and resourced before the experience begins.",
@@ -24,6 +26,8 @@ const APPROACH_CARDS: ApproachCard[] = [
   },
   {
     title: "The Lunar Spiral",
+    // TODO: swap in a proper lunar icon path once one is added to public/assets
+    icon: undefined,
     heading: "13 Integration Capacities",
     description:
       "The capacities that help you weave what you find into who you are becoming — a little at a time.",
@@ -33,7 +37,7 @@ const APPROACH_CARDS: ApproachCard[] = [
       { text: "+ 11 more", color: "grey" },
     ],
     backgroundColor: "#236C7F",
-    titleColor: "#0A0E10",
+    titleColor: "#D6D06C",
     paddingY: "py-[81px]",
   },
 ];
