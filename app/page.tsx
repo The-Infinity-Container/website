@@ -18,21 +18,21 @@ export default function HomePage() {
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="bg-black">
         {/* Logo-open animation, extended height, text overlaid below the globe */}
-        <div className="relative w-full h-[200vh] overflow-hidden bg-black">
+        <div className="relative w-full h-[82vh] md:h-[200vh] overflow-hidden bg-black">
           <video
             autoPlay
             muted
             loop
             playsInline
-            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
+            className="absolute top-0 md:top-1/2 left-1/2 min-w-full min-h-[84vh] md:min-h-full w-auto h-auto -translate-x-1/2 md:-translate-y-1/2 object-cover"
           >
             <source src="/assets/videos/hero-mobile.mp4" media="(max-width: 767px)" type="video/mp4" />
             <source src="/assets/videos/hero-desktop.mp4" type="video/mp4" />
           </video>
 
-          <div className="absolute inset-x-0 top-1/2 z-10 text-center px-6 pt-[60px] pb-[84px] mt-[4em]">
+          <div className="absolute inset-x-0 top-1/2 z-10 text-center px-6 pt-0 md:pt-[60px] pb-0 md:pb-[84px] mt-[-40px] md:mt-[4em]">
           <p
-            className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.15em] max-w-[900px] mx-auto mb-6 leading-snug"
+            className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.15em] max-w-[900px] mx-auto mb-4 md:mb-6 leading-snug"
             style={{ fontSize: "clamp(0.788rem, 1.68vw, 1.225rem)" }}
           >
             Psychedelic Integration <span className="mx-2">·</span> Life Transitions{" "}
@@ -40,7 +40,7 @@ export default function HomePage() {
           </p>
 
           <h1
-            className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-[0.03em] leading-[1.12] max-w-[1300px] mx-auto mb-[18px]"
+            className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-[0.03em] leading-[1.12] max-w-[1300px] mx-auto mb-2 md:mb-[18px]"
             style={{ fontSize: "clamp(1.925rem, 5.25vw, 4.2rem)" }}
           >
             This is where
@@ -51,14 +51,14 @@ export default function HomePage() {
           </h1>
 
           <p
-            className="font-[family-name:var(--font-noto-serif)] italic text-tic-yellow mb-[21px]"
+            className="font-[family-name:var(--font-noto-serif)] italic text-tic-yellow mb-4 md:mb-[21px]"
             style={{ fontSize: "clamp(1.05rem, 2.24vw, 1.4rem)" }}
           >
             Prepare well. Integrate fully. Keep going.
           </p>
 
           <p
-            className="font-[family-name:var(--font-noto-serif)] text-tic-grey max-w-[640px] mx-auto mb-8 leading-[1.75]"
+            className="font-[family-name:var(--font-noto-serif)] text-tic-grey max-w-[640px] mx-auto mb-5 md:mb-8 leading-[1.75]"
             style={{ fontSize: "clamp(0.788rem, 1.54vw, 0.963rem)" }}
           >
             Psychedelic integration, life transitions, and expanded experience — for the people
@@ -89,10 +89,10 @@ export default function HomePage() {
 
       {/* ── What is this? ──────────────────────────────────────────── */}
       <section className="bg-white px-6 py-[110px]">
-        <div className="max-w-[1080px] mx-auto mt-[6em]">
+        <div className="max-w-[1080px] mx-auto md:mt-[6em]">
           <div className="relative">
             <SectionLabel>What is TIC</SectionLabel>
-            <SectionHeading className="max-w-[68%]">
+            <SectionHeading className="md:max-w-[68%]">
               Integration support for the people who hold everyone else.
             </SectionHeading>
             <Image
@@ -106,7 +106,7 @@ export default function HomePage() {
           </div>
 
           {/* Mobile: stacked, Desktop: 2-column grid */}
-          <div className="flex flex-col gap-8 md:gap-16 w-full md:grid mt-[7em]" style={{ gridTemplateColumns: "1.4fr 1fr", alignItems: "start" }}>
+          <div className="flex flex-col gap-8 md:gap-16 w-full md:grid md:mt-[7em]" style={{ gridTemplateColumns: "1.4fr 1fr", alignItems: "start" }}>
             {/* Mobile: Integration image second */}
             <div className="md:hidden order-2 w-full">
               <Image
@@ -185,7 +185,7 @@ export default function HomePage() {
           </div>
 
           {/* Spotify Playlist + Mushrooms */}
-          <div className="flex items-end justify-center gap-4 md:gap-8 -mt-24">
+          <div className="flex items-end justify-center gap-4 md:gap-8 mt-8 lg:-mt-24">
             <div className="hidden lg:block flex-shrink-0 relative z-0 -mr-[6.5rem]">
               <Image
                 src="/assets/mushrooms-trio.svg"
@@ -376,13 +376,13 @@ export default function HomePage() {
               arc across two spirals:
             </BodyText>
 
-            <div className="mt-[11em]">
+            <div className="mt-10 lg:mt-[11em]">
               <ApproachCards />
             </div>
 
             <Link
               href="/what-is-integration#our-system"
-              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[22px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors block w-fit mx-auto text-center mt-[14em]"
+              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[22px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors block w-fit mx-auto text-center mt-10 lg:mt-[14em]"
             >
               Learn more about the Solar-Lunar Framework →
             </Link>
