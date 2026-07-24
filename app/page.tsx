@@ -185,7 +185,7 @@ export default function HomePage() {
           </div>
 
           {/* Spotify Playlist + Mushrooms */}
-          <div className="flex items-end justify-center gap-4 md:gap-8 mt-16">
+          <div className="flex items-end justify-center gap-4 md:gap-8 -mt-24">
             <div className="hidden lg:block flex-shrink-0 relative z-0 -mr-[6.5rem]">
               <Image
                 src="/assets/mushrooms-trio.svg"
