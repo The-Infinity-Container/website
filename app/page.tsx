@@ -90,20 +90,18 @@ export default function HomePage() {
       {/* ── What is this? ──────────────────────────────────────────── */}
       <section className="bg-white px-6 py-[110px]">
         <div className="max-w-[1080px] mx-auto">
-          <div className="flex items-start justify-between gap-8">
-            <div className="flex-1">
-              <SectionLabel>What is TIC</SectionLabel>
-              <SectionHeading className="max-w-[820px]">
-                Integration support for the people who hold everyone else.
-              </SectionHeading>
-            </div>
+          <div className="relative">
+            <SectionLabel>What is TIC</SectionLabel>
+            <SectionHeading className="max-w-[68%]">
+              Integration support for the people who hold everyone else.
+            </SectionHeading>
             <Image
               src="/assets/eye-grey.svg"
               alt=""
               aria-hidden
               width={463}
               height={305}
-              className="hidden md:block flex-shrink-0 w-[240px] lg:w-[360px] xl:w-[440px] h-auto"
+              className="hidden md:block absolute -top-[40px] -right-[20px] lg:-top-[60px] lg:-right-[30px] pointer-events-none w-[364px] h-auto"
             />
           </div>
 
