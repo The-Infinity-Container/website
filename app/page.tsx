@@ -65,14 +65,12 @@ export default function HomePage() {
             doing the work and the practitioners who hold that space.
           </p>
 
-          <a
-            href={FIND_MEMBERSHIP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/find-my-membership"
             className="inline-block font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm bg-tic-salmon text-black px-10 py-4 rounded-sm hover:bg-tic-pink transition-colors"
           >
             Find My Membership →
-          </a>
+          </Link>
           <a
             href={SIGNIN_URL}
             target="_blank"
@@ -121,21 +119,23 @@ export default function HomePage() {
             {/* Mobile: Poem appears third */}
             <div className="md:hidden order-3 w-full font-[family-name:var(--font-noto-serif)] italic text-[22px] leading-[1.65] text-black border-l-[3px] border-tic-yellow pl-[26px]">
               Integration is a birthday<br />
-              &amp; a funeral.<br />
+              <span className="pl-8 inline-block">&amp; a funeral.</span><br />
               It is playing in the unknown,<br />
-              while knowing yourself more.<br />
+              <span className="pl-8 inline-block">while knowing yourself more.</span><br />
               It is weaving.<br />
               It is collaborating.<br />
               It is titration &amp; digestion.<br />
               It is process.<br />
               It is practice with awareness.<br />
               It is the evolution of a differentiated,<br />
-              connected self.<br />
+              <span className="pl-8 inline-block">connected self.</span><br />
               It is intra-connected identity.<br />
               It is WE, it is us.<br />
-              It is the link between possibility and actuality.
+              It is the link between possibility and<br />
+              <span className="pl-8 inline-block">actuality.</span>
               <br /><br />
-              And it happens in The Infinity Container.<br />
+              And it happens in The Infinity<br />
+              <span className="pl-8 inline-block">Container.</span><br />
               A little at a time.
             </div>
 
@@ -164,21 +164,23 @@ export default function HomePage() {
               />
               <div className="font-[family-name:var(--font-noto-serif)] italic text-[22px] leading-[1.65] text-black pl-[26px]">
                 Integration is a birthday<br />
-                &amp; a funeral.<br />
+                <span className="pl-8 inline-block">&amp; a funeral.</span><br />
                 It is playing in the unknown,<br />
-                while knowing yourself more.<br />
+                <span className="pl-8 inline-block">while knowing yourself more.</span><br />
                 It is weaving.<br />
                 It is collaborating.<br />
                 It is titration &amp; digestion.<br />
                 It is process.<br />
                 It is practice with awareness.<br />
                 It is the evolution of a differentiated,<br />
-                connected self.<br />
+                <span className="pl-8 inline-block">connected self.</span><br />
                 It is intra-connected identity.<br />
                 It is WE, it is us.<br />
-                It is the link between possibility and actuality.
+                It is the link between possibility and<br />
+                <span className="pl-8 inline-block">actuality.</span>
                 <br /><br />
-                And it happens in The Infinity Container.<br />
+                And it happens in The Infinity<br />
+                <span className="pl-8 inline-block">Container.</span><br />
                 A little at a time.
               </div>
             </div>
@@ -294,12 +296,12 @@ export default function HomePage() {
           </div>
 
           <div className="relative mx-auto mt-[192px]">
-            <div className="max-w-[95vw] mx-auto bg-white border border-black/10 rounded py-[40px] px-6 md:py-[80px] md:px-[100px] flex flex-col items-start justify-start gap-8 relative z-10">
+            <div className="max-w-[95vw] mx-auto bg-white border border-black/10 rounded px-[26px] py-[36px] flex flex-col items-start justify-start gap-8 relative z-10">
             <div className="max-w-[800px]">
-              <h4 className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] leading-[1.25] mb-[28px]" style={{ fontSize: "clamp(21px, 3.24vw, 34px)" }}>
+              <h4 className="font-[family-name:var(--font-gordon)] text-[26px] uppercase tracking-[0.02em] leading-[1.3] font-normal mb-[24px]">
                 Not ready for a membership? Start free.
               </h4>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[20px] leading-[1.7] text-[#3a3a3a] mb-[40px]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-[14px] leading-[1.7] text-[#3a3a3a]">
                 Join the free community for monthly community calls and a library of integration
                 modules — each with one practice and one teaching video. A real taste of the work,
                 at no cost.
@@ -309,7 +311,7 @@ export default function HomePage() {
               href={JOIN_FREE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm border-[1.5px] border-black text-black px-8 py-[16px] rounded-sm hover:bg-black hover:text-white transition-colors"
+              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[12px] border-[1.5px] border-black text-black px-[24px] py-[16px] rounded-sm hover:bg-black hover:text-white transition-colors"
             >
               Join Free →
             </a>
@@ -413,7 +415,7 @@ export default function HomePage() {
             className="font-[family-name:var(--font-gordon)] uppercase tracking-wide text-center mb-14"
             style={{ fontSize: "clamp(1.625rem, 4vw, 2.5rem)" }}
           >
-            What practitioners say.
+            What our members say.
           </h2>
 
           <div className="grid md:grid-cols-2 gap-11 max-w-[920px] mx-auto">
