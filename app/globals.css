@@ -32,6 +32,8 @@ html {
   --color-tic-brown: #7c3537;
   --font-gordon: "CS-Gordon-Vintage", serif;
   --font-serif: var(--font-noto-serif), "Georgia", serif;
+  --text-body: 21px;
+  --text-body--line-height: 34px;
 }
 
 @keyframes marquee {

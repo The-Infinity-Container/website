@@ -19,7 +19,7 @@ import SectionHeading from "@/components/SectionHeading";
 
 **Styling (baked into the component):**
 - Font: Gordon (uppercase)
-- Size: 25px
+- Size: 23px
 - Letter spacing: 0.42px
 - Color: text-tic-dark-grey by default — pass `color="text-tic-yellow"` (or another single color class) on dark/saturated backgrounds where contrast requires it. Never size/spacing overrides.
 - Margin bottom: 60px
@@ -37,12 +37,11 @@ This component always renders an `<h2>` — even for sections that previously us
 
 ### Body Paragraph Text
 Use `<BodyText>` (`@/components/BodyText`) for body paragraphs (Noto Serif, regular text):
-- Size: 23px
+- Size/line-height come from the `text-body` theme token (`app/globals.css`, currently 21px/34px) — never hardcode these values, reference the `text-body` class so paragraph-size text stays in sync everywhere (this includes hand-styled links like the "Take the 7-question quiz" CTAs, which use `text-body` too)
 - Font: Noto Serif (font-[family-name:var(--font-noto-serif)])
-- Line height: 37px
 - Color and margin are intentionally left out of the component — pass them via `className` (e.g. `className="text-[#222] mb-6"`)
 
-**Exception:** Italic text and small text (in boxes, captions, etc.) may have different sizes — don't use `BodyText` for those, keep them hand-styled as before.
+**Exception:** Italic text and small text (in boxes, captions, etc.) may have different sizes — don't use `BodyText` for those, keep them hand-styled as before, but still use `text-body` if they're meant to match paragraph size.
 
 ### Section Content Alignment
 A section's label, heading, and any intro paragraph must sit flush against the same left edge as the content below them (a list, card grid, testimonial row, etc.) — never center them independently or leave them flush against a wider outer container while the content below is narrower/centered. Wrap the label + heading (+ intro paragraph, if any) in the same `max-w-[...] mx-auto` block used for the content beneath, so both share one left edge.

@@ -496,7 +496,7 @@ export default function CommunityCallPage() {
           <div className="text-center">
             <a
               href="/find-my-membership"
-              className="font-[family-name:var(--font-noto-serif)] text-[23px] italic text-[#0b0d10] underline decoration-1 underline-offset-4 hover:text-tic-brown transition-colors"
+              className="font-[family-name:var(--font-noto-serif)] text-body italic text-[#0b0d10] underline decoration-1 underline-offset-4 hover:text-tic-brown transition-colors"
             >
               Not sure which fits? Take the 7-question quiz →
             </a>
