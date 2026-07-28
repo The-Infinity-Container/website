@@ -319,7 +319,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Link
               href="/find-my-membership"
-              className="font-[family-name:var(--font-noto-serif)] italic text-[23px] underline underline-offset-4 hover:text-tic-brown transition-colors"
+              className="font-[family-name:var(--font-noto-serif)] italic text-body underline underline-offset-4 hover:text-tic-brown transition-colors"
             >
               Not sure which path fits you? Take the 7-question quiz →
             </Link>

@@ -26,7 +26,7 @@ export default function WhatIsIntegrationPage() {
           <p className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.24em] mb-[80px]" style={{ fontSize: "clamp(20px, 6vw, 30px)" }}>
             What is Integration?
           </p>
-          <h1 className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-[0.02em] leading-[1.15] mx-auto" style={{ fontSize: "clamp(31px, 4.95vw, 50px)" }}>
+          <h1 className="font-[family-name:var(--font-gordon)] text-white uppercase tracking-[0.02em] leading-[1.15] mx-auto translate-y-[3px] md:-mb-[9px]" style={{ fontSize: "clamp(31px, 4.95vw, 50px)" }}>
             How an experience
           </h1>
           <Image
@@ -52,7 +52,7 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── THE WORK SECTION ──────────────────────────────────────── */}
-      <section className="bg-white px-3 pt-[100px] pb-[140px]">
+      <section className="bg-white px-3 pt-[100px] pb-[70px] md:pb-[140px]">
         <div className="max-w-[1290px] mx-auto">
           {/* Header row */}
           <div className="mb-[28px]">
@@ -74,50 +74,29 @@ export default function WhatIsIntegrationPage() {
               </BodyText>
             </div>
 
-            <div className="font-[family-name:var(--font-noto-serif)] italic text-[22px] leading-[1.65] text-black border-l-[3px] border-tic-yellow pl-[26px]">
-              <p>Integration is a birthday<br />
-                & a funeral.<br />
-                It is playing in the unknown,<br />
-                while knowing yourself more.<br />
-                It is weaving.<br />
-                It is collaborating.<br />
-                It is titration & digestion.<br />
-                It is process.<br />
-                It is practice with awareness.<br />
-                It is the evolution of a differentiated,<br />
-                connected self.<br />
-                It is intra-connected identity.<br />
-                It is WE, it is us.<br />
-                It is the link between possibility and actuality.<br />
-                <br />
-                It happens in The Infinity Container.
-              </p>
+            <div className="relative flex justify-center items-start">
+              <div className="hidden md:block absolute left-0 top-[50px] bottom-0 w-[3px] bg-tic-yellow" />
+              <Image
+                src="/assets/snake-shape.svg"
+                alt="Integration journey"
+                width={600}
+                height={800}
+                className="w-[71%] md:w-full max-w-[378px] h-auto rotate-[-12deg]"
+              />
             </div>
           </div>
 
           {/* Full-width blue link */}
-          <div className="mb-[60px]">
+          <div>
             <a href="/blog/blog-what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full mt-1 md:mt-[80px]">
               <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: read the full essay on the blog →</span>
             </a>
-          </div>
-
-          {/* Full-width snake image */}
-          <div className="overflow-hidden flex justify-center items-center -mb-[265px] md:mb-0">
-            <Image
-              src="/assets/snake-shape.svg"
-              alt="Integration journey"
-              width={600}
-              height={800}
-              className="w-full max-w-full rotate-[60deg] scale-[0.85] md:scale-100"
-              style={{ height: "90vh", objectFit: "contain" }}
-            />
           </div>
         </div>
       </section>
 
       {/* ── INTEGRATION IS THE WAY SECTION ───────────────────────── */}
-      <section className="bg-white px-6 pt-[100px] pb-[140px]">
+      <section className="bg-white px-6 pt-[50px] md:pt-[100px] pb-[140px]">
         <div className="max-w-[1290px] mx-auto text-center">
           <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(24px, 8vw, 115px)", color: "#E64E59", letterSpacing: "0.09em", marginBottom: "-68px" }}>
             Integration
@@ -236,10 +215,10 @@ export default function WhatIsIntegrationPage() {
           <Image
             src="/assets/lunar-pink-transparent-bg.svg"
             alt="Solar-Lunar Framework"
-            width={729}
-            height={729}
+            width={656}
+            height={656}
             className="mx-auto w-full h-auto -mb-[50px] mt-[73px] md:mb-0 md:mt-0"
-            style={{ maxWidth: "875px" }}
+            style={{ maxWidth: "700px" }}
             aria-hidden
           />
         </div>
@@ -318,7 +297,7 @@ export default function WhatIsIntegrationPage() {
               width={360}
               height={450}
               className="h-auto mx-auto md:mx-0"
-              style={{ width: "43%" }}
+              style={{ width: "51%" }}
               aria-hidden
             />
           </div>
@@ -345,7 +324,7 @@ export default function WhatIsIntegrationPage() {
           />
 
           <div className="text-center" style={{ marginTop: "80px" }}>
-            <a href="/find-my-membership" className="font-[family-name:var(--font-noto-serif)] italic text-black hover:opacity-70 transition-opacity inline-block underline" style={{ fontSize: "23px", lineHeight: "37px" }}>
+            <a href="/find-my-membership" className="font-[family-name:var(--font-noto-serif)] text-body italic text-black hover:opacity-70 transition-opacity inline-block underline">
               Not sure which fits? Take the 7-question quiz →
             </a>
           </div>
