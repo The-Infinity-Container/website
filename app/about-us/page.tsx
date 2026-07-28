@@ -23,8 +23,9 @@ const CREDENTIALS = [
 const GRATITUDE = [
   { name: "Catie", credit: "for the magic of coding" },
   { name: "Erika", credit: "for the magic of support" },
-  { name: "Mariana", credit: "for the magic of movement" },
+  { name: "Mariana", credit: "for the magic of movement", href: "https://www.marianamartincapriles.com/" },
   { name: "Daniela", credit: "for the magic of design thinking" },
+  { name: "Edu", credit: "for the magic of art", href: "https://www.educerro.com" },
 ];
 
 export default function AboutUsPage() {
@@ -32,7 +33,7 @@ export default function AboutUsPage() {
     <main>
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="bg-white px-6 pt-[50px] md:pt-[100px] pb-[50px] md:pb-[100px]">
-        <div className="max-w-[1290px] mx-auto grid grid-cols-1 md:grid-cols-[1.25fr_0.9fr] gap-[60px] items-center">
+        <div className="max-w-[1290px] mx-auto grid grid-cols-1 md:grid-cols-[1.25fr_0.9fr] gap-[60px] items-start">
           <div>
             <SectionLabel>About</SectionLabel>
             <h1
@@ -48,7 +49,7 @@ export default function AboutUsPage() {
               I&apos;m Dr. Victoria Sterkin — behavior analyst, therapist, integration specialist, and above all else, a helper. The Infinity Container is the space I spent twenty-five years learning how to build.
             </p>
           </div>
-          <div className="aspect-[4/5] border border-[#0b0d10]/12 rounded-[3px] overflow-hidden bg-tic-grey">
+          <div className="aspect-[4/5] w-[75%] ml-auto mt-[93px] border border-[#0b0d10]/12 rounded-[3px] overflow-hidden bg-tic-grey">
             <Image
               src="/assets/victoria.jpg"
               alt="Dr. Victoria Sterkin"
@@ -64,7 +65,7 @@ export default function AboutUsPage() {
       {/* ── My story ───────────────────────────────────────────────── */}
       <section className="bg-tic-yellow px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto">
-          <div className="max-w-[820px] mx-auto">
+          <div>
             <SectionLabel color="text-[#6a6410]">My story</SectionLabel>
             <SectionHeading>How I got here.</SectionHeading>
             <div className="text-[#26240f]">
@@ -85,31 +86,31 @@ export default function AboutUsPage() {
         <figure className="max-w-[1290px] mx-auto mt-16">
           <Image
             src="/assets/infinity-container-sketch.jpg"
-            alt="Victoria's Infinity Container sketch page"
+            alt="A page from Edu's sketchbook"
             width={1500}
             height={1159}
             className="w-full rounded-[4px]"
           />
           <figcaption className="font-[family-name:var(--font-noto-serif)] italic text-[13px] text-center mt-4" style={{ color: "#4f4a15" }}>
-            A page from Victoria&apos;s original sketchbook, imagining the container before it existed.
+            A page from Edu&apos;s sketchbook, imagining the container before it existed.
           </figcaption>
         </figure>
       </section>
 
       {/* ── Training & lineage ─────────────────────────────────────── */}
       <section className="bg-white px-6 py-[50px] md:py-[100px]">
-        <div className="max-w-[1290px] mx-auto grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-16 items-start">
-          <div>
+        <div className="max-w-[1290px] mx-auto grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-x-16 items-start">
+          <div className="md:col-span-2">
             <SectionLabel>Training &amp; lineage</SectionLabel>
             <SectionHeading>Where the work comes from.</SectionHeading>
-            <div className="text-[#222]">
-              <BodyText className="mb-6">The Solar-Lunar Framework didn&apos;t come from one tradition. It was built at the intersection of several — held to the standard of each.</BodyText>
-              <BodyText className="mb-6">My doctoral training in behavior analysis at Teachers College, Columbia University taught me how capacities are actually built: not through insight alone, but through practice, repetition, and the right conditions for change. Twenty-five years of clinical work taught me what the textbooks couldn&apos;t — that the body keeps its own counsel, and that transformation that ignores it doesn&apos;t last. My fairy godmother, clinical psychologist Dr. Joyce Wyden, taught me to see all human development as relational — starting in utero — so that our pasts can be resolved through awareness, comfort, and learning new sequences of behavior.</BodyText>
-              <BodyText>The framework draws on verbal behavior science, somatic and body-based practice, interpersonal neurobiology, and contemplative traditions — woven into a system designed for one thing: helping experience become capacity.</BodyText>
-            </div>
+          </div>
+          <div className="text-[#222]">
+            <BodyText className="mb-6">The Solar-Lunar Framework didn&apos;t come from one tradition. It was built at the intersection of several — held to the standard of each.</BodyText>
+            <BodyText className="mb-6">My doctoral training in behavior analysis at Teachers College, Columbia University taught me how capacities are actually built: not through insight alone, but through practice, repetition, and the right conditions for change. Twenty-five years of clinical work taught me what the textbooks couldn&apos;t — that the body keeps its own counsel, and that transformation that ignores it doesn&apos;t last. My fairy godmother, clinical psychologist Dr. Joyce Wyden, taught me to see all human development as relational — starting in utero — so that our pasts can be resolved through awareness, comfort, and learning new sequences of behavior.</BodyText>
+            <BodyText>The framework draws on verbal behavior science, somatic and body-based practice, interpersonal neurobiology, and contemplative traditions — woven into a system designed for one thing: helping experience become capacity.</BodyText>
           </div>
           <div>
-            <ul className="list-none">
+            <ul className="list-none -mt-[14px]">
               {CREDENTIALS.map((item) => (
                 <li key={item} className="relative text-[15.5px] leading-[1.55] text-[#1c1c1c] py-[14px] pl-[22px] border-b border-[#0b0d10]/10">
                   <span className="absolute left-0 top-[21px] w-[7px] h-[7px] rounded-full bg-tic-pink" />
@@ -146,7 +147,7 @@ export default function AboutUsPage() {
 
       {/* ── Why the Infinity Container ────────────────────────────── */}
       <section className="bg-tic-grey px-6 py-[50px] md:py-[100px]">
-        <div className="max-w-[820px] mx-auto relative">
+        <div className="max-w-[1290px] mx-auto relative">
           <Image
             src="/assets/brain.svg"
             alt=""
@@ -190,10 +191,10 @@ export default function AboutUsPage() {
             <div>
               <div className="aspect-square border border-[#0b0d10]/12 rounded-[3px] overflow-hidden bg-tic-grey mb-5">
                 <Image
-                  src="/assets/victoria.jpg"
+                  src="/assets/vic-2.jpg"
                   alt="Dr. Victoria Sterkin"
-                  width={900}
-                  height={1125}
+                  width={600}
+                  height={900}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -231,7 +232,18 @@ export default function AboutUsPage() {
           </h2>
           {GRATITUDE.map((g) => (
             <div key={g.name} className="mb-[18px] leading-[1.5]">
-              <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[17px]">{g.name}</span>{" "}
+              {g.href ? (
+                <a
+                  href={g.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[17px] hover:text-tic-brown transition-colors"
+                >
+                  {g.name}
+                </a>
+              ) : (
+                <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[17px]">{g.name}</span>
+              )}{" "}
               <span className="font-[family-name:var(--font-noto-serif)] italic text-tic-brown text-[15px]">— {g.credit}</span>
             </div>
           ))}
@@ -243,18 +255,18 @@ export default function AboutUsPage() {
           </p>
           <div className="mt-10">
             <Image
-              src="/assets/magic-of-collaboration.png"
+              src="/assets/magic-of-collaboration.svg"
               alt="Here's to the Magic of Collaboration"
-              width={1600}
-              height={900}
-              className="w-[320px] max-w-[80%] inline-block"
+              width={598}
+              height={131}
+              className="w-[420px] max-w-[85%] inline-block"
             />
           </div>
         </div>
       </section>
 
       {/* ── Community call band ───────────────────────────────────── */}
-      <section className="bg-[#0b0d10] py-12 md:py-24 px-6 text-center">
+      <section className="bg-black py-12 md:py-24 px-6 text-center">
         <h2
           className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.03em] text-white mb-5"
           style={{ fontSize: "clamp(26px, 4vw, 40px)" }}
