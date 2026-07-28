@@ -36,7 +36,7 @@ export default function MembershipCards({ cards }: MembershipCardsProps) {
         return (
           <div
             key={card.label}
-            className={`${colors.text} px-[26px] py-[36px] rounded`}
+            className={`${colors.text} px-[26px] py-[36px] rounded flex flex-col`}
             style={{ backgroundColor: colors.bgColor }}
           >
             <p
@@ -55,7 +55,7 @@ export default function MembershipCards({ cards }: MembershipCardsProps) {
               href={card.buttonHref}
               target={card.buttonHref.startsWith("http") ? "_blank" : undefined}
               rel={card.buttonHref.startsWith("http") ? "noopener noreferrer" : undefined}
-              className={`${colors.buttonText} font-[family-name:var(--font-gordon)] text-[12px] uppercase px-[24px] py-[16px] block text-center hover:opacity-70 transition-opacity`}
+              className={`${colors.buttonText} font-[family-name:var(--font-gordon)] text-[12px] uppercase px-[24px] py-[16px] block text-center hover:opacity-70 transition-opacity mt-auto`}
               style={{ backgroundColor: colors.buttonBgColor, letterSpacing: "0.06em" }}
             >
               {card.buttonText}
