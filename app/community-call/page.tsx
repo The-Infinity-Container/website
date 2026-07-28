@@ -132,15 +132,15 @@ export default function CommunityCallPage() {
               alt=""
               width={1074}
               height={1012}
-              className="w-[500px] ml-[14em] block"
+              className="w-[400px] ml-[24em] block"
               priority
             />
             <Image
-              src="/assets/no-cost-note.png"
+              src="/assets/no-cost-v2.svg"
               alt="No cost. All are welcome."
-              width={748}
-              height={263}
-              className="w-[510px] mr-auto ml-[-4em] mt-[6em] rotate-[-6deg]"
+              width={414}
+              height={156}
+              className="w-[400px] mr-auto ml-[-5em] mt-[6em] rotate-[-1deg]"
             />
           </div>
           <div className="md:hidden max-w-[260px] mx-auto">
@@ -153,10 +153,10 @@ export default function CommunityCallPage() {
               priority
             />
             <Image
-              src="/assets/no-cost-note.png"
+              src="/assets/no-cost-v2.svg"
               alt="No cost. All are welcome."
-              width={748}
-              height={263}
+              width={414}
+              height={156}
               className="w-[150px] mx-auto mt-4 rotate-[-3deg]"
             />
           </div>
@@ -284,7 +284,7 @@ export default function CommunityCallPage() {
                 alt=""
                 width={76}
                 height={82}
-                className="w-[130px] shrink-0 md:w-[200px] md:mr-[-17em]"
+                className="w-[130px] shrink-0 md:w-[200px] md:mr-[-14em]"
               />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-9 mt-14">
