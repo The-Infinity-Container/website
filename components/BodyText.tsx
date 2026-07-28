@@ -7,8 +7,7 @@ export default function BodyText({
 }) {
   return (
     <p
-      className={`font-[family-name:var(--font-noto-serif)] ${className}`}
-      style={{ fontSize: "23px", lineHeight: "37px" }}
+      className={`font-[family-name:var(--font-noto-serif)] text-body ${className}`}
     >
       {children}
     </p>
