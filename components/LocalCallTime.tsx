@@ -2,7 +2,9 @@
 
 import { useSyncExternalStore } from "react";
 
-// Call is 10:00am–11:30am PST. Only shown when the viewer's zone differs from Pacific.
+// Call is 10:00am–11:30am Pacific. Always shown in the viewer's local zone (Pacific viewers just see PST/PDT).
+const FALLBACK_LABEL = "10:00am – 11:30am PT";
+
 function computeLabel(): string {
   try {
     const startUTC = new Date(Date.UTC(2000, 0, 1, 18, 0, 0));
@@ -26,13 +28,13 @@ function computeLabel(): string {
     const endLocal = fmt.format(endUTC);
     const tzName = tzFmt.formatToParts(startUTC).find((p) => p.type === "timeZoneName")?.value;
 
-    if (tzName && tzName !== "PST" && tzName !== "PDT") {
-      return `${startLocal}–${endLocal} ${tzName} in your timezone`;
+    if (tzName) {
+      return `${startLocal} – ${endLocal} ${tzName}`;
     }
   } catch {
-    // Intl not available — no local-time line.
+    // Intl not available — fall back to the static Pacific time.
   }
-  return "";
+  return FALLBACK_LABEL;
 }
 
 // Never changes after mount, so subscribe is a no-op.
@@ -46,17 +48,11 @@ function getSnapshot() {
   return cachedLabel;
 }
 function getServerSnapshot() {
-  return "";
+  return FALLBACK_LABEL;
 }
 
 export default function LocalCallTime() {
   const label = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
-  if (!label) return null;
-
-  return (
-    <span className="block text-[0.75em] opacity-70 tracking-[0.08em] mt-1">
-      {label}
-    </span>
-  );
+  return <>{label}</>;
 }

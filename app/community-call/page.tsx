@@ -95,7 +95,6 @@ export default function CommunityCallPage() {
             className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[#0b0d10] py-3.5 w-full text-center border-t border-[#0b0d10]/12"
             style={{ fontSize: "clamp(14px, 1.8vw, 17px)" }}
           >
-            10:00am – 11:30am PST
             <LocalCallTime />
           </p>
           <p
