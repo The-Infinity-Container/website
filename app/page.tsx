@@ -18,19 +18,19 @@ export default function HomePage() {
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="bg-black">
         {/* Logo-open animation, extended height, text overlaid below the globe */}
-        <div className="relative w-full h-[200vh] overflow-hidden bg-black">
+        <div className="relative w-full h-[130vh] md:h-[200vh] overflow-hidden bg-black">
           <video
             autoPlay
             muted
             loop
             playsInline
-            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
+            className="absolute top-[36%] md:top-1/2 left-1/2 min-w-full min-h-[82%] md:min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
           >
-            <source src="/assets/videos/hero-mobile.mp4" media="(max-width: 767px)" type="video/mp4" />
+            <source src="/assets/videos/hero-mobile-extended.mp4" media="(max-width: 767px)" type="video/mp4" />
             <source src="/assets/videos/hero-desktop.mp4" type="video/mp4" />
           </video>
 
-          <div className="absolute inset-x-0 top-1/2 z-10 text-center px-6 pt-[60px] pb-[84px] mt-[4em]">
+          <div className="absolute inset-x-0 top-[36%] md:top-1/2 z-10 text-center px-6 pt-[60px] pb-[84px] mt-[1em] md:mt-[4em]">
           <p
             className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.15em] max-w-[900px] mx-auto mb-6 leading-snug"
             style={{ fontSize: "clamp(0.788rem, 1.68vw, 1.225rem)" }}
