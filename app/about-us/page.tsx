@@ -31,7 +31,7 @@ export default function AboutUsPage() {
   return (
     <main>
       {/* ── Hero ───────────────────────────────────────────────────── */}
-      <header className="bg-white px-6 pt-[100px] pb-[100px]">
+      <header className="bg-white px-6 pt-[50px] md:pt-[100px] pb-[50px] md:pb-[100px]">
         <div className="max-w-[1290px] mx-auto grid grid-cols-1 md:grid-cols-[1.25fr_0.9fr] gap-[60px] items-center">
           <div>
             <SectionLabel>About</SectionLabel>
@@ -62,7 +62,7 @@ export default function AboutUsPage() {
       </header>
 
       {/* ── My story ───────────────────────────────────────────────── */}
-      <section className="bg-tic-yellow px-6 py-[100px]">
+      <section className="bg-tic-yellow px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto">
           <div className="max-w-[820px] mx-auto">
             <SectionLabel color="text-[#6a6410]">My story</SectionLabel>
@@ -97,7 +97,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* ── Training & lineage ─────────────────────────────────────── */}
-      <section className="bg-white px-6 py-[100px]">
+      <section className="bg-white px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-16 items-start">
           <div>
             <SectionLabel>Training &amp; lineage</SectionLabel>
@@ -131,7 +131,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* ── Way divider ────────────────────────────────────────────── */}
-      <div className="bg-[#817202] py-[70px] px-2 text-center">
+      <div className="bg-[#817202] py-[35px] md:py-[70px] px-2 text-center">
         <span
           className="block font-[family-name:var(--font-gordon)] uppercase text-tic-yellow leading-[1.12] tracking-[0.03em] text-[clamp(24px,8.5vw,124px)] md:text-[clamp(40px,9.5vw,124px)]"
         >
@@ -145,7 +145,7 @@ export default function AboutUsPage() {
       </div>
 
       {/* ── Why the Infinity Container ────────────────────────────── */}
-      <section className="bg-tic-grey px-6 py-[100px]">
+      <section className="bg-tic-grey px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[820px] mx-auto relative">
           <Image
             src="/assets/brain.svg"
@@ -171,7 +171,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* ── The people ─────────────────────────────────────────────── */}
-      <section className="bg-white px-6 py-[100px]">
+      <section className="bg-white px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto">
           <div className="flex items-start justify-between gap-6">
             <div>
@@ -224,7 +224,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* ── With gratitude ─────────────────────────────────────────── */}
-      <section className="bg-white px-6 pt-10 pb-[100px]">
+      <section className="bg-white px-6 pt-10 pb-[50px] md:pb-[100px]">
         <div className="max-w-[760px] mx-auto bg-tic-grey rounded-[6px] px-10 pt-16 pb-14 text-center">
           <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.2em] text-[16px] mb-[34px]">
             With gratitude
@@ -254,7 +254,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* ── Community call band ───────────────────────────────────── */}
-      <section className="bg-[#0b0d10] py-24 px-6 text-center">
+      <section className="bg-[#0b0d10] py-12 md:py-24 px-6 text-center">
         <h2
           className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.03em] text-white mb-5"
           style={{ fontSize: "clamp(26px, 4vw, 40px)" }}

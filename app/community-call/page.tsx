@@ -56,7 +56,7 @@ export default function CommunityCallPage() {
   return (
     <main>
       {/* ── Hero ───────────────────────────────────────────────────── */}
-      <header className="bg-[#d5d069] px-6 pt-[110px] pb-[90px] text-center">
+      <header className="bg-[#d5d069] px-6 pt-[55px] md:pt-[110px] pb-[45px] md:pb-[90px] text-center">
         <h1
           className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.02em] leading-[1.15] text-[#0b0d10] max-w-[1100px] mx-auto mb-6"
           style={{ fontSize: "clamp(34px, 5.5vw, 58px)" }}
@@ -165,7 +165,7 @@ export default function CommunityCallPage() {
       </header>
 
       {/* ── What is it? ────────────────────────────────────────────── */}
-      <section className="bg-[#fcfcfc] px-6 py-[100px]">
+      <section className="bg-[#fcfcfc] px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:mb-[-50px]">
             <div className="order-1 md:order-none">
@@ -216,7 +216,7 @@ export default function CommunityCallPage() {
       </section>
 
       {/* ── Come as you are ────────────────────────────────────────── */}
-      <section className="bg-tic-grey px-6 py-[100px]">
+      <section className="bg-tic-grey px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto">
           <div className="max-w-[760px] mx-auto">
             <SectionLabel>The only requirement</SectionLabel>
@@ -272,7 +272,7 @@ export default function CommunityCallPage() {
       </section>
 
       {/* ── Testimonials ───────────────────────────────────────────── */}
-      <section className="bg-[#fcfcfc] px-6 py-[100px]">
+      <section className="bg-[#fcfcfc] px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto">
           <div className="max-w-[980px] mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start gap-6">
@@ -305,7 +305,7 @@ export default function CommunityCallPage() {
       </section>
 
       {/* ── Divider ────────────────────────────────────────────────── */}
-      <div className="py-[70px] px-2 text-center bg-[#817202]">
+      <div className="py-[35px] md:py-[70px] px-2 text-center bg-[#817202]">
         <span
           className="font-[family-name:var(--font-gordon)] tracking-[0.03em] leading-[1.12] uppercase text-[#d5d069] block text-[clamp(24px,8.5vw,124px)] md:text-[clamp(40px,9.5vw,124px)]"
         >
@@ -316,7 +316,7 @@ export default function CommunityCallPage() {
       </div>
 
       {/* ── Free membership ────────────────────────────────────────── */}
-      <section id="join" className="bg-[#d5d069] px-6 py-[100px] text-[#0b0d10]">
+      <section id="join" className="bg-[#d5d069] px-6 py-[50px] md:py-[100px] text-[#0b0d10]">
         <div className="max-w-[1290px] mx-auto">
           <div className="relative">
             <Image
@@ -419,7 +419,7 @@ export default function CommunityCallPage() {
       </section>
 
       {/* ── Go deeper ──────────────────────────────────────────────── */}
-      <section className="bg-[#fcfcfc] px-6 py-[100px]">
+      <section className="bg-[#fcfcfc] px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto">
           <div className="max-w-[920px] mx-auto">
             <SectionLabel>Keep going</SectionLabel>

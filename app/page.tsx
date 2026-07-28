@@ -88,7 +88,7 @@ export default function HomePage() {
       <WayDivider />
 
       {/* ── What is this? ──────────────────────────────────────────── */}
-      <section className="bg-white px-6 py-[110px]">
+      <section className="bg-white px-6 py-[55px] md:py-[110px]">
         <div className="max-w-[1080px] mx-auto md:mt-[6em]">
           <div className="relative">
             <SectionLabel>What is TIC</SectionLabel>
@@ -242,7 +242,7 @@ export default function HomePage() {
       <WayDivider onBlack />
 
       {/* ── Two Paths ──────────────────────────────────────────────── */}
-      <section className="px-6 py-[110px] overflow-hidden" style={{ backgroundColor: "#DFE3DE" }}>
+      <section className="px-6 py-[55px] md:py-[110px] overflow-hidden" style={{ backgroundColor: "#DFE3DE" }}>
         <div className="max-w-[1080px] mx-auto">
           <div className="relative">
             <SectionLabel>Who is this for?</SectionLabel>
@@ -328,7 +328,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Framework ──────────────────────────────────────────────── */}
-      <section className="relative text-white pt-[120px] pb-[100px] overflow-hidden" style={{ backgroundColor: "#0A0E10" }}>
+      <section className="relative text-white pt-[60px] md:pt-[120px] pb-[50px] md:pb-[100px] overflow-hidden" style={{ backgroundColor: "#0A0E10" }}>
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 flex flex-col lg:justify-center lg:min-h-[1750px]">
           {/* Stable content block — the images below anchor to THIS box, not the
               section, so growing the paragraph's margin below never moves them.
@@ -398,7 +398,7 @@ export default function HomePage() {
       <WayDivider />
 
       {/* ── Testimonials ───────────────────────────────────────────── */}
-      <section className="relative bg-white px-6 py-[110px] overflow-hidden">
+      <section className="relative bg-white px-6 py-[55px] md:py-[110px] overflow-hidden">
         <Image
           src="/assets/frog.svg"
           alt=""
@@ -440,7 +440,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Newsletter ─────────────────────────────────────────────── */}
-      <section className="bg-tic-yellow px-6 py-[100px] text-center">
+      <section className="bg-tic-yellow px-6 py-[50px] md:py-[100px] text-center">
         <h2
           className="font-[family-name:var(--font-gordon)] uppercase tracking-wide mb-[18px]"
           style={{ fontSize: "clamp(1.625rem, 4vw, 2.5rem)" }}
@@ -462,7 +462,7 @@ export default function HomePage() {
 function WayDivider({ onBlack = false }: { onBlack?: boolean }) {
   return (
     <div
-      className={`px-6 pt-[100px] pb-[140px] text-center ${
+      className={`px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px] text-center ${
         onBlack ? "bg-black" : "bg-tic-olive"
       }`}
     >

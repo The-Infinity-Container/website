@@ -13,7 +13,7 @@ export default function FindMyMembershipPage() {
   return (
     <>
       <QuizHero />
-      <section className="bg-white px-6 pt-20 pb-[100px]">
+      <section className="bg-white px-6 pt-10 md:pt-20 pb-[50px] md:pb-[100px]">
         <QuizEngine />
       </section>
       <WayDivider />
