@@ -13,7 +13,7 @@ export default function PartnershipsPage() {
     <main className="pt-14">
 
       {/* ── Header — olive, scribble balls, intro copy ────────────── */}
-      <section className="relative bg-tic-yellow px-6 md:px-10 pt-14 pb-16 overflow-hidden">
+      <section className="relative bg-tic-yellow px-6 md:px-10 pt-7 md:pt-14 pb-8 md:pb-16 overflow-hidden">
         <div className="flex items-center justify-center gap-4 md:gap-10">
           <ScribbleBall color="#e64e59" className="hidden sm:block sm:w-14 sm:h-14 md:w-20 md:h-20 shrink-0" />
           <h1
@@ -74,7 +74,7 @@ export default function PartnershipsPage() {
       </section>
 
       {/* ── Lacuna Medicinals — orange ─────────────────────────────── */}
-      <section className="bg-tic-orange px-6 md:px-10 py-16">
+      <section className="bg-tic-orange px-6 md:px-10 py-8 md:py-16">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-start">
           <div className="w-full md:w-48 shrink-0 flex justify-center md:justify-start">
             <Image
@@ -129,7 +129,7 @@ export default function PartnershipsPage() {
       </section>
 
       {/* ── Reset Academy — sage ───────────────────────────────────── */}
-      <section className="px-6 md:px-10 py-16" style={{ backgroundColor: "#dfe3de" }}>
+      <section className="px-6 md:px-10 py-8 md:py-16" style={{ backgroundColor: "#dfe3de" }}>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-start">
           <div className="w-full md:w-48 shrink-0 flex justify-center md:justify-start mt-1">
             <Image

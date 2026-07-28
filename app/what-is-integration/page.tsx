@@ -52,12 +52,12 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── THE WORK SECTION ──────────────────────────────────────── */}
-      <section className="bg-white px-3 pt-[100px] pb-[70px] md:pb-[140px]">
+      <section className="bg-white px-3 pt-[50px] md:pt-[100px] pb-[35px] md:pb-[140px]">
         <div className="max-w-[1290px] mx-auto">
           {/* Header row */}
           <div className="mb-[28px]">
             <SectionLabel>The work</SectionLabel>
-            <SectionHeading>More than a conversation.</SectionHeading>
+            <SectionHeading>More than just a conversation.</SectionHeading>
           </div>
 
           {/* Two-column row: paragraphs and poem */}
@@ -88,7 +88,7 @@ export default function WhatIsIntegrationPage() {
 
           {/* Full-width blue link */}
           <div>
-            <a href="/blog/blog-what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full mt-1 md:mt-[80px]">
+            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full mt-1 md:mt-[80px]">
               <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: read the full essay on the blog →</span>
             </a>
           </div>
@@ -96,7 +96,7 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── INTEGRATION IS THE WAY SECTION ───────────────────────── */}
-      <section className="bg-white px-6 pt-[50px] md:pt-[100px] pb-[140px]">
+      <section className="bg-white px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
         <div className="max-w-[1290px] mx-auto text-center">
           <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(24px, 8vw, 115px)", color: "#E64E59", letterSpacing: "0.09em", marginBottom: "-68px" }}>
             Integration
@@ -107,7 +107,7 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── THE GAP SECTION ───────────────────────────────────────── */}
-      <section className="bg-tic-grey px-6 pt-[100px] pb-[140px]">
+      <section className="bg-tic-grey px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
         <div className="max-w-[1200px] mx-auto">
           {/* Row 1: Label, heading, first paragraph */}
           <div className="mb-[24px] md:mb-[-36px]">
@@ -141,7 +141,7 @@ export default function WhatIsIntegrationPage() {
               Integration takes structure, rhythm, and relationship. It takes a system that honors both the preparation before and the long, spiraling work after. That is what The Infinity Container was built for.
             </BodyText>
 
-            <a href="/blog/what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity inline-block" style={{ marginTop: "4px" }}>
+            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#why-a-container" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity inline-block" style={{ marginTop: "4px" }}>
               <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: why integration needs a container →</span>
             </a>
           </div>
@@ -149,7 +149,7 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── WHY CAPACITIES SECTION ───────────────────────────────── */}
-      <section className="bg-white px-6 pt-[100px] pb-[140px]">
+      <section className="bg-white px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
         <div className="max-w-[90vw] mx-auto">
           <div className="grid md:grid-cols-[1fr_1fr] gap-[60px] items-start mb-[60px]">
             <div>
@@ -198,14 +198,14 @@ export default function WhatIsIntegrationPage() {
             This is why we integrate rather than simply learn. Insight that stays intellectual fades. Capacity that is practiced in community becomes who you are.
           </BodyText>
 
-          <a href="/blog/what-is-integration" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity inline-block" style={{ marginTop: "4px" }}>
+          <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#capacities-not-skills" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity inline-block" style={{ marginTop: "4px" }}>
             <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: capacities, not skills →</span>
           </a>
         </div>
       </section>
 
       {/* ── INTEGRATION IS THE WAY / OUR SYSTEM ────────────────────── */}
-      <section className="bg-black px-6 pt-[100px] pb-[140px]">
+      <section className="bg-black px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
         <div className="max-w-[1290px] mx-auto text-center mb-[80px]">
           <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(24px, 8vw, 115px)", color: "white", letterSpacing: "0.09em", marginBottom: "-68px" }}>
             Integration
@@ -277,7 +277,7 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── HOW YOU LIVE IT ───────────────────────────────────────── */}
-      <section className="bg-white px-6 pt-[100px] pb-[140px]">
+      <section className="bg-white px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
         <div className="max-w-[90vw] mx-auto">
           <SectionLabel>How you live it</SectionLabel>
           <SectionHeading>
@@ -332,7 +332,7 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── KEEP GOING ──────────────────────────────────────────────── */}
-      <section className="px-6 pt-[100px] pb-[140px]" style={{ backgroundColor: "#D5D06A" }}>
+      <section className="px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]" style={{ backgroundColor: "#D5D06A" }}>
         <div className="max-w-[90vw] mx-auto">
           <p className="font-[family-name:var(--font-gordon)] uppercase mb-[44px] text-center" style={{ fontSize: "clamp(57px, 9.72vw, 96px)", color: "black", letterSpacing: "0.09em", marginBottom: "-20px" }}>
             Keep going.

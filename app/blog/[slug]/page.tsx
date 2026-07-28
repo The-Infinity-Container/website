@@ -6,6 +6,7 @@ import { getPostBySlug } from "@/lib/posts";
 import { categoryColor, categoryLabel } from "@/lib/categories";
 import CategoryBanner from "@/components/CategoryBanner";
 import { sanitizePostBody } from "@/lib/sanitizeHtml";
+import { injectHeadingAnchors, POST_HEADING_ANCHORS } from "@/lib/postAnchors";
 
 export async function generateMetadata({
   params,
@@ -27,7 +28,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!post) notFound();
 
-  const safeBody = sanitizePostBody(post.body);
+  const anchors = POST_HEADING_ANCHORS[slug];
+  const safeBody = anchors
+    ? injectHeadingAnchors(sanitizePostBody(post.body), anchors)
+    : sanitizePostBody(post.body);
 
   return (
     <main className="bg-black text-white pb-[5em]">
