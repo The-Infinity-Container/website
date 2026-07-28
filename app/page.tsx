@@ -26,7 +26,7 @@ export default function HomePage() {
             playsInline
             className="absolute top-0 md:top-1/2 left-1/2 min-w-full min-h-[84vh] md:min-h-full w-auto h-auto -translate-x-1/2 md:-translate-y-1/2 object-cover"
           >
-            <source src="/assets/videos/hero-mobile.mp4" media="(max-width: 767px)" type="video/mp4" />
+            <source src="/assets/videos/hero-mobile-extended.mp4" media="(max-width: 767px)" type="video/mp4" />
             <source src="/assets/videos/hero-desktop.mp4" type="video/mp4" />
           </video>
 
