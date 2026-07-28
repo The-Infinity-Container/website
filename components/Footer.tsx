@@ -48,7 +48,7 @@ export default function Footer() {
                   </a>
                 </p>
                 <p className="font-[family-name:var(--font-noto-serif)] text-[14.7px] mb-[8.4px]" style={{ lineHeight: "23.8px" }}>
-                  <a href="#" className="hover:opacity-70 transition-opacity">
+                  <a href="https://substack.com/@theinfinitycontainer" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                     Substack
                   </a>
                 </p>
