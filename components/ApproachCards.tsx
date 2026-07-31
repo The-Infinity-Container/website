@@ -76,7 +76,7 @@ export default function ApproachCards() {
           <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.14em] text-[21px] text-white mb-[24px]">
             {card.heading}
           </p>
-          <p className="font-[family-name:var(--font-noto-serif)] text-white text-[20px] leading-[1.8] mb-[28px]">
+          <p className="font-[family-name:var(--font-noto-serif)] text-white text-body mb-[28px]">
             {card.description}
           </p>
           <div className="flex flex-wrap gap-3">

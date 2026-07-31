@@ -47,7 +47,7 @@ export default function BlogHero({ posts }: { posts: Post[] }) {
                 </span>
               </Link>
               <div className="flex-1">
-                <p className="font-[family-name:var(--font-noto-serif)] text-lg leading-relaxed text-white">
+                <p className="font-[family-name:var(--font-noto-serif)] text-body text-white">
                   {post.excerpt}
                 </p>
               </div>

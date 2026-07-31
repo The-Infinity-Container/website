@@ -62,7 +62,7 @@ export default function ResultScreen({ result, onRetake }: ResultScreenProps) {
               <h4 className="font-[family-name:var(--font-gordon)] text-[15px] tracking-[0.06em] mb-2">
                 {card.title}
               </h4>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[13px] leading-[1.65] text-[#444] mb-[14px]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#444] mb-[14px]">
                 {card.body}
               </p>
               <a

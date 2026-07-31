@@ -12,7 +12,7 @@ export default function SectionHeading({
   return (
     <h2
       className={`font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.4] ${color} ${className}`}
-      style={{ fontSize: "clamp(21px, 3.24vw, 34px)", marginBottom }}
+      style={{ fontSize: "clamp(21px, 3.24vw, 36px)", marginBottom }}
     >
       {children}
     </h2>

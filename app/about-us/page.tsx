@@ -200,7 +200,7 @@ export default function AboutUsPage() {
               </div>
               <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[20px] mb-1.5">Dr. Victoria Sterkin</p>
               <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.16em] text-[11px] text-tic-pink mb-3.5">Founder &amp; Creator</p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[15px] leading-[1.75] text-[#333]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#333]">
                 Behavior analyst, therapist, and integration specialist. Victoria designs and holds every practice, theme, and program inside TIC.
               </p>
             </div>
@@ -216,7 +216,7 @@ export default function AboutUsPage() {
               </div>
               <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[20px] mb-1.5">Edu Cerro</p>
               <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.16em] text-[11px] text-tic-pink mb-3.5">Artist</p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[15px] leading-[1.75] text-[#333]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#333]">
                 Every capacity in the Solar-Lunar Framework has a face because Edu drew it one. His artwork gives the practice its visual language.
               </p>
             </div>
@@ -273,7 +273,7 @@ export default function AboutUsPage() {
         >
           Meet us before you join anything.
         </h2>
-        <p className="font-[family-name:var(--font-noto-serif)] text-tic-grey max-w-[560px] mx-auto mb-9" style={{ fontSize: "16.5px", lineHeight: "1.8" }}>
+        <p className="font-[family-name:var(--font-noto-serif)] text-body text-tic-grey max-w-[560px] mx-auto mb-9">
           Once a month, we gather for a free community call — open to anyone curious about the work. Join the free membership and the call link is yours.
         </p>
         <a

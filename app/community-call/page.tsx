@@ -63,10 +63,7 @@ export default function CommunityCallPage() {
         >
           Meet us before you join anything.
         </h1>
-        <p
-          className="font-[family-name:var(--font-noto-serif)] italic text-[#817202] max-w-[820px] mx-auto mb-[52px] leading-[1.7]"
-          style={{ fontSize: "clamp(17px, 2.2vw, 21px)" }}
-        >
+        <p className="font-[family-name:var(--font-noto-serif)] italic text-body text-[#817202] max-w-[820px] mx-auto mb-[52px]">
           Once a month, we gather. You don&apos;t have to be ready for anything else.
         </p>
 
@@ -220,7 +217,7 @@ export default function CommunityCallPage() {
           <div className="max-w-[760px] mx-auto">
             <SectionLabel>The only requirement</SectionLabel>
             <SectionHeading>Come as you are.</SectionHeading>
-            <p className="font-[family-name:var(--font-noto-serif)] italic text-[18px] text-[#2a2a2a] mb-11 leading-[1.7]">
+            <p className="font-[family-name:var(--font-noto-serif)] italic text-body text-[#2a2a2a] mb-11">
               No requirement to share. No requirement to be on camera. No requirement to be ready.
             </p>
           </div>
@@ -230,7 +227,7 @@ export default function CommunityCallPage() {
               {LEFT_REASONS.map((r) => (
                 <p
                   key={r}
-                  className="relative text-[16px] leading-[1.6] text-[#2a2a2a] py-2.5 pl-7 border-b border-[#0b0d10]/[0.07] before:content-['∞'] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:text-[#eb731f] before:font-serif before:leading-none"
+                  className="relative text-body text-[#2a2a2a] py-2.5 pl-7 border-b border-[#0b0d10]/[0.07] before:content-['∞'] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:text-[#eb731f] before:font-serif before:leading-none"
                 >
                   {r}
                 </p>
@@ -240,7 +237,7 @@ export default function CommunityCallPage() {
               {RIGHT_REASONS.map((r) => (
                 <p
                   key={r}
-                  className="relative text-[16px] leading-[1.6] text-[#2a2a2a] py-2.5 pl-7 border-b border-[#0b0d10]/[0.07] before:content-['∞'] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:text-[#eb731f] before:font-serif before:leading-none"
+                  className="relative text-body text-[#2a2a2a] py-2.5 pl-7 border-b border-[#0b0d10]/[0.07] before:content-['∞'] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:text-[#eb731f] before:font-serif before:leading-none"
                 >
                   {r}
                 </p>
@@ -257,8 +254,7 @@ export default function CommunityCallPage() {
               className="w-[120px] mx-auto md:mx-0 md:ml-auto"
             />
             <p
-              className="font-[family-name:var(--font-noto-serif)] italic leading-[1.7] text-tic-brown text-center md:text-left pt-10 md:pt-0"
-              style={{ fontSize: "clamp(18px, 2.5vw, 22px)" }}
+              className="font-[family-name:var(--font-noto-serif)] italic text-body text-tic-brown text-center md:text-left pt-10 md:pt-0"
             >
               Turn off your video. Lay down if you need to.
               <br />
@@ -290,7 +286,7 @@ export default function CommunityCallPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-9 mt-14">
               {TESTIMONIALS.map((t) => (
                 <div key={t.cite} className="flex flex-col">
-                  <blockquote className="font-[family-name:var(--font-noto-serif)] italic text-[16px] leading-[1.85] text-[#0b0d10] border-l-[3px] border-tic-pink pl-[22px] mb-[18px] grow">
+                  <blockquote className="font-[family-name:var(--font-noto-serif)] italic text-body text-[#0b0d10] border-l-[3px] border-tic-pink pl-[22px] mb-[18px] grow">
                     &quot;{t.quote}&quot;
                   </blockquote>
                   <cite className="font-[family-name:var(--font-gordon)] not-italic text-[11px] tracking-[0.16em] uppercase text-tic-dark-grey pl-[25px]">
@@ -371,7 +367,7 @@ export default function CommunityCallPage() {
               <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[18px] tracking-[0.04em] text-[#817202] mb-3.5">
                 The monthly Community Call
               </h4>
-              <p className="text-[15px] leading-[1.7] text-[#2a2a2a]">
+              <p className="text-body text-[#2a2a2a]">
                 Join live on the first Saturday of each month. Zoom link sent to your inbox once you&apos;re in.
               </p>
             </div>
@@ -379,7 +375,7 @@ export default function CommunityCallPage() {
               <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[18px] tracking-[0.04em] text-[#817202] mb-3.5">
                 The integration library
               </h4>
-              <p className="text-[15px] leading-[1.7] text-[#2a2a2a]">
+              <p className="text-body text-[#2a2a2a]">
                 Teaching videos and practice recordings from past calls — each tied to a capacity in the Solar-Lunar Framework. One teaching and one practice per capacity.
               </p>
             </div>
@@ -387,7 +383,7 @@ export default function CommunityCallPage() {
               <h4 className="font-[family-name:var(--font-gordon)] font-normal text-[18px] tracking-[0.04em] text-[#817202] mb-3.5">
                 The community
               </h4>
-              <p className="text-[15px] leading-[1.7] text-[#2a2a2a]">
+              <p className="text-body text-[#2a2a2a]">
                 A home base inside Mighty Network where you can connect with other members between calls.
               </p>
             </div>
@@ -410,7 +406,7 @@ export default function CommunityCallPage() {
             >
               Join the Free Membership →
             </a>
-            <p className="font-[family-name:var(--font-noto-serif)] italic text-[18px] mt-[5px] text-[#817202]">
+            <p className="font-[family-name:var(--font-noto-serif)] italic text-body mt-[5px] text-[#817202]">
               Already in the Practice or Practitioner membership? The call link is already yours — check your membership space.
             </p>
           </div>
@@ -456,7 +452,7 @@ export default function CommunityCallPage() {
                 <br />
                 Real support.
               </h3>
-              <p className="text-[15px] leading-[1.7] mb-7 grow">
+              <p className="text-body mb-7 grow">
                 Weekly Friday sessions, monthly themes, the full integration library. For anyone ready to practice the capacities, not just learn about them.
               </p>
               <a
@@ -478,7 +474,7 @@ export default function CommunityCallPage() {
               >
                 Practice it — and learn to hold it.
               </h3>
-              <p className="text-[15px] leading-[1.7] mb-7 grow">
+              <p className="text-body mb-7 grow">
                 Everything in Practice, plus professional tools, practitioner-focused teaching, and a peer community doing their own work alongside their client work.
               </p>
               <a

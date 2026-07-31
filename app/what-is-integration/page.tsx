@@ -62,7 +62,7 @@ export default function WhatIsIntegrationPage() {
 
           {/* Two-column row: paragraphs and poem */}
           <div className="grid md:grid-cols-[1.35fr_1fr] gap-[72px] items-start mb-[40px]">
-            <div className="space-y-[24px] text-[#222]">
+            <div className="space-y-[24px] text-[#222] mt-[3em]">
               <BodyText>
                 Integration is often described as "making meaning" from a psychedelic experience — a session or two of talking about what happened. But meaning that stays in language stays in your head. Real integration lives in the body, in behavior, in relationship, in time.
               </BodyText>
@@ -75,20 +75,20 @@ export default function WhatIsIntegrationPage() {
             </div>
 
             <div className="relative flex justify-center items-start">
-              <div className="hidden md:block absolute left-0 top-[50px] bottom-0 w-[3px] bg-tic-yellow" />
+              <div className="hidden md:block absolute left-0 top-0 -bottom-[10px] w-[3px] bg-tic-yellow" />
               <Image
                 src="/assets/snake-shape.svg"
                 alt="Integration journey"
                 width={600}
                 height={800}
-                className="w-[71%] md:w-full max-w-[378px] h-auto rotate-[-12deg]"
+                className="w-[300px] h-auto rotate-[-12deg]"
               />
             </div>
           </div>
 
           {/* Full-width blue link */}
           <div>
-            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full mt-1 md:mt-[80px]">
+            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full text-center mt-[6rem]">
               <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: read the full essay on the blog →</span>
             </a>
           </div>
@@ -137,11 +137,14 @@ export default function WhatIsIntegrationPage() {
 
           {/* Row 3: Full-width paragraph and link */}
           <div>
-            <BodyText className="mb-[24px] text-[#222]">
+            <p
+              className="font-[family-name:var(--font-noto-serif)] italic text-[#222] mb-[24px] text-center"
+              style={{ fontSize: "clamp(20px, 2.57vw, 24px)" }}
+            >
               Integration takes structure, rhythm, and relationship. It takes a system that honors both the preparation before and the long, spiraling work after. That is what The Infinity Container was built for.
-            </BodyText>
+            </p>
 
-            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#why-a-container" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity inline-block" style={{ marginTop: "4px" }}>
+            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#why-a-container" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full text-center mt-[6rem]">
               <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: why integration needs a container →</span>
             </a>
           </div>
@@ -170,7 +173,7 @@ export default function WhatIsIntegrationPage() {
               alt=""
               width={570}
               height={600}
-              className="w-full h-auto"
+              className="w-[78%] h-auto"
               aria-hidden
             />
           </div>
@@ -194,11 +197,14 @@ export default function WhatIsIntegrationPage() {
             </div>
           </div>
 
-          <BodyText className="text-[#222] mt-[6rem] mb-[6rem]">
+          <p
+            className="font-[family-name:var(--font-noto-serif)] italic text-[#222] mt-[6rem] mb-[6rem] text-center"
+            style={{ fontSize: "clamp(20px, 2.57vw, 24px)" }}
+          >
             This is why we integrate rather than simply learn. Insight that stays intellectual fades. Capacity that is practiced in community becomes who you are.
-          </BodyText>
+          </p>
 
-          <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#capacities-not-skills" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity inline-block" style={{ marginTop: "4px" }}>
+          <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#capacities-not-skills" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full text-center mt-[6rem]">
             <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: capacities, not skills →</span>
           </a>
         </div>
@@ -263,7 +269,7 @@ export default function WhatIsIntegrationPage() {
                 );
               })}
               <div className="border-2 border-dashed rounded flex items-center justify-center bg-black" style={{ borderColor: "#236C80" }}>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[14px] leading-[1.6] text-white text-center px-[16px]">
+                <p className="font-[family-name:var(--font-noto-serif)] text-body text-white text-center px-[16px]">
                   ...and thirteen more,<br />practiced inside<br />the container.
                 </p>
               </div>
@@ -284,7 +290,7 @@ export default function WhatIsIntegrationPage() {
             The framework isn't something
             <br />
             you read about here.<br />
-            It's something you practice inside of.
+            It's something you<br />practice inside of.
           </SectionHeading>
 
           <div className="grid md:grid-cols-[70%_30%] gap-[60px] items-start mb-[44px]">
@@ -362,7 +368,7 @@ export default function WhatIsIntegrationPage() {
                 <p className="font-[family-name:var(--font-gordon)] text-[23px] leading-[1.3] mb-[18px]" style={{ color: "#2a2a2a" }}>
                   Go deeper on the blog
                 </p>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[13px] leading-[1.6] text-[#2a2a2a]">
+                <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#2a2a2a]">
                   The complete guide to integration — the science, the practice, and the lived experience of the work. Free, no signup.
                 </p>
               </div>
@@ -379,7 +385,7 @@ export default function WhatIsIntegrationPage() {
                 <p className="font-[family-name:var(--font-gordon)] text-[23px] leading-[1.3] mb-[18px]" style={{ color: "#2a2a2a" }}>
                   Get the newsletter
                 </p>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[13px] leading-[1.6] text-[#2a2a2a]">
+                <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#2a2a2a]">
                   Integration frameworks, somatic tools, and practitioner resources — rooted in the Solar-Lunar system. Written by Dr. Victoria Sterkin.
                 </p>
               </div>
@@ -396,7 +402,7 @@ export default function WhatIsIntegrationPage() {
                 <p className="font-[family-name:var(--font-gordon)] text-[23px] leading-[1.3] mb-[18px]" style={{ color: "#2a2a2a" }}>
                   Come to a community call
                 </p>
-                <p className="font-[family-name:var(--font-noto-serif)] text-[12px] leading-[1.6] text-[#2a2a2a]">
+                <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#2a2a2a]">
                   Come to a community call. A free monthly gathering — experience the community and the practice before committing to anything. Join the free membership to get the call link.
                 </p>
               </div>

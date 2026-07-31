@@ -9,7 +9,7 @@ export default function QuizHero() {
         <br />
         Start here.
       </h1>
-      <p className="font-[family-name:var(--font-noto-serif)] italic text-[clamp(16px,2vw,20px)] text-tic-grey max-w-[540px] mx-auto leading-[1.75]">
+      <p className="font-[family-name:var(--font-noto-serif)] italic text-body text-tic-grey max-w-[540px] mx-auto">
         Seven questions. A few minutes. The right fit for where you actually are.
       </p>
     </header>
