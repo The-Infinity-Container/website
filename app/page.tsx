@@ -18,13 +18,13 @@ export default function HomePage() {
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="bg-black">
         {/* Logo-open animation, extended height, text overlaid below the globe */}
-        <div className="relative w-full h-[115vh] md:h-[200vh] overflow-hidden bg-black">
+        <div className="relative w-full h-[120vh] md:h-[200vh] overflow-hidden bg-black">
           <video
             autoPlay
             muted
             loop
             playsInline
-            className="absolute top-0 md:top-1/2 left-1/2 min-w-full min-h-[115vh] md:min-h-full w-auto h-auto -translate-x-1/2 md:-translate-y-1/2 object-cover"
+            className="absolute top-0 md:top-1/2 left-1/2 min-w-full min-h-[120vh] md:min-h-full w-auto h-auto -translate-x-1/2 md:-translate-y-1/2 object-cover"
           >
             <source src="/assets/videos/hero-mobile-extended.mp4" media="(max-width: 767px)" type="video/mp4" />
             <source src="/assets/videos/hero-desktop.mp4" type="video/mp4" />
@@ -80,7 +80,7 @@ export default function HomePage() {
             href={SIGNIN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="block mt-3 text-sm text-tic-yellow"
+            className="block mt-3 mb-5 md:mb-0 text-sm text-tic-yellow"
           >
             Already a member? Sign in
           </a>
@@ -469,7 +469,7 @@ export default function HomePage() {
 function WayDivider({ onBlack = false }: { onBlack?: boolean }) {
   return (
     <div
-      className={`px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px] text-center ${
+      className={`px-6 pt-[50px] md:pt-[100px] pb-[118px] md:pb-[168px] text-center ${
         onBlack ? "bg-black" : "bg-tic-olive"
       }`}
     >
