@@ -61,7 +61,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           />
         )}
         <div
-          className="font-[family-name:var(--font-noto-serif)] prose prose-invert max-w-none"
+          className="font-[family-name:var(--font-noto-serif)] prose prose-lg prose-invert max-w-none"
           dangerouslySetInnerHTML={{ __html: safeBody }}
         />
 

@@ -93,7 +93,7 @@ export default function WhatIsThisPage() {
         <p className="font-[family-name:var(--font-gordon)] text-xl md:text-2xl tracking-wide uppercase max-w-2xl mx-auto">
           A SPACE TO EXPAND, CONDENSE AND ACCESS THE PLANE OF POSSIBILITY.
         </p>
-        <p className="font-[family-name:var(--font-noto-serif)] text-lg mt-6 italic opacity-80">
+        <p className="font-[family-name:var(--font-noto-serif)] text-body mt-6 italic opacity-80">
           Tune into presence and we&apos;ll meet you where you are.
         </p>
       </section>
@@ -147,7 +147,7 @@ export default function WhatIsThisPage() {
           <h2 className="font-[family-name:var(--font-gordon)] text-2xl tracking-widest uppercase">
             The Platform
           </h2>
-          <p className="font-[family-name:var(--font-noto-serif)] text-base leading-relaxed">
+          <p className="font-[family-name:var(--font-noto-serif)] text-body">
             The Infinity Container is an integration platform hosted on Mighty Networks.
             Once you&apos;re a paying member, your login info gives you access to our entire platform.
           </p>

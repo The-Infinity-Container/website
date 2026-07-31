@@ -24,7 +24,7 @@ export default function SimpleNewsletter() {
 
   if (status === "success") {
     return (
-      <p className="text-center font-[family-name:var(--font-noto-serif)] italic text-lg">
+      <p className="text-center font-[family-name:var(--font-noto-serif)] italic text-body">
         Thanks for subscribing!
       </p>
     );

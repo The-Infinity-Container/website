@@ -19,15 +19,15 @@ import SectionHeading from "@/components/SectionHeading";
 
 **Styling (baked into the component):**
 - Font: Gordon (uppercase)
-- Size: 23px
+- Size: 18px
 - Letter spacing: 0.42px
 - Color: text-tic-dark-grey by default — pass `color="text-tic-yellow"` (or another single color class) on dark/saturated backgrounds where contrast requires it. Never size/spacing overrides.
-- Margin bottom: 60px
+- Margin bottom: 50px
 
 ### Section Heading (h2)
 Use `<SectionHeading>` (`@/components/SectionHeading`) for the heading directly under a section label:
 - Font: Gordon, uppercase, `font-normal`
-- Size: `clamp(21px, 3.24vw, 34px)`
+- Size: `clamp(21px, 3.24vw, 36px)`
 - Letter spacing: `tracking-[0.02em]`
 - Line height: `leading-[1.4]`
 - Margin bottom: 28px (override via the `marginBottom` prop, not a `mb-*` class, so it doesn't fight Tailwind's class-order specificity)

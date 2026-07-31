@@ -86,7 +86,7 @@ export default function HomePage() {
       <WayDivider />
 
       {/* ── What is this? ──────────────────────────────────────────── */}
-      <section className="bg-white px-6 py-[55px] md:py-[110px]">
+      <section className="bg-white px-6 py-[55px]">
         <div className="max-w-[1080px] mx-auto md:mt-[6em]">
           <div className="relative">
             <SectionLabel>What is TIC</SectionLabel>
@@ -99,7 +99,7 @@ export default function HomePage() {
               aria-hidden
               width={463}
               height={305}
-              className="hidden md:block absolute -top-[100px] -right-[20px] lg:-right-[30px] pointer-events-none w-[364px] h-auto"
+              className="hidden md:block absolute -top-[100px] -right-[20px] lg:-right-[56px] pointer-events-none w-[364px] h-auto mt-[7em] text-transparent"
             />
           </div>
 
@@ -140,7 +140,7 @@ export default function HomePage() {
             </div>
 
             {/* Text content - appears first on mobile, first on desktop */}
-            <div className="flex flex-col gap-[22px] order-1 md:order-1 w-full text-[#2a2a2a]">
+            <div className="flex flex-col gap-[22px] order-1 md:order-1 w-full text-[#2a2a2a] mt-[4em]">
               <BodyText>
                 The Infinity Container is a community built for the full arc — preparation before the experience, and integration after. We work inside the Solar-Lunar Framework, a proprietary system rooted in behavioral science, somatic practice, and contemplative traditions.
               </BodyText>
@@ -153,7 +153,7 @@ export default function HomePage() {
             </div>
 
             {/* Desktop: Integration image and poem in right column */}
-            <div className="hidden md:flex flex-col gap-8 md:order-2 md:-mt-16 relative">
+            <div className="hidden md:flex flex-col gap-8 md:order-2 md:mt-[3em] relative">
               <div className="absolute left-0 -top-[12px] bottom-0 w-[3px] bg-tic-yellow" />
               <Image
                 src="/assets/integration.svg"
@@ -162,7 +162,7 @@ export default function HomePage() {
                 height={100}
                 className="w-[89%] h-auto ml-[2em]"
               />
-              <div className="font-[family-name:var(--font-noto-serif)] italic text-[22px] leading-[1.65] text-black pl-[26px]">
+              <div className="font-[family-name:var(--font-noto-serif)] italic text-body text-black pl-[26px]">
                 Integration is a birthday<br />
                 <span className="pl-8 inline-block">&amp; a funeral.</span><br />
                 It is playing in the unknown,<br />
@@ -187,21 +187,21 @@ export default function HomePage() {
           </div>
 
           {/* Spotify Playlist + Mushrooms */}
-          <div className="flex items-end justify-center gap-4 md:gap-8 mt-8 lg:-mt-24">
-            <div className="hidden lg:block flex-shrink-0 relative z-0 -mr-[6.5rem]">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-end justify-items-center gap-4 md:gap-8 mt-8 lg:-mt-75">
+            <div className="hidden lg:flex lg:justify-end flex-shrink-0 relative z-0 -mr-[6.5rem]">
               <Image
                 src="/assets/mushrooms-trio.svg"
                 alt=""
                 aria-hidden
                 width={233}
                 height={359}
-                className="w-[315.5px] h-auto scale-x-[-1]"
+                className="w-[422.5px] h-auto scale-x-[-1]"
               />
             </div>
             <div className="w-full max-w-md relative z-10" style={{ marginBottom: "-7em" }}>
               <SpotifyEmbed />
             </div>
-            <div className="hidden lg:block flex-shrink-0 relative z-0 -ml-[5.5rem]">
+            <div className="hidden lg:flex lg:justify-start flex-shrink-0 relative z-0 -ml-[5.5rem]">
               <Image
                 src="/assets/mushrooms-trio.svg"
                 alt=""
@@ -296,12 +296,12 @@ export default function HomePage() {
           </div>
 
           <div className="relative mx-auto mt-[192px]">
-            <div className="max-w-[95vw] mx-auto bg-white border border-black/10 rounded px-[26px] py-[36px] flex flex-col items-start justify-start gap-8 relative z-10">
+            <div className="w-[75%] mx-auto bg-white border border-black/10 rounded px-[26px] py-[36px] flex flex-col items-start justify-start gap-8 relative z-10">
             <div className="max-w-[800px]">
               <h4 className="font-[family-name:var(--font-gordon)] text-[26px] uppercase tracking-[0.02em] leading-[1.3] font-normal mb-[24px]">
                 Not ready for a membership? Start free.
               </h4>
-              <p className="font-[family-name:var(--font-noto-serif)] text-[14px] leading-[1.7] text-[#3a3a3a]">
+              <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#3a3a3a]">
                 Join the free community for monthly community calls and a library of integration
                 modules — each with one practice and one teaching video. A real taste of the work,
                 at no cost.
@@ -311,7 +311,7 @@ export default function HomePage() {
               href={JOIN_FREE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[12px] border-[1.5px] border-black text-black px-[24px] py-[16px] rounded-sm hover:bg-black hover:text-white transition-colors"
+              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[12px] border-[1.5px] border-black text-black px-[24px] py-[16px] rounded-sm hover:bg-black hover:text-white transition-colors w-[61em] text-center"
             >
               Join Free →
             </a>
@@ -378,7 +378,7 @@ export default function HomePage() {
               arc across two spirals:
             </BodyText>
 
-            <div className="mt-10 lg:mt-[11em]">
+            <div className="mt-10 lg:mt-[4em]">
               <ApproachCards />
             </div>
 
@@ -420,7 +420,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-11 max-w-[920px] mx-auto">
             <div>
-              <blockquote className="font-[family-name:var(--font-noto-serif)] italic leading-[1.8] text-lg border-l-[3px] border-tic-pink pl-6 mb-[18px]">
+              <blockquote className="font-[family-name:var(--font-noto-serif)] italic text-body border-l-[3px] border-tic-pink pl-6 mb-[18px]">
                 &ldquo;Friday practice is a place where I don&apos;t have to do the holding. I get
                 to be held — and I also learn techniques I can use with my clients.&rdquo;
               </blockquote>
@@ -429,7 +429,7 @@ export default function HomePage() {
               </cite>
             </div>
             <div>
-              <blockquote className="font-[family-name:var(--font-noto-serif)] italic leading-[1.8] text-lg border-l-[3px] border-tic-pink pl-6 mb-[18px]">
+              <blockquote className="font-[family-name:var(--font-noto-serif)] italic text-body border-l-[3px] border-tic-pink pl-6 mb-[18px]">
                 &ldquo;The consistency and the connection allows me to really grow and trust
                 there&apos;s a place to grow with and in. I feel held by the ecosystem.&rdquo;
               </blockquote>
@@ -449,7 +449,7 @@ export default function HomePage() {
         >
           Integration as a practice, not an event.
         </h2>
-        <p className="font-[family-name:var(--font-noto-serif)] text-base max-w-[560px] mx-auto mb-10 leading-[1.7] text-[#2a2a1a]">
+        <p className="font-[family-name:var(--font-noto-serif)] text-body max-w-[560px] mx-auto mb-10 text-[#2a2a1a]">
           The TIC newsletter brings you integration frameworks, somatic tools, and practitioner
           resources — rooted in the Solar-Lunar system. Written by Dr. Victoria Sterkin.
         </p>

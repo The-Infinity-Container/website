@@ -41,7 +41,7 @@ export default function WhoIsThisForPage() {
           height={130}
           className="w-full max-w-xs md:max-w-sm h-auto"
         />
-        <div className="font-[family-name:var(--font-noto-serif)] text-lg md:text-xl max-w-xl leading-loose space-y-2">
+        <div className="font-[family-name:var(--font-noto-serif)] text-body max-w-xl space-y-2">
           <p>Are you holding &amp; creating without feeling held?</p>
           <p>Perhaps you&apos;re lacking mentorship?</p>
           <p>Feeling burnt out? Uninspired?</p>
@@ -56,7 +56,7 @@ export default function WhoIsThisForPage() {
         <h1 className="font-[family-name:var(--font-gordon)] text-3xl md:text-4xl tracking-widest uppercase leading-snug max-w-3xl mx-auto mb-6">
           Get in The Infinity Container.
         </h1>
-        <p className="font-[family-name:var(--font-noto-serif)] text-base md:text-lg max-w-xl mx-auto leading-relaxed opacity-90 mb-8">
+        <p className="font-[family-name:var(--font-noto-serif)] text-body max-w-xl mx-auto opacity-90 mb-8">
           We&apos;re embodying what we learn. Exploring what we teach. &amp; Teaching better ways to practice.
           We&apos;re supporting the supporters.
         </p>
@@ -79,12 +79,12 @@ export default function WhoIsThisForPage() {
         </h2>
         <div className="flex flex-col md:flex-row gap-12 items-start">
           <div className="md:w-2/3 space-y-4">
-            <p className="font-[family-name:var(--font-noto-serif)] text-base leading-relaxed">
+            <p className="font-[family-name:var(--font-noto-serif)] text-body">
               Practitioners practice with an awareness of process — an awareness of the subtleties
               that everything takes focus, repetition, exploration and that everything grows a
               little at a time.
             </p>
-            <p className="font-[family-name:var(--font-noto-serif)] text-base leading-relaxed">
+            <p className="font-[family-name:var(--font-noto-serif)] text-body">
               They hold space for people to process, explore, and be curious. They may offer
               teachings, services, and or guidance to others in their communities.
             </p>
@@ -127,7 +127,7 @@ export default function WhoIsThisForPage() {
 
       {/* ── Quote ───────────────────────────────────────────────── */}
       <section className="py-20 px-8 max-w-3xl mx-auto text-center">
-        <blockquote className="font-[family-name:var(--font-noto-serif)] text-lg md:text-xl italic leading-relaxed mb-6">
+        <blockquote className="font-[family-name:var(--font-noto-serif)] text-body italic mb-6">
           &ldquo;Whatever you know is just words, names of finite phenomena. It is the infinite
           that is the source of abiding joy because it is not subject to change. Therefore,
           seek to know the infinite.&rdquo;

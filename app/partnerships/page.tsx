@@ -44,25 +44,16 @@ export default function PartnershipsPage() {
               className="hidden md:block absolute -right-32 top-24 w-16 h-16"
             />
 
-            <p
-              className="font-[family-name:var(--font-noto-serif)] font-bold text-[23px] text-[#222]"
-              style={{ lineHeight: "37px" }}
-            >
+            <p className="font-[family-name:var(--font-noto-serif)] font-bold text-body text-[#222]">
               Partnership for us, is relational. We&apos;re creating an ecosystem.
             </p>
-            <p
-              className="font-[family-name:var(--font-noto-serif)] text-[23px] text-[#222] mt-3"
-              style={{ lineHeight: "37px" }}
-            >
+            <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#222] mt-3">
               Each offering shared here reflects work we engage with personally and feel
               confident standing behind. We choose partnerships rooted in care, integrity,
               and a shared commitment to supporting the body, community and conscious
               evolution.
             </p>
-            <p
-              className="font-[family-name:var(--font-noto-serif)] text-[23px] text-[#222] mt-6"
-              style={{ lineHeight: "37px" }}
-            >
+            <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#222] mt-6">
               Some of these partnerships include affiliate links. If you feel called to
               purchase through them, we receive a small commission at no extra cost to
               you. Some of these partnerships also include a discount for you, as a gift
@@ -86,10 +77,7 @@ export default function PartnershipsPage() {
             />
           </div>
 
-          <div
-            className="font-[family-name:var(--font-noto-serif)] text-[23px] text-[#222] space-y-5"
-            style={{ lineHeight: "37px" }}
-          >
+          <div className="font-[family-name:var(--font-noto-serif)] text-body text-[#222] space-y-5">
             <p>
               <strong>Lacuna Medicinals</strong> is a small, women-owned endeavor rooted
               in deep love and reverence for plants and fungi. Through our own mystical
@@ -141,10 +129,7 @@ export default function PartnershipsPage() {
             />
           </div>
 
-          <div
-            className="font-[family-name:var(--font-noto-serif)] text-[23px] text-[#222] space-y-5"
-            style={{ lineHeight: "37px" }}
-          >
+          <div className="font-[family-name:var(--font-noto-serif)] text-body text-[#222] space-y-5">
             <p>
               <strong>The Reset Academy</strong> is <strong>Dr. Mindy Pelz&apos;s
               membership program</strong> designed to help women improve metabolic

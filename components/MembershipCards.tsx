@@ -48,7 +48,7 @@ export default function MembershipCards({ cards }: MembershipCardsProps) {
             <h3 className="font-[family-name:var(--font-gordon)] text-[26px] uppercase tracking-[0.02em] mb-[24px] font-normal leading-[1.3]">
               {card.heading}
             </h3>
-            <p className="font-[family-name:var(--font-noto-serif)] text-[14px] leading-[1.7] mb-[32px]">
+            <p className="font-[family-name:var(--font-noto-serif)] text-body mb-[32px]">
               {card.description}
             </p>
             <a

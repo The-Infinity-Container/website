@@ -60,7 +60,7 @@ export default function TestimonialsPage() {
         <div className="grid md:grid-cols-2 gap-10">
           {TESTIMONIALS.map((t) => (
             <figure key={t.initials} className="border-l-4 border-black pl-6">
-              <blockquote className="font-[family-name:var(--font-noto-serif)] text-base md:text-lg italic leading-relaxed mb-4">
+              <blockquote className="font-[family-name:var(--font-noto-serif)] text-body italic mb-4">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
               <figcaption className="font-[family-name:var(--font-gordon)] text-sm uppercase tracking-widest">

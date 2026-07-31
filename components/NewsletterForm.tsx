@@ -39,7 +39,7 @@ export default function NewsletterForm({
 
   if (status === "success") {
     return (
-      <p className={`font-[family-name:var(--font-noto-serif)] italic text-lg ${textColor}`}>
+      <p className={`font-[family-name:var(--font-noto-serif)] italic text-body ${textColor}`}>
         You&apos;re in. We&apos;ll meet you where you are. ✦
       </p>
     );
@@ -53,7 +53,7 @@ export default function NewsletterForm({
         </h3>
       )}
       {description && (
-        <p className={`font-[family-name:var(--font-noto-serif)] text-sm mb-4 ${textColor}`}>
+        <p className={`font-[family-name:var(--font-noto-serif)] text-body mb-4 ${textColor}`}>
           {description}
         </p>
       )}

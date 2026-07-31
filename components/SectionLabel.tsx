@@ -10,7 +10,7 @@ export default function SectionLabel({
   return (
     <p
       className={`font-[family-name:var(--font-gordon)] uppercase ${color} ${className}`}
-      style={{ fontSize: "23px", letterSpacing: "0.42px", marginBottom: "60px" }}
+      style={{ fontSize: "18px", letterSpacing: "0.42px", marginBottom: "50px" }}
     >
       {children}
     </p>
