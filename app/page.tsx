@@ -117,7 +117,7 @@ export default function HomePage() {
                 alt="Integration"
                 width={320}
                 height={100}
-                className="w-full h-auto mb-8"
+                className="w-full h-auto"
               />
             </div>
 
@@ -145,7 +145,7 @@ export default function HomePage() {
             </div>
 
             {/* Text content - appears first on mobile, first on desktop */}
-            <div className="flex flex-col gap-[22px] order-1 md:order-1 w-full text-[#2a2a2a] mt-[4em]">
+            <div className="flex flex-col gap-[22px] order-1 md:order-1 w-full text-[#2a2a2a] mt-0 md:mt-[4em]">
               <BodyText>
                 The Infinity Container is a community built for the full arc — preparation before the experience, and integration after. We work inside the Solar-Lunar Framework, a proprietary system rooted in behavioral science, somatic practice, and contemplative traditions.
               </BodyText>
@@ -300,11 +300,11 @@ export default function HomePage() {
           />
           </div>
 
-          <div className="relative mx-auto mt-[192px]">
-            <div className="w-[75%] mx-auto bg-white border border-black/10 rounded px-[26px] py-[36px] flex flex-col items-start justify-start gap-8 relative z-10">
+          <div className="relative mx-auto mt-11 md:mt-[192px]">
+            <div className="md:w-[75%] mx-auto bg-white border border-black/10 rounded px-[26px] py-[36px] flex flex-col items-start justify-start gap-8 relative z-10">
             <div className="max-w-[800px]">
               <h4 className="font-[family-name:var(--font-gordon)] text-[26px] uppercase tracking-[0.02em] leading-[1.3] font-normal mb-[24px]">
-                Not ready for a membership? Start free.
+                Not ready<br className="md:hidden" /> for a membership? Start free.
               </h4>
               <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#3a3a3a]">
                 Join the free community for monthly community calls and a library of integration
@@ -316,7 +316,7 @@ export default function HomePage() {
               href={JOIN_FREE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[12px] border-[1.5px] border-black text-black px-[24px] py-[16px] rounded-sm hover:bg-black hover:text-white transition-colors w-[61em] text-center"
+              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[12px] border-[1.5px] border-black text-black px-[24px] py-[16px] rounded-sm hover:bg-black hover:text-white transition-colors w-[24em] md:w-[61em] text-center"
             >
               Join Free →
             </a>
@@ -389,7 +389,7 @@ export default function HomePage() {
 
             <Link
               href="/what-is-integration#our-system"
-              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[22px] text-tic-yellow border-b border-tic-yellow pb-[3px] hover:text-tic-pink hover:border-tic-pink transition-colors block w-fit mx-auto text-center mt-10 lg:mt-[14em]"
+              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[22px] text-tic-yellow border-b border-tic-yellow pb-[55px] hover:text-tic-pink hover:border-tic-pink transition-colors block w-fit mx-auto text-center mt-10 lg:mt-[14em]"
             >
               Learn more about the Solar-Lunar Framework →
             </Link>
@@ -452,11 +452,11 @@ export default function HomePage() {
           className="font-[family-name:var(--font-gordon)] uppercase tracking-wide mb-[18px]"
           style={{ fontSize: "clamp(1.625rem, 4vw, 2.5rem)" }}
         >
-          Integration as a practice, not an event.
+          Integration as<br className="md:hidden" /> a practice,<br className="md:hidden" /> not an event.
         </h2>
         <p className="font-[family-name:var(--font-noto-serif)] text-body max-w-[560px] mx-auto mb-10 text-[#2a2a1a]">
           The TIC newsletter brings you integration frameworks, somatic tools, and practitioner
-          resources — rooted in the Solar-Lunar system. Written by Dr. Victoria Sterkin.
+          resources — rooted in the Solar-Lunar system. Written by<br className="md:hidden" /> Dr. Victoria Sterkin.
         </p>
         <InlineNewsletter inputBg="bg-white" />
         <p className="mt-4 text-xs text-[#5a570f]">No spam. Unsubscribe anytime.</p>
