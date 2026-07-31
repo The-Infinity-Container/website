@@ -18,25 +18,30 @@ export default function HomePage() {
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="bg-black">
         {/* Logo-open animation, extended height, text overlaid below the globe */}
-        <div className="relative w-full h-[82vh] md:h-[200vh] overflow-hidden bg-black">
+        <div className="relative w-full h-[115vh] md:h-[200vh] overflow-hidden bg-black">
           <video
             autoPlay
             muted
             loop
             playsInline
-            className="absolute top-0 md:top-1/2 left-1/2 min-w-full min-h-[84vh] md:min-h-full w-auto h-auto -translate-x-1/2 md:-translate-y-1/2 object-cover"
+            className="absolute top-0 md:top-1/2 left-1/2 min-w-full min-h-[115vh] md:min-h-full w-auto h-auto -translate-x-1/2 md:-translate-y-1/2 object-cover"
           >
             <source src="/assets/videos/hero-mobile-extended.mp4" media="(max-width: 767px)" type="video/mp4" />
             <source src="/assets/videos/hero-desktop.mp4" type="video/mp4" />
           </video>
 
-          <div className="absolute inset-x-0 top-1/2 z-10 text-center px-6 pt-0 md:pt-[60px] pb-0 md:pb-[84px] mt-[-40px] md:mt-[4em]">
+          <div className="absolute inset-x-0 top-1/2 z-10 text-center px-6 pt-0 md:pt-[60px] pb-8 md:pb-[84px] mt-[-25px] md:mt-[4em]">
           <p
-            className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.15em] max-w-[900px] mx-auto mb-4 md:mb-6 leading-snug"
+            className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.15em] max-w-[900px] mx-auto mt-[15px] md:mt-0 mb-4 md:mb-6 leading-snug"
             style={{ fontSize: "clamp(0.788rem, 1.68vw, 1.225rem)" }}
           >
-            Psychedelic Integration <span className="mx-2">·</span> Life Transitions{" "}
-            <span className="mx-2">·</span> Expanded Experience
+            Psychedelic Integration
+            <span className="mx-2 hidden md:inline">·</span>
+            <br className="md:hidden" />
+            Life Transitions
+            <span className="mx-2 hidden md:inline">·</span>
+            <br className="md:hidden" />
+            Expanded Experience
           </p>
 
           <h1
