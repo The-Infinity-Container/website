@@ -230,7 +230,7 @@ export default function ToneGenerator() {
           <input
             type="range"
             min={0}
-            max={70}
+            max={100}
             step={1}
             value={vol}
             onChange={(e) => updateVolume(Number(e.target.value))}
