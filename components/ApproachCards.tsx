@@ -3,6 +3,7 @@ import Image from "next/image";
 interface ApproachCard {
   title: string;
   icon?: string;
+  iconSize?: number;
   heading: string;
   description: string;
   badges: { text: string; color?: "white" | "grey" }[];
@@ -16,6 +17,7 @@ const APPROACH_CARDS: ApproachCard[] = [
   {
     title: "The Solar Spiral",
     icon: "/assets/sun-icon.svg",
+    iconSize: 116,
     heading: "7 Preparation Capacities",
     description:
       "The capacities that help you arrive ready — grounded, receptive, and resourced before the experience begins.",
@@ -63,7 +65,8 @@ export default function ApproachCards() {
                 aria-hidden
                 width={90}
                 height={90}
-                className="w-[96px] h-[96px] shrink-0 -mt-[15px]"
+                style={{ width: card.iconSize ?? 96, height: card.iconSize ?? 96 }}
+                className="shrink-0 -mt-[15px]"
               />
             )}
             <h3
