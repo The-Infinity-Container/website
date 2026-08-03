@@ -85,8 +85,8 @@ export default function PartnershipsPage() {
               <Image
                 src="/assets/reset-academy-logo.png"
                 alt="Reset Academy — Empowering Women To Believe In Their Minds & Bodies, with Dr. Mindy Pelz"
-                width={1235}
-                height={360}
+                width={888}
+                height={781}
                 className="w-full h-auto"
               />
             </div>
