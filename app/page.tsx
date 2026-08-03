@@ -336,41 +336,36 @@ export default function HomePage() {
 
       {/* ── Framework ──────────────────────────────────────────────── */}
       <section className="relative text-white pt-[60px] md:pt-[120px] pb-[50px] md:pb-[100px] overflow-hidden" style={{ backgroundColor: "#0A0E10" }}>
-        <div className="relative z-10 max-w-[1280px] mx-auto px-6 flex flex-col lg:justify-center lg:min-h-[1750px]">
-          {/* Stable content block — the images below anchor to THIS box, not the
-              section, so growing the paragraph's margin below never moves them.
-              Fixed (not min) height so the three images have room to spread out
-              without overlapping, and this whole block gets centered in the
-              section by the flex parent above. */}
-          <div className="relative lg:h-[1600px]">
-            {/* Spiral image row — three true siblings in one overlay */}
-            <div className="hidden lg:block absolute inset-0 pointer-events-none" aria-hidden>
-              <Image
-                src="/assets/solar-lunar-spiral.svg"
-                alt=""
-                width={890}
-                height={1386}
-                style={{ filter: "invert(1)" }}
-                className="absolute left-1/2 -translate-x-1/2 top-8 w-[420px] h-auto opacity-20"
-              />
-              <Image
-                src="/assets/solar-lunar-spiral.svg"
-                alt=""
-                width={890}
-                height={1386}
-                style={{ filter: "invert(1)" }}
-                className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[420px] h-auto opacity-20"
-              />
-              <Image
-                src="/assets/solar-lunar-spiral.svg"
-                alt=""
-                width={890}
-                height={1386}
-                style={{ filter: "invert(1)" }}
-                className="absolute left-1/2 -translate-x-1/2 bottom-8 w-[420px] h-auto opacity-20"
-              />
-            </div>
+        {/* Spiral image row — scoped to the whole section so the group centers between the section's top and bottom edges, independent of the text content's height */}
+        <div className="hidden lg:flex flex-col justify-around items-center gap-[40px] absolute inset-0 pointer-events-none" aria-hidden>
+          <Image
+            src="/assets/solar-lunar-spiral.svg"
+            alt=""
+            width={890}
+            height={1386}
+            style={{ filter: "invert(1)" }}
+            className="h-[27.3%] w-auto opacity-20"
+          />
+          <Image
+            src="/assets/solar-lunar-spiral.svg"
+            alt=""
+            width={890}
+            height={1386}
+            style={{ filter: "invert(1)" }}
+            className="h-[27.3%] w-auto opacity-20"
+          />
+          <Image
+            src="/assets/solar-lunar-spiral.svg"
+            alt=""
+            width={890}
+            height={1386}
+            style={{ filter: "invert(1)" }}
+            className="h-[27.3%] w-auto opacity-20"
+          />
+        </div>
 
+        <div className="relative z-10 max-w-[1280px] mx-auto px-6 flex flex-col lg:justify-center">
+          <div>
             <SectionLabel color="text-tic-yellow">Our approach</SectionLabel>
             <SectionHeading>
               Integration is not an event.
@@ -389,7 +384,7 @@ export default function HomePage() {
 
             <Link
               href="/what-is-integration#our-system"
-              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[22px] text-tic-yellow border-b border-tic-yellow pb-[55px] hover:text-tic-pink hover:border-tic-pink transition-colors block w-fit mx-auto text-center mt-10 lg:mt-[14em]"
+              className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[22px] text-tic-yellow border-b border-tic-yellow pb-[55px] lg:pb-0 hover:text-tic-pink hover:border-tic-pink transition-colors block w-fit mx-auto text-center mt-10 lg:mt-0"
             >
               Learn more about the Solar-Lunar Framework →
             </Link>
