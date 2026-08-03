@@ -1,169 +1,138 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import ScribbleBall from "@/components/ScribbleBall";
+import SectionLabel from "@/components/SectionLabel";
+import SectionHeading from "@/components/SectionHeading";
+import BodyText from "@/components/BodyText";
 
 export const metadata: Metadata = {
   title: "Partnerships — The Infinity Container",
   description:
-    "Our curated partners — chosen for care, integrity, and a shared commitment to supporting the body, community and conscious evolution.",
+    "TIC partnerships — companies and communities Victoria trusts personally.",
 };
 
 export default function PartnershipsPage() {
   return (
-    <main className="pt-14">
+    <main className="bg-white">
 
-      {/* ── Header — olive, scribble balls, intro copy ────────────── */}
-      <section className="relative bg-tic-yellow px-6 md:px-10 pt-7 md:pt-14 pb-8 md:pb-16 overflow-hidden">
-        <div className="flex items-center justify-center gap-4 md:gap-10">
-          <ScribbleBall color="#e64e59" className="hidden sm:block sm:w-14 sm:h-14 md:w-20 md:h-20 shrink-0" />
-          <h1
-            className="text-center font-[family-name:var(--font-gordon)] uppercase tracking-wide leading-none text-[2rem] md:text-[clamp(2.5rem,8vw,5.5rem)]"
-            style={{ color: "#7c3537" }}
-          >
-            Partnerships
-          </h1>
-          <ScribbleBall color="#e64e59" className="hidden sm:block sm:w-14 sm:h-14 md:w-20 md:h-20 shrink-0" />
-        </div>
+      {/* ── Hero ───────────────────────────────────────────────────── */}
+      <header className="px-6 pt-[55px] md:pt-[100px] pb-[45px] md:pb-[80px] text-center">
+        <SectionLabel className="text-center">Partnerships</SectionLabel>
+        <h1
+          className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.02em] leading-[1.15] text-black max-w-[680px] mx-auto mb-6"
+          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+        >
+          People and places we trust personally.
+        </h1>
+        <p className="font-[family-name:var(--font-noto-serif)] italic text-body text-[#444] max-w-[560px] mx-auto">
+          TIC partnerships are relational, not transactional. Every company here is one we&apos;ve worked with, learned from, or leaned on — and recommend because we mean it.
+        </p>
+      </header>
 
-        {/* Spacer matches the image column (w-48) + gap-10 used below, so this
-            paragraph's left edge lines up with the Lacuna/Reset paragraph text. */}
-        <div className="max-w-6xl mx-auto mt-10 flex flex-col md:flex-row gap-10 items-start">
-          <div className="hidden md:block w-48 shrink-0" aria-hidden="true" />
+      {/* ── Partners ───────────────────────────────────────────────── */}
+      <section className="bg-tic-grey px-6 py-[60px] md:py-[100px]">
+        <div className="max-w-[1290px] mx-auto flex flex-col gap-[60px]">
 
-          <div className="relative max-w-2xl">
-            <ScribbleBall
-              color="#dfe3de"
-              className="hidden md:block absolute -left-28 top-0 w-24 h-24"
-            />
-            <ScribbleBall
-              color="#ed7e21"
-              className="hidden md:block absolute -right-24 top-2 w-14 h-14"
-            />
-            <ScribbleBall
-              color="#0b0d10"
-              className="hidden md:block absolute -right-32 top-24 w-16 h-16"
-            />
-
-            <p className="font-[family-name:var(--font-noto-serif)] font-bold text-body text-[#222]">
-              Partnership for us, is relational. We&apos;re creating an ecosystem.
-            </p>
-            <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#222] mt-3">
-              Each offering shared here reflects work we engage with personally and feel
-              confident standing behind. We choose partnerships rooted in care, integrity,
-              and a shared commitment to supporting the body, community and conscious
-              evolution.
-            </p>
-            <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#222] mt-6">
-              Some of these partnerships include affiliate links. If you feel called to
-              purchase through them, we receive a small commission at no extra cost to
-              you. Some of these partnerships also include a discount for you, as a gift
-              to our community. This reciprocity supports the ongoing creation of The
-              Infinity Container, keeping memberships at an affordable rate.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Lacuna Medicinals — orange ─────────────────────────────── */}
-      <section className="bg-tic-orange px-6 md:px-10 py-8 md:py-16">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-start">
-          <div className="w-full md:w-48 shrink-0 flex justify-center md:justify-start">
-            <Image
-              src="/assets/lacuna-medicinals-logo.png"
-              alt="Lacuna Medicinals"
-              width={800}
-              height={1171}
-              className="w-40 md:w-48 h-auto"
-            />
-          </div>
-
-          <div className="font-[family-name:var(--font-noto-serif)] text-body text-[#222] space-y-5">
-            <p>
-              <strong>Lacuna Medicinals</strong> is a small, women-owned endeavor rooted
-              in deep love and reverence for plants and fungi. Through our own mystical
-              experiences with the natural world, we have come to understand
-              that—contrary to many modern paradigms—plants and fungi are not merely
-              isolated chemicals offering miraculous cures. They are conscious,
-              intelligent life-forms that are constantly communicating with us.
-            </p>
-            <p>
-              With that said, Lacuna Medicinals is both an apothecary and an education
-              hub—a space where people can learn &amp; source medicine grown with
-              integrity and deep consideration for the communities we live among. Our
-              mushroom medicines are cultivated in-house and our entire product line is
-              crafted by our very own hands, allowing us to be present for every step of
-              the process.
-            </p>
-            <p>
-              Bridging ancient practices with the evolving field of modern medicine is
-              both our passion and our life&apos;s work. Our intention is not only to
-              enrich lives, but to remind each of us of the innate power we carry
-              within.
-            </p>
-
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-5 pt-2">
-              <a
-                href="https://lacunamedicinals.com/?ref=INFINITY"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-tic-olive text-tic-yellow font-[family-name:var(--font-gordon)] uppercase tracking-wide text-center leading-tight text-sm px-6 py-3 shadow-[3px_4px_0_rgba(0,0,0,0.25)] -rotate-1 hover:rotate-0 transition-transform"
+          {/* Lacuna Medicinals */}
+          <div className="bg-white rounded-[6px] p-8 md:p-16 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-9 md:gap-16 items-start">
+            <div className="flex items-start justify-center md:justify-start">
+              <Image
+                src="/assets/lacuna-medicinals-logo.png"
+                alt="Lacuna Medicinals"
+                width={800}
+                height={1171}
+                className="w-40 md:w-full h-auto"
+              />
+            </div>
+            <div className="flex flex-col">
+              <SectionLabel>Mycology · Microdosing</SectionLabel>
+              <SectionHeading>Lacuna Medicinals</SectionHeading>
+              <p
+                className="font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-yellow pl-5 mb-5"
+                style={{ fontSize: "17px", lineHeight: "1.8" }}
               >
-                Explore With<br />Our Link
-              </a>
-              <p className="font-bold text-center md:text-left">10% off Discount Code: INFINITY</p>
+                &quot;It&apos;s important to have a relationship with the people growing your medicine. The mycologist behind Lacuna is deeply rooted in integrity, wisdom, and science.&quot;
+              </p>
+              <BodyText className="text-[#333] mb-5">
+                Lacuna Medicinals is a women-owned apothecary and education hub rooted in deep love and reverence for plants and fungi. Their medicine is grown with integrity and care — cultivated in-house, crafted by their own hands, with full presence at every step of the process. For TIC members exploring microdosing or functional mushroom support, this is where we send people.
+              </BodyText>
+              <div className="flex items-center gap-6 flex-wrap">
+                <a
+                  href="https://lacunamedicinals.com/?ref=INFINITY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block font-[family-name:var(--font-gordon)] uppercase text-xs tracking-[0.12em] bg-tic-orange text-black px-7 py-3 rounded-sm hover:bg-tic-pink transition-colors"
+                >
+                  Visit Lacuna Medicinals →
+                </a>
+                <div className="flex items-center gap-3">
+                  <span className="font-[family-name:var(--font-gordon)] uppercase text-[10px] tracking-[0.18em] text-tic-dark-grey">
+                    TIC discount
+                  </span>
+                  <span className="font-[family-name:var(--font-gordon)] uppercase text-sm tracking-[0.18em] bg-tic-yellow text-black px-4 py-2 rounded-sm">
+                    INFINITY
+                  </span>
+                  <span className="font-[family-name:var(--font-gordon)] uppercase text-[10px] tracking-[0.18em] text-tic-dark-grey">
+                    · 10% off
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* ── Reset Academy — sage ───────────────────────────────────── */}
-      <section className="px-6 md:px-10 py-8 md:py-16" style={{ backgroundColor: "#dfe3de" }}>
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-start">
-          <div className="w-full md:w-48 shrink-0 flex justify-center md:justify-start mt-1">
-            <Image
-              src="/assets/reset-academy-logo.png"
-              alt="Reset Academy — Empowering Women To Believe In Their Minds & Bodies, with Dr. Mindy Pelz"
-              width={1235}
-              height={360}
-              className="w-82 md:w-48 h-auto shrink-0 2xl:w-[348px] 2xl:-ml-[157px]"
-            />
-          </div>
-
-          <div className="font-[family-name:var(--font-noto-serif)] text-body text-[#222] space-y-5">
-            <p>
-              <strong>The Reset Academy</strong> is <strong>Dr. Mindy Pelz&apos;s
-              membership program</strong> designed to help women improve metabolic
-              health, balance hormones, and build a sustainable fasting lifestyle using
-              science-backed tools.
-            </p>
-            <p>
-              Inside the Academy, members learn how to work with their body instead of
-              against it. Dr. Mindy teaches women how to align fasting, food, movement,
-              and lifestyle habits with their hormonal cycle so they can improve
-              metabolism, support brain health, and increase energy.
-            </p>
-            <p>
-              The Reset Academy also includes courses taught by a group of expert
-              Master Teachers, <strong>including Dr Victoria Sterkin, founder of The
-              Infinity Container.</strong> These practitioners bring specialized
-              training in areas such as nervous system regulation, functional
-              nutrition, hormone health, mindset, and emotional healing. Their courses
-              give members practical tools to address deeper root causes of health
-              challenges while supporting the fasting lifestyle Dr. Mindy teaches.
-            </p>
-
-            <div className="pt-2 text-center md:text-left">
+          {/* Reset Academy */}
+          <div className="bg-white rounded-[6px] p-8 md:p-16 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-9 md:gap-16 items-start">
+            <div className="flex items-start justify-center md:justify-start">
+              <Image
+                src="/assets/reset-academy-logo.png"
+                alt="Reset Academy — Empowering Women To Believe In Their Minds & Bodies, with Dr. Mindy Pelz"
+                width={1235}
+                height={360}
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="flex flex-col">
+              <SectionLabel>Women&apos;s Health · Fasting · Hormones</SectionLabel>
+              <SectionHeading>Reset Academy</SectionHeading>
+              <p
+                className="font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-yellow pl-5 mb-5"
+                style={{ fontSize: "17px", lineHeight: "1.8" }}
+              >
+                &quot;Dr. Mindy is a dear and trusted friend. Her commitment to women&apos;s health began before most people started talking about menopause and perimenopause — she was the first to link cycles to lifestyle protocols. She has been offering free teachings online before it became a trend and paved the way for much of the information we receive today.&quot;
+              </p>
+              <BodyText className="text-[#333] mb-5">
+                Reset Academy is Dr. Mindy Pelz&apos;s membership community for women navigating metabolic health, fasting, and hormonal wellbeing. Dr. Victoria Sterkin is a Master Teacher inside Reset Academy, where she offers a course called <em>Integrating with Authenticity</em> — bringing the Solar-Lunar integration framework to women ready to make lasting change. Not just information, but embodied practice.
+              </BodyText>
               <a
                 href="https://resetacademy.drmindypelz.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-tic-yellow font-[family-name:var(--font-gordon)] uppercase tracking-wide text-center leading-tight text-sm px-6 py-3 shadow-[3px_4px_0_rgba(0,0,0,0.25)] rotate-1 hover:rotate-0 transition-transform"
-                style={{ backgroundColor: "#f56e71" }}
+                className="inline-block font-[family-name:var(--font-gordon)] uppercase text-xs tracking-[0.12em] bg-tic-orange text-black px-7 py-3 rounded-sm hover:bg-tic-pink transition-colors w-fit"
               >
-                Explore With<br />Our Link
+                Visit Reset Academy →
               </a>
             </div>
           </div>
+
+        </div>
+      </section>
+
+      {/* ── Divider ────────────────────────────────────────────────── */}
+      <div className="bg-tic-olive text-center px-2 py-[70px]">
+        <span
+          className="font-[family-name:var(--font-gordon)] uppercase text-tic-yellow block"
+          style={{ fontSize: "clamp(40px, 9.5vw, 124px)", letterSpacing: "0.03em", lineHeight: "1.12" }}
+        >
+          Integration<br />is the way
+        </span>
+      </div>
+
+      {/* ── FTC Disclosure ─────────────────────────────────────────── */}
+      <section className="bg-white px-6 py-[52px]">
+        <div className="max-w-[680px] mx-auto">
+          <SectionLabel>Disclosure</SectionLabel>
+          <p className="font-[family-name:var(--font-noto-serif)] text-[13px] leading-[1.75] text-tic-dark-grey">
+            Some links on this page are affiliate links, which means The Infinity Container may receive a small commission if you make a purchase — at no additional cost to you. We only partner with companies we personally use and trust. Our recommendations are our own and are not influenced by compensation.
+          </p>
         </div>
       </section>
 
