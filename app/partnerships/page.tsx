@@ -117,13 +117,10 @@ export default function PartnershipsPage() {
       </section>
 
       {/* ── Divider ────────────────────────────────────────────────── */}
-      <div className="bg-tic-olive text-center px-2 py-[70px]">
-        <span
-          className="font-[family-name:var(--font-gordon)] uppercase text-tic-yellow block"
-          style={{ fontSize: "clamp(40px, 9.5vw, 124px)", letterSpacing: "0.03em", lineHeight: "1.12" }}
-        >
+      <div className="bg-tic-olive text-center px-2 pt-[50px] md:pt-[100px] pb-[118px] md:pb-[168px]">
+        <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold text-tic-yellow" style={{ fontSize: "clamp(24px, 8vw, 115px)", letterSpacing: "0.09em", marginBottom: "-68px" }}>
           Integration<br />is the way
-        </span>
+        </h2>
       </div>
 
       {/* ── FTC Disclosure ─────────────────────────────────────────── */}

@@ -5,17 +5,12 @@ interface WayDividerProps {
 
 export default function WayDivider({ lineOne = "Integration", lineTwo = "is the way" }: WayDividerProps) {
   return (
-    <div className="bg-[#817202] py-[35px] md:py-[70px] px-2 text-center">
-      <span
-        className="block font-[family-name:var(--font-gordon)] uppercase text-tic-yellow leading-[1.12] tracking-[0.03em] text-[clamp(24px,8.5vw,124px)] md:text-[clamp(40px,9.5vw,124px)]"
-      >
+    <div className="bg-[#817202] px-2 pt-[50px] md:pt-[100px] pb-[118px] md:pb-[168px] text-center">
+      <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold text-tic-yellow" style={{ fontSize: "clamp(24px, 8vw, 115px)", letterSpacing: "0.09em", marginBottom: "-68px" }}>
         {lineOne}
-      </span>
-      <span
-        className="block font-[family-name:var(--font-gordon)] uppercase text-tic-yellow leading-[1.12] tracking-[0.03em] text-[clamp(24px,8.5vw,124px)] md:text-[clamp(40px,9.5vw,124px)]"
-      >
+        <br />
         {lineTwo}
-      </span>
+      </h2>
     </div>
   );
 }
