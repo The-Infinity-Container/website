@@ -300,14 +300,12 @@ export default function CommunityCallPage() {
       </section>
 
       {/* ── Divider ────────────────────────────────────────────────── */}
-      <div className="py-[35px] md:py-[70px] px-2 text-center bg-[#817202]">
-        <span
-          className="font-[family-name:var(--font-gordon)] tracking-[0.03em] leading-[1.12] uppercase text-[#d5d069] block text-[clamp(24px,8.5vw,124px)] md:text-[clamp(40px,9.5vw,124px)]"
-        >
+      <div className="px-2 pt-[50px] md:pt-[100px] pb-[118px] md:pb-[168px] text-center bg-[#817202]">
+        <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold text-[#d5d069]" style={{ fontSize: "clamp(24px, 8vw, 115px)", letterSpacing: "0.09em", marginBottom: "-68px" }}>
           Integration
           <br />
           is the way
-        </span>
+        </h2>
       </div>
 
       {/* ── Free membership ────────────────────────────────────────── */}
