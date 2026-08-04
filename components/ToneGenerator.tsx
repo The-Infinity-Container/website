@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import SectionLabel from "@/components/SectionLabel";
+import SectionHeading from "@/components/SectionHeading";
 
 export default function ToneGenerator() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -106,14 +108,13 @@ export default function ToneGenerator() {
     oscillatorRef.current = null;
     setIsPlaying(false);
     stopTremolo();
+    const stopTime = ctx.currentTime + 0.1;
     gainNode.gain.cancelScheduledValues(ctx.currentTime);
     gainNode.gain.setValueAtTime(gainNode.gain.value, ctx.currentTime);
-    gainNode.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.1);
-    setTimeout(() => {
-      try {
-        oscillator.stop();
-      } catch {}
-    }, 150);
+    gainNode.gain.linearRampToValueAtTime(0, stopTime);
+    try {
+      oscillator.stop(stopTime);
+    } catch {}
   }
 
   function toggleTone() {
@@ -152,15 +153,12 @@ export default function ToneGenerator() {
 
   return (
     <main className="tone-generator min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-20 text-center">
-      <p className="font-[family-name:var(--font-gordon)] text-[11px] tracking-[0.28em] uppercase text-tic-yellow mb-5">
+      <SectionLabel color="text-tic-yellow" className="text-center">
         TIC Tone Generator
-      </p>
-      <h1
-        className="font-[family-name:var(--font-gordon)] font-normal text-white mb-3"
-        style={{ fontSize: "clamp(28px,4vw,42px)", letterSpacing: "0.04em" }}
-      >
+      </SectionLabel>
+      <SectionHeading color="text-white" className="text-center" marginBottom="12px">
         Find your frequency.
-      </h1>
+      </SectionHeading>
       <p className="font-[family-name:var(--font-noto-serif)] italic text-[17px] text-tic-dark-grey mb-16 max-w-[440px]">
         Tune in. Notice what shifts.
       </p>
