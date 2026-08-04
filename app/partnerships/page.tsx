@@ -33,14 +33,14 @@ export default function PartnershipsPage() {
         <div className="max-w-[1290px] mx-auto flex flex-col gap-[60px]">
 
           {/* Lacuna Medicinals */}
-          <div className="bg-white rounded-[6px] p-8 md:p-16 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-9 md:gap-16 items-start">
-            <div className="flex items-start justify-center md:justify-start">
+          <div className="bg-white rounded-[6px] p-8 md:p-16 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-9 md:gap-16 md:items-stretch">
+            <div className="flex items-center justify-center md:justify-start">
               <Image
                 src="/assets/lacuna-medicinals-logo.png"
                 alt="Lacuna Medicinals"
                 width={800}
                 height={1171}
-                className="w-40 md:w-full h-auto"
+                className="w-[122px] md:w-[76.5%] h-auto"
               />
             </div>
             <div className="flex flex-col">
@@ -80,8 +80,8 @@ export default function PartnershipsPage() {
           </div>
 
           {/* Reset Academy */}
-          <div className="bg-white rounded-[6px] p-8 md:p-16 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-9 md:gap-16 items-start">
-            <div className="flex items-start justify-center md:justify-start">
+          <div className="bg-white rounded-[6px] p-8 md:p-16 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-9 md:gap-16 md:items-stretch">
+            <div className="flex items-center justify-center md:justify-start">
               <Image
                 src="/assets/reset-academy-logo.png"
                 alt="Reset Academy — Empowering Women To Believe In Their Minds & Bodies, with Dr. Mindy Pelz"

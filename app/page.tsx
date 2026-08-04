@@ -192,8 +192,8 @@ export default function HomePage() {
           </div>
 
           {/* Spotify Playlist + Mushrooms */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-end justify-items-center gap-4 md:gap-8 mt-8 lg:-mt-75">
-            <div className="hidden lg:flex lg:justify-end flex-shrink-0 relative z-0 -mr-[6.5rem]">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-end justify-items-center gap-4 md:gap-8 mt-8 lg:-mt-69" style={{ marginBottom: "-2rem" }}>
+            <div className="hidden lg:flex lg:justify-end flex-shrink-0 relative z-0 -mr-[12.5rem]">
               <Image
                 src="/assets/mushrooms-trio.svg"
                 alt=""
@@ -206,7 +206,7 @@ export default function HomePage() {
             <div className="w-full max-w-md relative z-10" style={{ marginBottom: "-7em" }}>
               <SpotifyEmbed />
             </div>
-            <div className="hidden lg:flex lg:justify-start flex-shrink-0 relative z-0 -ml-[5.5rem]">
+            <div className="hidden lg:flex lg:justify-start flex-shrink-0 relative z-0 -ml-[17.5rem]">
               <Image
                 src="/assets/mushrooms-trio.svg"
                 alt=""

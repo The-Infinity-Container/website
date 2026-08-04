@@ -344,7 +344,9 @@ export default function WhatIsIntegrationPage() {
             Keep going.
           </p>
           <p className="font-[family-name:var(--font-noto-serif)] italic text-[23px] mx-auto text-center mb-[30px]" style={{ color: "#7C3537", lineHeight: "37px", maxWidth: "70vw" }}>
-            You don't have to be ready to join anything. Integration happens a little at a time — start at whatever depth feels right.
+            You don&apos;t have to be ready to join anything. Integration happens a little at a time.
+            <br />
+            Start at whatever depth feels right.
           </p>
 
           <div className="flex justify-center mb-[60px]" style={{ position: "relative", zIndex: 10 }}>
