@@ -1,60 +1,36 @@
-"use client";
+import Image from "next/image";
 
-import { useState } from "react";
-import Link from "next/link";
-import CategoryBanner from "./CategoryBanner";
-import { categoryColor } from "@/lib/categories";
-import type { Post } from "@/types/post";
-
-export default function BlogHero({ posts }: { posts: Post[] }) {
-  const [active, setActive] = useState<Set<string>>(new Set());
-
-  function toggle(key: string) {
-    setActive((prev) => {
-      const next = new Set(prev);
-      if (next.has(key)) next.delete(key);
-      else next.add(key);
-      return next;
-    });
-  }
-
-  const visiblePosts = active.size === 0 ? posts : posts.filter((p) => active.has(p.category));
-
+export default function BlogHero() {
   return (
-    <>
-      <CategoryBanner active={active} onToggle={toggle} />
-
-      {/* ── Post list ───────────────────────────────────────────── */}
-      <section className="bg-black pt-16 pb-[7em] px-6">
-        <div className="max-w-4xl mx-auto flex flex-col gap-16">
-          {visiblePosts.length === 0 && (
-            <p className="font-[family-name:var(--font-noto-serif)] text-center py-10 text-white/60">
-              No posts in this category yet.
-            </p>
-          )}
-          {visiblePosts.map((post) => (
-            <article key={post.slug} className="flex flex-col md:flex-row gap-6 md:gap-10 items-center md:items-start">
-              <Link
-                href={`/blog/${post.slug}`}
-                className="group shrink-0 w-44 h-44 md:w-52 md:h-52 rounded-full flex flex-col items-center justify-center text-center px-5 transition-transform hover:scale-105"
-                style={{ backgroundColor: categoryColor(post.category) }}
-              >
-                <span className="font-[family-name:var(--font-noto-serif)] font-bold text-white text-lg md:text-xl leading-tight line-clamp-4">
-                  {post.title}
-                </span>
-                <span className="mt-3 text-white text-xs font-bold uppercase tracking-widest group-hover:underline">
-                  Read More »
-                </span>
-              </Link>
-              <div className="flex-1">
-                <p className="font-[family-name:var(--font-noto-serif)] text-body text-white">
-                  {post.excerpt}
-                </p>
-              </div>
-            </article>
-          ))}
+    <header className="bg-black px-6 pt-20 pb-10 md:pb-0 overflow-hidden">
+      <div className="max-w-[1290px] mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p className="font-[family-name:var(--font-gordon)] text-tic-yellow uppercase tracking-[0.24em] text-[11px] mb-[18px]">
+            Writing from the container
+          </p>
+          <h1
+            className="font-[family-name:var(--font-gordon)] font-normal text-white uppercase tracking-[0.02em] leading-[1.12] mb-5"
+            style={{ fontSize: "clamp(36px, 5.5vw, 58px)" }}
+          >
+            Integration &amp; Reflection
+          </h1>
+          <p className="font-[family-name:var(--font-noto-serif)] italic text-tic-dark-grey max-w-[480px] leading-[1.7] text-lg">
+            Essays, frameworks, and field notes from the practice of becoming.
+          </p>
         </div>
-      </section>
-    </>
+        <div className="hidden md:flex items-end justify-end">
+          <Image
+            src="/assets/blog-hero-octopus.png"
+            alt=""
+            aria-hidden
+            width={900}
+            height={465}
+            className="w-full max-w-[616px] h-auto -translate-y-5"
+            style={{ mixBlendMode: "lighten" }}
+            priority
+          />
+        </div>
+      </div>
+    </header>
   );
 }
