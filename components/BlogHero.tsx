@@ -20,13 +20,12 @@ export default function BlogHero() {
         </div>
         <div className="hidden md:flex items-end justify-end">
           <Image
-            src="/assets/blog-hero-octopus.png"
+            src="/assets/blog-hero-octopus-blue.svg"
             alt=""
             aria-hidden
-            width={900}
-            height={465}
+            width={476}
+            height={268}
             className="w-full max-w-[616px] h-auto -translate-y-5"
-            style={{ mixBlendMode: "lighten" }}
             priority
           />
         </div>

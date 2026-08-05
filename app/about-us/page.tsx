@@ -24,8 +24,8 @@ const GRATITUDE = [
   { name: "Catie", credit: "for the magic of coding" },
   { name: "Erika", credit: "for the magic of support" },
   { name: "Mariana", credit: "for the magic of movement", href: "https://www.marianamartincapriles.com/" },
-  { name: "Daniela", credit: "for the magic of design thinking" },
-  { name: "Edu", credit: "for the magic of art", href: "https://www.educerro.com" },
+  { name: "Daniela", credit: "for the magic of design thinking", href: "https://hum783.com/" },
+  { name: "Edu", credit: "for the magic of art", href: "https://www.educerro.com/" },
 ];
 
 export default function AboutUsPage() {
@@ -38,7 +38,7 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 md:grid-cols-[1.25fr_0.9fr] gap-[60px] items-start">
             <div>
               <h1
-                className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.08] text-[#0b0d10]"
+                className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.08] text-[#0b0d10] mt-2"
                 style={{ fontSize: "clamp(34px, 5.2vw, 58px)" }}
               >
                 The container was built by someone who needed one.
@@ -50,13 +50,13 @@ export default function AboutUsPage() {
                 I&apos;m Dr. Victoria Sterkin — behavior analyst, therapist, integration specialist, and above all else, a helper. The Infinity Container is the space I spent twenty-five years learning how to build.
               </p>
             </div>
-            <div className="aspect-[4/5] w-[75%] ml-auto border border-[#0b0d10]/12 rounded-[3px] overflow-hidden bg-tic-grey" style={{ marginLeft: "-1em" }}>
+            <div className="ml-auto rounded-[3px] overflow-hidden" style={{ marginLeft: "-1em" }}>
               <Image
                 src="/assets/victoria.jpg"
                 alt="Dr. Victoria Sterkin"
                 width={900}
                 height={1125}
-                className="w-full h-full object-cover"
+                className="w-[65%] h-[87%] object-cover"
                 priority
               />
             </div>
@@ -88,7 +88,7 @@ export default function AboutUsPage() {
           <div className="relative z-10">
             <SectionLabel color="text-[#6a6410]">My story</SectionLabel>
             <SectionHeading>How I got here.</SectionHeading>
-            <div className="text-[#26240f] w-[80%] mx-auto">
+            <div className="text-[#26240f] w-[80%]">
               <BodyText className="mb-6">We are living in a crisis of unintegrated time — a world that keeps us fragmented, living in the past, and disconnected from the present. My own path to understanding this began with a talk by Dr. Dan Siegel at the former Blue School in lower Manhattan, where I was consulting at the time. He spoke about interpersonal neurobiology — about integration as collaborative communication between the parts of yourself, your body, and the larger Earth body. About what he now calls MWe: a sense of oneness. Something clicked into place I&apos;ve never been able to unsee. Fragmentation is at the root of dysfunction. Personal, biological, social — all of it.</BodyText>
               <BodyText className="mb-6">I started seeing integration opportunities everywhere. In grief. In role changes. In transformative moments and psychedelic journeys.</BodyText>
               <BodyText className="mb-6">And in myself. I was a young behaviorist then, working with children — and in doing that work, I began to update my own developmental holes, the ones that opened around age six, when my mother died. Riding the subway between clients&apos; homes and schools, I began to feel the in-between itself — the shift, the time it takes to shift, the awareness it takes to transform — and how the digital age was quietly taking that time from us.</BodyText>
@@ -152,7 +152,7 @@ export default function AboutUsPage() {
       </div>
 
       {/* ── Why the Infinity Container ────────────────────────────── */}
-      <section className="bg-tic-grey px-6 py-[50px] md:py-[100px]">
+      <section className="relative z-10 bg-tic-grey px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto relative">
           <Image
             src="/assets/brain.svg"
@@ -180,51 +180,57 @@ export default function AboutUsPage() {
       {/* ── The people ─────────────────────────────────────────────── */}
       <section className="bg-white px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto">
-          <div className="flex items-start justify-between gap-6">
-            <div>
+          <div className="relative">
+            <div className="max-w-[900px]">
               <SectionLabel>The people</SectionLabel>
               <SectionHeading marginBottom="0">The hands that build the container.</SectionHeading>
             </div>
-            <Image
-              src="/assets/spider-thick.svg"
-              alt=""
-              width={400}
-              height={400}
-              className="w-[84px] md:w-[120px] flex-shrink-0 -mt-1.5"
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-9 mt-[52px]">
-            <div>
-              <div className="aspect-square border border-[#0b0d10]/12 rounded-[3px] overflow-hidden bg-tic-grey mb-5">
-                <Image
-                  src="/assets/vic-2.jpg"
-                  alt="Dr. Victoria Sterkin"
-                  width={600}
-                  height={900}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[20px] mb-1.5">Dr. Victoria Sterkin</p>
-              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.16em] text-[11px] text-tic-pink mb-3.5">Founder &amp; Creator</p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#333]">
-                Behavior analyst, therapist, and integration specialist. Victoria designs and holds every practice, theme, and program inside TIC.
-              </p>
+            <div className="absolute right-[36em] top-[8em] w-[84px] md:w-[130px]">
+              <Image
+                src="/assets/spider-with-line.svg"
+                alt=""
+                width={102}
+                height={386}
+                className="relative bottom-[19em] w-full h-auto"
+              />
             </div>
-            <div>
-              <div className="aspect-square border border-[#0b0d10]/12 rounded-[3px] overflow-hidden bg-tic-grey mb-5">
-                <Image
-                  src="/assets/edu.jpg"
-                  alt="Edu Cerro"
-                  width={900}
-                  height={1200}
-                  className="w-full h-full object-cover"
-                />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-22 mt-[150px]">
+            <div className="border-[3px] border-[#0b0d10]/12 px-4 py-8">
+              <div className="w-[70%] mx-auto">
+                <div className="aspect-square overflow-hidden bg-tic-grey mb-5">
+                  <Image
+                    src="/assets/vic-2.jpg"
+                    alt="Dr. Victoria Sterkin"
+                    width={600}
+                    height={900}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[20px] underline mb-1.5">Dr. Victoria Sterkin</p>
+                <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.16em] text-[11px] text-black mb-3.5">Founder &amp; Creator</p>
+                <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#333]">
+                  Behavior analyst, therapist, and integration specialist. Victoria designs and holds every practice, theme, and program inside TIC.
+                </p>
               </div>
-              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[20px] mb-1.5">Edu Cerro</p>
-              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.16em] text-[11px] text-tic-pink mb-3.5">Artist</p>
-              <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#333]">
-                Every capacity in the Solar-Lunar Framework has a face because Edu drew it one. His artwork gives the practice its visual language.
-              </p>
+            </div>
+            <div className="border-[3px] border-[#0b0d10]/12 px-4 py-8">
+              <div className="w-[70%] mx-auto">
+                <div className="aspect-square overflow-hidden bg-tic-grey mb-5">
+                  <Image
+                    src="/assets/edu.jpg"
+                    alt="Edu Cerro"
+                    width={900}
+                    height={1200}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[20px] underline mb-1.5">Edu Cerro</p>
+                <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.16em] text-[11px] text-black mb-3.5">Artist</p>
+                <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#333]">
+                  Every capacity in the Solar-Lunar Framework has a face because Edu drew it one. His artwork gives the practice its visual language.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -243,7 +249,7 @@ export default function AboutUsPage() {
                   href={g.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[17px] hover:text-tic-brown transition-colors"
+                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[17px] hover:text-tic-pink transition-colors"
                 >
                   {g.name}
                 </a>

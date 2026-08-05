@@ -10,11 +10,17 @@ const DARK_NAV_ROUTES = ["/", "/blog"];
 
 type NavLink =
   | { label: string; href: string; external?: boolean }
-  | { label: string; children: { label: string; href: string }[] };
+  | { label: string; children: { label: string; href: string; external?: boolean }[] };
 
 const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "Membership Info", href: "https://the-infinity-container.mn.co/landing", external: true },
+  {
+    label: "Membership",
+    children: [
+      { label: "Find Your Membership", href: "/find-my-membership" },
+      { label: "Membership Info", href: "https://the-infinity-container.mn.co/landing", external: true },
+    ],
+  },
   {
     label: "Integration",
     children: [
@@ -32,7 +38,7 @@ const NAV_LINKS: NavLink[] = [
 export default function SiteNav() {
   const pathname = usePathname();
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const isDark = DARK_NAV_ROUTES.some((r) => (r === "/" ? pathname === "/" : pathname.startsWith(r)));
 
   function isActive(href: string) {
@@ -113,14 +119,15 @@ export default function SiteNav() {
           {NAV_LINKS.map((link) => {
             if ("children" in link) {
               const childActive = link.children.some((c) => isActive(c.href));
+              const isOpen = dropdownOpen === link.label;
               return (
                 <li key={link.label}>
                   <button
                     className={`${linkBase} flex items-center justify-end gap-3 ${
-                      childActive || dropdownOpen ? "bg-tic-pink" : ""
+                      childActive || isOpen ? "bg-tic-pink" : ""
                     }`}
-                    onClick={() => setDropdownOpen((o) => !o)}
-                    aria-expanded={dropdownOpen}
+                    onClick={() => setDropdownOpen((o) => (o === link.label ? null : link.label))}
+                    aria-expanded={isOpen}
                   >
                     {link.label}
                     <svg
@@ -128,7 +135,7 @@ export default function SiteNav() {
                       height="14"
                       viewBox="0 0 14 14"
                       fill="none"
-                      className={`transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
+                      className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                       aria-hidden="true"
                     >
                       <path
@@ -142,22 +149,36 @@ export default function SiteNav() {
                   </button>
                   <ul
                     className={`overflow-hidden transition-all duration-200 ${
-                      dropdownOpen ? "max-h-40" : "max-h-0"
+                      isOpen ? "max-h-40" : "max-h-0"
                     }`}
                   >
-                    {link.children.map((child) => (
-                      <li key={child.href}>
-                        <Link
-                          href={child.href}
-                          className={`block w-full text-right px-6 py-3 font-[family-name:var(--font-gordon)] text-base uppercase tracking-wide transition-colors hover:bg-tic-pink ${
-                            isActive(child.href) ? "opacity-60" : ""
-                          }`}
-                          onClick={closeDrawer}
-                        >
-                          {child.label}
-                        </Link>
-                      </li>
-                    ))}
+                    {link.children.map((child) =>
+                      child.external ? (
+                        <li key={child.href}>
+                          <a
+                            href={child.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block w-full text-right px-6 py-3 font-[family-name:var(--font-gordon)] text-base uppercase tracking-wide transition-colors hover:bg-tic-pink"
+                            onClick={closeDrawer}
+                          >
+                            {child.label}
+                          </a>
+                        </li>
+                      ) : (
+                        <li key={child.href}>
+                          <Link
+                            href={child.href}
+                            className={`block w-full text-right px-6 py-3 font-[family-name:var(--font-gordon)] text-base uppercase tracking-wide transition-colors hover:bg-tic-pink ${
+                              isActive(child.href) ? "opacity-60" : ""
+                            }`}
+                            onClick={closeDrawer}
+                          >
+                            {child.label}
+                          </Link>
+                        </li>
+                      )
+                    )}
                   </ul>
                 </li>
               );

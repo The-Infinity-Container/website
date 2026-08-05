@@ -26,7 +26,7 @@ export default function BlogPostList({ posts }: { posts: Post[] }) {
     <>
       {/* ── Category filters ────────────────────────────────────── */}
       <div className="bg-black border-b border-white/[0.08] sticky top-[97px] md:top-[49px] z-40">
-        <div className="max-w-[1290px] mx-auto px-6 flex overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="max-w-[1290px] mx-auto flex overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {tabs.map((tab) => {
             const isActive = active === tab.key;
             return (
@@ -34,13 +34,15 @@ export default function BlogPostList({ posts }: { posts: Post[] }) {
                 key={tab.key}
                 type="button"
                 onClick={() => setActive(tab.key)}
-                className="font-[family-name:var(--font-gordon)] text-[11px] tracking-[0.16em] uppercase px-6 py-[18px] whitespace-nowrap border-b-2 transition-colors cursor-pointer"
-                style={{
-                  color: isActive ? tab.color : "rgba(252,252,252,0.4)",
-                  borderBottomColor: isActive ? tab.color : "transparent",
-                }}
+                className="font-[family-name:var(--font-gordon)] text-[11px] tracking-[0.16em] uppercase px-6 first:pl-0 py-[18px] mr-[2em] whitespace-nowrap transition-colors cursor-pointer"
+                style={{ color: tab.color }}
               >
-                {tab.label}
+                <span
+                  className="inline-block border-b-2 pb-[6px] transition-colors"
+                  style={{ borderBottomColor: isActive ? tab.color : "transparent" }}
+                >
+                  {tab.label}
+                </span>
               </button>
             );
           })}
@@ -83,7 +85,7 @@ export default function BlogPostList({ posts }: { posts: Post[] }) {
               >
                 {featured.title}
               </Link>
-              <p className="text-[16px] leading-[1.8] text-[#333]">{featured.excerpt}</p>
+              <p className="text-body text-[#333]">{featured.excerpt}</p>
               <Link
                 href={`/blog/${featured.slug}`}
                 className="self-start font-[family-name:var(--font-gordon)] text-[11px] tracking-[0.14em] uppercase text-tic-cobalt border-b border-tic-cobalt pb-[2px] hover:text-tic-rose hover:border-tic-rose transition-colors"
