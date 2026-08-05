@@ -4,8 +4,10 @@ import { useState } from "react";
 
 export default function InlineNewsletter({
   inputBg = "bg-tic-pink",
+  onSuccess,
 }: {
   inputBg?: string;
+  onSuccess?: () => void;
 }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,6 +24,7 @@ export default function InlineNewsletter({
       });
       const data = await res.json();
       setStatus(data.success ? "success" : "error");
+      if (data.success) onSuccess?.();
     } catch {
       setStatus("error");
     }

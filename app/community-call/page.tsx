@@ -117,19 +117,19 @@ export default function CommunityCallPage() {
           href={SIGN_IN_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-[13px] text-[#817202] mb-16 hover:text-[#0b0d10] transition-colors"
+          className="block text-[13px] text-[#817202] hover:text-[#0b0d10] transition-colors"
         >
           Already a member? Sign in →
         </a>
 
         <div className="mx-auto">
-          <div className="hidden md:grid grid-cols-2 gap-12 items-center max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-3 gap-2 md:gap-10 items-center max-w-[1400px] mx-auto">
             <Image
               src="/assets/satellite.svg"
               alt=""
               width={1074}
               height={1012}
-              className="w-[400px] ml-[24em] block"
+              className="w-[246px] justify-self-end"
               priority
             />
             <Image
@@ -137,24 +137,14 @@ export default function CommunityCallPage() {
               alt="No cost. All are welcome."
               width={414}
               height={156}
-              className="w-[400px] mr-auto ml-[-5em] mt-[6em] rotate-[-1deg]"
+              className="w-[332px] mx-auto rotate-[-1deg]"
             />
-          </div>
-          <div className="md:hidden max-w-[260px] mx-auto">
             <Image
               src="/assets/satellite.svg"
               alt=""
               width={1074}
               height={1012}
-              className="w-[200px] mx-auto block"
-              priority
-            />
-            <Image
-              src="/assets/no-cost-v2.svg"
-              alt="No cost. All are welcome."
-              width={414}
-              height={156}
-              className="w-[150px] mx-auto mt-4 rotate-[-3deg]"
+              className="w-[246px] justify-self-start scale-x-[-1]"
             />
           </div>
         </div>
@@ -214,7 +204,7 @@ export default function CommunityCallPage() {
       {/* ── Come as you are ────────────────────────────────────────── */}
       <section className="bg-tic-grey px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto">
-          <div className="max-w-[760px] mx-auto">
+          <div>
             <SectionLabel>The only requirement</SectionLabel>
             <SectionHeading>Come as you are.</SectionHeading>
             <p className="font-[family-name:var(--font-noto-serif)] italic text-body text-[#2a2a2a] mb-11">
@@ -222,7 +212,7 @@ export default function CommunityCallPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[60px] gap-y-0 mb-[52px] max-w-[760px] mx-auto text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[60px] gap-y-0 mb-[52px] text-left">
             <div>
               {LEFT_REASONS.map((r) => (
                 <p
@@ -245,23 +235,21 @@ export default function CommunityCallPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:[grid-template-columns:minmax(0,35%)_minmax(0,65%)] gap-8 items-center text-center md:text-left">
+          <div className="grid grid-cols-1 md:[grid-template-columns:minmax(0,65%)_minmax(0,35%)] gap-8 text-center">
+            <p
+              className="font-[family-name:var(--font-noto-serif)] italic text-body text-tic-brown text-center pt-10 md:pt-0"
+            >
+              Turn off your video. Lay down if you need to. Any level of participation is welcome.
+              <br />
+              The only requirement is respectful presence.
+            </p>
             <Image
               src="/assets/plant-pot-maroon.svg"
               alt=""
               width={147}
               height={293}
-              className="w-[120px] mx-auto md:mx-0 md:ml-auto"
+              className="relative z-10 w-[270px] mx-auto md:mx-0 md:ml-auto md:-mt-[447px]"
             />
-            <p
-              className="font-[family-name:var(--font-noto-serif)] italic text-body text-tic-brown text-center md:text-left pt-10 md:pt-0"
-            >
-              Turn off your video. Lay down if you need to.
-              <br />
-              Any level of participation is welcome.
-              <br />
-              The only requirement is respectful presence.
-            </p>
           </div>
         </div>
       </section>
@@ -280,10 +268,10 @@ export default function CommunityCallPage() {
                 alt=""
                 width={76}
                 height={82}
-                className="w-[130px] shrink-0 md:w-[200px] md:mr-[-14em]"
+                className="w-[130px] shrink-0 md:w-[234px] md:mr-[-17em]"
               />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-9 mt-14">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-9 -mt-[3em]">
               {TESTIMONIALS.map((t) => (
                 <div key={t.cite} className="flex flex-col">
                   <blockquote className="font-[family-name:var(--font-noto-serif)] italic text-body text-[#0b0d10] border-l-[3px] border-tic-pink pl-[22px] mb-[18px] grow">

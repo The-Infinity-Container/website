@@ -15,15 +15,39 @@ export default function PartnershipsPage() {
     <main className="bg-white">
 
       {/* ── Hero ───────────────────────────────────────────────────── */}
-      <header className="px-6 pt-[55px] md:pt-[100px] pb-[45px] md:pb-[80px] text-center">
-        <SectionLabel className="text-center">Partnerships</SectionLabel>
+      <header className="relative px-6 pt-[55px] md:pt-[100px] pb-[45px] md:pb-[80px] text-center overflow-hidden">
+        <Image
+          src="/assets/yellow-globe.svg"
+          alt=""
+          aria-hidden
+          width={136}
+          height={136}
+          className="hidden md:block absolute left-[8%] top-[18%] w-[13%] max-w-[220px]"
+        />
+        <Image
+          src="/assets/pink-globe.svg"
+          alt=""
+          aria-hidden
+          width={88}
+          height={88}
+          className="hidden md:block absolute left-[21%] top-[52%] w-[7%] max-w-[130px]"
+        />
+        <Image
+          src="/assets/orange-globe.svg"
+          alt=""
+          aria-hidden
+          width={192}
+          height={192}
+          className="hidden md:block absolute left-[75%] top-[30%] w-[18%] max-w-[310px]"
+        />
+        <SectionLabel className="relative text-center">Partnerships</SectionLabel>
         <h1
-          className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.02em] leading-[1.15] text-black max-w-[680px] mx-auto mb-6"
+          className="relative font-[family-name:var(--font-gordon)] font-normal tracking-[0.02em] leading-[1.15] text-black max-w-[680px] mx-auto mb-6"
           style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
         >
           People and places we trust personally.
         </h1>
-        <p className="font-[family-name:var(--font-noto-serif)] italic text-body text-[#444] max-w-[560px] mx-auto">
+        <p className="relative font-[family-name:var(--font-noto-serif)] italic text-body text-[#444] max-w-[560px] mx-auto">
           TIC partnerships are relational, not transactional. Every company here is one we&apos;ve worked with, learned from, or leaned on — and recommend because we mean it.
         </p>
       </header>

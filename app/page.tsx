@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import InlineNewsletter from "@/components/InlineNewsletter";
+import NewsletterPopup from "@/components/NewsletterPopup";
 import ApproachCards from "@/components/ApproachCards";
 import MembershipCards from "@/components/MembershipCards";
 import SpotifyEmbed from "@/components/SpotifyEmbed";
@@ -15,6 +16,7 @@ const SIGNIN_URL = "https://the-infinity-container.mn.co/sign_in";
 export default function HomePage() {
   return (
     <main>
+      <NewsletterPopup />
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="bg-black">
         {/* Logo-open animation, extended height, text overlaid below the globe */}

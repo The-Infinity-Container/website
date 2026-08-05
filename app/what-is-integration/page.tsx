@@ -73,7 +73,7 @@ export default function WhatIsIntegrationPage() {
                 And it applies far beyond psychedelics. Life transitions, grief, awe, birth, loss, love — any experience big enough to change you asks to be integrated. The question is whether it gets what it needs.
               </BodyText>
 
-              <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity inline-block mt-[2.7rem]">
+              <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[18px] hover:opacity-70 transition-opacity inline-block mt-[2.7rem]">
                 <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: read the full essay on the blog →</span>
               </a>
             </div>
@@ -104,20 +104,34 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── THE GAP SECTION ───────────────────────────────────────── */}
-      <section className="bg-tic-grey px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
+      <section className="bg-tic-grey px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1200px] mx-auto">
           {/* Row 1: Label, heading, first paragraph */}
           <div className="mb-[24px] md:mb-[-36px]">
             <SectionLabel>The gap</SectionLabel>
             <SectionHeading>It doesn't happen on its own.</SectionHeading>
             <BodyText className="text-[#222]">
-              The experience is a doorway — but most people are handed the doorway and nothing else. No preparation beforehand. No container afterward. No community to witness the becoming.
+              The experience is a{" "}
+              <Link href="/tone-generator" className="no-underline text-inherit cursor-pointer">
+                doorway
+              </Link>{" "}
+              — but most people are handed the{" "}
+              <Link href="/tone-generator" className="no-underline text-inherit cursor-pointer">
+                doorway
+              </Link>{" "}
+              and nothing else.
+              <br />
+              Little preparation beforehand.
+              <br />
+              No container afterward.
+              <br />
+              No community to witness the becoming.
             </BodyText>
           </div>
 
           {/* Row 2: Two-column grid with italic text and hand image */}
           <div className="grid md:grid-cols-[2fr_3fr] gap-[60px] items-center mb-[60px]">
-            <div className="flex items-center font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-brown pl-[28px] min-h-[300px]" style={{ fontSize: "32px", lineHeight: "1.6" }}>
+            <div className="flex items-center font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-brown pl-[28px] min-h-[300px]" style={{ fontSize: "clamp(20px, 2.57vw, 24px)", lineHeight: "1.6" }}>
               Insight without integration fades. The journey that could have changed everything becomes a story you tell.
             </div>
             <div>
@@ -141,7 +155,7 @@ export default function WhatIsIntegrationPage() {
               Integration takes structure, rhythm, and relationship. It takes a system that honors both the preparation before and the long, spiraling work after. That is what The Infinity Container was built for.
             </p>
 
-            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#why-a-container" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full text-center mt-[6rem]">
+            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#why-a-container" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[18px] hover:opacity-70 transition-opacity block w-full text-center mt-[6rem]">
               <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: why integration needs a container →</span>
             </a>
           </div>
@@ -201,7 +215,7 @@ export default function WhatIsIntegrationPage() {
             This is why we integrate rather than simply learn. Insight that stays intellectual fades. Capacity that is practiced in community becomes who you are.
           </p>
 
-          <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#capacities-not-skills" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full text-center mt-[6rem]">
+          <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#capacities-not-skills" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[18px] hover:opacity-70 transition-opacity block w-full text-center mt-[6rem]">
             <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: capacities, not skills →</span>
           </a>
         </div>
