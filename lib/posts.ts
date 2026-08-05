@@ -19,13 +19,6 @@ function normalize(post: Post): Post {
   };
 }
 
-// Falls back to this whenever a post is published without an explicit
-// reading_time_minutes so the byline never has to omit it.
-export function estimateReadingTime(body: string): number {
-  const words = body.replace(/<[^>]+>/g, " ").trim().split(/\s+/).filter(Boolean).length;
-  return Math.max(1, Math.round(words / 200));
-}
-
 export async function getPublishedPosts(): Promise<Post[]> {
   const supabase = await createClient();
   const { data, error } = await supabase

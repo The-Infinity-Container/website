@@ -7,7 +7,7 @@ import { CATEGORIES, type CategoryKey } from "@/lib/categories";
 import { createPost, updatePost, getUsedFocusKeyphrases, type PostActionState } from "@/lib/actions/posts";
 import { uploadImage } from "@/lib/uploadImage";
 import { analyzeSeo, seoScore, SEO_SCORE_META } from "@/lib/seoAnalysis";
-import { estimateReadingTime } from "@/lib/posts";
+import { estimateReadingTime } from "@/lib/readingTime";
 import type { Post, PostStatus } from "@/types/post";
 
 function slugify(input: string) {
