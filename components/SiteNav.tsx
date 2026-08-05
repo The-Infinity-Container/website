@@ -32,7 +32,6 @@ const NAV_LINKS: NavLink[] = [
   { label: "Partnerships", href: "/partnerships" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about-us" },
-  { label: "Quiz", href: "/find-my-membership" },
 ];
 
 export default function SiteNav() {
