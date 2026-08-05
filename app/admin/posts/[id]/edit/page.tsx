@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PostForm from "@/components/admin/PostForm";
-import { getPostById } from "@/lib/posts";
+import { getAllPostsForAdmin, getPostById } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Edit Post — Admin",
@@ -13,12 +13,15 @@ export default async function EditPostPage({ params }: { params: Promise<{ id: s
 
   if (!post) notFound();
 
+  const allPosts = await getAllPostsForAdmin();
+  const otherPosts = allPosts.filter((p) => p.id !== post.id).map((p) => ({ slug: p.slug, title: p.title }));
+
   return (
     <div className="px-6 py-10 max-w-2xl mx-auto">
       <h1 className="font-[family-name:var(--font-gordon)] text-3xl uppercase tracking-widest mb-8">
         Edit Post
       </h1>
-      <PostForm post={post} />
+      <PostForm post={post} otherPosts={otherPosts} />
     </div>
   );
 }
