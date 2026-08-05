@@ -33,31 +33,33 @@ export default function AboutUsPage() {
     <main>
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="bg-white px-6 pt-[50px] md:pt-[100px] pb-[50px] md:pb-[100px]">
-        <div className="max-w-[1290px] mx-auto grid grid-cols-1 md:grid-cols-[1.25fr_0.9fr] gap-[60px] items-start">
-          <div>
-            <SectionLabel>About</SectionLabel>
-            <h1
-              className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.08] text-[#0b0d10]"
-              style={{ fontSize: "clamp(34px, 5.2vw, 58px)" }}
-            >
-              The container was built by someone who needed one.
-            </h1>
-            <p
-              className="font-[family-name:var(--font-noto-serif)] italic text-[#333] max-w-[460px] mt-7"
-              style={{ fontSize: "clamp(16px, 2vw, 19px)", lineHeight: "1.7" }}
-            >
-              I&apos;m Dr. Victoria Sterkin — behavior analyst, therapist, integration specialist, and above all else, a helper. The Infinity Container is the space I spent twenty-five years learning how to build.
-            </p>
-          </div>
-          <div className="aspect-[4/5] w-[75%] ml-auto mt-[93px] border border-[#0b0d10]/12 rounded-[3px] overflow-hidden bg-tic-grey">
-            <Image
-              src="/assets/victoria.jpg"
-              alt="Dr. Victoria Sterkin"
-              width={900}
-              height={1125}
-              className="w-full h-full object-cover"
-              priority
-            />
+        <div className="max-w-[1290px] mx-auto">
+          <SectionLabel>About</SectionLabel>
+          <div className="grid grid-cols-1 md:grid-cols-[1.25fr_0.9fr] gap-[60px] items-start">
+            <div>
+              <h1
+                className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.02em] leading-[1.08] text-[#0b0d10]"
+                style={{ fontSize: "clamp(34px, 5.2vw, 58px)" }}
+              >
+                The container was built by someone who needed one.
+              </h1>
+              <p
+                className="font-[family-name:var(--font-noto-serif)] italic text-[#333] max-w-[460px] mt-7"
+                style={{ fontSize: "clamp(16px, 2vw, 19px)", lineHeight: "1.7" }}
+              >
+                I&apos;m Dr. Victoria Sterkin — behavior analyst, therapist, integration specialist, and above all else, a helper. The Infinity Container is the space I spent twenty-five years learning how to build.
+              </p>
+            </div>
+            <div className="aspect-[4/5] w-[75%] ml-auto border border-[#0b0d10]/12 rounded-[3px] overflow-hidden bg-tic-grey" style={{ marginLeft: "-1em" }}>
+              <Image
+                src="/assets/victoria.jpg"
+                alt="Dr. Victoria Sterkin"
+                width={900}
+                height={1125}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
       </header>
@@ -109,7 +111,7 @@ export default function AboutUsPage() {
             <BodyText className="mb-6">My doctoral training in behavior analysis at Teachers College, Columbia University taught me how capacities are actually built: not through insight alone, but through practice, repetition, and the right conditions for change. Twenty-five years of clinical work taught me what the textbooks couldn&apos;t — that the body keeps its own counsel, and that transformation that ignores it doesn&apos;t last. My fairy godmother, clinical psychologist Dr. Joyce Wyden, taught me to see all human development as relational — starting in utero — so that our pasts can be resolved through awareness, comfort, and learning new sequences of behavior.</BodyText>
             <BodyText>The framework draws on verbal behavior science, somatic and body-based practice, interpersonal neurobiology, and contemplative traditions — woven into a system designed for one thing: helping experience become capacity.</BodyText>
           </div>
-          <div>
+          <div className="mt-[10px]">
             <ul className="list-none -mt-[14px]">
               {CREDENTIALS.map((item) => (
                 <li key={item} className="relative text-[15.5px] leading-[1.55] text-[#1c1c1c] py-[14px] pl-[22px] border-b border-[#0b0d10]/10">
