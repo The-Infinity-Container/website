@@ -65,12 +65,30 @@ export default function AboutUsPage() {
       </header>
 
       {/* ── My story ───────────────────────────────────────────────── */}
-      <section className="bg-tic-yellow px-6 py-[50px] md:py-[100px]">
-        <div className="max-w-[1290px] mx-auto">
-          <div>
+      <section className="bg-tic-yellow px-6 py-[50px] md:py-[100px] relative overflow-hidden">
+        <div className="max-w-[1290px] mx-auto relative">
+          <div className="absolute inset-0 flex flex-col pointer-events-none select-none" aria-hidden="true">
+            <div className="relative w-[90%] mx-auto h-1/2 overflow-hidden opacity-30">
+              <Image
+                src="/assets/infinity-container-sketch.jpg"
+                alt=""
+                fill
+                className="object-cover object-top rounded-[4px]"
+              />
+            </div>
+            <div className="relative w-[90%] mx-auto h-1/2 overflow-hidden opacity-30">
+              <Image
+                src="/assets/infinity-container-sketch.jpg"
+                alt=""
+                fill
+                className="object-cover object-bottom rounded-[4px] -scale-y-100"
+              />
+            </div>
+          </div>
+          <div className="relative z-10">
             <SectionLabel color="text-[#6a6410]">My story</SectionLabel>
             <SectionHeading>How I got here.</SectionHeading>
-            <div className="text-[#26240f]">
+            <div className="text-[#26240f] w-[80%] mx-auto">
               <BodyText className="mb-6">We are living in a crisis of unintegrated time — a world that keeps us fragmented, living in the past, and disconnected from the present. My own path to understanding this began with a talk by Dr. Dan Siegel at the former Blue School in lower Manhattan, where I was consulting at the time. He spoke about interpersonal neurobiology — about integration as collaborative communication between the parts of yourself, your body, and the larger Earth body. About what he now calls MWe: a sense of oneness. Something clicked into place I&apos;ve never been able to unsee. Fragmentation is at the root of dysfunction. Personal, biological, social — all of it.</BodyText>
               <BodyText className="mb-6">I started seeing integration opportunities everywhere. In grief. In role changes. In transformative moments and psychedelic journeys.</BodyText>
               <BodyText className="mb-6">And in myself. I was a young behaviorist then, working with children — and in doing that work, I began to update my own developmental holes, the ones that opened around age six, when my mother died. Riding the subway between clients&apos; homes and schools, I began to feel the in-between itself — the shift, the time it takes to shift, the awareness it takes to transform — and how the digital age was quietly taking that time from us.</BodyText>
@@ -81,26 +99,17 @@ export default function AboutUsPage() {
               <BodyText className="mb-6">I didn&apos;t just come to this work as a facilitator; I came to it as a behaviorist. Training with Dr. Douglas Greer taught me to think about human development not as a list of skills to teach, but as the induction of whole repertoires of capacity. The capacity, not the skill.</BodyText>
               <BodyText className="mb-6">So I built The Infinity Container. I was grieving many aspects of my life at the time and started paying closer attention to what I was needing to integrate. I needed a Salon, to listen to others and be heard. A practice space not to verbally process, but to feel the capacities I needed to grow. A practitioner&apos;s lab that could be both laboratory and playground. A container that was flexible but consistent, and an ecosystem that could hold the helpers, too.</BodyText>
               <BodyText className="mb-6">After decades of building these capacities with clients, what I found missing was a way for the nervous system to trust the bottom-up processing of life again. To trust the magic of the body — and its place in something larger. Our society relentlessly orients us toward the myopic top-down — the cognitive, the psychological — and the pace of modern life doesn&apos;t support anyone&apos;s growth toward a more integrated state. Watching what people move through with entheogens and integration, and what I moved through myself, has been like watching years of therapy get digested into the body in a matter of weeks. The entropic state of the journey moves us from the thinking mind down into the felt experience of awake aliveness.</BodyText>
-              <BodyText>Grief has always done this to me too.</BodyText>
+              <BodyText className="mb-6">Grief has always done this to me too.</BodyText>
+              <p className="font-[family-name:var(--font-noto-serif)] italic text-[13px] mt-2" style={{ color: "#4f4a15" }}>
+                A page from Edu&apos;s sketchbook, imagining the container before it existed.
+              </p>
             </div>
           </div>
         </div>
-        <figure className="max-w-[1290px] mx-auto mt-16">
-          <Image
-            src="/assets/infinity-container-sketch.jpg"
-            alt="A page from Edu's sketchbook"
-            width={1500}
-            height={1159}
-            className="w-full rounded-[4px]"
-          />
-          <figcaption className="font-[family-name:var(--font-noto-serif)] italic text-[13px] text-center mt-4" style={{ color: "#4f4a15" }}>
-            A page from Edu&apos;s sketchbook, imagining the container before it existed.
-          </figcaption>
-        </figure>
       </section>
 
       {/* ── Training & lineage ─────────────────────────────────────── */}
-      <section className="bg-white px-6 py-[50px] md:py-[100px]">
+      <section className="bg-white px-6 pt-[50px] md:pt-[100px] pb-[40px]">
         <div className="max-w-[1290px] mx-auto grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-x-16 items-start">
           <div className="md:col-span-2">
             <SectionLabel>Training &amp; lineage</SectionLabel>
@@ -120,16 +129,16 @@ export default function AboutUsPage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-[34px] text-center">
-              <Image
-                src="/assets/solar-lunar-combo.png"
-                alt="Solar-Lunar dual spiral emblem"
-                width={900}
-                height={900}
-                className="w-[190px] max-w-[60%] inline-block"
-              />
-            </div>
           </div>
+        </div>
+        <div className="mt-[34px] text-center">
+          <Image
+            src="/assets/solar-lunar-combo.png"
+            alt="Solar-Lunar dual spiral emblem"
+            width={900}
+            height={900}
+            className="w-[380px] max-w-[60%] inline-block"
+          />
         </div>
       </section>
 
@@ -150,7 +159,7 @@ export default function AboutUsPage() {
             alt=""
             width={752}
             height={1173}
-            className="float-right w-[110px] md:w-[150px] ml-7 mb-4 -mt-2"
+            className="float-right w-[213px] ml-7 mb-4 -mt-2"
             style={{ filter: "invert(0.48)" }}
           />
           <SectionLabel>Why the Infinity Container</SectionLabel>

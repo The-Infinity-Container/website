@@ -33,7 +33,7 @@ export default function PartnershipsPage() {
         <div className="max-w-[1290px] mx-auto flex flex-col gap-[60px]">
 
           {/* Lacuna Medicinals */}
-          <div className="bg-white rounded-[6px] p-8 md:p-16 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-9 md:gap-16 md:items-stretch">
+          <div id="lacuna-medicinals" className="bg-white rounded-[6px] p-8 md:p-16 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-9 md:gap-16 md:items-stretch">
             <div className="flex items-center justify-center md:justify-start">
               <Image
                 src="/assets/lacuna-medicinals-logo.png"
@@ -80,7 +80,7 @@ export default function PartnershipsPage() {
           </div>
 
           {/* Reset Academy */}
-          <div className="bg-white rounded-[6px] p-8 md:p-16 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-9 md:gap-16 md:items-stretch">
+          <div id="reset-academy" className="bg-white rounded-[6px] p-8 md:p-16 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-9 md:gap-16 md:items-stretch">
             <div className="flex items-center justify-center md:justify-start">
               <Image
                 src="/assets/reset-academy-logo.png"
