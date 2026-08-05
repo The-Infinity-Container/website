@@ -34,8 +34,8 @@ export default function BlogPostList({ posts }: { posts: Post[] }) {
                 key={tab.key}
                 type="button"
                 onClick={() => setActive(tab.key)}
-                className="font-[family-name:var(--font-gordon)] text-[11px] tracking-[0.16em] uppercase px-6 first:pl-0 py-[18px] mr-[2em] whitespace-nowrap transition-colors cursor-pointer"
-                style={{ color: tab.color }}
+                className="font-[family-name:var(--font-gordon)] uppercase px-6 first:pl-0 py-[18px] mr-[2em] whitespace-nowrap transition-colors cursor-pointer"
+                style={{ color: tab.color, fontSize: "18px", letterSpacing: "0.42px" }}
               >
                 <span
                   className="inline-block border-b-2 pb-[6px] transition-colors"
@@ -73,8 +73,8 @@ export default function BlogPostList({ posts }: { posts: Post[] }) {
             )}
             <div className="flex flex-col gap-4">
               <p
-                className="font-[family-name:var(--font-gordon)] text-[10px] tracking-[0.2em] uppercase"
-                style={{ color: categoryColor(featured.category) }}
+                className="font-[family-name:var(--font-gordon)] uppercase"
+                style={{ color: categoryColor(featured.category), fontSize: "18px", letterSpacing: "0.42px" }}
               >
                 {categoryLabel(featured.category)}
               </p>
@@ -103,8 +103,8 @@ export default function BlogPostList({ posts }: { posts: Post[] }) {
               className="flex flex-col gap-3.5 p-7 bg-white border border-tic-grey rounded hover:border-tic-dark-grey transition-colors"
             >
               <p
-                className="font-[family-name:var(--font-gordon)] text-[10px] tracking-[0.2em] uppercase"
-                style={{ color: categoryColor(post.category) }}
+                className="font-[family-name:var(--font-gordon)] uppercase"
+                style={{ color: categoryColor(post.category), fontSize: "18px", letterSpacing: "0.42px" }}
               >
                 {categoryLabel(post.category)}
               </p>

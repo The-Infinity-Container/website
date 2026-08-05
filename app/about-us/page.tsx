@@ -25,7 +25,6 @@ const GRATITUDE = [
   { name: "Erika", credit: "for the magic of support" },
   { name: "Mariana", credit: "for the magic of movement", href: "https://www.marianamartincapriles.com/" },
   { name: "Daniela", credit: "for the magic of design thinking", href: "https://hum783.com/" },
-  { name: "Edu", credit: "for the magic of art", href: "https://www.educerro.com/" },
 ];
 
 export default function AboutUsPage() {
@@ -207,7 +206,14 @@ export default function AboutUsPage() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[20px] underline mb-1.5">Dr. Victoria Sterkin</p>
+                <a
+                  href="https://victoriasterkin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[20px] underline mb-1.5 hover:text-tic-pink transition-colors"
+                >
+                  Dr. Victoria Sterkin
+                </a>
                 <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.16em] text-[11px] text-black mb-3.5">Founder &amp; Creator</p>
                 <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#333]">
                   Behavior analyst, therapist, and integration specialist. Victoria designs and holds every practice, theme, and program inside TIC.
@@ -225,7 +231,14 @@ export default function AboutUsPage() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[20px] underline mb-1.5">Edu Cerro</p>
+                <a
+                  href="https://www.educerro.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block font-[family-name:var(--font-gordon)] uppercase tracking-[0.06em] text-[20px] underline mb-1.5 hover:text-tic-pink transition-colors"
+                >
+                  Edu Cerro
+                </a>
                 <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.16em] text-[11px] text-black mb-3.5">Artist</p>
                 <p className="font-[family-name:var(--font-noto-serif)] text-body text-[#333]">
                   Every capacity in the Solar-Lunar Framework has a face because Edu drew it one. His artwork gives the practice its visual language.
@@ -237,9 +250,9 @@ export default function AboutUsPage() {
       </section>
 
       {/* ── With gratitude ─────────────────────────────────────────── */}
-      <section className="bg-white px-6 pt-10 pb-[50px] md:pb-[100px]">
+      <section className="bg-white px-6 pb-[50px] md:pb-[100px]">
         <div className="max-w-[760px] mx-auto bg-tic-grey rounded-[6px] px-10 pt-16 pb-14 text-center">
-          <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.2em] text-[16px] mb-[34px]">
+          <h2 className="font-[family-name:var(--font-gordon)] font-normal uppercase tracking-[0.2em] text-[18px] mb-[34px]">
             With gratitude
           </h2>
           {GRATITUDE.map((g) => (
@@ -249,7 +262,7 @@ export default function AboutUsPage() {
                   href={g.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[17px] hover:text-tic-pink transition-colors"
+                  className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[17px] underline hover:text-tic-pink transition-colors"
                 >
                   {g.name}
                 </a>

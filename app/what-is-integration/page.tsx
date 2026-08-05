@@ -52,7 +52,7 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── THE WORK SECTION ──────────────────────────────────────── */}
-      <section className="bg-white px-3 pt-[50px] md:pt-[100px]">
+      <section className="bg-white px-3 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
         <div className="max-w-[1290px] mx-auto">
           {/* Header row */}
           <div className="mb-[28px]">
@@ -104,7 +104,7 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── THE GAP SECTION ───────────────────────────────────────── */}
-      <section className="bg-tic-grey px-6 py-[50px] md:py-[100px]">
+      <section className="bg-tic-grey px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
         <div className="max-w-[1200px] mx-auto">
           {/* Row 1: Label, heading, first paragraph */}
           <div className="mb-[24px] md:mb-[-36px]">
@@ -112,11 +112,11 @@ export default function WhatIsIntegrationPage() {
             <SectionHeading>It doesn't happen on its own.</SectionHeading>
             <BodyText className="text-[#222]">
               The experience is a{" "}
-              <Link href="/tone-generator" className="no-underline text-inherit cursor-pointer">
+              <Link href="/tone-generator" className="underline text-tic-olive hover:text-tic-salmon transition-colors">
                 doorway
               </Link>{" "}
               — but most people are handed the{" "}
-              <Link href="/tone-generator" className="no-underline text-inherit cursor-pointer">
+              <Link href="/tone-generator" className="underline text-tic-olive hover:text-tic-salmon transition-colors">
                 doorway
               </Link>{" "}
               and nothing else.
@@ -130,7 +130,7 @@ export default function WhatIsIntegrationPage() {
           </div>
 
           {/* Row 2: Two-column grid with italic text and hand image */}
-          <div className="grid md:grid-cols-[2fr_3fr] gap-[60px] items-center mb-[60px]">
+          <div className="grid md:grid-cols-[2fr_3fr] gap-[60px] items-center mb-[60px]" style={{ marginTop: "-5em" }}>
             <div className="flex items-center font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-brown pl-[28px] min-h-[300px]" style={{ fontSize: "clamp(20px, 2.57vw, 24px)", lineHeight: "1.6" }}>
               Insight without integration fades. The journey that could have changed everything becomes a story you tell.
             </div>
@@ -140,7 +140,7 @@ export default function WhatIsIntegrationPage() {
                 alt=""
                 width={600}
                 height={600}
-                className="w-full h-auto md:w-[90%] md:mt-[3em]"
+                className="w-full h-auto md:w-[72%] md:mt-[3em]"
                 aria-hidden
               />
             </div>

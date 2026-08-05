@@ -1,5 +1,6 @@
 import type { Question } from "@/lib/quiz/types";
 import { TOTAL_QUESTIONS } from "@/lib/quiz/data";
+import SectionLabel from "@/components/SectionLabel";
 
 interface QuizQuestionProps {
   question: Question;
@@ -27,9 +28,9 @@ export default function QuizQuestion({
 
   return (
     <div>
-      <p className="font-[family-name:var(--font-gordon)] text-[11px] tracking-[0.2em] uppercase text-tic-dark-grey mb-4">
+      <SectionLabel>
         Question {index + 1} of {TOTAL_QUESTIONS}
-      </p>
+      </SectionLabel>
 
       <p className="font-[family-name:var(--font-gordon)] text-[clamp(20px,3vw,28px)] tracking-[0.02em] leading-[1.3] text-black mb-9">
         {question.text}

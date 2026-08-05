@@ -4,6 +4,7 @@ import LocalCallTime from "@/components/LocalCallTime";
 import SectionLabel from "@/components/SectionLabel";
 import SectionHeading from "@/components/SectionHeading";
 import BodyText from "@/components/BodyText";
+import MembershipCards from "@/components/MembershipCards";
 
 export const metadata: Metadata = {
   title: "Community Call | The Infinity Container",
@@ -223,7 +224,7 @@ export default function CommunityCallPage() {
                 </p>
               ))}
             </div>
-            <div>
+            <div className="w-[69%]">
               {RIGHT_REASONS.map((r) => (
                 <p
                   key={r}
@@ -400,81 +401,55 @@ export default function CommunityCallPage() {
       </section>
 
       {/* ── Go deeper ──────────────────────────────────────────────── */}
-      <section className="bg-[#fcfcfc] px-6 py-[50px] md:py-[100px]">
-        <div className="max-w-[1290px] mx-auto">
-          <div className="max-w-[920px] mx-auto">
-            <SectionLabel>Keep going</SectionLabel>
-            <SectionHeading>
-              The call is where many people start.
-              <br />
-              The memberships are where the work continues.
-            </SectionHeading>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-[52px]">
-              <BodyText className="order-2 md:order-1 text-[#222]">
-                The Practice and Practitioner memberships include everything in the free tier — plus weekly Friday practice sessions, monthly integration themes, the full capacity library, and a community moving through the Solar-Lunar Framework together.
-              </BodyText>
-              <div className="order-1 md:order-2 flex justify-center md:justify-end">
-                <Image
-                  src="/assets/shell.svg"
-                  alt=""
-                  width={1203}
-                  height={1662}
-                  className="w-[140px] md:w-[200px]"
-                />
-              </div>
-            </div>
+      <section className="bg-[#fcfcfc] px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
+        <div className="max-w-[90vw] mx-auto">
+          <SectionLabel>Keep going</SectionLabel>
+          <SectionHeading>
+            The call is where many people start.
+            <br />
+            The memberships are
+            <br />
+            where the work continues.
+          </SectionHeading>
+          <div className="grid md:grid-cols-[70%_30%] gap-[60px] items-start mb-[44px]">
+            <BodyText className="text-[#222]">
+              The Practice and Practitioner memberships include everything in the free tier — plus weekly Friday practice sessions, monthly integration themes, the full capacity library, and a community moving through the Solar-Lunar Framework together.
+            </BodyText>
+            <Image
+              src="/assets/shell.svg"
+              alt="Shell"
+              width={1203}
+              height={1662}
+              className="h-auto mx-auto md:mx-0"
+              style={{ width: "51%", marginTop: "-13em" }}
+              aria-hidden
+            />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[920px] mx-auto mb-10">
-            <div className="rounded-[4px] p-11 px-9 flex flex-col bg-tic-salmon text-[#0b0d10]">
-              <p className="font-[family-name:var(--font-gordon)] text-[10px] tracking-[0.2em] uppercase mb-[18px] opacity-85">
-                For Helpers &amp; Seekers
-              </p>
-              <h3
-                className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.02em] leading-[1.25] mb-4"
-                style={{ fontSize: "clamp(20px, 2.6vw, 26px)" }}
-              >
-                Weekly practice.
-                <br />
-                Real support.
-              </h3>
-              <p className="text-body mb-7 grow">
-                Weekly Friday sessions, monthly themes, the full integration library. For anyone ready to practice the capacities, not just learn about them.
-              </p>
-              <a
-                href="https://the-infinity-container.mn.co/users/onboarding/plans/1898747"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.12em] uppercase no-underline px-6 py-3 rounded-[3px] self-start bg-[#0b0d10] text-[#fcfcfc]"
-              >
-                Explore the Practice Membership →
-              </a>
-            </div>
-            <div className="rounded-[4px] p-11 px-9 flex flex-col bg-tic-blue text-[#fcfcfc]">
-              <p className="font-[family-name:var(--font-gordon)] text-[10px] tracking-[0.2em] uppercase mb-[18px] opacity-85">
-                For Practitioners
-              </p>
-              <h3
-                className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.02em] leading-[1.25] mb-4"
-                style={{ fontSize: "clamp(20px, 2.6vw, 26px)" }}
-              >
-                Practice it — and learn to hold it.
-              </h3>
-              <p className="text-body mb-7 grow">
-                Everything in Practice, plus professional tools, practitioner-focused teaching, and a peer community doing their own work alongside their client work.
-              </p>
-              <a
-                href="https://the-infinity-container.mn.co/users/onboarding/plans/1483936"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.12em] uppercase no-underline px-6 py-3 rounded-[3px] self-start bg-[#fcfcfc] text-tic-blue"
-              >
-                Explore the Practitioner Membership →
-              </a>
-            </div>
-          </div>
+          <MembershipCards
+            cards={[
+              {
+                label: "For Helpers & Seekers",
+                heading: "Weekly practice. Real support.",
+                description:
+                  "Weekly Friday sessions, monthly themes, the full integration library. For anyone ready to practice the capacities, not just learn about them.",
+                buttonText: "Explore the Practice Membership →",
+                buttonHref: "https://the-infinity-container.mn.co/users/onboarding/plans/1898747",
+                backgroundColor: "red",
+              },
+              {
+                label: "For Practitioners",
+                heading: "Practice it — and learn to hold it.",
+                description:
+                  "Everything in Practice, plus professional tools, practitioner-focused teaching, and a peer community doing their own work alongside their client work.",
+                buttonText: "Explore the Practitioner Membership →",
+                buttonHref: "https://the-infinity-container.mn.co/users/onboarding/plans/1483936",
+                backgroundColor: "blue",
+              },
+            ]}
+          />
 
-          <div className="text-center">
+          <div className="text-center" style={{ marginTop: "80px" }}>
             <a
               href="/find-my-membership"
               className="font-[family-name:var(--font-noto-serif)] text-body italic text-[#0b0d10] underline decoration-1 underline-offset-4 hover:text-tic-brown transition-colors"

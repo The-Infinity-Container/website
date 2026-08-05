@@ -1,5 +1,6 @@
 import type { ResultType } from "@/lib/quiz/types";
 import { results } from "@/lib/quiz/data";
+import SectionLabel from "@/components/SectionLabel";
 
 interface ResultScreenProps {
   result: ResultType;
@@ -11,9 +12,7 @@ export default function ResultScreen({ result, onRetake }: ResultScreenProps) {
 
   return (
     <div className="text-center">
-      <p className="font-[family-name:var(--font-gordon)] text-[11px] tracking-[0.22em] uppercase text-tic-dark-grey mb-5">
-        {content.eyebrow}
-      </p>
+      <SectionLabel>{content.eyebrow}</SectionLabel>
 
       <span
         className={[
