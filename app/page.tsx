@@ -7,10 +7,191 @@ import SpotifyEmbed from "@/components/SpotifyEmbed";
 import SectionLabel from "@/components/SectionLabel";
 import SectionHeading from "@/components/SectionHeading";
 import BodyText from "@/components/BodyText";
+import FAQ, { FAQParagraph, type FAQItem } from "@/components/FAQ";
 
 const FIND_MEMBERSHIP_URL = "https://the-infinity-container.mn.co/users/onboarding/plans";
 const JOIN_FREE_URL = "https://the-infinity-container.mn.co/users/onboarding/plans/1484020";
 const SIGNIN_URL = "https://the-infinity-container.mn.co/sign_in";
+
+const homeFaqItems: FAQItem[] = [
+  {
+    question: "What is The Infinity Container?",
+    answer: (
+      <FAQParagraph>
+        The Infinity Container is a psychedelic integration community built around the
+        Solar-Lunar Framework — a proprietary system rooted in behavioral science, somatic
+        practice, and contemplative traditions. We exist for practitioners, helpers, and anyone
+        navigating a psychedelic experience, life transition, or expanded state who is ready to do
+        the work with real support. Integration is not something we teach about here. It&apos;s
+        something we practice together.
+      </FAQParagraph>
+    ),
+  },
+  {
+    question: "What is psychedelic integration?",
+    answer: (
+      <FAQParagraph>
+        Psychedelic integration is the process of making what happens in an expanded state a
+        permanent part of who you are. The experience is the doorway. Integration is everything
+        that happens after you walk through it — in the body, in behavior, in relationship, and
+        over time. Without integration, even the most profound experiences fade. With it, they
+        become capacity. TIC is built to hold that process — through weekly practice, a consistent
+        framework, and a community doing the same work alongside you.
+      </FAQParagraph>
+    ),
+  },
+  {
+    question: "Is TIC therapy?",
+    answer: (
+      <FAQParagraph>
+        No. The Infinity Container is not therapy and is not a substitute for clinical care. It is
+        an ongoing integration practice community — built around embodied practice, a consistent
+        framework, and relational support. Many members work with therapists alongside their TIC
+        membership and find the two complement each other well. If you are in crisis or need
+        clinical support, please seek professional care.
+      </FAQParagraph>
+    ),
+  },
+  {
+    question: "Who is TIC for?",
+    answer: (
+      <FAQParagraph>
+        TIC is for two communities: practitioners, therapists, coaches, healers, and space-holders
+        who give endlessly and need a place to be held themselves — and helpers, seekers, and
+        curious humans integrating their own experiences, life transitions, or psychedelic
+        journeys. If you&apos;re not sure where you fit, the Free membership is open to everyone,
+        and our 7-question quiz can help you find the right tier.
+      </FAQParagraph>
+    ),
+  },
+  {
+    question: "Is TIC affiliated with a religion or specific psychedelic substance or protocol?",
+    answer: (
+      <FAQParagraph>
+        No. The Infinity Container is not affiliated with any religion, church, or spiritual
+        tradition. We are not tied to any specific medicine, substance, or protocol. The
+        Solar-Lunar Framework is built on behavioral science, somatic practice, interpersonal
+        neurobiology, and contemplative traditions — drawing from multiple lineages without being
+        doctrine-based. What you work with, how you work with it, and what your beliefs are is
+        yours. TIC holds the practice container. The path is your own.
+      </FAQParagraph>
+    ),
+  },
+  {
+    question: "Do I need a psychedelic experience to join?",
+    answer: (
+      <FAQParagraph>
+        No. Integration is the process of weaving any significant experience into who you are —
+        grief, birth, a major life transition, a creative breakthrough, a spiritual moment. The
+        tools, practices, and framework are the same regardless of whether psychedelics are part
+        of your path. If they are, you&apos;re in the right place. If they&apos;re not, you&apos;re
+        still in the right place.
+      </FAQParagraph>
+    ),
+  },
+  {
+    question: "How do I integrate a psychedelic experience?",
+    answer: (
+      <>
+        <FAQParagraph>Integration begins before the journey.</FAQParagraph>
+        <FAQParagraph>
+          Preparation is the first half of the work — arriving grounded, resourced, and
+          intentional before an experience significantly shapes what you&apos;re able to receive
+          and how you&apos;re able to integrate afterward. This is why the Solar-Lunar Framework
+          includes seven Solar preparation capacities alongside thirteen Lunar integration
+          capacities. The arc is complete: prepare well, integrate fully.
+        </FAQParagraph>
+        <FAQParagraph>
+          After an experience, begin with slowing down. Before you try to make meaning of what
+          happened, give yourself time to simply be with it — in your body, not just your head.
+          Journaling, movement, rest, and nature are all integration practices. So is talking with
+          someone who understands the territory. The most important thing is not to rush back into
+          ordinary life as if nothing happened. Something did happen. Give it room.
+        </FAQParagraph>
+        <FAQParagraph>
+          At TIC, we practice both preparation and integration through the Solar-Lunar Framework —
+          a system that maps the full arc of transformative experience. Each month the community
+          moves through one capacity together, with guided practice, teaching, and community
+          support. You don&apos;t have to figure out what to do next. The framework holds the
+          sequence.
+        </FAQParagraph>
+      </>
+    ),
+  },
+  {
+    question: "What if I had a difficult or overwhelming experience?",
+    answer: (
+      <>
+        <FAQParagraph>
+          You&apos;re not alone, and what you went through doesn&apos;t mean something went wrong
+          with you. Difficult experiences — what some call &ldquo;challenging journeys&rdquo; —
+          often carry the most important material. They&apos;re harder to integrate, not
+          impossible.
+        </FAQParagraph>
+        <FAQParagraph>
+          What helps: grounding practices, rest, time in nature, gentle movement, and support from
+          someone who understands psychedelic experiences without pathologizing them. What
+          doesn&apos;t help: rushing to make it mean something before you&apos;ve had time to
+          settle, or isolating yourself because you don&apos;t know who to tell.
+        </FAQParagraph>
+        <FAQParagraph>
+          TIC&apos;s Community Call is a free, low-pressure space to land. You don&apos;t have to
+          share. You don&apos;t have to have it figured out. Come as you are. The first Saturday of
+          every month, 10:00–11:30am PST.
+        </FAQParagraph>
+        <FAQParagraph>
+          If you are in crisis or having thoughts of harming yourself, please reach out to a crisis
+          line or mental health professional immediately.
+        </FAQParagraph>
+      </>
+    ),
+  },
+  {
+    question: "What's the difference between psychedelic therapy and integration?",
+    answer: (
+      <>
+        <FAQParagraph>
+          Psychedelic therapy typically refers to a clinical model — a therapist-guided session
+          using a psychedelic substance in a therapeutic context, like MDMA-assisted therapy or
+          psilocybin-assisted therapy in a clinical trial or legal setting. It is a specific,
+          structured clinical intervention.
+        </FAQParagraph>
+        <FAQParagraph>
+          Integration is what happens after — and it applies whether or not the experience
+          happened in a clinical setting. Integration is the ongoing practice of making what you
+          found in an expanded state part of who you are: in your body, your behavior, your
+          relationships, and your daily life. It requires time, practice, and support — and it is
+          rarely provided by the clinical model that facilitated the experience.
+        </FAQParagraph>
+        <FAQParagraph>
+          TIC is an integration community, not a therapy practice. We don&apos;t facilitate
+          psychedelic experiences. We support the work that comes after.
+        </FAQParagraph>
+      </>
+    ),
+  },
+  {
+    question: "How long does integration take?",
+    answer: (
+      <>
+        <FAQParagraph>
+          Honestly: it depends on the experience, and on what it opened. Some experiences
+          integrate relatively quickly — weeks to a few months of consistent practice. Others,
+          particularly those that touch deep grief, trauma, or identity, spiral for years.
+          Integration is not linear and it doesn&apos;t have a finish line.
+        </FAQParagraph>
+        <FAQParagraph>
+          The more honest question is not &ldquo;how long will this take&rdquo; but &ldquo;am I
+          giving this what it needs&rdquo; — which means consistent practice, embodied support, a
+          container to return to, and community. TIC is built for the long game. The Solar-Lunar
+          Framework moves through capacities month by month, and many members have been in the
+          container for years — not because they&apos;re stuck, but because integration is an
+          ongoing practice of becoming, not a problem to solve.
+        </FAQParagraph>
+      </>
+    ),
+  },
+];
 
 export default function HomePage() {
   return (
@@ -456,6 +637,9 @@ export default function HomePage() {
         <InlineNewsletter inputBg="bg-white" />
         <p className="mt-4 text-xs text-[#5a570f]">No spam. Unsubscribe anytime.</p>
       </section>
+
+      {/* ── FAQ ────────────────────────────────────────────────────── */}
+      <FAQ items={homeFaqItems} />
 
     </main>
   );
