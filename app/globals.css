@@ -85,3 +85,13 @@ body {
   color: #000;
   font-family: var(--font-serif);
 }
+
+/* With viewport-fit: cover the page runs edge to edge, so in landscape the notch
+   can sit over the nav's outermost controls (TIC: INDEX and Sign In). Hold them
+   inside the safe area; the floor matches the nav's own md:px-8. */
+@media (orientation: landscape) and (max-height: 500px) {
+  body > nav {
+    padding-left: max(2rem, env(safe-area-inset-left));
+    padding-right: max(2rem, env(safe-area-inset-right));
+  }
+}

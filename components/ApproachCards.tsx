@@ -13,6 +13,11 @@ interface ApproachCard {
   paddingBottom: string;
 }
 
+// On mobile the icons share a fixed-width slot, so the card titles start at the same x
+// regardless of which icon sits beside them. Above md the slot collapses to the icon's
+// own width, preserving the original desktop layout.
+const ICON_SLOT = "w-[116px] md:w-auto";
+
 const APPROACH_CARDS: ApproachCard[] = [
   {
     title: "The Solar Spiral",
@@ -59,18 +64,20 @@ export default function ApproachCards() {
         >
           <div className="flex items-center gap-5 mb-4">
             {card.icon && (
-              <Image
-                src={card.icon}
-                alt=""
-                aria-hidden
-                width={90}
-                height={90}
-                style={{ width: card.iconSize ?? 96, height: card.iconSize ?? 96 }}
-                className="shrink-0 -mt-[15px]"
-              />
+              <span className={`shrink-0 flex items-center ${ICON_SLOT}`}>
+                <Image
+                  src={card.icon}
+                  alt=""
+                  aria-hidden
+                  width={90}
+                  height={90}
+                  style={{ width: card.iconSize ?? 96, height: card.iconSize ?? 96 }}
+                  className="-mt-[15px]"
+                />
+              </span>
             )}
             <h3
-              className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[31px] leading-[1.2]"
+              className="font-[family-name:var(--font-gordon)] tracking-[0.06em] text-[28px] md:text-[31px] leading-[1.2]"
               style={{ color: card.titleColor }}
             >
               {card.title}

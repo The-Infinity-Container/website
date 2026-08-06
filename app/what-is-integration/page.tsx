@@ -85,7 +85,7 @@ export default function WhatIsIntegrationPage() {
                 alt="Integration journey"
                 width={600}
                 height={800}
-                className="w-[300px] h-auto rotate-[-12deg]"
+                className="w-[70%] max-w-[300px] h-auto rotate-[-12deg] md:w-[300px]"
               />
             </div>
           </div>
@@ -130,8 +130,11 @@ export default function WhatIsIntegrationPage() {
           </div>
 
           {/* Row 2: Two-column grid with italic text and hand image */}
-          <div className="grid md:grid-cols-[2fr_3fr] gap-[60px] items-center mb-[60px]" style={{ marginTop: "-5em" }}>
-            <div className="flex items-center font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-brown pl-[28px] h-[150px]" style={{ fontSize: "clamp(20px, 2.57vw, 24px)", lineHeight: "1.6", marginTop: "-11em" }}>
+          <div className="grid md:grid-cols-[2fr_3fr] gap-[40px] md:gap-[60px] mb-[40px] md:mb-[60px] md:items-center md:-mt-[5em]">
+            <div
+              className="flex items-center font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-brown pl-[28px] md:h-[150px] md:-mt-[11em]"
+              style={{ fontSize: "clamp(20px, 2.57vw, 24px)", lineHeight: "1.6" }}
+            >
               Insight without integration fades. The journey that could have changed everything becomes a story you tell.
             </div>
             <div>
@@ -140,15 +143,14 @@ export default function WhatIsIntegrationPage() {
                 alt=""
                 width={600}
                 height={600}
-                className="w-full h-auto md:mt-[3em]"
-                style={{ position: "relative", bottom: "10em", left: "9em", width: "80%" }}
+                className="w-[70%] mx-auto h-auto md:w-[80%] md:mx-0 md:mt-[3em] md:relative md:bottom-[10em] md:left-[9em]"
                 aria-hidden
               />
             </div>
           </div>
 
           {/* Row 3: Full-width paragraph and link */}
-          <div style={{ marginTop: "-26em", width: "62%", minHeight: "150px" }}>
+          <div className="md:-mt-[26em] md:w-[62%] md:min-h-[150px]">
             <p className="text-body font-[family-name:var(--font-noto-serif)] italic text-[#222] mb-[24px] text-left">
               Integration takes structure, rhythm, and relationship. It takes a system that honors both the preparation before and the long, spiraling work after. That is what The Infinity Container was built for.
             </p>
@@ -182,7 +184,7 @@ export default function WhatIsIntegrationPage() {
               alt=""
               width={570}
               height={600}
-              className="w-[78%] h-auto ml-[6em]"
+              className="w-[78%] h-auto mx-auto md:mx-0 md:ml-[6em]"
               aria-hidden
             />
           </div>
@@ -244,7 +246,7 @@ export default function WhatIsIntegrationPage() {
               alt="Solar-Lunar Framework"
               width={656}
               height={656}
-              className="mx-auto w-full h-auto"
+              className="mx-auto w-full h-auto hidden md:block"
               style={{ maxWidth: "420px" }}
               aria-hidden
             />
@@ -314,8 +316,7 @@ export default function WhatIsIntegrationPage() {
               alt="Shell"
               width={360}
               height={450}
-              className="h-auto mx-auto md:mx-0"
-              style={{ width: "51%", marginTop: "-13em" }}
+              className="block h-auto w-[15%] mx-auto md:w-[51%] md:mx-0 md:-mt-[13em]"
               aria-hidden
             />
           </div>
@@ -343,7 +344,7 @@ export default function WhatIsIntegrationPage() {
 
           <div className="text-center" style={{ marginTop: "80px" }}>
             <a href="/find-my-membership" className="font-[family-name:var(--font-noto-serif)] text-body italic text-black hover:opacity-70 transition-opacity inline-block underline">
-              Not sure which fits? Take the 7-question quiz →
+              Not sure which fits?<br className="md:hidden" /> Take the 7-question quiz →
             </a>
           </div>
         </div>
@@ -352,7 +353,7 @@ export default function WhatIsIntegrationPage() {
       {/* ── KEEP GOING ──────────────────────────────────────────────── */}
       <section className="px-6 pt-[50px] md:pt-[100px] pb-[50px] md:pb-[100px]" style={{ backgroundColor: "#D5D06A" }}>
         <div className="max-w-[90vw] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] uppercase mb-[44px] text-center" style={{ fontSize: "clamp(57px, 9.72vw, 96px)", color: "black", letterSpacing: "0.09em", marginBottom: "-20px" }}>
+          <p className="font-[family-name:var(--font-gordon)] uppercase text-center mb-[-4px] md:mb-[-20px]" style={{ fontSize: "clamp(57px, 9.72vw, 96px)", color: "black", letterSpacing: "0.09em" }}>
             Keep going.
           </p>
           <p className="font-[family-name:var(--font-noto-serif)] italic text-[23px] mx-auto text-center mb-[30px]" style={{ color: "#7C3537", lineHeight: "37px", maxWidth: "70vw" }}>
@@ -432,8 +433,7 @@ export default function WhatIsIntegrationPage() {
               alt=""
               width={200}
               height={200}
-              className="h-auto"
-              style={{ width: "calc(var(--spacing) * 100)" }}
+              className="h-auto w-[calc(var(--spacing)*70)] md:w-[calc(var(--spacing)*100)]"
               aria-hidden
             />
           </div>
