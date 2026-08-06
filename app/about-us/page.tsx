@@ -3,6 +3,7 @@ import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
 import SectionHeading from "@/components/SectionHeading";
 import BodyText from "@/components/BodyText";
+import ReadMoreCollapse from "@/components/ReadMoreCollapse";
 
 export const metadata: Metadata = {
   title: "About | The Infinity Container",
@@ -67,7 +68,7 @@ export default function AboutUsPage() {
       <section className="bg-tic-yellow px-6 py-[50px] md:py-[100px] relative overflow-hidden">
         <div className="max-w-[1290px] mx-auto relative">
           <div className="absolute inset-0 flex flex-col pointer-events-none select-none" aria-hidden="true">
-            <div className="relative w-[90%] mx-auto h-1/2 overflow-hidden opacity-30">
+            <div className="relative w-full h-1/2 overflow-hidden opacity-30">
               <Image
                 src="/assets/infinity-container-sketch.jpg"
                 alt=""
@@ -75,7 +76,7 @@ export default function AboutUsPage() {
                 className="object-cover object-top rounded-[4px]"
               />
             </div>
-            <div className="relative w-[90%] mx-auto h-1/2 overflow-hidden opacity-30">
+            <div className="relative w-full h-1/2 overflow-hidden opacity-30">
               <Image
                 src="/assets/infinity-container-sketch.jpg"
                 alt=""
@@ -92,16 +93,18 @@ export default function AboutUsPage() {
               <BodyText className="mb-6">I started seeing integration opportunities everywhere. In grief. In role changes. In transformative moments and psychedelic journeys.</BodyText>
               <BodyText className="mb-6">And in myself. I was a young behaviorist then, working with children — and in doing that work, I began to update my own developmental holes, the ones that opened around age six, when my mother died. Riding the subway between clients&apos; homes and schools, I began to feel the in-between itself — the shift, the time it takes to shift, the awareness it takes to transform — and how the digital age was quietly taking that time from us.</BodyText>
               <BodyText className="mb-6">We stopped digesting life.</BodyText>
-              <BodyText className="mb-6">We became trapped in a thinking mind that dictates reality, disconnected from the body that holds a more accurate reading of the present truth. Fragmentation causes overwhelm, burnout, dissociation, abuse, pain, disease, war, scarcity. We cut ourselves off from what&apos;s here, and often live inside a program written in the past.</BodyText>
-              <BodyText className="mb-6">During COVID, that awareness became urgent. We needed something to better help people manage the new version of chaos life brought forward — and particularly a way to help buoy the helpers. The mushrooms came to me in my dreams, and I answered the call. I helped create a psychedelic company focused on microdosing — building a practitioner program, weekly trainings, and a curriculum certifying practitioners to help their clients work with the medicine.</BodyText>
-              <BodyText className="mb-6">When I left that business, I saw a profound gap. Integration had become a buzzword — but no communities were offering the containment, consistency, and support the work actually requires. I hadn&apos;t seen a program that names the capacities needed to integrate more fluidly with life.</BodyText>
-              <BodyText className="mb-6">I didn&apos;t just come to this work as a facilitator; I came to it as a behaviorist. Training with Dr. Douglas Greer taught me to think about human development not as a list of skills to teach, but as the induction of whole repertoires of capacity. The capacity, not the skill.</BodyText>
-              <BodyText className="mb-6">So I built The Infinity Container. I was grieving many aspects of my life at the time and started paying closer attention to what I was needing to integrate. I needed a Salon, to listen to others and be heard. A practice space not to verbally process, but to feel the capacities I needed to grow. A practitioner&apos;s lab that could be both laboratory and playground. A container that was flexible but consistent, and an ecosystem that could hold the helpers, too.</BodyText>
-              <BodyText className="mb-6">After decades of building these capacities with clients, what I found missing was a way for the nervous system to trust the bottom-up processing of life again. To trust the magic of the body — and its place in something larger. Our society relentlessly orients us toward the myopic top-down — the cognitive, the psychological — and the pace of modern life doesn&apos;t support anyone&apos;s growth toward a more integrated state. Watching what people move through with entheogens and integration, and what I moved through myself, has been like watching years of therapy get digested into the body in a matter of weeks. The entropic state of the journey moves us from the thinking mind down into the felt experience of awake aliveness.</BodyText>
-              <BodyText className="mb-6">Grief has always done this to me too.</BodyText>
-              <p className="font-[family-name:var(--font-noto-serif)] italic text-[13px] mt-2" style={{ color: "#4f4a15" }}>
-                A page from Edu&apos;s sketchbook, imagining the container before it existed.
-              </p>
+              <ReadMoreCollapse buttonClassName="text-[#6a6410]">
+                <BodyText className="mb-6">We became trapped in a thinking mind that dictates reality, disconnected from the body that holds a more accurate reading of the present truth. Fragmentation causes overwhelm, burnout, dissociation, abuse, pain, disease, war, scarcity. We cut ourselves off from what&apos;s here, and often live inside a program written in the past.</BodyText>
+                <BodyText className="mb-6">During COVID, that awareness became urgent. We needed something to better help people manage the new version of chaos life brought forward — and particularly a way to help buoy the helpers. The mushrooms came to me in my dreams, and I answered the call. I helped create a psychedelic company focused on microdosing — building a practitioner program, weekly trainings, and a curriculum certifying practitioners to help their clients work with the medicine.</BodyText>
+                <BodyText className="mb-6">When I left that business, I saw a profound gap. Integration had become a buzzword — but no communities were offering the containment, consistency, and support the work actually requires. I hadn&apos;t seen a program that names the capacities needed to integrate more fluidly with life.</BodyText>
+                <BodyText className="mb-6">I didn&apos;t just come to this work as a facilitator; I came to it as a behaviorist. Training with Dr. R. Douglas Greer taught me to think about human development not as a list of skills to teach, but as the induction of whole repertoires of capacity. The capacity, not the skill.</BodyText>
+                <BodyText className="mb-6">So I built The Infinity Container. I was grieving many aspects of my life at the time and started paying closer attention to what I was needing to integrate. I needed a Salon, to listen to others and be heard. A practice space not to verbally process, but to feel the capacities I needed to grow. A practitioner&apos;s lab that could be both laboratory and playground. A container that was flexible but consistent, and an ecosystem that could hold the helpers, too.</BodyText>
+                <BodyText className="mb-6">After decades of building these capacities with clients, what I found missing was a way for the nervous system to trust the bottom-up processing of life again. To trust the magic of the body — and its place in something larger. Our society relentlessly orients us toward the myopic top-down — the cognitive, the psychological — and the pace of modern life doesn&apos;t support anyone&apos;s growth toward a more integrated state. Watching what people move through with entheogens and integration, and what I moved through myself, has been like watching years of therapy get digested into the body in a matter of weeks. The entropic state of the journey moves us from the thinking mind down into the felt experience of awake aliveness.</BodyText>
+                <BodyText className="mb-6">Grief has always done this to me too.</BodyText>
+                <p className="font-[family-name:var(--font-noto-serif)] italic text-[13px] mt-2" style={{ color: "#4f4a15" }}>
+                  A page from Edu&apos;s sketchbook, imagining the container before it existed.
+                </p>
+              </ReadMoreCollapse>
             </div>
           </div>
         </div>

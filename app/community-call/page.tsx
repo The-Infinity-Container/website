@@ -152,7 +152,7 @@ export default function CommunityCallPage() {
       </header>
 
       {/* ── What is it? ────────────────────────────────────────────── */}
-      <section className="bg-[#fcfcfc] px-6 py-[50px] md:py-[100px]">
+      <section className="bg-[#fcfcfc] px-6 py-[50px] md:py-[100px]" style={{ marginTop: "-2em", paddingBottom: "0px" }}>
         <div className="max-w-[1290px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:mb-[-50px]">
             <div className="order-1 md:order-none">
@@ -190,7 +190,7 @@ export default function CommunityCallPage() {
               alt=""
               width={500}
               height={500}
-              className="w-full h-auto"
+              className="w-[80%] h-auto"
             />
             <p
               className="font-[family-name:var(--font-noto-serif)] italic leading-[1.6] text-tic-brown border-l-[3px] border-tic-brown pl-7"
@@ -258,7 +258,7 @@ export default function CommunityCallPage() {
       {/* ── Testimonials ───────────────────────────────────────────── */}
       <section className="bg-[#fcfcfc] px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto">
-          <div className="max-w-[980px] mx-auto">
+          <div>
             <div className="flex flex-col md:flex-row justify-between items-start gap-6">
               <div>
                 <SectionLabel>What members say</SectionLabel>
@@ -269,7 +269,15 @@ export default function CommunityCallPage() {
                 alt=""
                 width={76}
                 height={82}
-                className="w-[130px] shrink-0 md:w-[234px] md:mr-[-17em]"
+                className="w-[130px] shrink-0 md:w-[234px]"
+                style={{
+                  position: "relative",
+                  bottom: "4em",
+                  // Overhangs the 1290px container by up to 6em on wide screens, but
+                  // shrinks on narrower ones so it never crosses the viewport edge
+                  // (the page hides horizontal overflow instead of scrolling to it).
+                  marginRight: "calc(-1 * min(6em, 8px + max(0px, (100vw - 1338px) / 2)))",
+                }}
               />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-9 -mt-[3em]">
@@ -421,7 +429,13 @@ export default function CommunityCallPage() {
               width={1203}
               height={1662}
               className="h-auto mx-auto md:mx-0"
-              style={{ width: "51%", marginTop: "-13em" }}
+              style={{
+                width: "51%",
+                // Full -13em (-208px) pull-up only kicks in at >=1728px wide, where the
+                // shell clears the heading text horizontally. Below that it scales down
+                // to 0 by 1280px wide, so it never rises into the heading on narrow screens.
+                marginTop: "clamp(-208px, calc((1280px - 100vw) * 0.4643), 0px)",
+              }}
               aria-hidden
             />
           </div>
