@@ -105,7 +105,7 @@ export default function WhatIsIntegrationPage() {
 
       {/* ── THE GAP SECTION ───────────────────────────────────────── */}
       <section className="bg-tic-grey px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[90vw] mx-auto">
           {/* Row 1: Label, heading, first paragraph */}
           <div className="mb-[24px] md:mb-[-36px]">
             <SectionLabel>The gap</SectionLabel>
@@ -131,7 +131,7 @@ export default function WhatIsIntegrationPage() {
 
           {/* Row 2: Two-column grid with italic text and hand image */}
           <div className="grid md:grid-cols-[2fr_3fr] gap-[60px] items-center mb-[60px]" style={{ marginTop: "-5em" }}>
-            <div className="flex items-center font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-brown pl-[28px] min-h-[300px]" style={{ fontSize: "clamp(20px, 2.57vw, 24px)", lineHeight: "1.6" }}>
+            <div className="flex items-center font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-brown pl-[28px] h-[150px]" style={{ fontSize: "clamp(20px, 2.57vw, 24px)", lineHeight: "1.6", marginTop: "-11em" }}>
               Insight without integration fades. The journey that could have changed everything becomes a story you tell.
             </div>
             <div>
@@ -140,22 +140,20 @@ export default function WhatIsIntegrationPage() {
                 alt=""
                 width={600}
                 height={600}
-                className="w-full h-auto md:w-[72%] md:mt-[3em]"
+                className="w-full h-auto md:mt-[3em]"
+                style={{ position: "relative", bottom: "10em", left: "9em", width: "80%" }}
                 aria-hidden
               />
             </div>
           </div>
 
           {/* Row 3: Full-width paragraph and link */}
-          <div>
-            <p
-              className="font-[family-name:var(--font-noto-serif)] italic text-[#222] mb-[24px] text-center"
-              style={{ fontSize: "clamp(20px, 2.57vw, 24px)" }}
-            >
+          <div style={{ marginTop: "-26em", width: "62%", minHeight: "150px" }}>
+            <p className="text-body font-[family-name:var(--font-noto-serif)] italic text-[#222] mb-[24px] text-left">
               Integration takes structure, rhythm, and relationship. It takes a system that honors both the preparation before and the long, spiraling work after. That is what The Infinity Container was built for.
             </p>
 
-            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#why-a-container" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[18px] hover:opacity-70 transition-opacity block w-full text-center mt-[6rem]">
+            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#why-a-container" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[18px] hover:opacity-70 transition-opacity block w-full text-center mt-[3rem]">
               <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: why integration needs a container →</span>
             </a>
           </div>
