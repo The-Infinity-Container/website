@@ -205,8 +205,26 @@ export default function HomePage() {
                 className="w-[422.5px] h-auto scale-x-[-1]"
               />
             </div>
-            <div className="w-full max-w-md relative z-10" style={{ marginBottom: "-7em" }}>
-              <SpotifyEmbed />
+            <div className="w-full max-w-md relative z-10" style={{ marginBottom: "-7em", marginTop: "5em" }}>
+              <Image
+                src="/assets/mushrooms-trio.svg"
+                alt=""
+                aria-hidden
+                width={233}
+                height={359}
+                className="lg:hidden absolute -top-21 left-2 z-0 w-14 h-auto scale-x-[-1] pointer-events-none"
+              />
+              <Image
+                src="/assets/mushrooms-trio.svg"
+                alt=""
+                aria-hidden
+                width={233}
+                height={359}
+                className="lg:hidden absolute -top-21 right-2 z-0 w-14 h-auto pointer-events-none"
+              />
+              <div className="relative z-10">
+                <SpotifyEmbed />
+              </div>
             </div>
             <div className="hidden lg:flex lg:justify-start flex-shrink-0 relative z-0 -ml-[17.5rem]">
               <Image
