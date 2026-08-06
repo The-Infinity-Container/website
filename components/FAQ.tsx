@@ -22,7 +22,7 @@ export default function FAQ({
   return (
     <section className="bg-white px-6 py-[55px] md:py-[110px]">
       <div className="max-w-[1290px] mx-auto">
-        <div className="max-w-[820px]">
+        <div className="max-w-[80vw]">
           <SectionLabel>{label}</SectionLabel>
           <SectionHeading>{heading}</SectionHeading>
           <div className="flex flex-col border-t border-black/10">
@@ -49,7 +49,7 @@ function FAQRow({ item }: { item: FAQItem }) {
         aria-controls={panelId}
         className="w-full flex items-center justify-between gap-6 py-6 text-left"
       >
-        <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] text-black leading-[1.4]" style={{ fontSize: "clamp(15px, 1.8vw, 18px)" }}>
+        <span className="font-[family-name:var(--font-noto-serif)] tracking-[0.02em] text-black leading-[1.4]" style={{ fontSize: "clamp(15px, 1.8vw, 18px)" }}>
           {item.question}
         </span>
         <PlusMinusIcon open={open} />
