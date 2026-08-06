@@ -6,7 +6,6 @@ export default function SpotifyEmbed() {
         style={{ borderRadius: 12, width: "100%", height: 280 }}
         frameBorder={0}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
         title="The Infinity Container Playlist"
       />
     </div>

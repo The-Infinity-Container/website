@@ -50,7 +50,7 @@ export default function AboutUsPage() {
                 I&apos;m Dr. Victoria Sterkin — behavior analyst, therapist, integration specialist, and above all else, a helper. The Infinity Container is the space I spent twenty-five years learning how to build.
               </p>
             </div>
-            <div className="ml-auto rounded-[3px] overflow-hidden" style={{ marginLeft: "-1em" }}>
+            <div className="flex justify-center md:block md:-ml-[1em] rounded-[3px] overflow-hidden">
               <Image
                 src="/assets/victoria.jpg"
                 alt="Dr. Victoria Sterkin"
@@ -66,7 +66,11 @@ export default function AboutUsPage() {
 
       {/* ── My story ───────────────────────────────────────────────── */}
       <section className="bg-tic-yellow px-6 py-[50px] md:py-[100px] relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -mt-[14em] w-screen -translate-x-1/2 flex flex-col opacity-30 pointer-events-none select-none" aria-hidden="true">
+        {/* Desktop: two stacked, mirrored copies sized to a fixed height (unchanged). */}
+        <div
+          className="hidden md:flex md:flex-col absolute top-0 left-1/2 -mt-[14em] w-screen -translate-x-1/2 opacity-30 pointer-events-none select-none"
+          aria-hidden="true"
+        >
           <Image
             src="/assets/infinity-container-sketch.jpg"
             alt=""
@@ -82,6 +86,19 @@ export default function AboutUsPage() {
             className="relative bottom-[3em] block w-full h-auto -scale-y-100"
           />
         </div>
+        {/* Mobile: a true repeating background, so it always covers the section however
+            tall the story text (and its "read more" expansion) makes it — the fixed-height
+            stacked-image approach above runs out well before the content does on mobile. */}
+        <div
+          className="md:hidden absolute inset-0 opacity-30 pointer-events-none select-none"
+          style={{
+            backgroundImage: "url(/assets/infinity-container-sketch.jpg)",
+            backgroundRepeat: "repeat-y",
+            backgroundSize: "100% auto",
+            backgroundPosition: "top center",
+          }}
+          aria-hidden="true"
+        />
         <div className="max-w-[1290px] mx-auto relative">
           <div className="relative z-10">
             <SectionLabel color="text-[#6a6410]">My story</SectionLabel>
@@ -159,7 +176,7 @@ export default function AboutUsPage() {
             alt=""
             width={752}
             height={1173}
-            className="float-right w-[213px] ml-7 mb-4 -mt-2"
+            className="float-right w-[70px] md:w-[213px] ml-7 mb-4 -mt-2"
             style={{ filter: "invert(0.48)" }}
           />
           <SectionLabel>Why the Infinity Container</SectionLabel>
@@ -195,7 +212,7 @@ export default function AboutUsPage() {
               />
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-22 mt-[150px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[53px] md:gap-22 mt-[40px] md:mt-[150px]">
             <div className="border-[3px] border-[#0b0d10]/12 px-4 py-8">
               <div className="w-[70%] mx-auto">
                 <div className="aspect-square overflow-hidden bg-tic-grey mb-5">
@@ -269,8 +286,13 @@ export default function AboutUsPage() {
                 </a>
               ) : (
                 <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.1em] text-[17px]">{g.name}</span>
-              )}{" "}
-              <span className="font-[family-name:var(--font-noto-serif)] italic text-tic-brown text-[15px]">— {g.credit}</span>
+              )}
+              <br className="md:hidden" />
+              <span className="hidden md:inline"> </span>
+              <span className="font-[family-name:var(--font-noto-serif)] italic text-tic-brown text-[15px]">
+                <span className="hidden md:inline">— </span>
+                {g.credit}
+              </span>
             </div>
           ))}
           <p className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.08em] text-[15px] leading-[1.5] max-w-[480px] mx-auto mt-6">

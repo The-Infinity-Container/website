@@ -68,7 +68,7 @@ export default function NewsletterPopup() {
         </h2>
         <p className="font-[family-name:var(--font-noto-serif)] text-body max-w-[460px] mx-auto mb-8 text-[#2a2a1a]">
           The TIC newsletter brings you integration frameworks, somatic tools, and practitioner
-          resources — rooted in the Solar-Lunar system. Written by<br className="md:hidden" /> Dr. Victoria Sterkin.
+          resources — rooted in the Solar-Lunar system. Written by Dr. Victoria Sterkin.
         </p>
         <InlineNewsletter inputBg="bg-white" onSuccess={handleSuccess} />
         <p className="mt-4 text-xs text-[#5a570f]">No spam. Unsubscribe anytime.</p>

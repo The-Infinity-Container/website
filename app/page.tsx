@@ -82,7 +82,7 @@ export default function HomePage() {
             href={SIGNIN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="block mt-3 mb-5 md:mb-0 text-sm text-tic-yellow"
+            className="block mt-5 md:mt-3 mb-7 md:mb-0 text-sm text-tic-yellow"
           >
             Already a member? Sign in
           </a>
@@ -453,7 +453,7 @@ export default function HomePage() {
         </h2>
         <p className="font-[family-name:var(--font-noto-serif)] text-body max-w-[560px] mx-auto mb-10 text-[#2a2a1a]">
           The TIC newsletter brings you integration frameworks, somatic tools, and practitioner
-          resources — rooted in the Solar-Lunar system. Written by<br className="md:hidden" /> Dr. Victoria Sterkin.
+          resources — rooted in the Solar-Lunar system. Written by Dr. Victoria Sterkin.
         </p>
         <InlineNewsletter inputBg="bg-white" />
         <p className="mt-4 text-xs text-[#5a570f]">No spam. Unsubscribe anytime.</p>
