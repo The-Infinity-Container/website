@@ -115,7 +115,7 @@ export default function PartnershipsPage() {
               />
             </div>
             <div className="flex flex-col">
-              <SectionLabel>Women&apos;s Health · Fasting · Hormones</SectionLabel>
+              <SectionLabel>Women&apos;s Health <span className="hidden md:inline">· </span>Fasting · Hormones</SectionLabel>
               <SectionHeading>Reset Academy</SectionHeading>
               <p
                 className="font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-yellow pl-5 mb-5"

@@ -68,7 +68,7 @@ export default function CommunityCallPage() {
           Once a month, we gather. You don&apos;t have to be ready for anything else.
         </p>
 
-        <div className="relative inline-flex flex-col items-center border border-[#0b0d10]/20 rounded px-24 pt-14 pb-24 mb-[52px] max-w-[1100px] w-full">
+        <div className="relative inline-flex flex-col items-center border border-[#0b0d10]/20 rounded px-2.5 pt-0 pb-0 md:px-24 md:pt-14 md:pb-24 mb-[52px] max-w-[1100px] w-full">
           <Image
             src="/assets/bee-disco-2.png"
             alt=""
@@ -84,19 +84,19 @@ export default function CommunityCallPage() {
             className="hidden md:block absolute w-[120px] right-[9px] bottom-6 rotate-[8deg] z-10"
           />
           <p
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[#0b0d10] py-3.5"
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[#0b0d10] py-8 md:py-3.5"
             style={{ fontSize: "clamp(14px, 1.8vw, 17px)" }}
           >
-            First Saturday of the month
+            First Saturday<br className="md:hidden" /> of the month
           </p>
           <p
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[#0b0d10] py-3.5 w-full text-center border-t border-[#0b0d10]/12"
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[#0b0d10] py-8 md:py-3.5 w-full text-center border-t border-[#0b0d10]/12"
             style={{ fontSize: "clamp(14px, 1.8vw, 17px)" }}
           >
             <LocalCallTime />
           </p>
           <p
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[#0b0d10] py-3.5 w-full text-center border-t border-[#0b0d10]/12"
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[#0b0d10] py-8 md:py-3.5 w-full text-center border-t border-[#0b0d10]/12"
             style={{ fontSize: "clamp(14px, 1.8vw, 17px)" }}
           >
             Free to attend · Zoom link inside the free membership
@@ -124,7 +124,7 @@ export default function CommunityCallPage() {
         </a>
 
         <div className="mx-auto">
-          <div className="grid grid-cols-3 gap-2 md:gap-10 items-center max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-[1fr_2.2fr_1fr] gap-2 mt-[2em] mb-[2em] md:grid-cols-3 md:gap-10 md:mt-0 md:mb-0 items-center max-w-[1400px] mx-auto">
             <Image
               src="/assets/satellite.svg"
               alt=""
@@ -168,7 +168,7 @@ export default function CommunityCallPage() {
               alt=""
               width={556}
               height={538}
-              className="w-[336px] shrink-0 mt-1 mb-2 md:mb-0 order-0 md:order-none md:-translate-x-[50px] -translate-y-[100px]"
+              className="w-[336px] shrink-0 mt-1 mb-2 md:mb-0 order-0 md:order-none md:-translate-x-[50px] md:-translate-y-[100px]"
             />
           </div>
 
@@ -190,10 +190,10 @@ export default function CommunityCallPage() {
               alt=""
               width={500}
               height={500}
-              className="w-[80%] h-auto"
+              className="w-[80%] h-auto mx-auto md:mx-0"
             />
             <p
-              className="font-[family-name:var(--font-noto-serif)] italic leading-[1.6] text-tic-brown border-l-[3px] border-tic-brown pl-7"
+              className="font-[family-name:var(--font-noto-serif)] italic leading-[1.6] text-tic-brown border-l-[3px] border-tic-brown pl-7 mb-[3em] md:mb-0"
               style={{ fontSize: "clamp(20px, 3vw, 26px)" }}
             >
               &quot;It&apos;s so important to have space to feel spacious. To process all that we are experiencing. To keep us more awake alive.&quot;
@@ -224,7 +224,7 @@ export default function CommunityCallPage() {
                 </p>
               ))}
             </div>
-            <div className="w-[69%]">
+            <div className="md:w-[69%]">
               {RIGHT_REASONS.map((r) => (
                 <p
                   key={r}
@@ -238,7 +238,7 @@ export default function CommunityCallPage() {
 
           <div className="grid grid-cols-1 md:[grid-template-columns:minmax(0,65%)_minmax(0,35%)] gap-8 text-center">
             <p
-              className="font-[family-name:var(--font-noto-serif)] italic text-body text-tic-brown text-center pt-10 md:pt-0"
+              className="font-[family-name:var(--font-noto-serif)] italic text-body text-tic-brown text-center pt-0 md:pt-0"
             >
               Turn off your video. Lay down if you need to. Any level of participation is welcome.
               <br />
@@ -249,7 +249,7 @@ export default function CommunityCallPage() {
               alt=""
               width={147}
               height={293}
-              className="relative z-10 w-[270px] mx-auto md:mx-0 md:ml-auto md:-mt-[447px]"
+              className="relative z-10 w-[171px] mx-auto md:w-[270px] md:mx-0 md:ml-auto md:-mt-[447px]"
             />
           </div>
         </div>
@@ -269,10 +269,8 @@ export default function CommunityCallPage() {
                 alt=""
                 width={76}
                 height={82}
-                className="w-[130px] shrink-0 md:w-[234px]"
+                className="relative w-[130px] shrink-0 self-center mb-12 md:w-[234px] md:bottom-[4em] md:self-auto md:mb-0"
                 style={{
-                  position: "relative",
-                  bottom: "4em",
                   // Overhangs the 1290px container by up to 6em on wide screens, but
                   // shrinks on narrower ones so it never crosses the viewport edge
                   // (the page hides horizontal overflow instead of scrolling to it).
@@ -280,7 +278,7 @@ export default function CommunityCallPage() {
                 }}
               />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-9 -mt-[3em]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-9 md:-mt-[3em]">
               {TESTIMONIALS.map((t) => (
                 <div key={t.cite} className="flex flex-col">
                   <blockquote className="font-[family-name:var(--font-noto-serif)] italic text-body text-[#0b0d10] border-l-[3px] border-tic-pink pl-[22px] mb-[18px] grow">
@@ -428,9 +426,8 @@ export default function CommunityCallPage() {
               alt="Shell"
               width={1203}
               height={1662}
-              className="h-auto mx-auto md:mx-0"
+              className="h-auto mx-auto w-[49px] md:mx-0 md:w-[51%]"
               style={{
-                width: "51%",
                 // Full -13em (-208px) pull-up only kicks in at >=1728px wide, where the
                 // shell clears the heading text horizontally. Below that it scales down
                 // to 0 by 1280px wide, so it never rises into the heading on narrow screens.
@@ -468,7 +465,7 @@ export default function CommunityCallPage() {
               href="/find-my-membership"
               className="font-[family-name:var(--font-noto-serif)] text-body italic text-[#0b0d10] underline decoration-1 underline-offset-4 hover:text-tic-brown transition-colors"
             >
-              Not sure which fits? Take the 7-question quiz →
+              Not sure which fits?<br className="md:hidden" /> Take the 7-question quiz →
             </a>
           </div>
         </div>

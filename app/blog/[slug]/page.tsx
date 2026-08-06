@@ -173,13 +173,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="flex gap-4 justify-center flex-wrap">
           <a
             href="/community-call"
-            className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.12em] uppercase bg-tic-orange text-black px-7 py-3.5 rounded hover:bg-tic-pink transition-colors"
+            className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.12em] uppercase bg-tic-orange text-black px-4 md:px-7 py-3.5 rounded hover:bg-tic-pink transition-colors"
           >
             Join a Free Community Call →
           </a>
           <a
             href="/find-my-membership"
-            className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.12em] uppercase border-2 border-black text-black px-7 py-3.5 rounded hover:bg-black hover:text-white transition-colors"
+            className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.12em] uppercase border-2 border-black text-black px-4 md:px-7 py-3.5 rounded hover:bg-black hover:text-white transition-colors"
           >
             Find My Membership →
           </a>
