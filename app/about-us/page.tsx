@@ -184,13 +184,13 @@ export default function AboutUsPage() {
               <SectionLabel>The people</SectionLabel>
               <SectionHeading marginBottom="0">The hands that build the container.</SectionHeading>
             </div>
-            <div className="absolute right-[36em] top-[8em] w-[84px] md:w-[130px]">
+            <div className="absolute right-[36em] top-[8em] w-[252px] md:w-[390px]">
               <Image
                 src="/assets/spider-with-line.svg"
                 alt=""
-                width={102}
-                height={386}
-                className="relative bottom-[19em] w-full h-auto"
+                width={612}
+                height={612}
+                className="relative bottom-[14.3em] left-[8em] w-full h-auto"
               />
             </div>
           </div>

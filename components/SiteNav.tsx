@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // Routes that render the nav in its dark variant (pink links, yellow logo) —
 // used on pages that open with a black section at the top.
@@ -39,6 +39,11 @@ export default function SiteNav() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const isDark = DARK_NAV_ROUTES.some((r) => (r === "/" ? pathname === "/" : pathname.startsWith(r)));
+
+  useEffect(() => {
+    setDropdownOpen(null);
+    setDrawerOpen(false);
+  }, [pathname]);
 
   function isActive(href: string) {
     if (href === "/") return pathname === "/";
