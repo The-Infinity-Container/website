@@ -164,10 +164,10 @@ export default function CommunityCallPage() {
               </SectionHeading>
             </div>
             <Image
-              src="/assets/Lunar.png"
+              src="/assets/lunar-rebuilt-final.svg"
               alt=""
-              width={500}
-              height={500}
+              width={556}
+              height={538}
               className="w-[336px] shrink-0 mt-1 mb-2 md:mb-0 order-0 md:order-none md:-translate-x-[50px] -translate-y-[100px]"
             />
           </div>

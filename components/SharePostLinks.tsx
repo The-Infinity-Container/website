@@ -21,22 +21,6 @@ export default function SharePostLinks({ slug }: { slug: string }) {
         Share
       </p>
       <div className="flex gap-3 flex-wrap">
-        <a
-          href="https://www.instagram.com/theinfinitycontainer"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={linkClass}
-        >
-          Instagram
-        </a>
-        <a
-          href="https://substack.com/@theinfinitycontainer"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={linkClass}
-        >
-          Substack
-        </a>
         <button type="button" onClick={handleCopy} className={linkClass}>
           {copied ? "Copied!" : "Copy link"}
         </button>
