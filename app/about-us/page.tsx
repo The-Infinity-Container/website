@@ -66,23 +66,21 @@ export default function AboutUsPage() {
 
       {/* ── My story ───────────────────────────────────────────────── */}
       <section className="bg-tic-yellow px-6 py-[50px] md:py-[100px] relative overflow-hidden">
-        <div className="absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 flex flex-col pointer-events-none select-none" aria-hidden="true">
-          <div className="relative w-full h-1/2 overflow-hidden opacity-30">
-            <Image
-              src="/assets/infinity-container-sketch.jpg"
-              alt=""
-              fill
-              className="object-cover object-top rounded-[4px]"
-            />
-          </div>
-          <div className="relative w-full h-1/2 overflow-hidden opacity-30">
-            <Image
-              src="/assets/infinity-container-sketch.jpg"
-              alt=""
-              fill
-              className="object-cover object-bottom rounded-[4px] -scale-y-100"
-            />
-          </div>
+        <div className="absolute top-0 left-1/2 -mt-[14em] w-screen -translate-x-1/2 flex flex-col opacity-30 pointer-events-none select-none" aria-hidden="true">
+          <Image
+            src="/assets/infinity-container-sketch.jpg"
+            alt=""
+            width={1500}
+            height={1159}
+            className="block w-full h-auto"
+          />
+          <Image
+            src="/assets/infinity-container-sketch.jpg"
+            alt=""
+            width={1500}
+            height={1159}
+            className="relative bottom-[3em] block w-full h-auto -scale-y-100"
+          />
         </div>
         <div className="max-w-[1290px] mx-auto relative">
           <div className="relative z-10">
