@@ -330,7 +330,7 @@ export default function HomePage() {
               href="/find-my-membership"
               className="font-[family-name:var(--font-noto-serif)] italic text-body underline underline-offset-4 hover:text-tic-brown transition-colors"
             >
-              Not sure which path fits you? Take the 7-question quiz →
+              Not sure which path fits you?<br className="md:hidden" /> Take the 7-question quiz →
             </Link>
           </div>
         </div>
