@@ -34,7 +34,7 @@ export default function BlogPostList({ posts }: { posts: Post[] }) {
                 key={tab.key}
                 type="button"
                 onClick={() => setActive(tab.key)}
-                className="font-[family-name:var(--font-gordon)] uppercase px-6 first:pl-0 py-[18px] mr-[2em] whitespace-nowrap transition-colors cursor-pointer"
+                className="font-[family-name:var(--font-gordon)] uppercase px-3 first:pl-0 py-[18px] mr-3 md:px-6 md:mr-[2em] whitespace-nowrap transition-colors cursor-pointer"
                 style={{ color: tab.color, fontSize: "18px", letterSpacing: "0.42px" }}
               >
                 <span

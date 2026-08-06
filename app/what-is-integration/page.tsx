@@ -299,7 +299,17 @@ export default function WhatIsIntegrationPage() {
       {/* ── HOW YOU LIVE IT ───────────────────────────────────────── */}
       <section className="bg-white px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
         <div className="max-w-[90vw] mx-auto">
-          <SectionLabel>How you live it</SectionLabel>
+          <div className="flex items-start justify-between md:block">
+            <SectionLabel>How you live it</SectionLabel>
+            <Image
+              src="/assets/shell.svg"
+              alt="Shell"
+              width={360}
+              height={450}
+              className="md:hidden h-auto w-12"
+              aria-hidden
+            />
+          </div>
           <SectionHeading>
             The framework isn't something
             <br />
@@ -316,7 +326,7 @@ export default function WhatIsIntegrationPage() {
               alt="Shell"
               width={360}
               height={450}
-              className="block h-auto w-[15%] mx-auto md:w-[51%] md:mx-0 md:-mt-[13em]"
+              className="hidden md:block h-auto md:w-[51%] md:mx-0 md:-mt-[13em]"
               aria-hidden
             />
           </div>

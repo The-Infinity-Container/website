@@ -21,12 +21,13 @@ export default function Footer() {
           {/* Center column - window view image (equal-flex flanks on either side keep this
               mathematically centered regardless of how wide the left/right content is) */}
           <div className="flex flex-col items-center">
-            <img
-              src="/assets/window-view-yellow.svg"
-              alt=""
-              style={{ width: "213.5px", height: "auto", maxWidth: "100%" }}
-              aria-hidden
-            />
+            <a href="https://the-infinity-container.mn.co/sign_in" target="_blank" rel="noopener noreferrer" aria-label="Log in to The Infinity Container" className="hover:opacity-70 transition-opacity">
+              <img
+                src="/assets/window-view-yellow.svg"
+                alt=""
+                style={{ width: "213.5px", height: "auto", maxWidth: "100%" }}
+              />
+            </a>
             <a href="https://the-infinity-container.mn.co/sign_in" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-noto-serif)] mt-[13.3px] hover:opacity-70 transition-opacity" style={{ color: "#D5D06A", fontSize: "14.7px", lineHeight: "23.8px" }}>
               Log In
             </a>
@@ -34,7 +35,7 @@ export default function Footer() {
 
           {/* Right column - socials and logo */}
           <div className="flex flex-col relative md:flex-1 xl:items-end">
-            <div className="flex flex-col items-center gap-[16.8px] xl:flex-row xl:items-start xl:gap-[39.2px]">
+            <div className="flex flex-row items-center justify-between w-full gap-[16.8px] md:flex-col md:items-center md:justify-normal md:w-auto xl:flex-row xl:items-start xl:justify-normal xl:gap-[39.2px]">
               {/* Socials + email column */}
               <div className="xl:ml-[126px]">
                 <p className="font-[family-name:var(--font-noto-serif)] text-[14.7px] mb-[8.4px]" style={{ lineHeight: "23.8px" }}>
@@ -62,7 +63,7 @@ export default function Footer() {
               <img
                 src="/assets/tic-globe-logo.svg"
                 alt="The Infinity Container"
-                className="h-[130.9px] flex-shrink-0 -mt-[161.7px] -mr-[66.5px] md:mt-0 md:mr-0 xl:-mt-[27.3px] xl:-ml-[181.3px]"
+                className="h-[130.9px] flex-shrink-0 xl:-mt-[27.3px] xl:-ml-[181.3px]"
               />
             </div>
           </div>

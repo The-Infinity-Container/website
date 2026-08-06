@@ -17,13 +17,13 @@ export default function BlogHero() {
             Essays, frameworks, and field notes from the practice of becoming.
           </p>
         </div>
-        <div className="hidden md:flex items-end justify-end">
+        <div className="flex items-end justify-end">
           <Image
-            src="/assets/blog-hero-octopus-blue.svg"
+            src="/assets/blog-hero-octopus-blue.png"
             alt=""
             aria-hidden
-            width={476}
-            height={268}
+            width={1232}
+            height={694}
             className="w-full max-w-[616px] h-auto -translate-y-5"
             priority
           />

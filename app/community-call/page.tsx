@@ -269,7 +269,7 @@ export default function CommunityCallPage() {
                 alt=""
                 width={76}
                 height={82}
-                className="relative w-[130px] shrink-0 self-center mb-12 md:w-[234px] md:bottom-[4em] md:self-auto md:mb-0"
+                className="relative w-[130px] shrink-0 self-end mb-12 md:w-[234px] md:bottom-[4em] md:self-auto md:mb-0"
                 style={{
                   // Overhangs the 1290px container by up to 6em on wide screens, but
                   // shrinks on narrower ones so it never crosses the viewport edge
@@ -336,7 +336,7 @@ export default function CommunityCallPage() {
               beginning.
             </SectionHeading>
           </div>
-          <BodyText className="text-[#0b0d10] mb-[52px]">
+          <BodyText className="text-[#0b0d10] mb-[1cm] md:mb-[52px]">
             When you join the free membership, you get access to:
           </BodyText>
 
@@ -353,7 +353,7 @@ export default function CommunityCallPage() {
               alt=""
               width={480}
               height={370}
-              className="md:hidden w-[60px] mx-auto mb-2.5"
+              className="md:hidden absolute w-[66px] -top-8 right-3 rotate-[4deg] z-10"
             />
 
             <div className="bg-[#fcfcfc] rounded-[4px] p-9 px-7">
@@ -386,7 +386,7 @@ export default function CommunityCallPage() {
               alt=""
               width={480}
               height={417}
-              className="md:hidden w-[60px] mx-auto mt-2.5"
+              className="md:hidden absolute w-[60px] -bottom-6 left-3 z-10"
             />
           </div>
 
@@ -409,7 +409,17 @@ export default function CommunityCallPage() {
       {/* ── Go deeper ──────────────────────────────────────────────── */}
       <section className="bg-[#fcfcfc] px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
         <div className="max-w-[90vw] mx-auto">
-          <SectionLabel>Keep going</SectionLabel>
+          <div className="flex items-start justify-between md:block">
+            <SectionLabel>Keep going</SectionLabel>
+            <Image
+              src="/assets/shell.svg"
+              alt="Shell"
+              width={1203}
+              height={1662}
+              className="md:hidden h-auto w-12"
+              aria-hidden
+            />
+          </div>
           <SectionHeading>
             The call is where many people start.
             <br />
@@ -426,7 +436,7 @@ export default function CommunityCallPage() {
               alt="Shell"
               width={1203}
               height={1662}
-              className="h-auto mx-auto w-[49px] md:mx-0 md:w-[51%]"
+              className="hidden md:block h-auto md:w-[51%]"
               style={{
                 // Full -13em (-208px) pull-up only kicks in at >=1728px wide, where the
                 // shell clears the heading text horizontally. Below that it scales down
