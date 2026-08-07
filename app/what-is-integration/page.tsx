@@ -112,11 +112,11 @@ export default function WhatIsIntegrationPage() {
             <SectionHeading>It doesn't happen on its own.</SectionHeading>
             <BodyText className="text-[#222]">
               The experience is a{" "}
-              <Link href="/tone-generator" className="underline text-tic-olive hover:text-tic-salmon transition-colors">
+              <Link href="/tone-generator" className="underline text-tic-olive hover:text-tic-pink transition-colors">
                 doorway
               </Link>{" "}
               — but most people are handed the{" "}
-              <Link href="/tone-generator" className="underline text-tic-olive hover:text-tic-salmon transition-colors">
+              <Link href="/tone-generator" className="underline text-tic-olive hover:text-tic-pink transition-colors">
                 doorway
               </Link>{" "}
               and nothing else.

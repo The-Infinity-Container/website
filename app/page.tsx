@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeroVideo from "@/components/HeroVideo";
 import InlineNewsletter from "@/components/InlineNewsletter";
 import NewsletterPopup from "@/components/NewsletterPopup";
 import ApproachCards from "@/components/ApproachCards";
@@ -202,16 +203,7 @@ export default function HomePage() {
       <header className="bg-black">
         {/* Logo-open animation, extended height, text overlaid below the globe */}
         <div className="relative w-full h-[120vh] md:h-[200vh] overflow-hidden bg-black">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute top-0 md:top-1/2 left-1/2 min-w-full min-h-[120vh] md:min-h-full w-auto h-auto -translate-x-1/2 md:-translate-y-1/2 object-cover"
-          >
-            <source src="/assets/videos/hero-mobile-extended.mp4" media="(max-width: 767px)" type="video/mp4" />
-            <source src="/assets/videos/hero-desktop.mp4" type="video/mp4" />
-          </video>
+          <HeroVideo />
 
           <div className="absolute inset-x-0 top-1/2 z-10 text-center px-6 pt-0 md:pt-[60px] pb-8 md:pb-[84px] mt-[-25px] md:mt-[4em]">
           <p
