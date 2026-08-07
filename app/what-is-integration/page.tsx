@@ -144,8 +144,8 @@ export default function WhatIsIntegrationPage() {
               Integration takes structure, rhythm, and relationship. It takes a system that honors both the preparation before and the long, spiraling work after. That is what The Infinity Container was built for.
             </p>
 
-            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#why-a-container" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full text-center mt-[6rem]">
-              <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: why integration needs a container →</span>
+            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#why-a-container" className="group font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:text-tic-pink transition-colors block w-full text-center mt-[6rem]">
+              <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block group-hover:border-tic-pink transition-colors">Dive deeper: why integration needs a container →</span>
             </a>
           </div>
         </div>

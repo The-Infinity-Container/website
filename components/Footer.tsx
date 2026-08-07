@@ -1,6 +1,18 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="bg-black text-white pt-[28px] pb-[22.4px] px-6">
       {/* Main footer content */}
@@ -8,11 +20,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:items-center gap-[29.4px]" style={{ marginTop: "28px" }}>
           {/* Left column */}
           <div className="text-center md:flex-1 md:text-left">
-            <h3 className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.09em] mb-[13.3px]" style={{ fontSize: "1.05em" }}>
-              The infinity
-              <br />
-              container
-            </h3>
+            <Link href="/" onClick={handleHomeClick}>
+              <h3 className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.09em] mb-[13.3px]" style={{ fontSize: "1.05em" }}>
+                The infinity
+                <br />
+                container
+              </h3>
+            </Link>
             <p className="font-[family-name:var(--font-noto-serif)] italic text-[14.7px]" style={{ lineHeight: "23.8px" }}>
               Integration is the way.
             </p>
@@ -38,17 +52,17 @@ export default function Footer() {
               {/* Socials + email column */}
               <div className="xl:ml-[126px]">
                 <p className="font-[family-name:var(--font-noto-serif)] text-[14.7px] mb-[8.4px]" style={{ lineHeight: "23.8px" }}>
-                  <a href="https://www.instagram.com/theinfinitycontainer" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                  <a href="https://www.instagram.com/theinfinitycontainer" target="_blank" rel="noopener noreferrer" className="hover:text-tic-pink transition-colors">
                     Instagram
                   </a>
                 </p>
                 <p className="font-[family-name:var(--font-noto-serif)] text-[14.7px] mb-[8.4px]" style={{ lineHeight: "23.8px" }}>
-                  <a href="https://www.youtube.com/@TheInfinityContainer" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                  <a href="https://www.youtube.com/@TheInfinityContainer" target="_blank" rel="noopener noreferrer" className="hover:text-tic-pink transition-colors">
                     Youtube
                   </a>
                 </p>
                 <p className="font-[family-name:var(--font-noto-serif)] text-[14.7px] mb-[8.4px]" style={{ lineHeight: "23.8px" }}>
-                  <a href="https://substack.com/@theinfinitycontainer" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                  <a href="https://substack.com/@theinfinitycontainer" target="_blank" rel="noopener noreferrer" className="hover:text-tic-pink transition-colors">
                     Substack
                   </a>
                 </p>
