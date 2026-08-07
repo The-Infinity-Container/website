@@ -53,6 +53,9 @@ export type PostInput = {
   metaDescription: string;
   altText: string;
   claudeReadabilityScore: number | null;
+  author: string;
+  readingTimeMinutes: number | null;
+  relatedSlugs: string[];
   status: PostStatus;
 };
 
@@ -98,6 +101,9 @@ export async function createPost(input: PostInput): Promise<PostActionState> {
     meta_description: input.metaDescription.trim(),
     alt_text: input.altText.trim(),
     claude_readability_score: input.claudeReadabilityScore,
+    author: input.author.trim(),
+    reading_time_minutes: input.readingTimeMinutes,
+    related_slugs: input.relatedSlugs,
     status: input.status,
     published_at: input.status === "published" ? new Date().toISOString() : null,
   });
@@ -139,6 +145,9 @@ export async function updatePost(id: string, input: PostInput): Promise<PostActi
       meta_description: input.metaDescription.trim(),
       alt_text: input.altText.trim(),
       claude_readability_score: input.claudeReadabilityScore,
+      author: input.author.trim(),
+      reading_time_minutes: input.readingTimeMinutes,
+      related_slugs: input.relatedSlugs,
       status: input.status,
       published_at:
         input.status === "published"

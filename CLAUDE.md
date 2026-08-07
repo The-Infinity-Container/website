@@ -37,7 +37,7 @@ This component always renders an `<h2>` — even for sections that previously us
 
 ### Body Paragraph Text
 Use `<BodyText>` (`@/components/BodyText`) for body paragraphs (Noto Serif, regular text):
-- Size/line-height come from the `text-body` theme token (`app/globals.css`, currently 21px/34px) — never hardcode these values, reference the `text-body` class so paragraph-size text stays in sync everywhere (this includes hand-styled links like the "Take the 7-question quiz" CTAs, which use `text-body` too)
+- Size/line-height come from the `text-body` theme token (`app/globals.css`, currently 18px/29px) — never hardcode these values, reference the `text-body` class so paragraph-size text stays in sync everywhere (this includes hand-styled links like the "Take the 7-question quiz" CTAs, which use `text-body` too)
 - Font: Noto Serif (font-[family-name:var(--font-noto-serif)])
 - Color and margin are intentionally left out of the component — pass them via `className` (e.g. `className="text-[#222] mb-6"`)
 
@@ -51,7 +51,7 @@ Default section content wrappers to `max-w-[1290px] mx-auto` (matching what-is-i
 
 ### Dive Deeper Links
 All "Dive Deeper" links should be:
-- Size: 24px
+- Size: 18px (matches SectionLabel)
 - Font: Gordon (uppercase)
 - Letter spacing: tracking-[0.12em]
 - Color: text-tic-cobalt

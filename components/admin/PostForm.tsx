@@ -7,6 +7,7 @@ import { CATEGORIES, type CategoryKey } from "@/lib/categories";
 import { createPost, updatePost, getUsedFocusKeyphrases, type PostActionState } from "@/lib/actions/posts";
 import { uploadImage } from "@/lib/uploadImage";
 import { analyzeSeo, seoScore, SEO_SCORE_META } from "@/lib/seoAnalysis";
+import { estimateReadingTime } from "@/lib/readingTime";
 import type { Post, PostStatus } from "@/types/post";
 
 function slugify(input: string) {
@@ -72,9 +73,11 @@ function AccordionSection({
 export default function PostForm({
   post,
   initialContent,
+  otherPosts = [],
 }: {
   post?: Post;
   initialContent?: { title: string; body: string };
+  otherPosts?: { slug: string; title: string }[];
 }) {
   const isEdit = !!post;
 
@@ -97,6 +100,11 @@ export default function PostForm({
   const [claudeReadabilityScore, setClaudeReadabilityScore] = useState<number | null>(
     post?.claude_readability_score ?? null,
   );
+  const [author, setAuthor] = useState(post?.author ?? "");
+  const [readingTimeMinutes, setReadingTimeMinutes] = useState<number | null>(
+    post?.reading_time_minutes ?? null,
+  );
+  const [relatedSlugs, setRelatedSlugs] = useState<string[]>(post?.related_slugs ?? []);
   const [usedKeyphrases, setUsedKeyphrases] = useState<string[]>([]);
 
   const [contentOpen, setContentOpen] = useState(true);
@@ -132,10 +140,17 @@ export default function PostForm({
       metaDescription,
       altText,
       claudeReadabilityScore,
+      author,
+      readingTimeMinutes,
+      relatedSlugs,
       status,
     };
     return isEdit ? updatePost(post.id, payload) : createPost(payload);
   }, null);
+
+  function toggleRelated(slug: string) {
+    setRelatedSlugs((prev) => (prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]));
+  }
 
   function handleTitleChange(value: string) {
     setTitle(value);
@@ -288,6 +303,53 @@ export default function PostForm({
         <div>
           <label className={labelClass}>Body</label>
           <PostEditor value={body} onChange={setBody} />
+        </div>
+
+        <div>
+          <label htmlFor="author" className={labelClass}>
+            Author
+          </label>
+          <input id="author" value={author} onChange={(e) => setAuthor(e.target.value)} className={inputClass} />
+        </div>
+
+        <div>
+          <label htmlFor="reading-time" className={labelClass}>
+            Reading Time (minutes){" "}
+            <span className="font-normal normal-case text-black/50">
+              (optional — estimated at ~{estimateReadingTime(body)} min if left blank)
+            </span>
+          </label>
+          <input
+            id="reading-time"
+            type="number"
+            min={1}
+            value={readingTimeMinutes ?? ""}
+            onChange={(e) => {
+              const raw = e.target.value;
+              setReadingTimeMinutes(raw === "" ? null : Math.max(1, Math.round(Number(raw))));
+            }}
+            className={`${inputClass} max-w-[8rem]`}
+          />
+        </div>
+
+        <div>
+          <label className={labelClass}>Related Posts</label>
+          {otherPosts.length === 0 ? (
+            <p className="text-sm text-black/50">No other posts yet.</p>
+          ) : (
+            <div className="flex flex-col gap-1.5 max-h-48 overflow-y-auto border-2 border-black p-3">
+              {otherPosts.map((p) => (
+                <label key={p.slug} className="flex items-center gap-2 text-sm cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={relatedSlugs.includes(p.slug)}
+                    onChange={() => toggleRelated(p.slug)}
+                  />
+                  {p.title}
+                </label>
+              ))}
+            </div>
+          )}
         </div>
 
         <div>

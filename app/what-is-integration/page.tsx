@@ -52,7 +52,7 @@ export default function WhatIsIntegrationPage() {
       </section>
 
       {/* ── THE WORK SECTION ──────────────────────────────────────── */}
-      <section className="bg-white px-3 pt-[50px] md:pt-[100px] pb-[35px] md:pb-[140px]">
+      <section className="bg-white px-3 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
         <div className="max-w-[1290px] mx-auto">
           {/* Header row */}
           <div className="mb-[28px]">
@@ -72,6 +72,10 @@ export default function WhatIsIntegrationPage() {
               <BodyText>
                 And it applies far beyond psychedelics. Life transitions, grief, awe, birth, loss, love — any experience big enough to change you asks to be integrated. The question is whether it gets what it needs.
               </BodyText>
+
+              <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[18px] hover:opacity-70 transition-opacity inline-block mt-[2.7rem]">
+                <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: read the full essay on the blog →</span>
+              </a>
             </div>
 
             <div className="relative flex justify-center items-start">
@@ -81,24 +85,17 @@ export default function WhatIsIntegrationPage() {
                 alt="Integration journey"
                 width={600}
                 height={800}
-                className="w-[300px] h-auto rotate-[-12deg]"
+                className="w-[70%] max-w-[300px] h-auto rotate-[-12deg] md:w-[300px]"
               />
             </div>
-          </div>
-
-          {/* Full-width blue link */}
-          <div>
-            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full text-center mt-[6rem]">
-              <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: read the full essay on the blog →</span>
-            </a>
           </div>
         </div>
       </section>
 
       {/* ── INTEGRATION IS THE WAY SECTION ───────────────────────── */}
-      <section className="bg-white px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
+      <section className="bg-black px-6 pt-[50px] md:pt-[100px] pb-[118px] md:pb-[168px]">
         <div className="max-w-[1290px] mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(24px, 8vw, 115px)", color: "#E64E59", letterSpacing: "0.09em", marginBottom: "-68px" }}>
+          <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(24px, 8vw, 115px)", color: "#FFFFFF", letterSpacing: "0.09em", marginBottom: "-68px" }}>
             Integration
             <br />
             is the way
@@ -108,19 +105,36 @@ export default function WhatIsIntegrationPage() {
 
       {/* ── THE GAP SECTION ───────────────────────────────────────── */}
       <section className="bg-tic-grey px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[90vw] mx-auto">
           {/* Row 1: Label, heading, first paragraph */}
           <div className="mb-[24px] md:mb-[-36px]">
             <SectionLabel>The gap</SectionLabel>
             <SectionHeading>It doesn't happen on its own.</SectionHeading>
             <BodyText className="text-[#222]">
-              The experience is a doorway — but most people are handed the doorway and nothing else. No preparation beforehand. No container afterward. No community to witness the becoming.
+              The experience is a{" "}
+              <Link href="/tone-generator" className="underline text-tic-olive hover:text-tic-pink transition-colors">
+                doorway
+              </Link>{" "}
+              — but most people are handed the{" "}
+              <Link href="/tone-generator" className="underline text-tic-olive hover:text-tic-pink transition-colors">
+                doorway
+              </Link>{" "}
+              and nothing else.
+              <br />
+              Little preparation beforehand.
+              <br />
+              No container afterward.
+              <br />
+              No community to witness the becoming.
             </BodyText>
           </div>
 
           {/* Row 2: Two-column grid with italic text and hand image */}
-          <div className="grid md:grid-cols-[2fr_3fr] gap-[60px] items-center mb-[60px]">
-            <div className="flex items-center font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-brown pl-[28px] min-h-[300px]" style={{ fontSize: "32px", lineHeight: "1.6" }}>
+          <div className="grid md:grid-cols-[2fr_3fr] gap-[40px] md:gap-[60px] mb-[40px] md:mb-[60px] md:items-center md:-mt-[5em]">
+            <div
+              className="flex items-center font-[family-name:var(--font-noto-serif)] italic text-tic-brown border-l-[3px] border-tic-brown pl-[28px] md:h-[150px] md:-mt-[11em]"
+              style={{ fontSize: "clamp(20px, 2.57vw, 24px)", lineHeight: "1.6" }}
+            >
               Insight without integration fades. The journey that could have changed everything becomes a story you tell.
             </div>
             <div>
@@ -129,23 +143,20 @@ export default function WhatIsIntegrationPage() {
                 alt=""
                 width={600}
                 height={600}
-                className="w-full h-auto md:w-[90%] md:mt-[3em]"
+                className="w-[70%] mx-auto h-auto md:w-[80%] md:mx-0 md:mt-[3em] md:relative md:bottom-[10em] md:left-[9em]"
                 aria-hidden
               />
             </div>
           </div>
 
           {/* Row 3: Full-width paragraph and link */}
-          <div>
-            <p
-              className="font-[family-name:var(--font-noto-serif)] italic text-[#222] mb-[24px] text-center"
-              style={{ fontSize: "clamp(20px, 2.57vw, 24px)" }}
-            >
+          <div className="md:-mt-[26em] md:w-[62%] md:min-h-[150px]">
+            <p className="text-body font-[family-name:var(--font-noto-serif)] italic text-[#222] mb-[24px] text-left">
               Integration takes structure, rhythm, and relationship. It takes a system that honors both the preparation before and the long, spiraling work after. That is what The Infinity Container was built for.
             </p>
 
-            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#why-a-container" className="group font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:text-tic-pink transition-colors block w-full text-center mt-[6rem]">
-              <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block group-hover:border-tic-pink transition-colors">Dive deeper: why integration needs a container →</span>
+            <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#why-a-container" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[18px] hover:opacity-70 transition-opacity block w-full text-center mt-[3rem]">
+              <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: why integration needs a container →</span>
             </a>
           </div>
         </div>
@@ -173,7 +184,7 @@ export default function WhatIsIntegrationPage() {
               alt=""
               width={570}
               height={600}
-              className="w-[78%] h-auto"
+              className="w-[78%] h-auto mx-auto md:mx-0 md:ml-[6em]"
               aria-hidden
             />
           </div>
@@ -204,38 +215,41 @@ export default function WhatIsIntegrationPage() {
             This is why we integrate rather than simply learn. Insight that stays intellectual fades. Capacity that is practiced in community becomes who you are.
           </p>
 
-          <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#capacities-not-skills" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[22px] hover:opacity-70 transition-opacity block w-full text-center mt-[6rem]">
+          <a href="/blog/what-is-psychedelic-integration-a-behavioral-scientist-s-guide#capacities-not-skills" className="font-[family-name:var(--font-gordon)] text-tic-cobalt uppercase tracking-[0.12em] text-[18px] hover:opacity-70 transition-opacity block w-full text-center mt-[6rem]">
             <span className="border-b-[1.5px] border-tic-cobalt pb-[3px] inline-block">Dive deeper: capacities, not skills →</span>
           </a>
         </div>
       </section>
 
-      {/* ── INTEGRATION IS THE WAY / OUR SYSTEM ────────────────────── */}
-      <section className="bg-black px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
-        <div className="max-w-[1290px] mx-auto text-center mb-[80px]">
-          <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold" style={{ fontSize: "clamp(24px, 8vw, 115px)", color: "white", letterSpacing: "0.09em", marginBottom: "-68px" }}>
-            Integration
-            <br />
-            is the way
-          </h2>
-          <Image
-            src="/assets/lunar-pink-transparent-bg.svg"
-            alt="Solar-Lunar Framework"
-            width={656}
-            height={656}
-            className="mx-auto w-full h-auto -mb-[50px] mt-[73px] md:mb-0 md:mt-0"
-            style={{ maxWidth: "700px" }}
-            aria-hidden
-          />
-        </div>
+      {/* ── Divider ────────────────────────────────────────────────── */}
+      <div className="bg-tic-olive px-6 pt-[50px] md:pt-[100px] pb-[118px] md:pb-[168px] text-center">
+        <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold text-tic-yellow" style={{ fontSize: "clamp(24px, 8vw, 115px)", letterSpacing: "0.09em", marginBottom: "-68px" }}>
+          Integration
+          <br />
+          is the way
+        </h2>
+      </div>
 
+      {/* ── OUR SYSTEM ───────────────────────────────────────────────── */}
+      <section className="bg-black px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
         <div id="our-system">
-          <div className="max-w-[1280px] mx-auto">
-            <SectionLabel color="text-[#D5D06A]">Our system</SectionLabel>
-            <SectionHeading color="text-white">The Solar-Lunar Framework</SectionHeading>
-            <BodyText className="text-white mb-[44px]">
-              Our proprietary integration system — built on behavioral science, somatic practice, and contemplative traditions. It maps the full arc of transformative experience across two spirals:
-            </BodyText>
+          <div className="grid md:grid-cols-[1.3fr_1fr] gap-[60px] items-center max-w-[1280px] mx-auto mb-[44px]">
+            <div>
+              <SectionLabel color="text-[#D5D06A]">Our system</SectionLabel>
+              <SectionHeading color="text-white">The Solar-Lunar Framework</SectionHeading>
+              <BodyText className="text-white">
+                Our proprietary integration system — built on behavioral science, somatic practice, and contemplative traditions. It maps the full arc of transformative experience across two spirals:
+              </BodyText>
+            </div>
+            <Image
+              src="/assets/lunar-pink-transparent-bg.svg"
+              alt="Solar-Lunar Framework"
+              width={656}
+              height={656}
+              className="mx-auto w-full h-auto hidden md:block"
+              style={{ maxWidth: "420px" }}
+              aria-hidden
+            />
           </div>
 
           <div className="max-w-[1280px] mx-auto">
@@ -285,7 +299,17 @@ export default function WhatIsIntegrationPage() {
       {/* ── HOW YOU LIVE IT ───────────────────────────────────────── */}
       <section className="bg-white px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
         <div className="max-w-[90vw] mx-auto">
-          <SectionLabel>How you live it</SectionLabel>
+          <div className="flex items-start justify-between md:block">
+            <SectionLabel>How you live it</SectionLabel>
+            <Image
+              src="/assets/shell.svg"
+              alt="Shell"
+              width={360}
+              height={450}
+              className="md:hidden h-auto w-12"
+              aria-hidden
+            />
+          </div>
           <SectionHeading>
             The framework isn't something
             <br />
@@ -302,8 +326,7 @@ export default function WhatIsIntegrationPage() {
               alt="Shell"
               width={360}
               height={450}
-              className="h-auto mx-auto md:mx-0"
-              style={{ width: "51%" }}
+              className="hidden md:block h-auto md:w-[51%] md:mx-0 md:-mt-[13em]"
               aria-hidden
             />
           </div>
@@ -331,20 +354,22 @@ export default function WhatIsIntegrationPage() {
 
           <div className="text-center" style={{ marginTop: "80px" }}>
             <a href="/find-my-membership" className="font-[family-name:var(--font-noto-serif)] text-body italic text-black hover:opacity-70 transition-opacity inline-block underline">
-              Not sure which fits? Take the 7-question quiz →
+              Not sure which fits?<br className="md:hidden" /> Take the 7-question quiz →
             </a>
           </div>
         </div>
       </section>
 
       {/* ── KEEP GOING ──────────────────────────────────────────────── */}
-      <section className="px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]" style={{ backgroundColor: "#D5D06A" }}>
+      <section className="px-6 pt-[50px] md:pt-[100px] pb-[50px] md:pb-[100px]" style={{ backgroundColor: "#D5D06A" }}>
         <div className="max-w-[90vw] mx-auto">
-          <p className="font-[family-name:var(--font-gordon)] uppercase mb-[44px] text-center" style={{ fontSize: "clamp(57px, 9.72vw, 96px)", color: "black", letterSpacing: "0.09em", marginBottom: "-20px" }}>
+          <p className="font-[family-name:var(--font-gordon)] uppercase text-center mb-[-4px] md:mb-[-20px]" style={{ fontSize: "clamp(57px, 9.72vw, 96px)", color: "black", letterSpacing: "0.09em" }}>
             Keep going.
           </p>
           <p className="font-[family-name:var(--font-noto-serif)] italic text-[23px] mx-auto text-center mb-[30px]" style={{ color: "#7C3537", lineHeight: "37px", maxWidth: "70vw" }}>
-            You don't have to be ready to join anything. Integration happens a little at a time — start at whatever depth feels right.
+            You don&apos;t have to be ready to join anything. Integration happens a little at a time.
+            <br />
+            Start at whatever depth feels right.
           </p>
 
           <div className="flex justify-center mb-[60px]" style={{ position: "relative", zIndex: 10 }}>
@@ -418,8 +443,7 @@ export default function WhatIsIntegrationPage() {
               alt=""
               width={200}
               height={200}
-              className="h-auto"
-              style={{ width: "calc(var(--spacing) * 100)" }}
+              className="h-auto w-[calc(var(--spacing)*70)] md:w-[calc(var(--spacing)*100)]"
               aria-hidden
             />
           </div>

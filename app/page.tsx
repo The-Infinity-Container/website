@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroVideo from "@/components/HeroVideo";
 import InlineNewsletter from "@/components/InlineNewsletter";
+import NewsletterPopup from "@/components/NewsletterPopup";
 import ApproachCards from "@/components/ApproachCards";
 import MembershipCards from "@/components/MembershipCards";
 import SpotifyEmbed from "@/components/SpotifyEmbed";
@@ -197,6 +198,7 @@ const homeFaqItems: FAQItem[] = [
 export default function HomePage() {
   return (
     <main>
+      <NewsletterPopup />
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="bg-black">
         {/* Logo-open animation, extended height, text overlaid below the globe */}
@@ -253,7 +255,7 @@ export default function HomePage() {
             href={SIGNIN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="block mt-3 mb-5 md:mb-0 text-sm text-tic-yellow"
+            className="block mt-5 md:mt-3 mb-7 md:mb-0 text-sm text-tic-yellow"
           >
             Already a member? Sign in
           </a>
@@ -365,8 +367,8 @@ export default function HomePage() {
           </div>
 
           {/* Spotify Playlist + Mushrooms */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-end justify-items-center gap-4 md:gap-8 mt-8 lg:-mt-75">
-            <div className="hidden lg:flex lg:justify-end flex-shrink-0 relative z-0 -mr-[6.5rem]">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-end justify-items-center gap-4 md:gap-8 mt-8 lg:-mt-69" style={{ marginBottom: "-2rem" }}>
+            <div className="hidden lg:flex lg:justify-end flex-shrink-0 relative z-0 -mr-[12.5rem]">
               <Image
                 src="/assets/mushrooms-trio.svg"
                 alt=""
@@ -376,10 +378,28 @@ export default function HomePage() {
                 className="w-[422.5px] h-auto scale-x-[-1]"
               />
             </div>
-            <div className="w-full max-w-md relative z-10" style={{ marginBottom: "-7em" }}>
-              <SpotifyEmbed />
+            <div className="w-full max-w-md relative z-10" style={{ marginBottom: "-7em", marginTop: "5em" }}>
+              <Image
+                src="/assets/mushrooms-trio.svg"
+                alt=""
+                aria-hidden
+                width={233}
+                height={359}
+                className="lg:hidden absolute -top-21 left-2 z-0 w-14 h-auto scale-x-[-1] pointer-events-none"
+              />
+              <Image
+                src="/assets/mushrooms-trio.svg"
+                alt=""
+                aria-hidden
+                width={233}
+                height={359}
+                className="lg:hidden absolute -top-21 right-2 z-0 w-14 h-auto pointer-events-none"
+              />
+              <div className="relative z-10">
+                <SpotifyEmbed />
+              </div>
             </div>
-            <div className="hidden lg:flex lg:justify-start flex-shrink-0 relative z-0 -ml-[5.5rem]">
+            <div className="hidden lg:flex lg:justify-start flex-shrink-0 relative z-0 -ml-[17.5rem]">
               <Image
                 src="/assets/mushrooms-trio.svg"
                 alt=""
@@ -501,7 +521,7 @@ export default function HomePage() {
               href="/find-my-membership"
               className="font-[family-name:var(--font-noto-serif)] italic text-body underline underline-offset-4 hover:text-tic-brown transition-colors"
             >
-              Not sure which path fits you? Take the 7-question quiz →
+              Not sure which path fits you?<br className="md:hidden" /> Take the 7-question quiz →
             </Link>
           </div>
         </div>
@@ -624,7 +644,7 @@ export default function HomePage() {
         </h2>
         <p className="font-[family-name:var(--font-noto-serif)] text-body max-w-[560px] mx-auto mb-10 text-[#2a2a1a]">
           The TIC newsletter brings you integration frameworks, somatic tools, and practitioner
-          resources — rooted in the Solar-Lunar system. Written by<br className="md:hidden" /> Dr. Victoria Sterkin.
+          resources — rooted in the Solar-Lunar system. Written by Dr. Victoria Sterkin.
         </p>
         <InlineNewsletter inputBg="bg-white" />
         <p className="mt-4 text-xs text-[#5a570f]">No spam. Unsubscribe anytime.</p>

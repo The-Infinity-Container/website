@@ -16,6 +16,9 @@ export type Post = {
   meta_description: string;
   alt_text: string;
   claude_readability_score: number | null;
+  author: string;
+  reading_time_minutes: number | null;
+  related_slugs: string[];
   status: PostStatus;
   created_at: string;
   updated_at: string;

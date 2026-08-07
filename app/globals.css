@@ -45,8 +45,53 @@ html {
   animation: marquee 30s linear infinite;
 }
 
+.tone-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  background: rgba(252, 252, 252, 0.12);
+  border-radius: 100px;
+  outline: none;
+  cursor: pointer;
+}
+
+.tone-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-tic-yellow);
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.tone-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.tone-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-tic-yellow);
+  cursor: pointer;
+  border: none;
+}
+
 body {
   background: var(--color-tic-yellow);
   color: #000;
   font-family: var(--font-serif);
+}
+
+/* With viewport-fit: cover the page runs edge to edge, so in landscape the notch
+   can sit over the nav's outermost controls (TIC: INDEX and Sign In). Hold them
+   inside the safe area; the floor matches the nav's own md:px-8. */
+@media (orientation: landscape) and (max-height: 500px) {
+  body > nav {
+    padding-left: max(2rem, env(safe-area-inset-left));
+    padding-right: max(2rem, env(safe-area-inset-right));
+  }
 }

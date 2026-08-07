@@ -4,6 +4,7 @@ import LocalCallTime from "@/components/LocalCallTime";
 import SectionLabel from "@/components/SectionLabel";
 import SectionHeading from "@/components/SectionHeading";
 import BodyText from "@/components/BodyText";
+import MembershipCards from "@/components/MembershipCards";
 
 export const metadata: Metadata = {
   title: "Community Call | The Infinity Container",
@@ -67,7 +68,7 @@ export default function CommunityCallPage() {
           Once a month, we gather. You don&apos;t have to be ready for anything else.
         </p>
 
-        <div className="relative inline-flex flex-col items-center border border-[#0b0d10]/20 rounded px-24 pt-14 pb-24 mb-[52px] max-w-[1100px] w-full">
+        <div className="relative inline-flex flex-col items-center border border-[#0b0d10]/20 rounded px-2.5 pt-0 pb-0 md:px-24 md:pt-14 md:pb-24 mb-[52px] max-w-[1100px] w-full">
           <Image
             src="/assets/bee-disco-2.png"
             alt=""
@@ -83,19 +84,19 @@ export default function CommunityCallPage() {
             className="hidden md:block absolute w-[120px] right-[9px] bottom-6 rotate-[8deg] z-10"
           />
           <p
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[#0b0d10] py-3.5"
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[#0b0d10] py-8 md:py-3.5"
             style={{ fontSize: "clamp(14px, 1.8vw, 17px)" }}
           >
-            First Saturday of the month
+            First Saturday<br className="md:hidden" /> of the month
           </p>
           <p
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[#0b0d10] py-3.5 w-full text-center border-t border-[#0b0d10]/12"
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[#0b0d10] py-8 md:py-3.5 w-full text-center border-t border-[#0b0d10]/12"
             style={{ fontSize: "clamp(14px, 1.8vw, 17px)" }}
           >
             <LocalCallTime />
           </p>
           <p
-            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[#0b0d10] py-3.5 w-full text-center border-t border-[#0b0d10]/12"
+            className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-[#0b0d10] py-8 md:py-3.5 w-full text-center border-t border-[#0b0d10]/12"
             style={{ fontSize: "clamp(14px, 1.8vw, 17px)" }}
           >
             Free to attend · Zoom link inside the free membership
@@ -117,19 +118,19 @@ export default function CommunityCallPage() {
           href={SIGN_IN_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-[13px] text-[#817202] mb-16 hover:text-[#0b0d10] transition-colors"
+          className="block text-[13px] text-[#817202] hover:text-[#0b0d10] transition-colors"
         >
           Already a member? Sign in →
         </a>
 
         <div className="mx-auto">
-          <div className="hidden md:grid grid-cols-2 gap-12 items-center max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-[1fr_2.2fr_1fr] gap-2 mt-[2em] mb-[2em] md:grid-cols-3 md:gap-10 md:mt-0 md:mb-0 items-center max-w-[1400px] mx-auto">
             <Image
               src="/assets/satellite.svg"
               alt=""
               width={1074}
               height={1012}
-              className="w-[400px] ml-[24em] block"
+              className="w-[246px] justify-self-end"
               priority
             />
             <Image
@@ -137,31 +138,21 @@ export default function CommunityCallPage() {
               alt="No cost. All are welcome."
               width={414}
               height={156}
-              className="w-[400px] mr-auto ml-[-5em] mt-[6em] rotate-[-1deg]"
+              className="w-[332px] mx-auto rotate-[-1deg]"
             />
-          </div>
-          <div className="md:hidden max-w-[260px] mx-auto">
             <Image
               src="/assets/satellite.svg"
               alt=""
               width={1074}
               height={1012}
-              className="w-[200px] mx-auto block"
-              priority
-            />
-            <Image
-              src="/assets/no-cost-v2.svg"
-              alt="No cost. All are welcome."
-              width={414}
-              height={156}
-              className="w-[150px] mx-auto mt-4 rotate-[-3deg]"
+              className="w-[246px] justify-self-start scale-x-[-1]"
             />
           </div>
         </div>
       </header>
 
       {/* ── What is it? ────────────────────────────────────────────── */}
-      <section className="bg-[#fcfcfc] px-6 py-[50px] md:py-[100px]">
+      <section className="bg-[#fcfcfc] px-6 py-[50px] md:py-[100px]" style={{ marginTop: "-2em", paddingBottom: "0px" }}>
         <div className="max-w-[1290px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:mb-[-50px]">
             <div className="order-1 md:order-none">
@@ -173,11 +164,11 @@ export default function CommunityCallPage() {
               </SectionHeading>
             </div>
             <Image
-              src="/assets/Lunar.png"
+              src="/assets/lunar-rebuilt-final.svg"
               alt=""
-              width={500}
-              height={500}
-              className="w-[336px] shrink-0 mt-1 mb-2 md:mb-0 order-0 md:order-none md:-translate-x-[50px] -translate-y-[100px]"
+              width={556}
+              height={538}
+              className="w-[336px] shrink-0 mt-1 mb-2 md:mb-0 order-0 md:order-none md:-translate-x-[50px] md:-translate-y-[100px]"
             />
           </div>
 
@@ -199,10 +190,10 @@ export default function CommunityCallPage() {
               alt=""
               width={500}
               height={500}
-              className="w-full h-auto"
+              className="w-[80%] h-auto mx-auto md:mx-0"
             />
             <p
-              className="font-[family-name:var(--font-noto-serif)] italic leading-[1.6] text-tic-brown border-l-[3px] border-tic-brown pl-7"
+              className="font-[family-name:var(--font-noto-serif)] italic leading-[1.6] text-tic-brown border-l-[3px] border-tic-brown pl-7 mb-[3em] md:mb-0"
               style={{ fontSize: "clamp(20px, 3vw, 26px)" }}
             >
               &quot;It&apos;s so important to have space to feel spacious. To process all that we are experiencing. To keep us more awake alive.&quot;
@@ -214,7 +205,7 @@ export default function CommunityCallPage() {
       {/* ── Come as you are ────────────────────────────────────────── */}
       <section className="bg-tic-grey px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto">
-          <div className="max-w-[760px] mx-auto">
+          <div>
             <SectionLabel>The only requirement</SectionLabel>
             <SectionHeading>Come as you are.</SectionHeading>
             <p className="font-[family-name:var(--font-noto-serif)] italic text-body text-[#2a2a2a] mb-11">
@@ -222,7 +213,7 @@ export default function CommunityCallPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[60px] gap-y-0 mb-[52px] max-w-[760px] mx-auto text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[60px] gap-y-0 mb-[52px] text-left">
             <div>
               {LEFT_REASONS.map((r) => (
                 <p
@@ -233,7 +224,7 @@ export default function CommunityCallPage() {
                 </p>
               ))}
             </div>
-            <div>
+            <div className="md:w-[69%]">
               {RIGHT_REASONS.map((r) => (
                 <p
                   key={r}
@@ -245,23 +236,21 @@ export default function CommunityCallPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:[grid-template-columns:minmax(0,35%)_minmax(0,65%)] gap-8 items-center text-center md:text-left">
+          <div className="grid grid-cols-1 md:[grid-template-columns:minmax(0,65%)_minmax(0,35%)] gap-8 text-center">
+            <p
+              className="font-[family-name:var(--font-noto-serif)] italic text-body text-tic-brown text-center pt-0 md:pt-0"
+            >
+              Turn off your video. Lay down if you need to. Any level of participation is welcome.
+              <br />
+              The only requirement is respectful presence.
+            </p>
             <Image
               src="/assets/plant-pot-maroon.svg"
               alt=""
               width={147}
               height={293}
-              className="w-[120px] mx-auto md:mx-0 md:ml-auto"
+              className="relative z-10 w-[171px] mx-auto md:w-[270px] md:mx-0 md:ml-auto md:-mt-[447px]"
             />
-            <p
-              className="font-[family-name:var(--font-noto-serif)] italic text-body text-tic-brown text-center md:text-left pt-10 md:pt-0"
-            >
-              Turn off your video. Lay down if you need to.
-              <br />
-              Any level of participation is welcome.
-              <br />
-              The only requirement is respectful presence.
-            </p>
           </div>
         </div>
       </section>
@@ -269,7 +258,7 @@ export default function CommunityCallPage() {
       {/* ── Testimonials ───────────────────────────────────────────── */}
       <section className="bg-[#fcfcfc] px-6 py-[50px] md:py-[100px]">
         <div className="max-w-[1290px] mx-auto">
-          <div className="max-w-[980px] mx-auto">
+          <div>
             <div className="flex flex-col md:flex-row justify-between items-start gap-6">
               <div>
                 <SectionLabel>What members say</SectionLabel>
@@ -280,10 +269,16 @@ export default function CommunityCallPage() {
                 alt=""
                 width={76}
                 height={82}
-                className="w-[130px] shrink-0 md:w-[200px] md:mr-[-14em]"
+                className="relative w-[130px] shrink-0 self-end mb-12 md:w-[234px] md:bottom-[4em] md:self-auto md:mb-0"
+                style={{
+                  // Overhangs the 1290px container by up to 6em on wide screens, but
+                  // shrinks on narrower ones so it never crosses the viewport edge
+                  // (the page hides horizontal overflow instead of scrolling to it).
+                  marginRight: "calc(-1 * min(6em, 8px + max(0px, (100vw - 1338px) / 2)))",
+                }}
               />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-9 mt-14">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-9 md:-mt-[3em]">
               {TESTIMONIALS.map((t) => (
                 <div key={t.cite} className="flex flex-col">
                   <blockquote className="font-[family-name:var(--font-noto-serif)] italic text-body text-[#0b0d10] border-l-[3px] border-tic-pink pl-[22px] mb-[18px] grow">
@@ -300,14 +295,12 @@ export default function CommunityCallPage() {
       </section>
 
       {/* ── Divider ────────────────────────────────────────────────── */}
-      <div className="py-[35px] md:py-[70px] px-2 text-center bg-[#817202]">
-        <span
-          className="font-[family-name:var(--font-gordon)] tracking-[0.03em] leading-[1.12] uppercase text-[#d5d069] block text-[clamp(24px,8.5vw,124px)] md:text-[clamp(40px,9.5vw,124px)]"
-        >
+      <div className="px-2 pt-[50px] md:pt-[100px] pb-[118px] md:pb-[168px] text-center bg-[#817202]">
+        <h2 className="font-[family-name:var(--font-gordon)] uppercase font-bold text-[#d5d069]" style={{ fontSize: "clamp(24px, 8vw, 115px)", letterSpacing: "0.09em", marginBottom: "-68px" }}>
           Integration
           <br />
           is the way
-        </span>
+        </h2>
       </div>
 
       {/* ── Free membership ────────────────────────────────────────── */}
@@ -343,7 +336,7 @@ export default function CommunityCallPage() {
               beginning.
             </SectionHeading>
           </div>
-          <BodyText className="text-[#0b0d10] mb-[52px]">
+          <BodyText className="text-[#0b0d10] mb-[1cm] md:mb-[52px]">
             When you join the free membership, you get access to:
           </BodyText>
 
@@ -360,7 +353,7 @@ export default function CommunityCallPage() {
               alt=""
               width={480}
               height={370}
-              className="md:hidden w-[60px] mx-auto mb-2.5"
+              className="md:hidden absolute w-[66px] -top-8 right-3 rotate-[4deg] z-10"
             />
 
             <div className="bg-[#fcfcfc] rounded-[4px] p-9 px-7">
@@ -393,7 +386,7 @@ export default function CommunityCallPage() {
               alt=""
               width={480}
               height={417}
-              className="md:hidden w-[60px] mx-auto mt-2.5"
+              className="md:hidden absolute w-[60px] -bottom-6 left-3 z-10"
             />
           </div>
 
@@ -414,86 +407,75 @@ export default function CommunityCallPage() {
       </section>
 
       {/* ── Go deeper ──────────────────────────────────────────────── */}
-      <section className="bg-[#fcfcfc] px-6 py-[50px] md:py-[100px]">
-        <div className="max-w-[1290px] mx-auto">
-          <div className="max-w-[920px] mx-auto">
+      <section className="bg-[#fcfcfc] px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
+        <div className="max-w-[90vw] mx-auto">
+          <div className="flex items-start justify-between md:block">
             <SectionLabel>Keep going</SectionLabel>
-            <SectionHeading>
-              The call is where many people start.
-              <br />
-              The memberships are where the work continues.
-            </SectionHeading>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-[52px]">
-              <BodyText className="order-2 md:order-1 text-[#222]">
-                The Practice and Practitioner memberships include everything in the free tier — plus weekly Friday practice sessions, monthly integration themes, the full capacity library, and a community moving through the Solar-Lunar Framework together.
-              </BodyText>
-              <div className="order-1 md:order-2 flex justify-center md:justify-end">
-                <Image
-                  src="/assets/shell.svg"
-                  alt=""
-                  width={1203}
-                  height={1662}
-                  className="w-[140px] md:w-[200px]"
-                />
-              </div>
-            </div>
+            <Image
+              src="/assets/shell.svg"
+              alt="Shell"
+              width={1203}
+              height={1662}
+              className="md:hidden h-auto w-12"
+              aria-hidden
+            />
+          </div>
+          <SectionHeading>
+            The call is where many people start.
+            <br />
+            The memberships are
+            <br />
+            where the work continues.
+          </SectionHeading>
+          <div className="grid md:grid-cols-[70%_30%] gap-[60px] items-start mb-[44px]">
+            <BodyText className="text-[#222]">
+              The Practice and Practitioner memberships include everything in the free tier — plus weekly Friday practice sessions, monthly integration themes, the full capacity library, and a community moving through the Solar-Lunar Framework together.
+            </BodyText>
+            <Image
+              src="/assets/shell.svg"
+              alt="Shell"
+              width={1203}
+              height={1662}
+              className="hidden md:block h-auto md:w-[51%]"
+              style={{
+                // Full -13em (-208px) pull-up only kicks in at >=1728px wide, where the
+                // shell clears the heading text horizontally. Below that it scales down
+                // to 0 by 1280px wide, so it never rises into the heading on narrow screens.
+                marginTop: "clamp(-208px, calc((1280px - 100vw) * 0.4643), 0px)",
+              }}
+              aria-hidden
+            />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[920px] mx-auto mb-10">
-            <div className="rounded-[4px] p-11 px-9 flex flex-col bg-tic-salmon text-[#0b0d10]">
-              <p className="font-[family-name:var(--font-gordon)] text-[10px] tracking-[0.2em] uppercase mb-[18px] opacity-85">
-                For Helpers &amp; Seekers
-              </p>
-              <h3
-                className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.02em] leading-[1.25] mb-4"
-                style={{ fontSize: "clamp(20px, 2.6vw, 26px)" }}
-              >
-                Weekly practice.
-                <br />
-                Real support.
-              </h3>
-              <p className="text-body mb-7 grow">
-                Weekly Friday sessions, monthly themes, the full integration library. For anyone ready to practice the capacities, not just learn about them.
-              </p>
-              <a
-                href="https://the-infinity-container.mn.co/users/onboarding/plans/1898747"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.12em] uppercase no-underline px-6 py-3 rounded-[3px] self-start bg-[#0b0d10] text-[#fcfcfc]"
-              >
-                Explore the Practice Membership →
-              </a>
-            </div>
-            <div className="rounded-[4px] p-11 px-9 flex flex-col bg-tic-blue text-[#fcfcfc]">
-              <p className="font-[family-name:var(--font-gordon)] text-[10px] tracking-[0.2em] uppercase mb-[18px] opacity-85">
-                For Practitioners
-              </p>
-              <h3
-                className="font-[family-name:var(--font-gordon)] font-normal tracking-[0.02em] leading-[1.25] mb-4"
-                style={{ fontSize: "clamp(20px, 2.6vw, 26px)" }}
-              >
-                Practice it — and learn to hold it.
-              </h3>
-              <p className="text-body mb-7 grow">
-                Everything in Practice, plus professional tools, practitioner-focused teaching, and a peer community doing their own work alongside their client work.
-              </p>
-              <a
-                href="https://the-infinity-container.mn.co/users/onboarding/plans/1483936"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.12em] uppercase no-underline px-6 py-3 rounded-[3px] self-start bg-[#fcfcfc] text-tic-blue"
-              >
-                Explore the Practitioner Membership →
-              </a>
-            </div>
-          </div>
+          <MembershipCards
+            cards={[
+              {
+                label: "For Helpers & Seekers",
+                heading: "Weekly practice. Real support.",
+                description:
+                  "Weekly Friday sessions, monthly themes, the full integration library. For anyone ready to practice the capacities, not just learn about them.",
+                buttonText: "Explore the Practice Membership →",
+                buttonHref: "https://the-infinity-container.mn.co/users/onboarding/plans/1898747",
+                backgroundColor: "red",
+              },
+              {
+                label: "For Practitioners",
+                heading: "Practice it — and learn to hold it.",
+                description:
+                  "Everything in Practice, plus professional tools, practitioner-focused teaching, and a peer community doing their own work alongside their client work.",
+                buttonText: "Explore the Practitioner Membership →",
+                buttonHref: "https://the-infinity-container.mn.co/users/onboarding/plans/1483936",
+                backgroundColor: "blue",
+              },
+            ]}
+          />
 
-          <div className="text-center">
+          <div className="text-center" style={{ marginTop: "80px" }}>
             <a
               href="/find-my-membership"
               className="font-[family-name:var(--font-noto-serif)] text-body italic text-[#0b0d10] underline decoration-1 underline-offset-4 hover:text-tic-brown transition-colors"
             >
-              Not sure which fits? Take the 7-question quiz →
+              Not sure which fits?<br className="md:hidden" /> Take the 7-question quiz →
             </a>
           </div>
         </div>

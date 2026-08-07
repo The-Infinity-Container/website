@@ -1,14 +1,10 @@
-export type CategoryKey =
-  | "professional-support"
-  | "community"
-  | "therapeutic-education"
-  | "inspiration";
+export type CategoryKey = "integration" | "psychedelics" | "practitioners" | "reflection";
 
 export const CATEGORIES: { key: CategoryKey; label: string; color: string }[] = [
-  { key: "professional-support", label: "Professional Support", color: "#7C3537" },
-  { key: "community", label: "Community", color: "#EB731F" },
-  { key: "therapeutic-education", label: "Therapeutic Education", color: "#817203" },
-  { key: "inspiration", label: "Inspiration", color: "#F25FC1" },
+  { key: "integration", label: "Integration", color: "#817202" },
+  { key: "psychedelics", label: "Psychedelics", color: "#236c7f" },
+  { key: "practitioners", label: "Practitioners", color: "#1948a7" },
+  { key: "reflection", label: "Reflection", color: "#f56e71" },
 ];
 
 export function categoryLabel(key: string): string {
