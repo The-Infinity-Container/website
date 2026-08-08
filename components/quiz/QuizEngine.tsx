@@ -65,7 +65,7 @@ export default function QuizEngine() {
     fetch("/api/quiz-submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, result: computedResult }),
+      body: JSON.stringify({ name, email, answers: scores }),
     }).catch((err) => {
       console.error("quiz-submit request failed:", err);
     });
