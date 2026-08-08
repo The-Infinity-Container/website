@@ -86,6 +86,33 @@ export const questions: Question[] = [
   },
 ];
 
+/** Validates that raw client-submitted answers are well-formed before they're scored server-side. */
+export function isValidQuizScores(value: unknown): value is QuizScores {
+  if (typeof value !== "object" || value === null || Array.isArray(value)) return false;
+
+  const entries = Object.entries(value as Record<string, unknown>);
+  if (entries.length !== questions.length) return false;
+
+  return entries.every(([key, answer]) => {
+    const index = Number(key);
+    if (!Number.isInteger(index) || index < 0 || index >= questions.length) return false;
+
+    const question = questions[index];
+    const optionCount = question.options.length;
+
+    if (question.multiSelect) {
+      return (
+        Array.isArray(answer) &&
+        answer.length > 0 &&
+        answer.every((i) => Number.isInteger(i) && i >= 0 && i < optionCount) &&
+        new Set(answer).size === answer.length
+      );
+    }
+
+    return typeof answer === "number" && Number.isInteger(answer) && answer >= 0 && answer < optionCount;
+  });
+}
+
 export function calculateResult(scores: QuizScores): ResultType {
   let f = 0;
   let p = 0;

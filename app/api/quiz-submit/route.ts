@@ -1,19 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { upsertSubscriber, addSubscriberToForm, resolveTagId, tagSubscriberByEmail } from "@/lib/quiz/kit";
-import type { ResultType } from "@/lib/quiz/types";
+import { calculateResult, isValidQuizScores } from "@/lib/quiz/data";
+import type { QuizScores, ResultType } from "@/lib/quiz/types";
 import { isRateLimited, clientKey } from "@/lib/rateLimit";
 import { isValidEmail } from "@/lib/validate";
 
 interface QuizSubmitBody {
   name: string;
   email: string;
-  result: ResultType;
-}
-
-const RESULT_TYPES: readonly ResultType[] = ["free", "practice", "practitioner"];
-
-function isResultType(value: unknown): value is ResultType {
-  return typeof value === "string" && (RESULT_TYPES as readonly string[]).includes(value);
+  answers: QuizScores;
 }
 
 const FORM_ID_BY_RESULT: Record<ResultType, string | undefined> = {
@@ -41,11 +36,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: false, error: "Invalid JSON body" }, { status: 400 });
   }
 
-  const { name, email, result } = body;
+  const { name, email, answers } = body;
 
-  if (!name || !isValidEmail(email) || !isResultType(result) || !FORM_ID_BY_RESULT[result]) {
+  if (!name || !isValidEmail(email) || !isValidQuizScores(answers)) {
     return NextResponse.json({ success: false, error: "Missing or invalid fields" }, { status: 422 });
   }
+
+  // The result is derived from answers here, not trusted from the client —
+  // the client only sends raw option indices.
+  const result = calculateResult(answers);
 
   // The client always advances to the result screen regardless of this
   // response — a failed Kit call should never block the user from seeing
