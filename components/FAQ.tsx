@@ -24,7 +24,7 @@ export default function FAQ({
       <div className="max-w-[1290px] mx-auto">
         <div className="max-w-[820px] mx-auto">
           <SectionLabel>{label}</SectionLabel>
-          <SectionHeading color="text-tic-dark-grey">{heading}</SectionHeading>
+          <SectionHeading color="text-black">{heading}</SectionHeading>
           <div className="bg-white rounded-lg px-6 md:px-10">
             <div className="flex flex-col border-t border-black/10">
               {items.map((item, i) => (
@@ -49,9 +49,9 @@ function FAQRow({ item }: { item: FAQItem }) {
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls={panelId}
-        className="w-full flex items-center justify-between gap-6 py-6 text-left"
+        className="group w-full flex items-center justify-between gap-6 py-6 text-left"
       >
-        <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] text-black leading-[1.4]" style={{ fontSize: "clamp(15px, 1.8vw, 18px)" }}>
+        <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] text-black leading-[1.4] transition-colors group-hover:text-tic-pink" style={{ fontSize: "clamp(15px, 1.8vw, 18px)" }}>
           {item.question}
         </span>
         <PlusMinusIcon open={open} />
