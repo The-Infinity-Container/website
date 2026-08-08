@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 
 export default function SimpleNewsletter() {
+  const emailId = useId();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -33,7 +34,9 @@ export default function SimpleNewsletter() {
   return (
     <div>
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center">
+        <label htmlFor={emailId} className="sr-only">Email</label>
         <input
+          id={emailId}
           type="email"
           placeholder="Your email"
           value={email}

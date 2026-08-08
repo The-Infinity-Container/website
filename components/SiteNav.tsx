@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // Routes that render the nav in its dark variant (pink links, yellow logo) —
 // used on pages that open with a black section at the top.
@@ -39,11 +39,48 @@ export default function SiteNav() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const isDark = DARK_NAV_ROUTES.some((r) => (r === "/" ? pathname === "/" : pathname.startsWith(r)));
+  const drawerRef = useRef<HTMLDivElement>(null);
+  const openButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setDropdownOpen(null);
     setDrawerOpen(false);
   }, [pathname]);
+
+  // Escape-to-close and a focus trap while the drawer is open, so keyboard
+  // users can't tab into the hidden page content behind it.
+  useEffect(() => {
+    if (!drawerOpen) return;
+
+    const openButton = openButtonRef.current;
+    const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const focusables = Array.from(drawerRef.current?.querySelectorAll<HTMLElement>(focusableSelector) ?? []);
+    focusables[0]?.focus();
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setDrawerOpen(false);
+        return;
+      }
+      if (e.key !== "Tab" || focusables.length === 0) return;
+
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      openButton?.focus();
+    };
+  }, [drawerOpen]);
 
   function isActive(href: string) {
     if (href === "/") return pathname === "/";
@@ -64,6 +101,7 @@ export default function SiteNav() {
         className="sticky top-0 left-0 right-0 z-50 flex flex-wrap items-center justify-between bg-white border-b border-black/8 px-6 py-4 md:px-8"
       >
         <button
+          ref={openButtonRef}
           onClick={() => setDrawerOpen(true)}
           className="font-[family-name:var(--font-gordon)] text-xs tracking-[0.14em] uppercase text-black hover:text-tic-pink transition-colors"
           aria-label="Open navigation"
@@ -102,6 +140,10 @@ export default function SiteNav() {
 
       {/* Left sliding drawer */}
       <div
+        ref={drawerRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Site navigation"
         className={`fixed top-0 left-0 h-full z-50 w-[65vw] max-w-md bg-tic-yellow flex flex-col transition-transform duration-300 ease-in-out ${
           drawerOpen ? "translate-x-0" : "-translate-x-full"
         }`}

@@ -31,7 +31,8 @@ export default function WhatIsIntegrationPage() {
           </h1>
           <Image
             src="/assets/integration_handwritten.png"
-            alt="becomes a part of who you are"
+            alt=""
+            aria-hidden
             width={792}
             height={216}
             className="block mx-auto my-[8px]"
@@ -82,7 +83,8 @@ export default function WhatIsIntegrationPage() {
               <div className="hidden md:block absolute left-0 top-0 -bottom-[10px] w-[3px] bg-tic-yellow" />
               <Image
                 src="/assets/snake-shape.svg"
-                alt="Integration journey"
+                alt=""
+                aria-hidden
                 width={600}
                 height={800}
                 className="w-[70%] max-w-[300px] h-auto rotate-[-12deg] md:w-[300px]"
@@ -243,7 +245,7 @@ export default function WhatIsIntegrationPage() {
             </div>
             <Image
               src="/assets/lunar-pink-transparent-bg.svg"
-              alt="Solar-Lunar Framework"
+              alt=""
               width={656}
               height={656}
               className="mx-auto w-full h-auto hidden md:block"
@@ -303,7 +305,7 @@ export default function WhatIsIntegrationPage() {
             <SectionLabel>How you live it</SectionLabel>
             <Image
               src="/assets/shell.svg"
-              alt="Shell"
+              alt=""
               width={360}
               height={450}
               className="md:hidden h-auto w-12"
@@ -323,7 +325,7 @@ export default function WhatIsIntegrationPage() {
             </BodyText>
             <Image
               src="/assets/shell.svg"
-              alt="Shell"
+              alt=""
               width={360}
               height={450}
               className="hidden md:block h-auto md:w-[51%] md:mx-0 md:-mt-[13em]"

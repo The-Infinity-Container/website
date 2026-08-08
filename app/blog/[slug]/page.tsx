@@ -152,7 +152,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <Image
               key={url}
               src={url}
-              alt=""
+              alt={`${post.title} — additional photo`}
               width={400}
               height={400}
               className="w-full aspect-square object-cover rounded border border-tic-grey"

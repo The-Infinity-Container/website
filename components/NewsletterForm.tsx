@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 
 interface NewsletterFormProps {
   heading?: string;
@@ -13,6 +13,8 @@ export default function NewsletterForm({
   description = "To receive email updates on community calls and other Infinity Container news, subscribe to our newsletter.",
   dark = false,
 }: NewsletterFormProps) {
+  const nameId = useId();
+  const emailId = useId();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -58,7 +60,9 @@ export default function NewsletterForm({
         </p>
       )}
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 w-full max-w-xl">
+        <label htmlFor={nameId} className="sr-only">Name</label>
         <input
+          id={nameId}
           type="text"
           placeholder="Name"
           value={name}
@@ -66,7 +70,9 @@ export default function NewsletterForm({
           required
           className={`flex-1 border-b-2 ${borderColor} ${inputBg} bg-transparent py-2 px-1 text-sm outline-none focus:opacity-80 transition-opacity`}
         />
+        <label htmlFor={emailId} className="sr-only">Email</label>
         <input
+          id={emailId}
           type="email"
           placeholder="Email"
           value={email}

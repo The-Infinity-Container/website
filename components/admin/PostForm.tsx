@@ -234,7 +234,7 @@ export default function PostForm({
             // the project's storage hostname allow-listed, so a plain <img>
             // keeps the admin form working before that's configured.
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={coverImageUrl} alt="" className="w-full max-w-xs h-auto mb-2 border-2 border-black" />
+            <img src={coverImageUrl} alt="Cover image preview" className="w-full max-w-xs h-auto mb-2 border-2 border-black" />
           )}
           <label
             htmlFor="cover-image"
@@ -264,7 +264,7 @@ export default function PostForm({
               {images.map((url) => (
                 <div key={url} className="relative">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={url} alt="" className="w-full aspect-square object-cover border-2 border-black" />
+                  <img src={url} alt="Gallery image preview" className="w-full aspect-square object-cover border-2 border-black" />
                   <button
                     type="button"
                     onClick={() => removeImage(url)}

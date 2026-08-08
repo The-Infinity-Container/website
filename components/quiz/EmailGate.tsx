@@ -1,12 +1,14 @@
 "use client";
 
-import { useState, type ChangeEvent } from "react";
+import { useId, useState, type ChangeEvent } from "react";
 
 interface EmailGateProps {
   onSubmit: (name: string, email: string) => void;
 }
 
 export default function EmailGate({ onSubmit }: EmailGateProps) {
+  const nameId = useId();
+  const emailId = useId();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [showError, setShowError] = useState(false);
@@ -33,14 +35,18 @@ export default function EmailGate({ onSubmit }: EmailGateProps) {
       </p>
 
       <div className="flex flex-col gap-[14px] max-w-[420px] mx-auto mb-6">
+        <label htmlFor={nameId} className="sr-only">First name</label>
         <input
+          id={nameId}
           type="text"
           placeholder="First name"
           value={name}
           onChange={(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
           className="px-[18px] py-4 border-[1.5px] border-tic-grey rounded font-[family-name:var(--font-noto-serif)] text-[15px] text-black bg-white focus:outline-none focus:border-tic-orange transition-colors"
         />
+        <label htmlFor={emailId} className="sr-only">Email address</label>
         <input
+          id={emailId}
           type="email"
           placeholder="Email address"
           value={email}
