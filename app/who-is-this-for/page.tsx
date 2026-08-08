@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Marquee from "@/components/Marquee";
+import { resolvePageMetadata } from "@/lib/pageSeo";
 
-export const metadata: Metadata = {
-  title: "Who is The Infinity Container For?",
-  description: "For therapists, teachers, space holders, artists, coaches, doulas, and all practitioners who need space to be held.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return resolvePageMetadata("/who-is-this-for", {
+    title: "Who is The Infinity Container For?",
+    description:
+      "For therapists, teachers, space holders, artists, coaches, doulas, and all practitioners who need space to be held.",
+  });
+}
 
 const PRACTITIONERS = [
   "Therapists",

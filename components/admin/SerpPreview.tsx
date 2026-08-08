@@ -1,4 +1,4 @@
-const SITE_NAME = "The Infinity Container";
+export const SITE_NAME = "The Infinity Container";
 const SITE_DOMAIN = "theinfinitycontainer.com";
 const TITLE_TRUNCATE = 60;
 const DESCRIPTION_TRUNCATE = 160;
@@ -7,26 +7,25 @@ function truncate(text: string, max: number): string {
   return text.length > max ? `${text.slice(0, max - 1).trimEnd()}…` : text;
 }
 
+// Purely presentational — the caller resolves whatever fallback chain its
+// content type actually uses (e.g. blog posts fall back to "title | site
+// name"; static pages just store the final string) and passes the exact
+// title/description that will render.
 export default function SerpPreview({
   title,
-  seoTitle,
-  slug,
-  excerpt,
-  metaDescription,
+  path,
+  description,
 }: {
   title: string;
-  seoTitle: string;
-  slug: string;
-  excerpt: string;
-  metaDescription: string;
+  path: string;
+  description: string;
 }) {
-  // Mirrors the fallback chain in generateMetadata() on the real post page,
-  // so this preview matches what actually ships to <title>/<meta description>.
-  const displayTitle = truncate(`${(seoTitle || title || "Untitled post").trim()} — ${SITE_NAME}`, TITLE_TRUNCATE + SITE_NAME.length + 3);
-  const rawDescription = (metaDescription || excerpt).trim();
+  const displayTitle = title.trim() ? truncate(title.trim(), TITLE_TRUNCATE) : "Untitled";
+  const rawDescription = description.trim();
   const displayDescription = rawDescription
     ? truncate(rawDescription, DESCRIPTION_TRUNCATE)
     : "No meta description set — Google may generate one automatically from the page content.";
+  const segments = path.split("/").filter(Boolean);
 
   return (
     <div className="border-2 border-black p-4 bg-white">
@@ -35,8 +34,13 @@ export default function SerpPreview({
       </p>
       <div className="font-sans max-w-xl">
         <p className="text-sm text-[#4d5156] truncate">
-          {SITE_DOMAIN} <span className="text-black/30">›</span> blog <span className="text-black/30">›</span>{" "}
-          {slug || "post-slug"}
+          {SITE_DOMAIN}
+          {segments.map((segment) => (
+            <span key={segment}>
+              {" "}
+              <span className="text-black/30">›</span> {segment}
+            </span>
+          ))}
         </p>
         <p className="text-xl text-[#1a0dab] leading-snug truncate">{displayTitle}</p>
         <p className="text-sm text-[#4d5156] leading-snug">{displayDescription}</p>

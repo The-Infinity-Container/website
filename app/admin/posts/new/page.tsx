@@ -4,6 +4,7 @@ import { getAllPostsForAdmin } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "New Post — Admin",
+  robots: { index: false, follow: false },
 };
 
 export default async function NewPostPage() {

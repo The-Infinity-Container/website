@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import LogoutButton from "./LogoutButton";
 
@@ -16,9 +17,19 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     <main className="pt-14 pb-[5em] min-h-screen bg-white">
       {user && (
         <div className="flex items-center justify-between px-6 py-3 border-b-2 border-black">
-          <span className="font-[family-name:var(--font-gordon)] text-sm uppercase tracking-widest">
-            Admin
-          </span>
+          <div className="flex items-center gap-6">
+            <span className="font-[family-name:var(--font-gordon)] text-sm uppercase tracking-widest">
+              Admin
+            </span>
+            <nav className="flex items-center gap-4 text-sm font-bold uppercase tracking-wide">
+              <Link href="/admin" className="underline cursor-pointer hover:opacity-70">
+                Posts
+              </Link>
+              <Link href="/admin/seo" className="underline cursor-pointer hover:opacity-70">
+                SEO
+              </Link>
+            </nav>
+          </div>
           <LogoutButton />
         </div>
       )}

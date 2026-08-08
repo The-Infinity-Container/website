@@ -5,7 +5,8 @@ import { categoryLabel } from "@/lib/categories";
 import { deletePost, togglePublish } from "@/lib/actions/posts";
 
 export const metadata: Metadata = {
-  title: "Admin · Posts — The Infinity Container",
+  title: "Admin · Posts",
+  robots: { index: false, follow: false },
 };
 
 export default async function AdminDashboardPage() {

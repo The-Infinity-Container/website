@@ -5,6 +5,7 @@ import { getAllPostsForAdmin, getPostById } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Edit Post — Admin",
+  robots: { index: false, follow: false },
 };
 
 export default async function EditPostPage({ params }: { params: Promise<{ id: string }> }) {

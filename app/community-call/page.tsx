@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { resolvePageMetadata } from "@/lib/pageSeo";
 import LocalCallTime from "@/components/LocalCallTime";
 import SectionLabel from "@/components/SectionLabel";
 import SectionHeading from "@/components/SectionHeading";
 import BodyText from "@/components/BodyText";
 import MembershipCards from "@/components/MembershipCards";
 
-export const metadata: Metadata = {
-  title: "Community Call | The Infinity Container",
-  description:
-    "Join The Infinity Container's free monthly Community Call — a 90-minute integration session with teaching, embodied practice, and community sharing. First Saturday of the month, 10am PST.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return resolvePageMetadata("/community-call", {
+    title: "Community Call | The Infinity Container",
+    description:
+      "Join The Infinity Container's free monthly Community Call — a 90-minute integration session with teaching, embodied practice, and community sharing. First Saturday of the month, 10am PST.",
+  });
+}
 
 const SIGN_IN_URL = "https://the-infinity-container.mn.co/sign_in";
 const FREE_MEMBERSHIP_URL = "https://the-infinity-container.mn.co/users/onboarding/plans/1484020";

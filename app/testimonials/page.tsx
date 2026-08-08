@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Marquee from "@/components/Marquee";
+import { resolvePageMetadata } from "@/lib/pageSeo";
 
-export const metadata: Metadata = {
-  title: "Testimonials — The Infinity Container",
-  description: "What members of The Infinity Container say about their experience.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return resolvePageMetadata("/testimonials", {
+    title: "Testimonials | The Infinity Container",
+    description: "What members of The Infinity Container say about their experience.",
+  });
+}
 
 const TESTIMONIALS = [
   {

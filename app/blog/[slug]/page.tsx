@@ -20,10 +20,36 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
-  if (!post) return { title: "Post not found — The Infinity Container" };
+  if (!post) return { title: "Post not found" };
+
+  // seo_title is author-crafted to be a complete, length-optimized title (see
+  // lib/seoAnalysis.ts's 40–60 char check) — used verbatim, without the site's
+  // title template stacking another " | The Infinity Container" on top of it.
+  const title = post.seo_title ? { absolute: post.seo_title } : post.title;
+  const ogTitle = post.seo_title || post.title;
+  const description = post.meta_description || post.excerpt || undefined;
+  const image = post.cover_image_url
+    ? { url: post.cover_image_url, alt: post.alt_text || post.title }
+    : { url: "/opengraph-image.png", alt: "The Infinity Container" };
+
   return {
-    title: `${post.seo_title || post.title} — The Infinity Container`,
-    description: post.meta_description || post.excerpt || undefined,
+    title,
+    description,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: ogTitle,
+      description,
+      type: "article",
+      publishedTime: post.published_at ?? undefined,
+      authors: post.author ? [post.author] : undefined,
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: ogTitle,
+      description,
+      images: [image.url],
+    },
   };
 }
 
