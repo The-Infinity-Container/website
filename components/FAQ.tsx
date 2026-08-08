@@ -73,9 +73,9 @@ function FAQRow({ item }: { item: FAQItem }) {
 function PlusMinusIcon({ open }: { open: boolean }) {
   return (
     <span className="relative w-4 h-4 shrink-0" aria-hidden>
-      <span className="absolute left-1/2 top-1/2 h-[1.5px] w-4 -translate-x-1/2 -translate-y-1/2 bg-black" />
+      <span className="absolute left-1/2 top-1/2 h-[1.5px] w-4 -translate-x-1/2 -translate-y-1/2 bg-black transition-colors group-hover:bg-tic-pink" />
       <span
-        className={`absolute left-1/2 top-1/2 h-4 w-[1.5px] -translate-x-1/2 -translate-y-1/2 bg-black transition-opacity duration-200 ${
+        className={`absolute left-1/2 top-1/2 h-4 w-[1.5px] -translate-x-1/2 -translate-y-1/2 bg-black transition-[opacity,background-color] duration-200 group-hover:bg-tic-pink ${
           open ? "opacity-0" : "opacity-100"
         }`}
       />
