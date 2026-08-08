@@ -181,7 +181,7 @@ export default function SiteNav() {
                       height="14"
                       viewBox="0 0 14 14"
                       fill="none"
-                      className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                      className={`shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                       aria-hidden="true"
                     >
                       <path
