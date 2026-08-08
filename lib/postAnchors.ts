@@ -22,6 +22,12 @@ export function injectHeadingAnchors(html: string, anchors: Record<string, strin
     if (/\bid=/.test(attrs)) return match;
     const id = byText.get(stripTags(inner).toLowerCase());
     if (!id) return match;
-    return `<${tag}${attrs} id="${id}">${inner}</${tag}>`;
+    // scroll-anchor-target (globals.css) offsets for the sticky nav — a plain CSS
+    // class because this HTML bypasses Tailwind's build-time class scanner.
+    const withId = `${attrs} id="${id}"`;
+    const withClass = /\bclass="/.test(withId)
+      ? withId.replace(/\bclass="([^"]*)"/, `class="$1 scroll-anchor-target"`)
+      : `${withId} class="scroll-anchor-target"`;
+    return `<${tag}${withClass}>${inner}</${tag}>`;
   });
 }

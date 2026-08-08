@@ -234,7 +234,7 @@ export default function WhatIsIntegrationPage() {
 
       {/* ── OUR SYSTEM ───────────────────────────────────────────────── */}
       <section className="bg-black px-6 pt-[50px] md:pt-[100px] pb-[70px] md:pb-[140px]">
-        <div id="our-system">
+        <div id="our-system" className="scroll-anchor-target">
           <div className="grid md:grid-cols-[1.3fr_1fr] gap-[60px] items-center max-w-[1280px] mx-auto mb-[44px]">
             <div>
               <SectionLabel color="text-[#D5D06A]">Our system</SectionLabel>
