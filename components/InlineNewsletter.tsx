@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 
 export default function InlineNewsletter({
   inputBg = "bg-tic-pink",
@@ -9,6 +9,8 @@ export default function InlineNewsletter({
   inputBg?: string;
   onSuccess?: () => void;
 }) {
+  const nameId = useId();
+  const emailId = useId();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -40,7 +42,9 @@ export default function InlineNewsletter({
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-wrap justify-center gap-3">
+      <label htmlFor={nameId} className="sr-only">Name</label>
       <input
+        id={nameId}
         type="text"
         placeholder="Name"
         value={name}
@@ -48,7 +52,9 @@ export default function InlineNewsletter({
         required
         className={`${inputBg} px-5 py-3 text-black placeholder-black/60 outline-none min-w-[180px]`}
       />
+      <label htmlFor={emailId} className="sr-only">Email</label>
       <input
+        id={emailId}
         type="email"
         placeholder="Email"
         value={email}

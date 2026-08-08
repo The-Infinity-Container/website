@@ -413,7 +413,7 @@ export default function CommunityCallPage() {
             <SectionLabel>Keep going</SectionLabel>
             <Image
               src="/assets/shell.svg"
-              alt="Shell"
+              alt=""
               width={1203}
               height={1662}
               className="md:hidden h-auto w-12"
@@ -433,7 +433,7 @@ export default function CommunityCallPage() {
             </BodyText>
             <Image
               src="/assets/shell.svg"
-              alt="Shell"
+              alt=""
               width={1203}
               height={1662}
               className="hidden md:block h-auto md:w-[51%]"

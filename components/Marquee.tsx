@@ -23,7 +23,7 @@ export default function Marquee({
   const doubled = segment + segment;
 
   return (
-    <div className={`overflow-hidden whitespace-nowrap ${className}`}>
+    <div className={`overflow-hidden whitespace-nowrap ${className}`} aria-hidden="true">
       <motion.div
         className={`inline-block ${textClassName}`}
         animate={{ x: ["0%", "-50%"] }}
