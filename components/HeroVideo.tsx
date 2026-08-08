@@ -37,7 +37,7 @@ export default function HeroVideo() {
       <img
         src="/assets/hero-poster-mobile.jpg"
         alt=""
-        className="absolute top-0 left-1/2 min-w-full min-h-[120vh] w-auto h-auto -translate-x-1/2 object-cover"
+        className="absolute top-0 left-1/2 min-w-full min-h-[130vh] w-auto h-auto -translate-x-1/2 object-cover"
         aria-hidden
       />
     );
@@ -51,7 +51,7 @@ export default function HeroVideo() {
       loop
       playsInline
       poster={isMobile ? "/assets/hero-poster-mobile.jpg" : undefined}
-      className="absolute top-0 md:top-1/2 left-1/2 min-w-full min-h-[120vh] md:min-h-full w-auto h-auto -translate-x-1/2 md:-translate-y-1/2 object-cover"
+      className="absolute top-0 md:top-1/2 left-1/2 min-w-full min-h-[130vh] md:min-h-full w-auto h-auto -translate-x-1/2 md:-translate-y-1/2 object-cover"
     >
       <source src="/assets/videos/hero-mobile-extended.mp4" media={MOBILE_QUERY} type="video/mp4" />
       <source src="/assets/videos/hero-desktop.mp4" type="video/mp4" />
