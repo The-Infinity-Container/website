@@ -202,7 +202,7 @@ export default function HomePage() {
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="bg-black">
         {/* Logo-open animation, extended height, text overlaid below the globe */}
-        <div className="relative w-full h-[120vh] md:h-[200vh] overflow-hidden bg-black">
+        <div className="relative w-full h-[130vh] md:h-[200vh] overflow-hidden bg-black">
           <HeroVideo />
 
           <div className="absolute inset-x-0 top-1/2 z-10 text-center px-6 pt-0 md:pt-[60px] pb-8 md:pb-[84px] mt-[-25px] md:mt-[4em]">
@@ -238,7 +238,7 @@ export default function HomePage() {
           </p>
 
           <p
-            className="font-[family-name:var(--font-noto-serif)] text-tic-grey max-w-[640px] mx-auto mb-5 md:mb-8 leading-[1.75]"
+            className="font-[family-name:var(--font-noto-serif)] text-tic-grey max-w-[640px] mx-auto mb-[calc(var(--spacing)*6.5)] md:mb-8 leading-[1.75]"
             style={{ fontSize: "clamp(0.788rem, 1.54vw, 0.963rem)" }}
           >
             Psychedelic integration, life transitions, and expanded experience — for the people
@@ -247,7 +247,7 @@ export default function HomePage() {
 
           <Link
             href="/find-my-membership"
-            className="inline-block font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm bg-tic-salmon text-black px-10 py-4 rounded-sm hover:bg-tic-pink transition-colors"
+            className="inline-block font-[family-name:var(--font-gordon)] uppercase tracking-[0.12em] text-sm bg-tic-salmon text-black px-5 py-4 rounded-sm hover:bg-tic-pink transition-colors"
           >
             Find My Membership →
           </Link>
@@ -255,7 +255,7 @@ export default function HomePage() {
             href={SIGNIN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="block mt-5 md:mt-3 mb-7 md:mb-0 text-sm text-tic-yellow"
+            className="block mt-[calc(var(--spacing)*6.5)] md:mt-3 mb-[68px] md:mb-0 text-sm text-tic-yellow"
           >
             Already a member? Sign in
           </a>

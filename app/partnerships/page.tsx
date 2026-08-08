@@ -124,7 +124,7 @@ export default function PartnershipsPage() {
                 &quot;Dr. Mindy is a dear and trusted friend. Her commitment to women&apos;s health began before most people started talking about menopause and perimenopause — she was the first to link cycles to lifestyle protocols. She has been offering free teachings online before it became a trend and paved the way for much of the information we receive today.&quot;
               </p>
               <BodyText className="text-[#333] mb-5">
-                Reset Academy is Dr. Mindy Pelz&apos;s membership community for women navigating metabolic health, fasting, and hormonal wellbeing. Dr. Victoria Sterkin is a Master Teacher inside Reset Academy, where she offers a course called <em>Integrating with Authenticity</em> — bringing the Solar-Lunar integration framework to women ready to make lasting change. Not just information, but embodied practice.
+                Reset Academy is Dr. Mindy Pelz&apos;s membership community for women navigating metabolic health, fasting, and hormonal wellbeing. Dr. Victoria Sterkin is a Master Teacher inside Reset Academy, where she offers a course called <em>Integrating with Authenticity</em> — bringing an integration framework to women ready to make lasting change. Not just information, but embodied practice.
               </BodyText>
               <a
                 href="https://resetacademy.drmindypelz.com"
