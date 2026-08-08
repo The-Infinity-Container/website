@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { resolvePageMetadata } from "@/lib/pageSeo";
 import SectionLabel from "@/components/SectionLabel";
 import SectionHeading from "@/components/SectionHeading";
 import BodyText from "@/components/BodyText";
 import ReadMoreCollapse from "@/components/ReadMoreCollapse";
 
-export const metadata: Metadata = {
-  title: "About | The Infinity Container",
-  description:
-    "Meet Dr. Victoria Sterkin — behavior analyst, therapist, and integration specialist with 25 years of clinical experience — and the story behind The Infinity Container.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return resolvePageMetadata("/about-us", {
+    title: "About | The Infinity Container",
+    description:
+      "Meet Dr. Victoria Sterkin — behavior analyst, therapist, and integration specialist with 25 years of clinical experience — and the story behind The Infinity Container.",
+  });
+}
 
 const CREDENTIALS = [
   "PhD in Applied Behavior Analysis and two master's degrees, Teachers College, Columbia University",

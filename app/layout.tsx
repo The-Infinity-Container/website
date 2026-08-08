@@ -12,8 +12,20 @@ const notoSerif = Noto_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "The Infinity Container",
+  metadataBase: new URL("https://theinfinitycontainer.com"),
+  title: {
+    template: "%s | The Infinity Container",
+    default: "The Infinity Container",
+  },
   description: "Integration and support for practitioners — The Infinity Container",
+  openGraph: {
+    siteName: "The Infinity Container",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 // viewportFit: "cover" lets section backgrounds paint edge to edge in landscape.

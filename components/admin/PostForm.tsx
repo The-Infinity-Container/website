@@ -2,7 +2,8 @@
 
 import { useActionState, useEffect, useState } from "react";
 import PostEditor from "./PostEditor";
-import SerpPreview from "./SerpPreview";
+import SerpPreview, { SITE_NAME } from "./SerpPreview";
+import CharCounter from "./CharCounter";
 import { CATEGORIES, type CategoryKey } from "@/lib/categories";
 import { createPost, updatePost, getUsedFocusKeyphrases, type PostActionState } from "@/lib/actions/posts";
 import { uploadImage } from "@/lib/uploadImage";
@@ -25,16 +26,6 @@ const FOCUS_KEYPHRASE_MAX = 60;
 const SEO_TITLE_MAX = 60;
 const META_DESCRIPTION_MAX = 160;
 const ALT_TEXT_MAX = 125;
-
-function CharCounter({ value, max }: { value: string; max: number }) {
-  const len = value.length;
-  const color = len >= max ? "text-tic-coral" : len >= max * 0.85 ? "text-tic-orange" : "text-black/40";
-  return (
-    <span className={`text-xs font-bold ${color}`}>
-      {len}/{max}
-    </span>
-  );
-}
 
 function AccordionSection({
   title,
@@ -386,7 +377,11 @@ export default function PostForm({
           </span>
         }
       >
-        <SerpPreview title={title} seoTitle={seoTitle} slug={slug} excerpt={excerpt} metaDescription={metaDescription} />
+        <SerpPreview
+          title={seoTitle.trim() || `${(title || "Untitled post").trim()} | ${SITE_NAME}`}
+          path={`/blog/${slug || "post-slug"}`}
+          description={metaDescription || excerpt}
+        />
 
         <div>
           <div className="flex items-center justify-between">

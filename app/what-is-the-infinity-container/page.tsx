@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Marquee from "@/components/Marquee";
 import NewsletterForm from "@/components/NewsletterForm";
+import { resolvePageMetadata } from "@/lib/pageSeo";
 
-export const metadata: Metadata = {
-  title: "What is The Infinity Container?",
-  description: "A space for integration — for space holders, artists, and practitioners. The Infinity Container is where integration is the way.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return resolvePageMetadata("/what-is-the-infinity-container", {
+    title: "What is The Infinity Container?",
+    description:
+      "A space for integration — for space holders, artists, and practitioners. The Infinity Container is where integration is the way.",
+  });
+}
 
 const PILLARS = [
   { label: "Community // Network", icon: "✦" },

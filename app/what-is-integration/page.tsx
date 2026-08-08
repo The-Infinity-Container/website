@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { resolvePageMetadata } from "@/lib/pageSeo";
 import ApproachCards from "@/components/ApproachCards";
 import MembershipCards from "@/components/MembershipCards";
 import SimpleNewsletter from "@/components/SimpleNewsletter";
@@ -8,10 +9,13 @@ import SectionLabel from "@/components/SectionLabel";
 import SectionHeading from "@/components/SectionHeading";
 import BodyText from "@/components/BodyText";
 
-export const metadata: Metadata = {
-  title: "What is Integration? | The Infinity Container",
-  description: "Integration is how an experience becomes part of who you are. Learn what psychedelic integration is, why it doesn't happen on its own, and how the Solar-Lunar Framework maps the full arc from preparation to becoming.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return resolvePageMetadata("/what-is-integration", {
+    title: "What is Integration? | The Infinity Container",
+    description:
+      "Integration is how an experience becomes part of who you are. Learn what psychedelic integration is, why it doesn't happen on its own, and how the Solar-Lunar Framework maps the full arc from preparation to becoming.",
+  });
+}
 
 const SOLAR_CAPACITIES = ["Ground", "Anchor"];
 const LUNAR_CAPACITIES = ["Weave", "Conduct", "Titrate", "Play", "Kindle", "Shed"];

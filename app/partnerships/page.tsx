@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { resolvePageMetadata } from "@/lib/pageSeo";
 import SectionLabel from "@/components/SectionLabel";
 import SectionHeading from "@/components/SectionHeading";
 import BodyText from "@/components/BodyText";
 
-export const metadata: Metadata = {
-  title: "Partnerships — The Infinity Container",
-  description:
-    "TIC partnerships — companies and communities Victoria trusts personally.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return resolvePageMetadata("/partnerships", {
+    title: "Partnerships | The Infinity Container",
+    description: "TIC partnerships — companies and communities Victoria trusts personally.",
+  });
+}
 
 export default function PartnershipsPage() {
   return (

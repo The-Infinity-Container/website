@@ -1,5 +1,7 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { resolvePageMetadata } from "@/lib/pageSeo";
 import HeroVideo from "@/components/HeroVideo";
 import InlineNewsletter from "@/components/InlineNewsletter";
 import NewsletterPopup from "@/components/NewsletterPopup";
@@ -14,6 +16,14 @@ import FAQ, { FAQParagraph, type FAQItem } from "@/components/FAQ";
 const FIND_MEMBERSHIP_URL = "https://the-infinity-container.mn.co/users/onboarding/plans";
 const JOIN_FREE_URL = "https://the-infinity-container.mn.co/users/onboarding/plans/1484020";
 const SIGNIN_URL = "https://the-infinity-container.mn.co/sign_in";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return resolvePageMetadata("/", {
+    title: "Psychedelic Integration Community | The Infinity Container",
+    description:
+      "A psychedelic integration community for practitioners and seekers navigating life transitions and expanded states — built on the Solar-Lunar Framework.",
+  });
+}
 
 const homeFaqItems: FAQItem[] = [
   {
