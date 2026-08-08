@@ -284,7 +284,7 @@ export default function HomePage() {
           </div>
 
           {/* Mobile: stacked, Desktop: 2-column grid */}
-          <div className="flex flex-col gap-8 md:gap-16 w-full md:grid md:mt-[7em]" style={{ gridTemplateColumns: "1.4fr 1fr", alignItems: "start" }}>
+          <div className="flex flex-col gap-8 md:gap-16 w-full md:grid md:mt-[2em]" style={{ gridTemplateColumns: "1.4fr 1fr", alignItems: "start" }}>
             {/* Mobile: Integration image second */}
             <div className="md:hidden order-2 w-full">
               <Image
