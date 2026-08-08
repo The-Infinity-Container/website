@@ -11,8 +11,23 @@ const notoSerif = Noto_Serif({
   style: ["normal", "italic"],
 });
 
+// The custom domain isn't live yet — the site is only reachable at whatever
+// Vercel deployment URL is serving it. Hardcoding theinfinitycontainer.com
+// here made og:image/twitter:image resolve to that (WordPress, 404s the
+// image) domain instead of the real one, so shared links fell back to
+// whatever image a crawler had cached from an earlier, unrelated share of
+// the same URL. VERCEL_PROJECT_PRODUCTION_URL/VERCEL_URL are set
+// automatically by Vercel and will track the custom domain once it's added.
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL
+  : process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://theinfinitycontainer.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     template: "%s | The Infinity Container",
     default: "The Infinity Container",
