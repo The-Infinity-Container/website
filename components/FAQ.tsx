@@ -49,7 +49,7 @@ function FAQRow({ item }: { item: FAQItem }) {
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls={panelId}
-        className="group w-full flex items-center justify-between gap-6 py-6 text-left"
+        className="group w-full flex items-center justify-between gap-6 py-6 text-left cursor-pointer"
       >
         <span className="font-[family-name:var(--font-gordon)] uppercase tracking-[0.02em] text-black leading-[1.4] transition-colors group-hover:text-tic-pink" style={{ fontSize: "clamp(15px, 1.8vw, 18px)" }}>
           {item.question}
