@@ -1,11 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 import { upsertSubscriber, addSubscriberToForm, resolveTagId, tagSubscriberByEmail } from "@/lib/quiz/kit";
 import type { ResultType } from "@/lib/quiz/types";
+import { isRateLimited, clientKey } from "@/lib/rateLimit";
+import { isValidEmail } from "@/lib/validate";
 
 interface QuizSubmitBody {
   name: string;
   email: string;
   result: ResultType;
+}
+
+const RESULT_TYPES: readonly ResultType[] = ["free", "practice", "practitioner"];
+
+function isResultType(value: unknown): value is ResultType {
+  return typeof value === "string" && (RESULT_TYPES as readonly string[]).includes(value);
 }
 
 const FORM_ID_BY_RESULT: Record<ResultType, string | undefined> = {
@@ -21,6 +29,10 @@ const TAG_NAME_BY_RESULT: Record<ResultType, string> = {
 };
 
 export async function POST(req: NextRequest) {
+  if (isRateLimited(clientKey(req))) {
+    return NextResponse.json({ success: false, error: "Too many requests" }, { status: 429 });
+  }
+
   let body: QuizSubmitBody;
 
   try {
@@ -31,7 +43,7 @@ export async function POST(req: NextRequest) {
 
   const { name, email, result } = body;
 
-  if (!name || !email || !result || !FORM_ID_BY_RESULT[result]) {
+  if (!name || !isValidEmail(email) || !isResultType(result) || !FORM_ID_BY_RESULT[result]) {
     return NextResponse.json({ success: false, error: "Missing or invalid fields" }, { status: 422 });
   }
 

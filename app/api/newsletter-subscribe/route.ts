@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { upsertSubscriber, addSubscriberToForm } from "@/lib/quiz/kit";
+import { isRateLimited, clientKey } from "@/lib/rateLimit";
+import { isValidEmail } from "@/lib/validate";
 
 interface NewsletterSubscribeBody {
   name?: string;
@@ -7,6 +9,10 @@ interface NewsletterSubscribeBody {
 }
 
 export async function POST(req: NextRequest) {
+  if (isRateLimited(clientKey(req))) {
+    return NextResponse.json({ success: false, error: "Too many requests" }, { status: 429 });
+  }
+
   let body: NewsletterSubscribeBody;
 
   try {
@@ -18,7 +24,7 @@ export async function POST(req: NextRequest) {
   const { name = "", email } = body;
   const formId = process.env.KIT_FORM_NEWSLETTER;
 
-  if (!email || !formId) {
+  if (!isValidEmail(email) || !formId) {
     return NextResponse.json({ success: false, error: "Missing or invalid fields" }, { status: 422 });
   }
 
