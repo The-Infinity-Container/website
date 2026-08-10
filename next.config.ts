@@ -10,6 +10,13 @@ const nextConfig: NextConfig = {
   // Lets the dev server be reached from a phone on the same Wi-Fi for
   // on-device testing (npm run dev prints the LAN URL to use).
   allowedDevOrigins: ["192.168.4.26"],
+  async redirects() {
+    return [
+      { source: "/testimonials", destination: "/", permanent: true },
+      { source: "/what-is-the-infinity-container", destination: "/", permanent: true },
+      { source: "/who-is-this-for", destination: "/", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {
