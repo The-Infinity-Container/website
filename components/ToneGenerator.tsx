@@ -15,9 +15,45 @@ export default function ToneGenerator() {
   const gainNodeRef = useRef<GainNode | null>(null);
   const tremoloOscRef = useRef<OscillatorNode | null>(null);
   const tremoloGainRef = useRef<GainNode | null>(null);
+  const silentAudioRef = useRef<HTMLAudioElement | null>(null);
   const tremRef = useRef(trem);
   const freqRef = useRef(freq);
   const volRef = useRef(vol);
+
+  // iOS mutes Web Audio API output (oscillators) when the ring/silent switch
+  // is on, unlike real <audio>/<video> elements. Playing a silent one
+  // alongside the oscillator puts the tab's audio session into "media
+  // playback" mode, which makes the oscillator ignore the switch too.
+  function getSilentAudio() {
+    if (!silentAudioRef.current) {
+      const sampleRate = 8000;
+      const numSamples = Math.floor(sampleRate * 0.2);
+      const header = 44;
+      const buffer = new ArrayBuffer(header + numSamples);
+      const view = new DataView(buffer);
+      const writeString = (offset: number, str: string) => {
+        for (let i = 0; i < str.length; i++) view.setUint8(offset + i, str.charCodeAt(i));
+      };
+      writeString(0, "RIFF");
+      view.setUint32(4, 36 + numSamples, true);
+      writeString(8, "WAVE");
+      writeString(12, "fmt ");
+      view.setUint32(16, 16, true);
+      view.setUint16(20, 1, true);
+      view.setUint16(22, 1, true);
+      view.setUint32(24, sampleRate, true);
+      view.setUint32(28, sampleRate, true);
+      view.setUint16(32, 1, true);
+      view.setUint16(34, 8, true);
+      writeString(36, "data");
+      view.setUint32(40, numSamples, true);
+      new Uint8Array(buffer, header, numSamples).fill(128);
+      const audio = new Audio(URL.createObjectURL(new Blob([buffer], { type: "audio/wav" })));
+      audio.loop = true;
+      silentAudioRef.current = audio;
+    }
+    return silentAudioRef.current;
+  }
 
   useEffect(() => {
     tremRef.current = trem;
@@ -86,6 +122,7 @@ export default function ToneGenerator() {
   function startTone() {
     const ctx = getCtx();
     if (ctx.state === "suspended") ctx.resume();
+    getSilentAudio().play().catch(() => {});
     const gainNode = gainNodeRef.current!;
     const oscillator = ctx.createOscillator();
     oscillator.type = "sine";
@@ -108,6 +145,7 @@ export default function ToneGenerator() {
     oscillatorRef.current = null;
     setIsPlaying(false);
     stopTremolo();
+    silentAudioRef.current?.pause();
     const stopTime = ctx.currentTime + 0.1;
     gainNode.gain.cancelScheduledValues(ctx.currentTime);
     gainNode.gain.setValueAtTime(gainNode.gain.value, ctx.currentTime);
