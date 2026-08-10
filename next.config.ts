@@ -7,6 +7,9 @@ const supabaseHostname = supabaseUrl ? new URL(supabaseUrl).hostname : undefined
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Lets the dev server be reached from a phone on the same Wi-Fi for
+  // on-device testing (npm run dev prints the LAN URL to use).
+  allowedDevOrigins: ["192.168.4.26"],
   async headers() {
     return [
       {
