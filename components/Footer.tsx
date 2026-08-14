@@ -75,7 +75,7 @@ export default function Footer() {
               </div>
               {/* Globe */}
               <img
-                src="/assets/tic-globe-logo.svg"
+                src="/assets/tic-globe-logo.png"
                 alt="The Infinity Container"
                 className="h-[130.9px] flex-shrink-0 xl:-mt-[27.3px] xl:-ml-[181.3px]"
               />

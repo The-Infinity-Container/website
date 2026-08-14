@@ -311,7 +311,7 @@ export default function CommunityCallPage() {
         <div className="max-w-[1290px] mx-auto">
           <div className="relative">
             <Image
-              src="/assets/bee-disco.svg"
+              src="/assets/bee-disco.png"
               alt=""
               width={222}
               height={166}
