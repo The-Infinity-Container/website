@@ -4,6 +4,7 @@ import { resolvePageMetadata } from "@/lib/pageSeo";
 import SectionLabel from "@/components/SectionLabel";
 import SectionHeading from "@/components/SectionHeading";
 import BodyText from "@/components/BodyText";
+import ConsoleMessage from "@/components/ConsoleMessage";
 
 export async function generateMetadata(): Promise<Metadata> {
   return resolvePageMetadata("/partnerships", {
@@ -15,6 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function PartnershipsPage() {
   return (
     <main className="bg-white">
+      <ConsoleMessage messages={["MAY TIC BRING IN THE MONEY ✨✨🚨🚨🚨"]} />
 
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="relative px-6 pt-[55px] md:pt-[100px] pb-[45px] md:pb-[80px] text-center overflow-hidden">

@@ -3,6 +3,7 @@ import { resolvePageMetadata } from "@/lib/pageSeo";
 import QuizHero from "@/components/quiz/QuizHero";
 import QuizEngine from "@/components/quiz/QuizEngine";
 import WayDivider from "@/components/WayDivider";
+import ConsoleMessage from "@/components/ConsoleMessage";
 
 export async function generateMetadata(): Promise<Metadata> {
   return resolvePageMetadata("/find-my-membership", {
@@ -15,6 +16,11 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function FindMyMembershipPage() {
   return (
     <>
+      <ConsoleMessage
+        messages={[
+          "From Joyce: 'You bring wonder, creativity, growth and caring kindness into our world and Mama JoySee loves you soo very much' 🤗🥰💃🏼",
+        ]}
+      />
       <QuizHero />
       <section className="bg-white px-6 pt-10 md:pt-20 pb-[50px] md:pb-[100px]">
         <QuizEngine />

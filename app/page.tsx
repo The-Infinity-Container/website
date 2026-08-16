@@ -12,6 +12,7 @@ import SectionLabel from "@/components/SectionLabel";
 import SectionHeading from "@/components/SectionHeading";
 import BodyText from "@/components/BodyText";
 import FAQ, { FAQParagraph, type FAQItem } from "@/components/FAQ";
+import ConsoleMessage from "@/components/ConsoleMessage";
 
 const FIND_MEMBERSHIP_URL = "https://the-infinity-container.mn.co/users/onboarding/plans";
 const JOIN_FREE_URL = "https://the-infinity-container.mn.co/users/onboarding/plans/1484020";
@@ -208,6 +209,13 @@ const homeFaqItems: FAQItem[] = [
 export default function HomePage() {
   return (
     <main>
+      <ConsoleMessage
+        messages={[
+          "From me: You are supported to grow.",
+          "This ecosystem creates generative power for the good of the planet.",
+          "Cheers to collective health!",
+        ]}
+      />
       <NewsletterPopup />
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="bg-black">
