@@ -4,6 +4,7 @@ import { useActionState, useEffect, useState } from "react";
 import PostEditor from "./PostEditor";
 import SerpPreview, { SITE_NAME } from "./SerpPreview";
 import CharCounter from "./CharCounter";
+import SchedulePopup from "./SchedulePopup";
 import { CATEGORIES, type CategoryKey } from "@/lib/categories";
 import { createPost, updatePost, getUsedFocusKeyphrases, type PostActionState } from "@/lib/actions/posts";
 import { uploadImage } from "@/lib/uploadImage";
@@ -79,6 +80,8 @@ export default function PostForm({
   const [excerpt, setExcerpt] = useState(post?.excerpt ?? "");
   const [body, setBody] = useState(post?.body ?? initialContent?.body ?? "");
   const [status, setStatus] = useState<PostStatus>(post?.status ?? "draft");
+  const [scheduledAt, setScheduledAt] = useState<string | null>(post?.scheduled_at ?? null);
+  const [schedulePopupOpen, setSchedulePopupOpen] = useState(false);
   const [coverImageUrl, setCoverImageUrl] = useState<string | null>(post?.cover_image_url ?? null);
   const [images, setImages] = useState<string[]>(post?.images ?? []);
   const [uploading, setUploading] = useState(false);
@@ -117,8 +120,8 @@ export default function PostForm({
   });
   const score = seoScore(seoChecks);
 
-  const [state, formAction, pending] = useActionState<PostActionState, FormData>(async () => {
-    const payload = {
+  function buildPayload(overrides: Partial<{ status: PostStatus; scheduledAt: string | null }> = {}) {
+    return {
       title,
       slug: slug.trim() || slugify(title),
       category,
@@ -134,10 +137,31 @@ export default function PostForm({
       author,
       readingTimeMinutes,
       relatedSlugs,
-      status,
+      status: overrides.status ?? status,
+      scheduledAt: overrides.scheduledAt ?? scheduledAt,
     };
+  }
+
+  const [state, formAction, pending] = useActionState<PostActionState, FormData>(async () => {
+    const payload = buildPayload();
     return isEdit ? updatePost(post.id, payload) : createPost(payload);
   }, null);
+
+  const [scheduling, setScheduling] = useState(false);
+  const [scheduleError, setScheduleError] = useState<string | null>(null);
+
+  // Schedule confirm saves immediately — a button called "Schedule" should
+  // schedule the post, not just stage a value for a separate Save click.
+  // On success createPost/updatePost redirect to /admin (they throw to
+  // navigate), so this only ever returns normally in the error case.
+  async function handleScheduleConfirm(iso: string) {
+    setScheduleError(null);
+    setScheduling(true);
+    const payload = buildPayload({ status: "scheduled", scheduledAt: iso });
+    const result = await (isEdit ? updatePost(post.id, payload) : createPost(payload));
+    setScheduling(false);
+    setScheduleError(result?.error ?? null);
+  }
 
   function toggleRelated(slug: string) {
     setRelatedSlugs((prev) => (prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]));
@@ -350,14 +374,49 @@ export default function PostForm({
           <select
             id="status"
             value={status}
-            onChange={(e) => setStatus(e.target.value as PostStatus)}
+            onChange={(e) => {
+              const value = e.target.value as PostStatus;
+              if (value === "scheduled") {
+                setSchedulePopupOpen(true);
+                return;
+              }
+              setStatus(value);
+              setScheduledAt(null);
+            }}
             className={inputClass}
           >
             <option value="draft">Draft</option>
             <option value="published">Published</option>
+            {status === "scheduled" && <option value="scheduled">Scheduled</option>}
           </select>
+          {status === "scheduled" && scheduledAt && (
+            <p className="text-sm text-black/60 mt-1">
+              Scheduled for{" "}
+              {new Date(scheduledAt).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })} ·{" "}
+              <button
+                type="button"
+                onClick={() => setSchedulePopupOpen(true)}
+                className="underline cursor-pointer hover:opacity-70"
+              >
+                Change
+              </button>
+            </p>
+          )}
         </div>
       </AccordionSection>
+
+      {schedulePopupOpen && (
+        <SchedulePopup
+          initialValue={scheduledAt}
+          pending={scheduling}
+          error={scheduleError}
+          onCancel={() => {
+            setSchedulePopupOpen(false);
+            setScheduleError(null);
+          }}
+          onConfirm={handleScheduleConfirm}
+        />
+      )}
 
       <AccordionSection
         title="SEO"
@@ -518,13 +577,23 @@ export default function PostForm({
 
       {state?.error && <p className="text-sm text-tic-coral font-bold">{state.error}</p>}
 
-      <button
-        type="submit"
-        disabled={pending || uploading || galleryUploading}
-        className="bg-black text-tic-yellow font-[family-name:var(--font-gordon)] uppercase tracking-widest py-3 cursor-pointer hover:bg-tic-yellow hover:text-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-black disabled:hover:text-tic-yellow"
-      >
-        {pending ? "Saving…" : isEdit ? "Save Changes" : "Create Post"}
-      </button>
+      <div className="flex gap-3">
+        <button
+          type="submit"
+          disabled={pending || uploading || galleryUploading}
+          className="flex-1 bg-black text-tic-yellow font-[family-name:var(--font-gordon)] uppercase tracking-widest py-3 cursor-pointer hover:bg-tic-yellow hover:text-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-black disabled:hover:text-tic-yellow"
+        >
+          {pending ? "Saving…" : isEdit ? "Save Changes" : "Create Post"}
+        </button>
+        <button
+          type="button"
+          onClick={() => setSchedulePopupOpen(true)}
+          disabled={pending || uploading || galleryUploading}
+          className="border-2 border-black font-[family-name:var(--font-gordon)] uppercase tracking-widest py-3 px-6 cursor-pointer hover:bg-black hover:text-tic-yellow transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {status === "scheduled" ? "Reschedule" : "Schedule"}
+        </button>
+      </div>
     </form>
   );
 }

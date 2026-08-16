@@ -57,6 +57,7 @@ export type PostInput = {
   readingTimeMinutes: number | null;
   relatedSlugs: string[];
   status: PostStatus;
+  scheduledAt: string | null;
 };
 
 function validateSeoLengths(input: PostInput): string | null {
@@ -79,6 +80,27 @@ function deriveExcerpt(input: PostInput): string | null {
   return text ? text.slice(0, 200) : null;
 }
 
+function validateSchedule(input: PostInput): string | null {
+  if (input.status !== "scheduled") return null;
+  if (!input.scheduledAt) return "Pick a date and time to schedule this post.";
+  if (new Date(input.scheduledAt) <= new Date()) return "Scheduled time must be in the future.";
+  return null;
+}
+
+// published_at doubles as the sort key for the public post list, so a
+// scheduled post gets it set up front to scheduled_at rather than left null
+// — it needs to sort into place among already-published posts immediately,
+// not just once an admin flips its status after the fact.
+function resolvePublishFields(input: PostInput, wasPublished: boolean) {
+  if (input.status === "scheduled") {
+    return { published_at: input.scheduledAt, scheduled_at: input.scheduledAt };
+  }
+  if (input.status === "published") {
+    return { published_at: wasPublished ? undefined : new Date().toISOString(), scheduled_at: null };
+  }
+  return { published_at: null, scheduled_at: null };
+}
+
 export async function createPost(input: PostInput): Promise<PostActionState> {
   const supabase = await requireAdmin();
 
@@ -87,6 +109,8 @@ export async function createPost(input: PostInput): Promise<PostActionState> {
   if (input.images.length > 5) return { error: "Up to 5 gallery images allowed." };
   const seoError = validateSeoLengths(input);
   if (seoError) return { error: seoError };
+  const scheduleError = validateSchedule(input);
+  if (scheduleError) return { error: scheduleError };
 
   const { error } = await supabase.from("posts").insert({
     title: input.title.trim(),
@@ -105,7 +129,7 @@ export async function createPost(input: PostInput): Promise<PostActionState> {
     reading_time_minutes: input.readingTimeMinutes,
     related_slugs: input.relatedSlugs,
     status: input.status,
-    published_at: input.status === "published" ? new Date().toISOString() : null,
+    ...resolvePublishFields(input, false),
   });
 
   if (error) {
@@ -126,6 +150,8 @@ export async function updatePost(id: string, input: PostInput): Promise<PostActi
   if (input.images.length > 5) return { error: "Up to 5 gallery images allowed." };
   const seoError = validateSeoLengths(input);
   if (seoError) return { error: seoError };
+  const scheduleError = validateSchedule(input);
+  if (scheduleError) return { error: scheduleError };
 
   const existing = await supabase.from("posts").select("status").eq("id", id).maybeSingle();
   const wasPublished = existing.data?.status === "published";
@@ -149,12 +175,7 @@ export async function updatePost(id: string, input: PostInput): Promise<PostActi
       reading_time_minutes: input.readingTimeMinutes,
       related_slugs: input.relatedSlugs,
       status: input.status,
-      published_at:
-        input.status === "published"
-          ? wasPublished
-            ? undefined
-            : new Date().toISOString()
-          : null,
+      ...resolvePublishFields(input, wasPublished),
     })
     .eq("id", id);
 
@@ -169,6 +190,9 @@ export async function updatePost(id: string, input: PostInput): Promise<PostActi
   redirect("/admin");
 }
 
+// currentStatus should be the post's *effective* status (see effectiveStatus
+// in lib/posts.ts) — a due-but-unflipped scheduled post reads as "published"
+// here too, so toggling it correctly unpublishes rather than re-scheduling.
 export async function togglePublish(id: string, currentStatus: PostStatus) {
   const supabase = await requireAdmin();
   const nextStatus: PostStatus = currentStatus === "published" ? "draft" : "published";
@@ -178,10 +202,37 @@ export async function togglePublish(id: string, currentStatus: PostStatus) {
     .update({
       status: nextStatus,
       published_at: nextStatus === "published" ? new Date().toISOString() : null,
+      scheduled_at: null,
     })
     .eq("id", id);
   if (error) throw new Error(error.message);
 
   revalidatePath("/admin");
+  revalidatePath("/blog");
+}
+
+export async function publishNow(id: string) {
+  const supabase = await requireAdmin();
+  const { error } = await supabase
+    .from("posts")
+    .update({ status: "published", published_at: new Date().toISOString(), scheduled_at: null })
+    .eq("id", id);
+  if (error) throw new Error(error.message);
+
+  revalidatePath("/admin");
+  revalidatePath("/admin/scheduled");
+  revalidatePath("/blog");
+}
+
+export async function unschedulePost(id: string) {
+  const supabase = await requireAdmin();
+  const { error } = await supabase
+    .from("posts")
+    .update({ status: "draft", published_at: null, scheduled_at: null })
+    .eq("id", id);
+  if (error) throw new Error(error.message);
+
+  revalidatePath("/admin");
+  revalidatePath("/admin/scheduled");
   revalidatePath("/blog");
 }
