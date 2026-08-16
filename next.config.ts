@@ -15,6 +15,11 @@ const nextConfig: NextConfig = {
       { source: "/testimonials", destination: "/", permanent: true },
       { source: "/what-is-the-infinity-container", destination: "/", permanent: true },
       { source: "/who-is-this-for", destination: "/", permanent: true },
+      {
+        source: "/blog/blog-what-is-integration",
+        destination: "/blog/what-is-integration-definition",
+        permanent: true,
+      },
     ];
   },
   async headers() {

@@ -436,6 +436,10 @@ export default function PostForm({
           <label htmlFor="slug" className={labelClass}>
             Slug
           </label>
+          <p className="text-xs text-black/50 mb-1">
+            No leading slash — this becomes /blog/&#123;slug&#125;. E.g. what-is-integration-definition, not
+            /what-is-integration-definition.
+          </p>
           <input
             id="slug"
             value={slug}
