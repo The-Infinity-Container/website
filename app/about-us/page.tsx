@@ -5,6 +5,7 @@ import SectionLabel from "@/components/SectionLabel";
 import SectionHeading from "@/components/SectionHeading";
 import BodyText from "@/components/BodyText";
 import ReadMoreCollapse from "@/components/ReadMoreCollapse";
+import ConsoleMessage from "@/components/ConsoleMessage";
 
 export async function generateMetadata(): Promise<Metadata> {
   return resolvePageMetadata("/about-us", {
@@ -34,6 +35,9 @@ const GRATITUDE = [
 export default function AboutUsPage() {
   return (
     <main>
+      <ConsoleMessage
+        messages={["From Erika: May we all weave together in loving connections."]}
+      />
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="bg-white px-6 pt-[50px] md:pt-[100px] pb-[50px] md:pb-[100px]">
         <div className="max-w-[1290px] mx-auto">
