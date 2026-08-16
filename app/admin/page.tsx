@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllPostsForAdmin } from "@/lib/posts";
+import { getAllPostsForAdmin, effectiveStatus } from "@/lib/posts";
 import { categoryLabel } from "@/lib/categories";
 import { deletePost, togglePublish } from "@/lib/actions/posts";
 
@@ -31,33 +31,46 @@ export default async function AdminDashboardPage() {
       )}
 
       <div className="divide-y-2 divide-black">
-        {posts.map((post) => (
-          <div key={post.id} className="py-5 flex items-center justify-between gap-4">
-            <div className="min-w-0">
-              <p className="font-[family-name:var(--font-gordon)] uppercase tracking-wide truncate">
-                {post.title}
-              </p>
-              <p className="text-sm text-black/60">
-                {categoryLabel(post.category)} · {post.status}
-              </p>
+        {posts.map((post) => {
+          const status = effectiveStatus(post);
+          return (
+            <div key={post.id} className="py-5 flex items-center justify-between gap-4">
+              <div className="min-w-0">
+                <p className="font-[family-name:var(--font-gordon)] uppercase tracking-wide truncate">
+                  {post.title}
+                </p>
+                <p className="text-sm text-black/60">
+                  {categoryLabel(post.category)} · {status}
+                  {status === "scheduled" && post.scheduled_at && (
+                    <>
+                      {" "}
+                      for{" "}
+                      {new Date(post.scheduled_at).toLocaleString(undefined, {
+                        dateStyle: "medium",
+                        timeStyle: "short",
+                      })}
+                    </>
+                  )}
+                </p>
+              </div>
+              <div className="flex items-center gap-4 shrink-0 text-sm font-bold uppercase tracking-wide">
+                <Link href={`/admin/posts/${post.id}/edit`} className="underline cursor-pointer hover:opacity-70">
+                  Edit
+                </Link>
+                <form action={togglePublish.bind(null, post.id, status)}>
+                  <button type="submit" className="underline cursor-pointer hover:opacity-70">
+                    {status === "published" ? "Unpublish" : "Publish"}
+                  </button>
+                </form>
+                <form action={deletePost.bind(null, post.id)}>
+                  <button type="submit" className="underline text-tic-coral cursor-pointer hover:opacity-70">
+                    Delete
+                  </button>
+                </form>
+              </div>
             </div>
-            <div className="flex items-center gap-4 shrink-0 text-sm font-bold uppercase tracking-wide">
-              <Link href={`/admin/posts/${post.id}/edit`} className="underline cursor-pointer hover:opacity-70">
-                Edit
-              </Link>
-              <form action={togglePublish.bind(null, post.id, post.status)}>
-                <button type="submit" className="underline cursor-pointer hover:opacity-70">
-                  {post.status === "published" ? "Unpublish" : "Publish"}
-                </button>
-              </form>
-              <form action={deletePost.bind(null, post.id)}>
-                <button type="submit" className="underline text-tic-coral cursor-pointer hover:opacity-70">
-                  Delete
-                </button>
-              </form>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
