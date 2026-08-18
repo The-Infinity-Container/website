@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getPublishedPosts } from "@/lib/posts";
 
-const BASE_URL = "https://theinfinitycontainer.com";
+const BASE_URL = "https://www.theinfinitycontainer.com";
 
 const STATIC_ROUTES: {
   path: string;
