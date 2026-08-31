@@ -299,6 +299,10 @@ export default function WhatIsIntegrationPage() {
           <p className="font-[family-name:var(--font-noto-serif)] italic text-[25px] text-white text-center max-w-[1000px] mx-auto" style={{ lineHeight: "41px" }}>
             The framework is not a curriculum you complete. It is a practice you return to — a spiral you travel again and again, each time from somewhere new.
           </p>
+
+          <a href="/blog/the-solar-lunar-framework" className="font-[family-name:var(--font-gordon)] text-tic-turquoise uppercase tracking-[0.12em] text-[18px] hover:opacity-70 transition-opacity block w-full text-center mt-[3rem]">
+            <span className="border-b-[1.5px] border-tic-turquoise pb-[3px] inline-block">Read More about the Solar-Lunar Framework here →</span>
+          </a>
         </div>
       </section>
 
