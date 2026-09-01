@@ -1,16 +1,19 @@
 "use client";
 
 import { useId, useState, type ChangeEvent } from "react";
+import { HONEYPOT_FIELD } from "@/lib/honeypot";
 
 interface EmailGateProps {
-  onSubmit: (name: string, email: string) => void;
+  onSubmit: (name: string, email: string, honeypot: string) => void;
 }
 
 export default function EmailGate({ onSubmit }: EmailGateProps) {
   const nameId = useId();
   const emailId = useId();
+  const honeypotId = useId();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [honeypot, setHoneypot] = useState("");
   const [showError, setShowError] = useState(false);
 
   function handleSubmit() {
@@ -22,7 +25,7 @@ export default function EmailGate({ onSubmit }: EmailGateProps) {
       return;
     }
     setShowError(false);
-    onSubmit(trimmedName, trimmedEmail);
+    onSubmit(trimmedName, trimmedEmail, honeypot);
   }
 
   return (
@@ -53,6 +56,18 @@ export default function EmailGate({ onSubmit }: EmailGateProps) {
           onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
           className="px-[18px] py-4 border-[1.5px] border-tic-grey rounded font-[family-name:var(--font-noto-serif)] text-[15px] text-black bg-white focus:outline-none focus:border-tic-orange transition-colors"
         />
+        <div style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }} aria-hidden="true">
+          <label htmlFor={honeypotId}>Website</label>
+          <input
+            id={honeypotId}
+            name={HONEYPOT_FIELD}
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={honeypot}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setHoneypot(e.target.value)}
+          />
+        </div>
         {showError && (
           <p className="text-tic-rose text-[13px] italic font-[family-name:var(--font-noto-serif)]">
             Please enter a valid name and email.

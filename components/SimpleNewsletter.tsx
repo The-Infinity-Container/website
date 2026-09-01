@@ -1,10 +1,13 @@
 "use client";
 
 import { useId, useState } from "react";
+import { HONEYPOT_FIELD } from "@/lib/honeypot";
 
 export default function SimpleNewsletter() {
   const emailId = useId();
+  const honeypotId = useId();
   const [email, setEmail] = useState("");
+  const [honeypot, setHoneypot] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   async function handleSubmit(e: React.FormEvent) {
@@ -14,7 +17,7 @@ export default function SimpleNewsletter() {
       const res = await fetch("/api/newsletter-subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, [HONEYPOT_FIELD]: honeypot }),
       });
       const data = await res.json();
       setStatus(data.success ? "success" : "error");
@@ -44,6 +47,18 @@ export default function SimpleNewsletter() {
           required
           className="px-5 py-3 text-black placeholder-black/60 outline-none border border-black/20 w-full sm:min-w-[300px] sm:w-auto"
         />
+        <div style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }} aria-hidden="true">
+          <label htmlFor={honeypotId}>Website</label>
+          <input
+            id={honeypotId}
+            name={HONEYPOT_FIELD}
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+          />
+        </div>
         <button
           type="submit"
           disabled={status === "loading"}
