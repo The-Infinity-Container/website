@@ -2,10 +2,12 @@ import { NextRequest, NextResponse } from "next/server";
 import { upsertSubscriber, addSubscriberToForm } from "@/lib/quiz/kit";
 import { isRateLimited, clientKey } from "@/lib/rateLimit";
 import { isValidEmail } from "@/lib/validate";
+import { HONEYPOT_FIELD, isHoneypotFilled } from "@/lib/honeypot";
 
 interface NewsletterSubscribeBody {
   name?: string;
   email: string;
+  [HONEYPOT_FIELD]?: string;
 }
 
 export async function POST(req: NextRequest) {
@@ -19,6 +21,10 @@ export async function POST(req: NextRequest) {
     body = await req.json();
   } catch {
     return NextResponse.json({ success: false, error: "Invalid JSON body" }, { status: 400 });
+  }
+
+  if (isHoneypotFilled(body[HONEYPOT_FIELD])) {
+    return NextResponse.json({ success: true });
   }
 
   const { name = "", email } = body;

@@ -7,6 +7,7 @@ import EmailGate from "./EmailGate";
 import ResultScreen from "./ResultScreen";
 import { questions, calculateResult } from "@/lib/quiz/data";
 import type { QuizScores, ResultType } from "@/lib/quiz/types";
+import { HONEYPOT_FIELD } from "@/lib/honeypot";
 
 type Stage = "quiz" | "email" | "result";
 
@@ -55,7 +56,7 @@ export default function QuizEngine() {
     setAnsweredCount(currentIndex - 1);
   }
 
-  function handleEmailSubmit(name: string, email: string) {
+  function handleEmailSubmit(name: string, email: string, honeypot: string) {
     const computedResult = calculateResult(scores);
     setResult(computedResult);
     setStage("result");
@@ -65,7 +66,7 @@ export default function QuizEngine() {
     fetch("/api/quiz-submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, answers: scores }),
+      body: JSON.stringify({ name, email, answers: scores, [HONEYPOT_FIELD]: honeypot }),
     }).catch((err) => {
       console.error("quiz-submit request failed:", err);
     });

@@ -4,11 +4,13 @@ import { calculateResult, isValidQuizScores } from "@/lib/quiz/data";
 import type { QuizScores, ResultType } from "@/lib/quiz/types";
 import { isRateLimited, clientKey } from "@/lib/rateLimit";
 import { isValidEmail } from "@/lib/validate";
+import { HONEYPOT_FIELD, isHoneypotFilled } from "@/lib/honeypot";
 
 interface QuizSubmitBody {
   name: string;
   email: string;
   answers: QuizScores;
+  [HONEYPOT_FIELD]?: string;
 }
 
 const FORM_ID_BY_RESULT: Record<ResultType, string | undefined> = {
@@ -34,6 +36,10 @@ export async function POST(req: NextRequest) {
     body = await req.json();
   } catch {
     return NextResponse.json({ success: false, error: "Invalid JSON body" }, { status: 400 });
+  }
+
+  if (isHoneypotFilled(body[HONEYPOT_FIELD])) {
+    return NextResponse.json({ success: true });
   }
 
   const { name, email, answers } = body;
