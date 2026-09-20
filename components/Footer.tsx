@@ -89,7 +89,7 @@ export default function Footer() {
         <p className="font-[family-name:var(--font-noto-serif)] text-[14.7px] text-white/60">
           © 2026 The Infinity Container
         </p>
-        <Link href="#" className="font-[family-name:var(--font-noto-serif)] text-[14.7px] text-white/60 hover:text-white transition-colors">
+        <Link href="/privacy" className="font-[family-name:var(--font-noto-serif)] text-[14.7px] text-white/60 hover:text-white transition-colors">
           Privacy
         </Link>
       </div>
