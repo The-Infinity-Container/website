@@ -14,7 +14,8 @@ const providers: [string, string][] = [
   ["Stripe", "Payments"],
   ["Kit", "Newsletter email"],
   ["Substack", "Our Substack publication"],
-  ["Supabase", "Website data and hosting"],
+  ["Vercel", "Website hosting"],
+  ["Supabase", "Website content, admin sign-in, and quiz submissions"],
   ["Spotify", "Embedded playlist player on our website"],
 ];
 

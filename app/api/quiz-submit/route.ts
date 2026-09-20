@@ -5,6 +5,7 @@ import type { QuizScores, ResultType } from "@/lib/quiz/types";
 import { isRateLimited, clientKey } from "@/lib/rateLimit";
 import { isValidEmail } from "@/lib/validate";
 import { HONEYPOT_FIELD, isHoneypotFilled } from "@/lib/honeypot";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 interface QuizSubmitBody {
   name: string;
@@ -51,6 +52,16 @@ export async function POST(req: NextRequest) {
   // The result is derived from answers here, not trusted from the client —
   // the client only sends raw option indices.
   const result = calculateResult(answers);
+
+  // Stored independently of Kit so a failure in one never loses the other.
+  try {
+    const { error } = await createAdminClient()
+      .from("quiz_submissions")
+      .insert({ name, email, answers, result });
+    if (error) throw error;
+  } catch (err) {
+    console.error("Supabase quiz-submit insert error:", err);
+  }
 
   // The client always advances to the result screen regardless of this
   // response — a failed Kit call should never block the user from seeing
