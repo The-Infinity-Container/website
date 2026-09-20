@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Noto_Serif } from "next/font/google";
 import SiteNav from "@/components/SiteNav";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 import "./globals.css";
 
 const notoSerif = Noto_Serif({
@@ -64,6 +65,7 @@ export default function RootLayout({
         <SiteNav />
         {children}
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
