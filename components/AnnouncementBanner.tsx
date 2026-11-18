@@ -1,6 +1,30 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 const JOIN_URL = "https://join.theinfinitycontainer.com/theendisthebeginning";
 
+// Signups close 11/25/2026 at 11:59pm Pacific (PST, UTC-8) — hide the banner
+// from midnight onward. Checked in the browser so it works on a cached/static
+// page with no redeploy needed.
+const HIDE_AT = new Date("2026-11-26T00:00:00-08:00").getTime();
+
 export default function AnnouncementBanner() {
+  // Start hidden so an expired banner never flashes before the check runs.
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const msLeft = HIDE_AT - Date.now();
+    if (msLeft <= 0) return;
+    setVisible(true);
+    // setTimeout overflows past ~24.8 days; skip the live hide for far-off dates
+    if (msLeft > 2_000_000_000) return;
+    const t = setTimeout(() => setVisible(false), msLeft);
+    return () => clearTimeout(t);
+  }, []);
+
+  if (!visible) return null;
+
   return (
     <aside
       aria-label="Announcement"
