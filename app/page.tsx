@@ -13,6 +13,7 @@ import SectionHeading from "@/components/SectionHeading";
 import BodyText from "@/components/BodyText";
 import FAQ, { FAQParagraph, type FAQItem } from "@/components/FAQ";
 import ConsoleMessage from "@/components/ConsoleMessage";
+import AnnouncementBanner from "@/components/AnnouncementBanner";
 
 const FIND_MEMBERSHIP_URL = "https://the-infinity-container.mn.co/users/onboarding/plans";
 const JOIN_FREE_URL = "https://the-infinity-container.mn.co/users/onboarding/plans/1484020";
@@ -217,6 +218,7 @@ export default function HomePage() {
         ]}
       />
       <NewsletterPopup />
+      <AnnouncementBanner />
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <header className="bg-black">
         {/* Logo-open animation, extended height, text overlaid below the globe */}
